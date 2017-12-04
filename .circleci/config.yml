@@ -32,6 +32,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
+            - /usr/local/lib/node_modules/
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - deploy:
