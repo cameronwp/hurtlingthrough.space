@@ -10,10 +10,15 @@ Wordpress2016.overrideThemeStyles = () => ({
 
 const typography = new Typography(_.assign({}, Wordpress2016, {
   bodyFontFamily: ['Roboto Slab', 'serif'],
+  headerFontFamily: ['Montserrat', 'Roboto Slab', 'serif'],
   googleFonts: [
     {
       name: 'Fira Mono',
       styles: ['500']
+    },
+    {
+      name: 'Montserrat',
+      styles: ['700'],
     },
     {
       name: 'Roboto Slab',
