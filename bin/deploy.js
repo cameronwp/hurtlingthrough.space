@@ -51,7 +51,7 @@ const cloudfront = new AWS.CloudFront();
 const invalidation = {
   DistributionId: process.env.CLOUDFRONT_DISTRIBUTION_ID,
   InvalidationBatch: {
-    CallerReference: reference,
+    CallerReference: reference.toString(),
     Paths: {
       Quantity: 1,
       Items: [
