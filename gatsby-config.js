@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'C Is for Cameron',
+    title: 'Hurtling through Space',
     author: 'Cameron Pittman',
     description: '42',
-    siteUrl: 'https://cameronwp.com',
+    siteUrl: 'https://hurtlingthrough.space',
   },
-  // pathPrefix: '/gatsby-starter-blog',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -41,7 +40,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-58149140-1`,
       },
     },
     `gatsby-plugin-feed`,
