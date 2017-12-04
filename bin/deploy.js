@@ -31,18 +31,17 @@ const uploader = client.uploadDir({
   }
 });
 uploader.on('error', function(err) {
-  console.error("unable to sync:", err.stack);
+  console.error(err);
   process.exit(1)
 });
 uploader.on('progress', function() {
   if (process.env.CIRCLECI !== 'true') {
-    const percent = `${((uploader.progressAmount / uploader.progressTotal) * 100).toFixed(2)}%`;
+    const percent = `${((uploader.progressAmount / uploader.progressTotal) * 100).toFixed(2) || 0}%`;
     console.log(percent);
   }
 });
 uploader.on('end', function() {
   console.log("done!");
-  process.exit(0)
 });
 
 /* invalidate old common files */
@@ -55,10 +54,9 @@ const invalidation = {
   InvalidationBatch: {
     CallerReference: reference.toString(),
     Paths: {
-      Quantity: 2,
+      Quantity: 1,
       Items: [
-        'index.html',
-        'posts*'
+        '/*'
       ]
     }
   }
