@@ -35,8 +35,10 @@ uploader.on('error', function(err) {
   process.exit(1)
 });
 uploader.on('progress', function() {
-  const percent = `${((uploader.progressAmount / uploader.progressTotal) * 100).toFixed(2)}%`;
-  console.log(percent);
+  if (process.env.CIRCLECI !== 'true') {
+    const percent = `${((uploader.progressAmount / uploader.progressTotal) * 100).toFixed(2)}%`;
+    console.log(percent);
+  }
 });
 uploader.on('end', function() {
   console.log("done!");
@@ -53,7 +55,7 @@ const invalidation = {
   InvalidationBatch: {
     CallerReference: reference.toString(),
     Paths: {
-      Quantity: 1,
+      Quantity: 2,
       Items: [
         'index.html',
         'posts*'
