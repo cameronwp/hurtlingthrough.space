@@ -1,8 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import { Container } from 'react-responsive-grid'
-
 import { rhythm, scale } from '../utils/typography'
+import config from '../../gatsby-config'
+
+import "prismjs/themes/prism.css"
+
+function siteTitle() {
+  return config.siteMetadata.title
+}
 
 class Template extends React.Component {
   render() {
@@ -31,7 +37,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            {siteTitle()}
           </Link>
         </h1>
       )
@@ -52,7 +58,7 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            Gatsby Starter Blog
+            {siteTitle()}
           </Link>
         </h3>
       )

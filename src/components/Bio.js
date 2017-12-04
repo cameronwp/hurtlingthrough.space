@@ -23,7 +23,7 @@ class Bio extends React.Component {
       >
         <p>
           © <strong>Cameron Pittman</strong> {year()}. <a href="https://twitter.com/cwpittman">
-            You should follow him on Twitter
+            Follow me on Twitter!
           </a>
         </p>
       </div>

@@ -1,8 +1,10 @@
-# gatsby-starter-blog
-Gatsby starter for creating a blog
+# C Is for Cameron
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
+Personal site and such.
+
+## New Post
+
+Run `make now` to get a local ISO string of the datetime. Automatically puts it in your clipboard so you can copy into the new post.
 
 ## Running in development
 `gatsby develop`
