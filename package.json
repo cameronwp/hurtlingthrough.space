@@ -9,6 +9,7 @@
   "dependencies": {
     "aws-sdk": "^2.162.0",
     "dotenv": "^4.0.0",
+    "prompt": "^1.0.0",
     "s3": "^4.4.0"
   },
   "devDependencies": {
@@ -54,7 +55,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
-    "now": "./bin/now.js",
+    "new": "./bin/newpost.js",
     "build": "gatsby build",
     "deploy": "gatsby build && ./bin/deploy.js",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"

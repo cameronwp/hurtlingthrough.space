@@ -95,7 +95,7 @@ Any pushes to GitHub trigger a [CircleCI](https://circleci.com/) build, which is
 
 ## What's Next?
 
-* A script to generate new posts. It's tedious to type in dates - why not script it? Pop in a title and start writing.
+* ~A script to generate new posts. It's tedious to type in dates - why not script it? Pop in a title and start writing.~ _Added!_ `yarn new`
 * Generating tag indicies for easy sorting / searching.
 * Write more! And probably play with the styles a bit.
 
