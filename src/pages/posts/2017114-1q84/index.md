@@ -33,3 +33,5 @@ You can tell the author had fun. The book hints at (and eventually reveals) the 
 
 > A world with a question.
 
+That being said, there is no doubt that this is a love story. The characters fall in love through dreams. This is something you could only get away with in the intimacy of a book. On screen, this would be impossibly cheesy. In a book, every experience, every memory Aomame and Tengo is vivid. You can feel their longing, their assuredness that the other feels the same way.
+
