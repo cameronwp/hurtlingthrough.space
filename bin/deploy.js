@@ -75,6 +75,6 @@ function invalidateCache() {
 }
 
 uploadFiles()
-.then(invalidateCache)
-.catch(e => console.error)
-.then(() => process.exit(0));
+  .then(invalidateCache)
+  .catch(e => console.error)
+  .then(() => process.exit(0));

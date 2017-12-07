@@ -26,13 +26,16 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
-      - run: sudo npm i -g gatsby
+      - run:
+          name: Dependencies
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              yarn install
+            fi
 
       - save_cache:
           paths:
             - node_modules
-            - /usr/local/lib/node_modules/
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - deploy:
