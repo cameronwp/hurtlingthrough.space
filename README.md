@@ -14,11 +14,9 @@ yarn new
 
 ## Publishing
 
-Merges to `master` automatically get published.
+All merges to `master` automatically get published.
 
-Running bin/deploy.js uploads public/ to S3 and invalidates the CloudFront cache.
-
-You can run the deploy script locally with `yarn deploy`.
+If you want to publish manually, run `yarn deploy` (with the env vars detailed below). It will `gatsby build` the production files and will run `./bin/deploy.js` to upload public/ to S3 and invalidate the CloudFront cache.
 
 Create a `.env` file in the root of the repo with the following environment variables:
 

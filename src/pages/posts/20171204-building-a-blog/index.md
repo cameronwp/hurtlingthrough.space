@@ -74,7 +74,7 @@ Note that you'll need to add src/pages/404.js and src/html.js.
 
 The starter kit uses a Wordpress theme, which actually looks pretty nice. I wound up poking around and figuring out how to change fonts and overwrite styles.
 
-Annoyingly, the starter kit uses ISO date strings for the frontmatter date. I set up a custom script [bin/now.js](https://github.com/cameronwp/personal-web/blob/master/bin/now.js) that copies a localized ISO string to my clipboard so I can copy it in to the post.
+I wound up writing a script (triggered with `yarn new`) that prompts for a post title and tags (still need to actually do something with tags), and generates a snazzy prepopulated markdown file for the post with the correct dates filled in.
 
 ### Buy domain
 
@@ -95,8 +95,8 @@ Any pushes to GitHub trigger a [CircleCI](https://circleci.com/) build, which is
 
 ## What's Next?
 
-* ~A script to generate new posts. It's tedious to type in dates - why not script it? Pop in a title and start writing.~ _Added!_ `yarn new`
 * Generating tag indicies for easy sorting / searching.
+* Get more precise about invalidating the cache. It technically [costs money](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#PayingForInvalidation) to invalidate the cache. I _think_ I'm good just invaliding `/*`, which counts as 1 invalidation. I really only need to invalidate the root page only when a new post is published, so I could get clever with `git diff` to determine when invalidation needs to happen.
 * Write more! And probably play with the styles a bit.
 
 ---
