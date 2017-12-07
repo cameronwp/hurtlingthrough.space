@@ -2,6 +2,8 @@
 
 Personal site and such. Published at [hurtlingthrough.space](https://hurtlingthrough.space).
 
+Based on [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog).
+
 ## New Post
 
 ```sh
