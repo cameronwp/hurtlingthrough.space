@@ -9,8 +9,8 @@ Wordpress2016.overrideThemeStyles = () => ({
 })
 
 const typography = new Typography(_.assign({}, Wordpress2016, {
-  bodyFontFamily: ['Roboto Slab', 'serif'],
-  headerFontFamily: ['Montserrat', 'Roboto Slab', 'serif'],
+  bodyFontFamily: ['Arvo', 'sans-serif'],
+  headerFontFamily: ['Montserrat', 'Arvo', 'sans-serif'],
   googleFonts: [
     {
       name: 'Fira Mono',
@@ -21,7 +21,7 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
       styles: ['700'],
     },
     {
-      name: 'Roboto Slab',
+      name: 'Arvo',
       styles: [
         '400',
         '400i',
@@ -31,8 +31,16 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
     },
   ],
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
+    blockquote: {
+      fontStyle: 'inherit',
+      textAlign: 'justify',
+      textIndent: '2em'
+    },
     code: {
       fontFamily: ['Fira Mono', 'monospace'].join(','),
+    },
+    'blockquote > *not(:last-child)': {
+      paddingBottom: '0.5'
     }
   })
 }))
