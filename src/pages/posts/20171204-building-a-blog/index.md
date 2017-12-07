@@ -84,19 +84,19 @@ Last year, I bought a half dozen '.space' domains, my favorite being this one. U
 
 Creating a new S3 bucket is fairly easy, as is setting up CloudFront. I wound up following [this walkthrough](https://www.h3xed.com/web-development/using-https-with-amazon-s3-and-your-domain) to connect everything.
 
-With CloudFront, I was able to keep my bucket private while only allowing CloudFront access. This is probably overkill, as the files are part of a public blog. But keeping the bucket private means that I restrict my content access to my domain, and it removes the possibility of accidentally allowing write access to the Internet.
+I was able to keep my [S3 bucket private while only allowing CloudFront access](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html). This is probably overkill, because the objects are part of a public blog. But keeping the bucket private means that I restrict content access to my domain, and it removes the possibility of accidentally allowing write access to the Internet.
 
 ### Deployment
 
 Any pushes to GitHub trigger a [CircleCI](https://circleci.com/) build, which is configured [here](https://github.com/cameronwp/personal-web/blob/master/.circleci/config.yml)). If the branch happens to be `master`:
 1. it generates new static files in public/
 2. it uploads the public/ directory to S3
-3. it invalidates CloudFront's cache, so that changes take place in a few minutes.
+3. it invalidates CloudFront's cache, so that changes go live in less than a minute instead of when caches expire.
 
 ## What's Next?
 
 * Generating tag indicies for easy sorting / searching.
-* Get more precise about invalidating the cache. It technically [costs money](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#PayingForInvalidation) to invalidate the cache. I _think_ I'm good just invaliding `/*`, which counts as 1 invalidation. I really only need to invalidate the root page only when a new post is published, so I could get clever with `git diff` to determine when invalidation needs to happen.
+* Get more precise about invalidating the cache. It technically [costs money](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#PayingForInvalidation) to invalidate the cache. I _think_ I'm good just invaliding `/*`, which counts as 1 invalidation. I really only need to invalidate the root page only when a new post is published, so I could get clever with `git diff` to determine when invalidation needs to happen. Also, it feels like using dynamite to kill a mouse with invalidating _everything_ in the cache. I should spend some time with cache headers and TTL, which, in all reality, could obviate the need to invalidate the cache.
 * Write more! And probably play with the styles a bit.
 
 ---
