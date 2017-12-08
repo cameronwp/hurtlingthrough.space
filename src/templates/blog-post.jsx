@@ -12,12 +12,12 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const postTitle = post.frontmatter.title
+    const {title, tags} = post.frontmatter
 
     return (
       <div>
-        <Helmet title={`${postTitle} | ${siteTitle}`} />
-        <h1>{postTitle}</h1>
+        <Helmet title={`${title} | ${siteTitle}`} />
+        <h1>{title}</h1>
         <section
           style={{
             ...scale(-1 / 5),
@@ -32,7 +32,7 @@ class BlogPostTemplate extends React.Component {
         <section className='share-section'>
           <p className='prompt'>Let's keep the conversation going!</p>
           <div className='social'>
-            <Share options={{ size: 'small', text: `Check out '${postTitle}'`, via: 'cwpittman' }} />
+            <Share options={{ size: 'small', text: `Check out '${title}'`, via: 'cwpittman' }} />
           </div>
         </section>
         <hr
@@ -53,13 +53,13 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
-        author
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
       frontmatter {
+        tags
         title
         date(formatString: "DD MMMM YYYY")
       }
