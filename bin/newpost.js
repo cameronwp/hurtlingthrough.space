@@ -5,20 +5,20 @@ const mkdirp = require('mkdirp');
 const path = require('path');
 const prompt = require('prompt');
 
-// https://stackoverflow.com/questions/17415579/how-to-iso-8601-format-a-date-with-timezone-offset-in-javascript
-Date.prototype.toIsoString = function() {
-  var tzo = -this.getTimezoneOffset(),
+// credit https://goo.gl/Ss9T1v
+function getLocalISO(date) {
+  var tzo = -date.getTimezoneOffset(),
       dif = tzo >= 0 ? '+' : '-',
       pad = function(num) {
           var norm = Math.floor(Math.abs(num));
           return (norm < 10 ? '0' : '') + norm;
       };
-  return this.getFullYear() +
-      '-' + pad(this.getMonth() + 1) +
-      '-' + pad(this.getDate()) +
-      'T' + pad(this.getHours()) +
-      ':' + pad(this.getMinutes()) +
-      ':' + pad(this.getSeconds()) +
+  return date.getFullYear() +
+      '-' + pad(date.getMonth() + 1) +
+      '-' + pad(date.getDate()) +
+      'T' + pad(date.getHours()) +
+      ':' + pad(date.getMinutes()) +
+      ':' + pad(date.getSeconds()) +
       dif + pad(tzo / 60) +
       ':' + pad(tzo % 60);
 }
@@ -51,11 +51,11 @@ function promptForTitle() {
     prompt.get(params, (err, result) => {
       if (err) {
         reject(err);
-        return;
+      } else {
+        title = result.title;
+        tags = result.tags;
+        resolve();
       }
-      title = result.title;
-      tags = result.tags;
-      resolve();
     });
   });
 }
@@ -69,7 +69,6 @@ function buildDirectory() {
     mkdirp(newdirectory, err => {
       if (err) {
         reject(err);
-        return;
       } else {
         resolve();
       }
@@ -80,7 +79,7 @@ function buildDirectory() {
 function writeFile() {
   const data = `---
 title: ${title}
-date: ${now.toIsoString()}
+date: ${getLocalISO(now)}
 tags: ${tags.length > 0 && yamlizeTags()}
 layout: post
 ---
@@ -92,7 +91,6 @@ type something smart here
     fs.writeFile(path.join(newdirectory, 'index.md'), data, err => {
       if (err) {
         reject(err);
-        return;
       } else {
         resolve();
       }
@@ -123,8 +121,11 @@ function directory(newdir) {
 promptForTitle()
   .then(buildDirectory)
   .then(writeFile)
-  .catch(console.error)
+  .catch(e => {
+    console.error(e);
+    process.exit(1);
+  })
   .then(() => {
     console.log(`New post ready at src/pages/posts/${newdirtitle}/index.md`);
-    process.exit(0)
+    process.exit(0);
   });
