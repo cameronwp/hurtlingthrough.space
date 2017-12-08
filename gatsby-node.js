@@ -56,3 +56,8 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     })
   }
 }
+
+exports.modifyWebpackConfig = function ({config}, stage) {
+  config._config.devtool = 'cheap-module-source-map'
+  return config
+}
