@@ -6,6 +6,8 @@ import Helmet from 'react-helmet'
 import Bio from '../components/bio'
 import { rhythm } from '../utils/typography'
 
+import './index.scss'
+
 class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
@@ -14,15 +16,16 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet title={siteTitle} />
-        {posts.map(({ node }) => {
+        {posts.map(({ node }, index) => {
+          // only show ten posts
+          if (index === 10) {
+            return
+          }
+
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
+              <h3 style={{ marginBottom: rhythm(1 / 4) }}>
                 <Link style={{ boxShadow: 'none' }} to={`${node.fields.slug}index.html`}>
                   {title}
                 </Link>
@@ -32,6 +35,13 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
+
+        {
+          posts.length > 10 &&
+          <section className='more'>
+            <Link to='/posts/index.html'>Show more</Link>
+          </section>
+        }
         <Bio />
       </div>
     )
@@ -40,6 +50,7 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
+// query for 11 so that we only show 'show more' if there are more to show
 export const pageQuery = graphql`
   query IndexQuery {
     site {
@@ -47,7 +58,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(limit: 11, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
