@@ -1,0 +1,17 @@
+.share-section {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 50%;
+  min-width: 22em;
+}
+
+.prompt {
+  font-size: 0.9em;
+  flex-shrink: 3;
+  color: hsla(0,0%,0%,0.6);
+}
+
+.social {
+  padding-top: 4px;
+}
