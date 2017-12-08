@@ -1,3 +1,30 @@
+.tags {
+  // margin-top: 1em;
+}
+
+.tag {
+  margin-right: 32px;
+  padding: 0.2em 1em;
+
+  color: rgba(0, 0, 0, 0.8);
+  background: rgb(231, 231, 231);
+
+  -webkit-box-shadow: 2px 2px 5px 0px rgb(218, 216, 216);
+  -moz-box-shadow: 2px 2px 5px 0px rgb(218, 216, 216);
+  box-shadow: 2px 2px 5px 0px rgb(218, 216, 216);
+
+  border-radius: 2px;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.tag:first-of-type {
+  margin-left: 64px;
+}
+
+.tag:last-of-type {
+  margin-right: 0;
+}
+
 .share-section {
   margin: 0 auto;
   display: flex;

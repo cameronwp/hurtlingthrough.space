@@ -8,32 +8,41 @@ import { rhythm, scale } from '../utils/typography'
 
 import './blog-post.scss'
 
+function renderTag(tag, index) {
+  return (
+    <a key={index} href='' className='tag'>{tag}</a>
+  )
+}
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const {title, tags} = post.frontmatter
+    const {date, title, tags} = post.frontmatter
 
     return (
       <div>
         <Helmet title={`${title} | ${siteTitle}`} />
         <h1>{title}</h1>
-        <section
-          style={{
-            ...scale(-1 / 5),
-            display: 'block',
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
+        <section style={{
+          ...scale(-0.2),
+          display: 'flex',
+          marginBottom: rhythm(1),
+          marginTop: rhythm(-0.5),
+        }}>
+          <div>{date}</div>
+          <div className='tags'>
+            {tags.map(renderTag)}
+          </div>
         </section>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <section className='share-section'>
-          <p className='prompt'>Let's keep the conversation going!</p>
           <div className='social'>
-            <Share options={{ size: 'small', text: `Check out '${title}'`, via: 'cwpittman' }} />
+            <Share url={window.location.href}
+              options={{ size: 'small', text: `Check out '${title}'`, via: 'cwpittman' }}
+            />
           </div>
+          <p className='prompt'>Let's keep the conversation going!</p>
         </section>
         <hr
           style={{

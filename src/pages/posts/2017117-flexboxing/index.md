@@ -2,8 +2,9 @@
 title: Flexboxing
 date: 2017-12-07T20:51:45-06:00
 tags:
-  - flexbox
   - css
+  - flexbox
+  - page-to-bookmark
 layout: post
 ---
 
