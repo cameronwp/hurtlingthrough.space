@@ -20,6 +20,9 @@ module.exports = class HTML extends React.Component {
         />
       )
     }
+
+    const description = 'Cameron Pittman talks software and aerospace engineering, and lots more'
+
     return (
       <html {...this.props.htmlAttributes}>
         <head>
@@ -29,6 +32,19 @@ module.exports = class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+
+          <meta name="description" content={description} />
+
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:site" content="@cwpittman" />
+          <meta name="twitter:creator" content="@cwpittman" />
+
+          <meta property="og:description" content={description} />
+          <meta property="og:site_name" content="Hurtling through Space" />
+          <meta property="og:type" content="article" />
+
+          <meta itemprop="description" content={description } />
+
           {this.props.headComponents}
           {css}
         </head>

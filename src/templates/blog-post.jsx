@@ -22,6 +22,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const { excerpt } = post
     const { date, title, tags, twitterprompt } = post.frontmatter
 
     const sectionStyle = {
@@ -31,9 +32,20 @@ class BlogPostTemplate extends React.Component {
       marginTop: rhythm(-0.5)
     }
 
+    const comboTitle = `${title} | ${siteTitle}`
+
     return (
       <div>
-        <Helmet title={`${title} | ${siteTitle}`} />
+        <Helmet title={comboTitle}>
+          <meta itemprop="name" content={comboTitle} />
+          <meta name="twitter:title" content={comboTitle} />
+          <meta name="twitter:description" content={excerpt} />
+          <meta property="og:title" content={comboTitle} />
+          <meta property="og:url" content={window.location.href} />
+          <meta property="article:published_time" content={new Date(date).toISOString()} />
+          {tags.map(tag => <meta property="article:tag" content={tag} />)}
+        </Helmet>
+
         <h1>{title}</h1>
         <section style={sectionStyle}>
           <div className='meta-info'>
@@ -83,6 +95,7 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
+      excerpt
       frontmatter {
         tags
         title
