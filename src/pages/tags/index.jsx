@@ -1,7 +1,9 @@
 import React from "react"
 import Helmet from "react-helmet"
-import Link from "gatsby-link"
 import kebabCase from "lodash/kebabCase"
+import Bio from '../../components/bio'
+import Tag from '../../components/tag'
+import { rhythm } from '../../utils/typography'
 
 class TagsPageRoute extends React.Component {
   render() {
@@ -16,18 +18,18 @@ class TagsPageRoute extends React.Component {
           <ul>
             {allTags.map(tag =>
               <li key={tag.fieldValue}>
-                <Link
-                  style={{
-                    textDecoration: "none",
-                  }}
-                  to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                >
-                  {tag.fieldValue} ({tag.totalCount})
-                </Link>
+                <Tag name={tag.fieldValue} display={`${tag.fieldValue} (${tag.totalCount})`} />
               </li>
             )}
           </ul>
         </div>
+
+        <hr
+          style={{
+            marginBottom: rhythm(1),
+          }}
+        />
+        <Bio />
       </div>
     )
   }

@@ -5,14 +5,15 @@ import Link from 'gatsby-link'
 import { Share } from 'react-twitter-widgets'
 
 import Bio from '../components/bio'
+import Tag from '../components/tag'
 import { rhythm, scale } from '../utils/typography'
 
 import './blog-post.scss'
 
 function renderTag(tag, index) {
   return (
-    <div key={index} className='tag'>
-      <Link to={`/tags/${tag}`} className='tag-content'>{tag}</Link>
+    <div className='tag'>
+      <Tag name={tag} key={index} />
     </div>
   )
 }
@@ -21,7 +22,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const {date, title, tags} = post.frontmatter
+    const { date, title, tags, twitterprompt } = post.frontmatter
 
     const sectionStyle = {
       ...scale(-0.2),
@@ -52,7 +53,7 @@ class BlogPostTemplate extends React.Component {
             <Share url={window.location.href}
               options={{
                 size: 'small',
-                text: `Check out '${title}'`,
+                text: twitterprompt || `Check out '${title}'`,
                 via: 'cwpittman'
               }}
             />
@@ -86,6 +87,7 @@ export const pageQuery = graphql`
         tags
         title
         date(formatString: "DD MMMM YYYY")
+        twitterprompt
       }
     }
   }

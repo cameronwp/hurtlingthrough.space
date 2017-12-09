@@ -2,11 +2,11 @@
 title: 1Q84
 date: 2017-12-04T22:55:09-06:00
 tags:
-  - 1q84
   - book-review
   - haruki-murakami
 layout: post
 draft: false
+twitterprompt: Cameron reads a weird book.
 ---
 
 I picked up [Haruki Murakami's _1Q84_](https://www.goodreads.com/book/show/10357575-1q84) in a bookstore at LAX before a late overseas flight. I had just finished a large beer at the bar to help me sleep. I only mention this because there's no other reason for someone to add a 10 pound, 1,200 page book to their already overflowing backpack right before a trip.
