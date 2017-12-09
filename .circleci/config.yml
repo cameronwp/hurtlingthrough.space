@@ -37,7 +37,7 @@ jobs:
           key: v2-dependencies-{{ checksum "package.json" }}
 
       - run:
-          name: Test
+          name: Test (by building static pages)
           command: yarn build
 
       - deploy:
