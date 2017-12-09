@@ -38,7 +38,7 @@ jobs:
 
       - run:
           name: Test
-          command: gatsby build
+          command: yarn build
 
       - deploy:
           name: Publish new version (master branch only)
