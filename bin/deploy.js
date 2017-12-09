@@ -30,7 +30,7 @@ function uploadFiles() {
       },
       getS3Params: (localFile, stat, callback) => {
         callback(null, {
-          CacheControl: 'max-age=604800'
+          CacheControl: 'max-age=691200'  // 8 days
         });
       }
     });
