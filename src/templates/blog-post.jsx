@@ -4,6 +4,8 @@ import get from 'lodash/get'
 import Link from 'gatsby-link'
 import { Share } from 'react-twitter-widgets'
 
+import config from '../../gatsby-config'
+
 import Bio from '../components/bio'
 import Tag from '../components/tag'
 import { rhythm, scale } from '../utils/typography'
@@ -21,9 +23,11 @@ function renderTag(tag, index) {
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
+    const { pathname } = this.props.location
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const { excerpt } = post
     const { date, title, tags, twitterprompt } = post.frontmatter
+    const pageURL = `${config.siteMetadata.siteUrl}${pathname}`
 
     const sectionStyle = {
       ...scale(-0.2),
@@ -41,7 +45,7 @@ class BlogPostTemplate extends React.Component {
           <meta name="twitter:title" content={comboTitle} />
           <meta name="twitter:description" content={excerpt} />
           <meta property="og:title" content={comboTitle} />
-          <meta property="og:url" content={window.location.href} />
+          <meta property="og:url" content={pageURL} />
           <meta property="article:published_time" content={new Date(date).toISOString()} />
           {tags.map(tag => <meta property="article:tag" content={tag} />)}
         </Helmet>
@@ -62,7 +66,7 @@ class BlogPostTemplate extends React.Component {
 
         <section className='share-section'>
           <div className='social'>
-            <Share url={window.location.href}
+            <Share url={pageURL}
               options={{
                 size: 'small',
                 text: twitterprompt || `Check out '${title}'`,
