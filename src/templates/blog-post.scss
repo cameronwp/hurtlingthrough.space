@@ -1,9 +1,32 @@
+.meta-info {
+  display: flex;
+}
+
+.date {
+  display: inline-block;
+  width: 30%;
+}
+
 .tags {
-  // margin-top: 1em;
+  display: inline-block;
+  width: 70%;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tag {
   margin-right: 32px;
+  margin-bottom: 0.5em;
+}
+
+.tag:last-of-type {
+  margin-right: 0;
+}
+
+.tag-content {
   padding: 0.2em 1em;
 
   color: rgba(0, 0, 0, 0.8);
@@ -15,14 +38,6 @@
 
   border-radius: 2px;
   border: 1px solid rgb(204, 204, 204);
-}
-
-.tag:first-of-type {
-  margin-left: 64px;
-}
-
-.tag:last-of-type {
-  margin-right: 0;
 }
 
 .share-section {
