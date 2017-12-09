@@ -10,11 +10,34 @@ Based on [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 yarn new
 ```
 
+Note that new posts automatically are set to `draft: true`. Change this to `draft: false` when you're ready to publish. Note that pages with `draft: true`
+do not show up in the homepage, but are still accessible directly.
+
+## Fun with Frontmatter
+
+### Publish a post.
+
+```md
+draft: false
+```
+
+### Custom twitter prompt
+
+Twitter prompts default to "Check out 'title' URL via @cwpittman". Prompts will always end with the URL and "via @cwpittman", but you can change the first part.
+```md
+twitterprompt: Cameron makes a huge mistake.
+```
+
+This makes the Twitter prompt: "Cameron makes a huge mistake. https://hurtlingthrough.space/... via @cwpittman"
+
 ## Running in development
 
 `gatsby develop`
 
 ## Publishing
+
+Note that you must set `draft: false` in the frontmatter of whatever posts you
+want to be public.
 
 All merges to `master` automatically get published.
 

@@ -22,6 +22,7 @@
     "gatsby-plugin-google-analytics": "^1.0.12",
     "gatsby-plugin-offline": "^1.0.10",
     "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sass": "^1.0.14",
     "gatsby-plugin-sharp": "^1.6.21",
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-remark-copy-linked-files": "^1.5.21",
@@ -35,8 +36,7 @@
     "lodash": "^4.17.4",
     "prettier": "^1.8.2",
     "react-responsive-grid": "^0.3.4",
-    "typeface-merriweather": "0.0.43",
-    "typeface-montserrat": "0.0.43",
+    "react-twitter-widgets": "^1.7.1",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "homepage": "https://github.com/cameronwp/personal-web#readme",

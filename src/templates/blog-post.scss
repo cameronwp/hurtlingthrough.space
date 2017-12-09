@@ -1,0 +1,45 @@
+.meta-info {
+  display: flex;
+}
+
+.date {
+  display: inline-block;
+  width: 30%;
+}
+
+.tags {
+  display: inline-block;
+  width: 70%;
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin-right: 32px;
+  margin-bottom: 0.5em;
+}
+
+.tag:last-of-type {
+  margin-right: 0;
+}
+
+.share-section {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  max-width: 50%;
+  min-width: 22em;
+}
+
+.prompt {
+  font-size: 0.9em;
+  flex-shrink: 3;
+  color: hsla(0,0%,0%,0.6);
+}
+
+.social {
+  padding-top: 4px;
+}

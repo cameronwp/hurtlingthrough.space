@@ -3,8 +3,10 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/Bio'
+import Bio from '../components/bio'
 import { rhythm } from '../utils/typography'
+
+import './index.scss'
 
 class BlogIndex extends React.Component {
   render() {
@@ -14,16 +16,12 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet title={siteTitle} />
-        {posts.map(({ node }) => {
+        {posts.map(({ node }, index) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
             <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+              <h3 style={{ marginBottom: rhythm(1 / 4) }}>
+                <Link style={{ boxShadow: 'none' }} to={`${node.fields.slug}index.html`}>
                   {title}
                 </Link>
               </h3>
@@ -40,6 +38,7 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
+// query for 11 so that we only show 'show more' if there are more to show
 export const pageQuery = graphql`
   query IndexQuery {
     site {
@@ -47,7 +46,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { draft: { ne: true } } }
+    ) {
       edges {
         node {
           excerpt

@@ -5,7 +5,7 @@ tags:
   - unix
   - chmod
   - tip
-layout: post
+draft: false
 ---
 
 If you're lazy about permissions, `chmod` and `chown` both take a `--reference` flag to set permissions equal to those of another file.

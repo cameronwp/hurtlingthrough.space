@@ -18,7 +18,7 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
     },
     {
       name: 'Montserrat',
-      styles: ['700'],
+      styles: ['700', '900'],
     },
     {
       name: 'Arvo',
