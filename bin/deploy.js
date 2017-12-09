@@ -27,11 +27,16 @@ function uploadFiles() {
       deleteRemoved: true,
       s3Params: {
         Bucket: process.env.BUCKET
+      },
+      getS3Params: (localFile, stat, callback) => {
+        callback(null, {
+          CacheControl: 'max-age=604800'
+        });
       }
     });
     uploader.on('error', function(err) {
       console.error(err);
-      reject(err)
+      reject(err);
     });
     uploader.on('progress', function() {
       if (process.env.CIRCLECI !== 'true') {
