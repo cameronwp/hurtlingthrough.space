@@ -29,18 +29,20 @@ jobs:
       - run:
           name: Dependencies
           command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              yarn install
-            fi
+            yarn install
 
       - save_cache:
           paths:
             - node_modules
           key: v2-dependencies-{{ checksum "package.json" }}
 
+      - run:
+          name: Test
+          command: gatsby build
+
       - deploy:
           name: Publish new version (master branch only)
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              yarn deploy
+              ./bin/deploy.js
             fi
