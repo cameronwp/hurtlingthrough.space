@@ -19,12 +19,34 @@
       "webRoot": "${workspaceRoot}"
     },
     {
-      "name": "Launch Server",
+      "name": "Launch Develop Server",
       "type": "node",
       "request": "launch",
       "protocol": "inspector",
       "program": "${workspaceRoot}/node_modules/.bin/gatsby",
       "args": ["develop", "-p", "7777"],
+      "stopOnEntry": false,
+      "cwd": "${workspaceRoot}",
+      "preLaunchTask": null,
+      "runtimeExecutable": null,
+      "runtimeArgs": [
+        "--nolazy"
+      ],
+      "env": {
+        "NODE_ENV": "development",
+        "DEBUG": "gatsby:*"
+      },
+      "console": "integratedTerminal",
+      "sourceMaps": true,
+      "outFiles": []
+    },
+    {
+      "name": "Launch Build Server",
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "program": "${workspaceRoot}/node_modules/.bin/gatsby",
+      "args": ["build", "-p", "7777"],
       "stopOnEntry": false,
       "cwd": "${workspaceRoot}",
       "preLaunchTask": null,
