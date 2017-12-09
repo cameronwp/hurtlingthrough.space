@@ -7,6 +7,7 @@ tags:
   - js
   - css
 layout: post
+draft: false
 ---
 
 Before I begin, I want to point out that I _really_ like GatsbyJS. It basically solved [all of my front end requirements](/posts/20171204-building-a-blog/index.html) in one fell swoop. The development and build processes built into the gatsby-cli have been amazing. I plan on sticking with it until the next _Great JavaScript Framework_™ overtakes React.

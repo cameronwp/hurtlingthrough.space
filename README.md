@@ -10,11 +10,17 @@ Based on [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog).
 yarn new
 ```
 
+Note that new posts automatically are set to `draft: true`. Change this to `draft: false` when you're ready to publish. Note that pages with `draft: true`
+do not show up in the homepage, but are still accessible directly.
+
 ## Running in development
 
 `gatsby develop`
 
 ## Publishing
+
+Note that you must set `draft: false` in the frontmatter of whatever posts you
+want to be public.
 
 All merges to `master` automatically get published.
 

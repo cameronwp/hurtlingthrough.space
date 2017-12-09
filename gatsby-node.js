@@ -21,17 +21,31 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   }`
   const { createPage } = boundActionCreators
   const blogPost = path.resolve('./src/templates/blog-post.jsx')
+  const tagPage = path.resolve('./src/templates/tag-page.jsx')
+  let tags = []
 
   createPosts = edges => {
     edges.forEach(edge => {
-      // Create blog posts pages.
-
       createPage({
         path: edge.node.fields.slug,
         component: blogPost,
         context: {
           slug: edge.node.fields.slug,
         },
+      })
+
+      tags = _.union(tags, edge.node.frontmatter.tags)
+    })
+  }
+
+  createTagPages = () => {
+    tags.sort().forEach(tag => {
+      createPage({
+        path: `tags/${tag}`,
+        component: tagPage,
+        context: {
+          tag
+        }
       })
     })
   }
@@ -45,6 +59,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       return result.data.allMarkdownRemark.edges
     })
     .then(createPosts)
+    .then(createTagPages)
     .catch(console.error)
 }
 

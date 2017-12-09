@@ -6,6 +6,7 @@ tags:
   - gatsbyjs
   - schema
 layout: post
+draft: true
 ---
 
 Root queries

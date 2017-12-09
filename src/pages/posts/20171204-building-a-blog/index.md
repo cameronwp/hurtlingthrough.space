@@ -10,6 +10,7 @@ tags:
   - circleci
   - git
 layout: post
+draft: false
 ---
 
 Aside from a few one off submissions to the official Udacity blog, I haven't blogged in years.<sup>1</sup> I made my old blog, [physicswithportals.com](https://physicswithportals.com), to describe my experiences as a physics teacher using _Portal 2_. The teaching stage of life is well behind me now with my new professional focus on the software and aerospace varieties of engineering. So, I made _Hurtling through Space_.

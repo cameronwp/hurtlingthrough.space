@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
+import Link from 'gatsby-link'
 import { Share } from 'react-twitter-widgets'
 
 import Bio from '../components/bio'
@@ -10,7 +11,9 @@ import './blog-post.scss'
 
 function renderTag(tag, index) {
   return (
-    <div className='tag'><a key={index} href='' className='tag-content'>{tag}</a></div>
+    <div key={index} className='tag'>
+      <Link to={`/tags/${tag}`} className='tag-content'>{tag}</Link>
+    </div>
   )
 }
 

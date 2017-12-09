@@ -6,6 +6,7 @@ tags:
   - shell
   - zsh
 layout: post
+draft: false
 ---
 
 I'm building this blog with [Gatsby](https://gatsbyjs.org), a tool for
