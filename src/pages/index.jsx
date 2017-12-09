@@ -17,11 +17,6 @@ class BlogIndex extends React.Component {
       <div>
         <Helmet title={siteTitle} />
         {posts.map(({ node }, index) => {
-          // only show ten posts
-          if (index === 10) {
-            return
-          }
-
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
             <div key={node.fields.slug}>
@@ -35,13 +30,6 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
-
-        {
-          posts.length > 10 &&
-          <section className='more'>
-            <Link to='/posts/index.html'>Show more</Link>
-          </section>
-        }
         <Bio />
       </div>
     )
@@ -58,7 +46,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 11, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           excerpt
