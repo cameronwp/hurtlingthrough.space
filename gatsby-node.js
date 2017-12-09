@@ -4,44 +4,48 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const { createPage } = boundActionCreators
-
-  return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.jsx')
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(limit: 1000) {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                }
-              }
-            }
+  const mdQuery = `
+  {
+    allMarkdownRemark(limit: 1000) {
+      edges {
+        node {
+          fields {
+            slug
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          console.error(result.errors)
-          reject(result.errors)
+          frontmatter {
+            tags
+          }
         }
+      }
+    }
+  }`
+  const { createPage } = boundActionCreators
+  const blogPost = path.resolve('./src/templates/blog-post.jsx')
 
-        // Create blog posts pages.
-        _.each(result.data.allMarkdownRemark.edges, edge => {
-          createPage({
-            path: edge.node.fields.slug,
-            component: blogPost,
-            context: {
-              slug: edge.node.fields.slug,
-            },
-          })
-        })
+  createPosts = edges => {
+    edges.forEach(edge => {
+      // Create blog posts pages.
+
+      createPage({
+        path: edge.node.fields.slug,
+        component: blogPost,
+        context: {
+          slug: edge.node.fields.slug,
+        },
       })
-    )
-  })
+    })
+  }
+
+  return graphql(mdQuery)
+    .then(result => {
+      if (result.errors) {
+        reject(result.errors)
+      }
+
+      return result.data.allMarkdownRemark.edges
+    })
+    .then(createPosts)
+    .catch(console.error)
 }
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
