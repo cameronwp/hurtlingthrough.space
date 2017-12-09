@@ -2,7 +2,7 @@
 title: Building a Blog
 date: 2017-12-04T12:26:35-06:00
 tags:
-  - gatsby
+  - gatsbyjs
   - blog
   - aws
   - s3

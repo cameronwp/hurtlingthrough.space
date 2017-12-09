@@ -3,8 +3,7 @@ title: Copy directories while excluding files
 date: 2017-12-03T22:13:32-06:00
 tags:
   - rsync
-  - shell
-  - zsh
+  - unix
 draft: false
 ---
 

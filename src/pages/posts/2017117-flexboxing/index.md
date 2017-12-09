@@ -5,6 +5,7 @@ tags:
   - css
   - flexbox
   - page-to-bookmark
+  - tip
 draft: false
 ---
 
