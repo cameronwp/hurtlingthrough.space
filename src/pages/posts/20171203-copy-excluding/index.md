@@ -5,7 +5,6 @@ tags:
   - rsync
   - shell
   - zsh
-layout: post
 draft: false
 ---
 

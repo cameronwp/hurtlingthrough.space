@@ -5,7 +5,6 @@ tags:
   - unix
   - chmod
   - tip
-layout: post
 draft: false
 ---
 

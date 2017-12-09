@@ -5,7 +5,6 @@ tags:
   - css
   - flexbox
   - page-to-bookmark
-layout: post
 draft: false
 ---
 

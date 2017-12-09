@@ -81,7 +81,6 @@ function writeFile() {
 title: ${title}
 date: ${getLocalISO(now)}
 tags: ${tags.length > 0 && yamlizeTags()}
-layout: post
 draft: true
 ---
 

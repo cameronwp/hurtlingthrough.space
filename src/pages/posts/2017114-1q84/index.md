@@ -4,7 +4,6 @@ date: 2017-12-04T22:55:09-06:00
 tags:
   - book-review
   - haruki-murakami
-layout: post
 draft: false
 twitterprompt: Cameron reads a weird book.
 ---

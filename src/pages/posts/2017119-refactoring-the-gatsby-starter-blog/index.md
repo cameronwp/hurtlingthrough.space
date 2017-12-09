@@ -6,7 +6,6 @@ tags:
   - react
   - js
   - css
-layout: post
 draft: false
 ---
 

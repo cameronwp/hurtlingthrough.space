@@ -5,7 +5,6 @@ tags:
   - graphql
   - gatsbyjs
   - schema
-layout: post
 draft: true
 ---
 

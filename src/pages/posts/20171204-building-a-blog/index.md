@@ -9,7 +9,6 @@ tags:
   - cloudfront
   - circleci
   - git
-layout: post
 draft: false
 ---
 
