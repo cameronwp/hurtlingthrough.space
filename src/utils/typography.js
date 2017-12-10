@@ -14,7 +14,7 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
   googleFonts: [
     {
       name: 'Fira Mono',
-      styles: ['500']
+      styles: ['400', '500']
     },
     {
       name: 'Montserrat',
@@ -37,7 +37,13 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
       textIndent: '2em'
     },
     code: {
+      background: '#f3f0ee',
       fontFamily: ['Fira Mono', 'monospace'].join(','),
+      fontWeight: 500
+    },
+    'p > code': {
+      fontSize: '0.95em',
+      fontWeight: 400
     },
     'blockquote > *not(:last-child)': {
       paddingBottom: '0.5'
