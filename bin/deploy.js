@@ -38,7 +38,6 @@ function getFileDiffList() {
 
 function uploadFiles() {
   return new Promise((resolve, reject) => {
-    resolve();
     const awsS3Client = new AWS.S3();
     const config = {
       s3Client: awsS3Client
@@ -80,22 +79,19 @@ function invalidateCache() {
 
     // get posts, tags that changed
     const devPath = 'src/pages'
-    filesChanged = filesChanged.filter(f => {
+    const postsChanged = filesChanged.filter(f => {
       return _.startsWith(f, devPath)
     }).map(f => {
       return f.replace(devPath, '').replace('index.md', 'index.html');
     });
 
-    const objectsToInvalidate = _.union(filesChanged, [
+    const objectsToInvalidate = _.union(postsChanged, [
       '/index.html',
       '/offline-plugin-app-shell-fallback/index.html',
-      '/tags/index.html',
-      '/rss.xml',
-      '/styles.css'
-    ]);
+      '/rss.xml'
+    ], (postsChanged.length > 0 ? ['/tags/*'] : []))
 
     console.log('invalidating: ', objectsToInvalidate);
-    resolve()
 
     const invalidation = {
       DistributionId: process.env.CLOUDFRONT_DISTRIBUTION_ID,
