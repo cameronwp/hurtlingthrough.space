@@ -11,9 +11,9 @@ draft: false
 
 Before I begin, I want to point out that I _really_ like GatsbyJS. It basically solved [all of my front end requirements](/posts/20171204-building-a-blog/index.html) in one fell swoop. The development and build processes built into the gatsby-cli have been amazing. I plan on sticking with it until the next _Great JavaScript Framework_™ overtakes React.
 
-That being said, I want to document a case study of the way I've refactored the [starter blog](https://github.com/gatsbyjs/gatsby-starter-blog/) to improve maintainability. I want to demonstrate an example of clean front end code. Of course, I'm critiquing the current version of the starter blog. I've seen relatively recent commits, so I can only assume that the repo will change and improve by the time you read this.
+That being said, I want to document a case study of the way I've refactored the [starter blog](https://github.com/gatsbyjs/gatsby-starter-blog/) to improve maintainability. I want to demonstrate an example of clean front end code. Of course, this is a discussion about the _current_ version of the starter blog. I've seen relatively recent commits, so I can only assume that the repo will change and improve by the time you read this.
 
-Let's start with the premise of GatsbyJS. It's essentially a supercharged Webpack config for generating static content with React. The base starter project is about as empty as possible - just a header and a title. All of the pages are React components. The starter blog focuses on a specific workflow in which you define templates with React, write up your blog posts in markdown files, and 💥boom💥, your static files are ready.
+Let's start with the premise of GatsbyJS. It's essentially a supercharged Webpack config for generating static content with React. The [base starter project](https://github.com/gatsbyjs/gatsby-starter-default) is about as empty as possible - just a header and a title. All of the pages are React components. The starter blog focuses on a specific workflow in which you define templates with React, write up your blog posts in markdown files, and 💥boom💥, your static files are ready.
 
 Here's what the site container template looks like when you start:
 
@@ -186,7 +186,7 @@ export default SiteTitle
 
 I'm not a fan of all the inline styles in my markup (more on that later), so I moved some of the configs out of the JSX. I also separated defining the header sizes, which change, from the inner link, which doesn't change. I wanted my code to visually reflect the idea that the header can either be `'large'` or `'small'`, but it defaults to `'small'`. I separated the definition of `large` and `small` headers from the `return` logic at the end of `render()`.
 
-(I also want to point out how I anal-retentively repeat a "`large` then `small`" pattern when I define the styles, the components and then the `return` values.)
+(I also want to point out how I anal-retentively repeat a "`large` then `small`" pattern when I define the styles, the components, and then the `return` values.)
 
 I prefer a single source of truth for repeated strings, so rather than defining a literal site title here (eg. `"Gatsby Starter Blog"`), I'm pulling it from the config file. Change the title once, change it everywhere!
 
@@ -263,9 +263,9 @@ First off, I really don't like this indentation (look at the lonely `>`s sitting
 
 I admit that I hated JSX when it came on the scene. "HTML in my _JavaScript_!? Are they crazy?" But now I love it. JSX works well with concept of functionally composing reusable components, and now I can't imagine building front ends without it. Recognizing that I came around to enjoy combining HTML and JS, I'm wary of my strong distaste for defining styles in JSX, but I can't shake the thought that this is a terrible idea.
 
-The reason why HTML in JS works well is that great components are _reusable_. Functional JavaScript is wonderful JavaScript. It's common to want to map many identical components onto a page, stamping out each one with different data. Good CSS is also reusable. But native CSS already has a super useful construct for repeatability: classes (not to mention new features like [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)). No JavaScript necessary to reuse a class.
+The reason why HTML in JS works well is that great components are _reusable_. Functional JavaScript is wonderful JavaScript. It's common to want to map many identical components onto a page, stamping out each one with different data. Good CSS is also reusable. But native CSS already has a super useful construct for repeatability: classes (not to mention new features like [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)). No JavaScript necessary to reuse styles.
 
-`rhythm()` is a [Typography.js](https://kyleamathews.github.io/typography.js/) method for programmatically changing styles relative to a base condition. A number of other instances of Typography.js methods litter the blog starter kit, notably the `scale()` method. I can appreciate the idea of simplifying the orchestration of large-scale, interrelated CSS changes. However, the end result is markup with too much going on with the only advantage being fewer CSS classes. Take another look at the base iteration of src/layouts/index.js - it's a confusing soup of structure and style, with content hiding between the lines.
+`rhythm()` is a [Typography.js](https://kyleamathews.github.io/typography.js/) method for programmatically changing styles relative to a base condition. A number of other instances of Typography.js methods litter the blog starter kit, notably the `scale()` method. I can appreciate the idea of simplifying the orchestration of large-scale, interrelated CSS changes. However, the end result is markup with too much going on with the only advantage being fewer CSS classes. Take another look at the base iteration of src/layouts/index.js - it's a confusing soup of structure and style with content hiding between the lines.
 
 Clean markup is more maintainable, so I'm keeping my styles separate from structure and sticking with classes. I've added [`gatsby-plugin-sass`](https://www.npmjs.com/package/gatsby-plugin-sass) and I'm slowly removing Typography functions (or at least, not adding any new ones).
 
