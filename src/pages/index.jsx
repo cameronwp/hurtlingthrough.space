@@ -38,7 +38,6 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
-// query for 11 so that we only show 'show more' if there are more to show
 export const pageQuery = graphql`
   query IndexQuery {
     site {

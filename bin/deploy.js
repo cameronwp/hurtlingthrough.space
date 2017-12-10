@@ -34,6 +34,7 @@ function uploadFiles() {
         const isHTML = _.endsWith(localFile, '.html')
         const isXML = _.endsWith(localFile, '.xml')
         const params = {
+          ACL: 'public-read',
           CacheControl: `max-age=${(isHTML || isXML ? '3600' : '1209600')}`
         }
         callback(null, params);
