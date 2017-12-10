@@ -4,7 +4,7 @@ date: 2017-12-09T19:23:11-06:00
 tags:
   - bluetooth
   - haiku
-draft: false
+draft: true
 ---
 
 _Turns it off and on_<br>
@@ -54,3 +54,41 @@ Just not from my phone.
 Insanity is:<br>
 Turning it off and on and<br>
 expecting to pair.
+
+"Bluetooth enabled"<br>
+means I need to go buy some<br>
+really long cables.
+
+`Syncing...`, the spinner<br>
+twirls carefree, unaware of<br>
+the hell it creates.
+
+`Cannot find device`<br>
+It is six inches away.<br>
+*incoherent screams*
+
+---
+
+And now, a story
+
+Here's how to connect:<br>
+Step One: power on, click sync.<br>
+Step Two: send a file.
+
+Oh? Did that not work?<br>
+Go back to step one. Retry.<br>
+Oh? Did that not work?
+
+Let's try this instead:<br>
+Hold down the button for ten.<br>
+Count it out. One... two...
+
+You wiped the PRAM.<br>
+Does it work now? No? Of course,<br>
+that was just for fun.
+
+Update your drivers.<br>
+I see, they are the latest.<br>
+Go back to step one.
+
+
