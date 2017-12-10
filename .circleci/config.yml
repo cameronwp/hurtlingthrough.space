@@ -44,5 +44,5 @@ jobs:
           name: Publish new version (master branch only)
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              ./bin/diff.sh | ./bin/deploy.js
+              ./bin/deploy.js
             fi
