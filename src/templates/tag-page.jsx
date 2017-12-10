@@ -29,7 +29,7 @@ class TagPageTemplate extends React.Component {
     const postLinks = posts.map(post => {
       return (
         <li key={post.node.fields.slug}>
-          <Link to={`${post.node.fields.slug}index.html`}>
+          <Link to={post.node.fields.slug}>
             {post.node.frontmatter.title}
           </Link>
         </li>
