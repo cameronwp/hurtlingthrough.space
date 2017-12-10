@@ -37,11 +37,11 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
       textIndent: '2em'
     },
     code: {
-      background: '#f3f0ee',
       fontFamily: ['Fira Mono', 'monospace'].join(','),
       fontWeight: 500
     },
     'p > code': {
+      background: '#f3f0ee',
       fontSize: '0.95em',
       fontWeight: 400
     },
