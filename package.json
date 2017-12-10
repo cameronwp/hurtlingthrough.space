@@ -57,7 +57,7 @@
     "develop": "./node_modules/gatsby-cli/lib/index.js develop",
     "new": "./bin/newpost.js",
     "build": "./node_modules/gatsby-cli/lib/index.js build",
-    "deploy": "./node_modules/gatsby-cli/lib/index.js build && ./bin/diff.sh | ./bin/deploy.js",
+    "deploy": "./node_modules/gatsby-cli/lib/index.js build && ./bin/deploy.js",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
