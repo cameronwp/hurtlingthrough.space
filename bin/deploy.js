@@ -7,6 +7,7 @@ if (process.env.CIRCLECI !== 'true') {
 const AWS = require('aws-sdk');
 const s3 = require('s3');
 const fs = require('fs');
+const _ = require('lodash');
 
 AWS.config.apiVersions = {
   s3: '2006-03-01',
@@ -14,8 +15,30 @@ AWS.config.apiVersions = {
 };
 AWS.config.update({region: process.env.AWS_REGION});
 
+let filesChanged = [];
+
+function getFileDiffList() {
+  return new Promise((resolve, reject) => {
+    let data = '';
+    process.stdin.resume();
+    process.stdin.setEncoding('utf8');
+
+    process.stdin.on('data', chunk => {
+      data += chunk;
+    });
+
+    process.stdin.on('end', () => {
+      filesChanged = data.split('\n');
+      resolve();
+    });
+
+    process.stdin.on('error', reject);
+  })
+}
+
 function uploadFiles() {
   return new Promise((resolve, reject) => {
+    resolve();
     const awsS3Client = new AWS.S3();
     const config = {
       s3Client: awsS3Client
@@ -23,8 +46,8 @@ function uploadFiles() {
     const client = s3.createClient(config);
 
     const uploader = client.uploadDir({
-      localDir: "public",
-      deleteRemoved: true,
+      localDir: 'public',
+      deleteRemoved: false, // don't remove old files in case they're still being used by a cache
       s3Params: {
         Bucket: process.env.BUCKET
       },
@@ -55,21 +78,37 @@ function invalidateCache() {
     const cloudfront = new AWS.CloudFront();
     const reference = Date.now();
 
+    // get posts, tags that changed
+    const devPath = 'src/pages'
+    filesChanged = filesChanged.filter(f => {
+      return _.startsWith(f, devPath)
+    }).map(f => {
+      return f.replace(devPath, '').replace('index.md', 'index.html');
+    });
+
+    const objectsToInvalidate = _.union(filesChanged, [
+      '/index.html',
+      '/offline-plugin-app-shell-fallback/index.html',
+      '/tags/index.html',
+      '/rss.xml',
+      '/styles.css'
+    ]);
+
+    console.log('invalidating: ', objectsToInvalidate);
+    resolve()
+
     const invalidation = {
       DistributionId: process.env.CLOUDFRONT_DISTRIBUTION_ID,
       InvalidationBatch: {
         CallerReference: reference.toString(),
         Paths: {
-          Quantity: 1,
-          Items: [
-            '/*'
-          ]
+          Quantity: objectsToInvalidate.length,
+          Items: objectsToInvalidate
         }
       }
     };
     cloudfront.createInvalidation(invalidation, (err, data) => {
       if (err) {
-        console.error(err);
         reject(err);
       } else {
         console.log(data);
@@ -79,7 +118,8 @@ function invalidateCache() {
   })
 }
 
-uploadFiles()
+getFileDiffList()
+  .then(uploadFiles)
   .then(invalidateCache)
   .catch(e => console.error)
   .then(() => process.exit(0));
