@@ -21,7 +21,7 @@ class BlogIndex extends React.Component {
           return (
             <div key={node.fields.slug}>
               <h3 style={{ marginBottom: rhythm(1 / 4) }}>
-                <Link style={{ boxShadow: 'none' }} to={`${node.fields.slug}index.html`}>
+                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
                 </Link>
               </h3>
@@ -38,7 +38,6 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
-// query for 11 so that we only show 'show more' if there are more to show
 export const pageQuery = graphql`
   query IndexQuery {
     site {
