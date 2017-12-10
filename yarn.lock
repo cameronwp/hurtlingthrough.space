@@ -10174,14 +10174,6 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typeface-arvo@^0.0.44:
-  version "0.0.44"
-  resolved "https://registry.yarnpkg.com/typeface-arvo/-/typeface-arvo-0.0.44.tgz#6d6fe146104c7cb53811a0eb7cad30de10d8e8d8"
-
-typeface-fira-mono@^0.0.44:
-  version "0.0.44"
-  resolved "https://registry.yarnpkg.com/typeface-fira-mono/-/typeface-fira-mono-0.0.44.tgz#4a3e2d0bdcf50968d1fa58a6169977702ec71851"
-
 typography-breakpoint-constants@^0.15.10:
   version "0.15.10"
   resolved "https://registry.yarnpkg.com/typography-breakpoint-constants/-/typography-breakpoint-constants-0.15.10.tgz#bd5308dd57250e7f28a8c6e1c0e668ddf1178c5c"
