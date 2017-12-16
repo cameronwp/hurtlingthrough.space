@@ -4,8 +4,18 @@ date: 2017-12-09T19:23:11-06:00
 tags:
   - bluetooth
   - haiku
-draft: true
+draft: false
 ---
+
+My watch refused to pair with my phone earlier this week. It was late and I was frustrated, a bit tired, and delirious. I wrote some haikus describing the frustration of Bluetooth, counting out syllables on my fingers and laughing harder at each attempt at being witty.
+
+Looking at them now on a good night's sleep with a cup of coffee, I'm not so sure what I was thinking.
+
+### Haikus
+
+Insanity is:<br>
+Turning it off and on and<br>
+expecting to pair.
 
 _Turns it off and on_<br>
 "Ok, it should connect now."<br>
@@ -43,17 +53,9 @@ Phone died, watch followed.
 `Type in the six digit code`<br>
 `Sorry, incorrect.`
 
-Music sounds muffled.<br>
-Why are my neighbors yelling?<br>
-My bad. Wrong speakers.
-
 Dubstep pounds next door.<br>
 My neighbors love blasting beats.<br>
 Just not from my phone.
-
-Insanity is:<br>
-Turning it off and on and<br>
-expecting to pair.
 
 "Bluetooth enabled"<br>
 means I need to go buy some<br>
@@ -67,9 +69,7 @@ the hell it creates.
 It is six inches away.<br>
 *incoherent screams*
 
----
-
-And now, a story
+_And now, a story..._
 
 Here's how to connect:<br>
 Step One: power on, click sync.<br>
@@ -90,5 +90,3 @@ that was just for fun.
 Update your drivers.<br>
 I see, they are the latest.<br>
 Go back to step one.
-
-
