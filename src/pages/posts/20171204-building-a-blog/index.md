@@ -99,6 +99,8 @@ Any pushes to GitHub trigger a [CircleCI](https://circleci.com/) build, which is
 * Get more precise about invalidating the cache. It technically [costs money](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#PayingForInvalidation) to invalidate the cache. I _think_ I'm good just invaliding `/*`, which counts as 1 invalidation. I really only need to invalidate the root page only when a new post is published, so I could get clever with `git diff` to determine when invalidation needs to happen. Also, it feels like using dynamite to kill a mouse with invalidating _everything_ in the cache. I should spend some time with cache headers and TTL, which, in all reality, could obviate the need to invalidate the cache.
 * Write more! And probably play with the styles a bit.
 
+_Follow up: more on deployment, caching [here](/posts/20171210-controlling-caches/)._
+
 ---
 
 <sub>1. But I've still written a lot! There are probably hundreds of hours of Udacity content that I've authored.</sub>

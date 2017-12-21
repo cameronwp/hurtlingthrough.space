@@ -10,7 +10,7 @@ tags:
 draft: false
 ---
 
-After initially deploying this blog a few weeks ago, I noticed some weird tendencies / bugs every time I published a new post or updated an old one. The first was that routes that looked like `posts/date-title/` would almost always 404 with an S3 "missing key" error if you hit them directly. The second issue is that pages would often, but not always, throw errors immediately after deployments.
+After initially [deploying this blog](/posts/20171204-building-a-blog/) a few weeks ago, I noticed some weird tendencies / bugs every time I published a new post or updated an old one. The first was that routes that looked like `posts/date-title/` would almost always 404 with an S3 "missing key" error if you hit them directly. The second issue is that pages would often, but not always, throw errors immediately after deployments.
 
 ### Routing Issues
 
@@ -30,6 +30,6 @@ Cached local copies of the site would request the old files, which no longer exi
 
 ### General Caching Improvements
 
-In the process of digging through the multiple layers of caching and requests that happen in the S3 -> CloudFront -> browser flow, I wound up making a few other changes to improve deployments and caching. I did some research into cache-control headers and set `Cache-Control: max-age` to 8 days for everything except HTML files, which are set to an hour. I'm assuming that JS and CSS will rarely change, while I'll want to make sure my content itself (and the homepage) won't get cached for long in the event that I want to update it.
+In the process of digging through the multiple layers of caching and requests that happen in the S3 -> CloudFront -> browser flow, I wound up making a few other changes to improve deployments and caching. I did some research into cache-control headers and set `Cache-Control: max-age` to 14 days for everything except HTML files, which are set to an hour. I'm assuming that JS and CSS will rarely change, while I'll want to make sure my content itself (and the homepage) won't get cached for long in the event that I want to update it.
 
 I've thought about running AWS Lambda jobs to periodically bump `Cache-Control` up to 8 days on older HTML files, but the real-world performance boost would be pretty minor and I'm not convinced it's worth the effort.
