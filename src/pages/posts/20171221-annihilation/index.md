@@ -5,7 +5,7 @@ tags:
   - annihilation
   - jeff-vandermeer
   - book-review
-draft: true
+draft: false
 twitterprompt: Cameron reviews Annihilation by Jeff VanderMeer - don't inhale the spores
 ---
 
