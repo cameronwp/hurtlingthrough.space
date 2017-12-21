@@ -55,7 +55,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "./node_modules/gatsby-cli/lib/index.js develop",
-    "new": "./bin/newpost.js",
+    "new": "./bin/new-post.js",
     "build": "./node_modules/gatsby-cli/lib/index.js build",
     "deploy": "./node_modules/gatsby-cli/lib/index.js build && ./bin/deploy.js",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"

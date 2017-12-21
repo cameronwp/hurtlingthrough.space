@@ -5,23 +5,23 @@ const mkdirp = require('mkdirp');
 const path = require('path');
 const prompt = require('prompt');
 
+// credit https://goo.gl/Ss9T1v
 function twoDigitPad(num) {
   const norm = Math.floor(Math.abs(num));
-  return (norm < 10 ? '0' : '') + norm;
+  return `${norm < 10 ? '0' : ''}${norm}`;
 }
 
-// credit https://goo.gl/Ss9T1v
 function getLocalISO(date) {
   const tzo = -date.getTimezoneOffset();
   const dif = tzo >= 0 ? '+' : '-';
   return date.getFullYear() +
-      '-' + twoDigitPad(date.getMonth() + 1) +
-      '-' + twoDigitPad(date.getDate()) +
-      'T' + twoDigitPad(date.getHours()) +
-      ':' + twoDigitPad(date.getMinutes()) +
-      ':' + twoDigitPad(date.getSeconds()) +
-      dif + twoDigitPad(tzo / 60) +
-      ':' + twoDigitPad(tzo % 60);
+    '-' + twoDigitPad(date.getMonth() + 1) +
+    '-' + twoDigitPad(date.getDate()) +
+    'T' + twoDigitPad(date.getHours()) +
+    ':' + twoDigitPad(date.getMinutes()) +
+    ':' + twoDigitPad(date.getSeconds()) +
+    dif + twoDigitPad(tzo / 60) +
+    ':' + twoDigitPad(tzo % 60);
 }
 
 const now = new Date();
