@@ -6,7 +6,7 @@ import { Share } from 'react-twitter-widgets'
 
 import config from '../../gatsby-config'
 
-import Bio from '../components/bio'
+import Footer from '../components/footer'
 import Tag from '../components/tag'
 import { rhythm, scale } from '../utils/typography'
 
@@ -81,7 +81,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
+        <Footer />
       </div>
     )
   }

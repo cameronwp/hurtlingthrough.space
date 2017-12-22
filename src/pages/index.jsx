@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
-import Bio from '../components/bio'
+import Footer from '../components/footer'
 import { rhythm } from '../utils/typography'
 
 import './index.scss'
@@ -30,7 +30,7 @@ class BlogIndex extends React.Component {
             </div>
           )
         })}
-        <Bio />
+        <Footer />
       </div>
     )
   }

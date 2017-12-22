@@ -2,14 +2,14 @@ import React from 'react'
 
 import { Follow } from 'react-twitter-widgets'
 import { rhythm } from '../utils/typography'
-import './bio.scss'
+import './footer.scss'
 
 function year() {
   const d = new Date()
   return d.getFullYear()
 }
 
-class Bio extends React.Component {
+class Footer extends React.Component {
   render() {
     return (
       <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: rhythm(2.5) }}>
@@ -24,4 +24,4 @@ class Bio extends React.Component {
   }
 }
 
-export default Bio
+export default Footer
