@@ -47,7 +47,7 @@ class BlogPostTemplate extends React.Component {
           <meta property="og:title" content={comboTitle} />
           <meta property="og:url" content={pageURL} />
           <meta property="article:published_time" content={new Date(date).toISOString()} />
-          {tags.map(tag => <meta property="article:tag" content={tag} />)}
+          {(tags || []).map(tag => <meta property="article:tag" content={tag} />)}
         </Helmet>
 
         <h1>{title}</h1>
