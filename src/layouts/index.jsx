@@ -5,6 +5,12 @@ import SiteTitle from '../components/site-title'
 
 import "prismjs/themes/prism.css"
 
+function aboutPage() {
+  return (
+    <h3><a href='/about'>about</a></h3>
+  )
+}
+
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
@@ -20,6 +26,7 @@ class Template extends React.Component {
     return (
       <Container style={containerStyle}>
         <SiteTitle size={isRoot ? 'large' : 'small'} />
+        {isRoot && aboutPage()}
         {children()}
       </Container>
     )
