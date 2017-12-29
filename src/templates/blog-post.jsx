@@ -26,7 +26,7 @@ class BlogPostTemplate extends React.Component {
     const { pathname } = this.props.location
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const { excerpt } = post
-    const { date, title, tags, twitterprompt } = post.frontmatter
+    const { date, draft, tags, title, twitterprompt } = post.frontmatter
     const pageURL = `${config.siteMetadata.siteUrl}${pathname}`
 
     const sectionStyle = {
@@ -50,7 +50,7 @@ class BlogPostTemplate extends React.Component {
           {(tags || []).map(tag => <meta property="article:tag" content={tag} />)}
         </Helmet>
 
-        <h1>{title}</h1>
+        <h1>{`${title}${draft ? ' (draft)' : ''}`}</h1>
         <section style={sectionStyle}>
           <div className='meta-info'>
             <div className='date'>{date}</div>
@@ -101,9 +101,10 @@ export const pageQuery = graphql`
       html
       excerpt
       frontmatter {
+        date(formatString: "DD MMMM YYYY")
+        draft
         tags
         title
-        date(formatString: "DD MMMM YYYY")
         twitterprompt
       }
     }
