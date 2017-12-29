@@ -13,7 +13,8 @@
     flex-direction: column;
   }
 
-  .footer-container > p {
+  .footer-container > div {
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
   }

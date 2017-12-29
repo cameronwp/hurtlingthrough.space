@@ -13,12 +13,12 @@ class Footer extends React.Component {
   render() {
     return (
       <div className='footer-container'>
-        <p className='follow'>
+        <div className='follow'>
           <Follow username='cwpittman' options={{ size: 'medium', dnt: true }} />
-        </p>
-        <p>
+        </div>
+        <div>
           © <strong><a href='/about'>Cameron Pittman</a></strong> {year()}.
-        </p>
+        </div>
       </div>
     )
   }
