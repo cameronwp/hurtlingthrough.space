@@ -1,28 +1,47 @@
 import React from 'react'
 import { Container } from 'react-responsive-grid'
+import TextContainer from '../components/text-container'
 import { rhythm } from '../utils/typography'
 import SiteTitle from '../components/site-title'
 
 import "prismjs/themes/prism.css"
 
+function postContainer(isRoot, children) {
+  return (
+    <TextContainer>
+      <SiteTitle size={isRoot ? 'large' : 'small'} />
+      {children()}
+    </TextContainer>
+  )
+}
+
+function fullWidthContainer(children) {
+  const fullWidthStyles = {
+    width: '100vw',
+    maxWidth: '100vw',
+    padding: 0
+  }
+
+  return (
+    <Container style={fullWidthStyles}>
+      {children()}
+    </Container>
+  )
+}
+
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
 
-    const rootPath = `/`
+    const rootPath = '/'
     const isRoot = location.pathname === rootPath
+    const isMarsThree = _.startsWith(location.pathname, '/mars-three/')
 
-    const containerStyle = {
-      maxWidth: rhythm(24),
-      padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
+    if (!isMarsThree) {
+      return postContainer(isRoot, children)
     }
 
-    return (
-      <Container style={containerStyle}>
-        <SiteTitle size={isRoot ? 'large' : 'small'} />
-        {children()}
-      </Container>
-    )
+    return fullWidthContainer(children)
   }
 }
 

@@ -6,7 +6,7 @@ import { Share } from 'react-twitter-widgets'
 
 import config from '../../gatsby-config'
 
-import Bio from '../components/bio'
+import Footer from '../components/footer'
 import { rhythm, scale } from '../utils/typography'
 
 function renderTag(tag, index) {
@@ -67,7 +67,7 @@ class TagPageTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
+        <Footer />
       </div>
     )
   }

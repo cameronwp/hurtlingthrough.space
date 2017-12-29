@@ -4,7 +4,7 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
-  const mdQuery = `
+  const postsQuery = `
   {
     allMarkdownRemark(limit: 1000) {
       edges {
@@ -19,22 +19,38 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       }
     }
   }`
+
   const { createPage } = boundActionCreators
-  const blogPost = path.resolve('./src/templates/blog-post.jsx')
-  const tagPage = path.resolve('./src/templates/tag-page.jsx')
+  const BlogPost = path.resolve('./src/templates/blog-post.jsx')
+  const TagPage = path.resolve('./src/templates/tag-page.jsx')
+  const MarsThree = path.resolve('./src/templates/mars-three.jsx')
   let tags = []
 
-  createPosts = edges => {
+  createPages = edges => {
     edges.forEach(edge => {
-      createPage({
-        path: edge.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: edge.node.fields.slug,
-        },
-      })
+      const { slug } = edge.node.fields
 
-      tags = _.union(tags, edge.node.frontmatter.tags)
+      if (_.startsWith(slug, '/posts/')) {
+        createPage({
+          path: slug,
+          component: BlogPost,
+          context: {
+            slug
+          },
+        })
+
+        tags = _.union(tags, edge.node.frontmatter.tags)
+      }
+
+      if (_.startsWith(slug, '/mars-three/')) {
+        createPage({
+          path: slug,
+          component: MarsThree,
+          context: {
+            slug
+          },
+        })
+      }
     })
   }
 
@@ -42,15 +58,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     tags.sort().forEach(tag => {
       createPage({
         path: `tags/${tag}`,
-        component: tagPage,
+        component: TagPage,
         context: {
           tag
-        }
+        },
       })
     })
   }
 
-  return graphql(mdQuery)
+  return graphql(postsQuery)
     .then(result => {
       if (result.errors) {
         reject(result.errors)
@@ -58,7 +74,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
       return result.data.allMarkdownRemark.edges
     })
-    .then(createPosts)
+    .then(createPages)
     .then(createTagPages)
     .catch(console.error)
 }

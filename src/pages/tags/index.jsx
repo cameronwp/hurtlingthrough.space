@@ -1,7 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import kebabCase from "lodash/kebabCase"
-import Bio from '../../components/bio'
+import Footer from '../../components/footer'
 import Tag from '../../components/tag'
 import { rhythm } from '../../utils/typography'
 
@@ -29,7 +29,7 @@ class TagsPageRoute extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
+        <Footer />
       </div>
     )
   }

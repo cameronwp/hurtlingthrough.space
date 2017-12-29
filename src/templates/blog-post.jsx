@@ -6,7 +6,7 @@ import { Share } from 'react-twitter-widgets'
 
 import config from '../../gatsby-config'
 
-import Bio from '../components/bio'
+import Footer from '../components/footer'
 import Tag from '../components/tag'
 import { rhythm, scale } from '../utils/typography'
 
@@ -47,7 +47,7 @@ class BlogPostTemplate extends React.Component {
           <meta property="og:title" content={comboTitle} />
           <meta property="og:url" content={pageURL} />
           <meta property="article:published_time" content={new Date(date).toISOString()} />
-          {tags.map(tag => <meta property="article:tag" content={tag} />)}
+          {(tags || []).map(tag => <meta property="article:tag" content={tag} />)}
         </Helmet>
 
         <h1>{title}</h1>
@@ -81,7 +81,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
-        <Bio />
+        <Footer />
       </div>
     )
   }

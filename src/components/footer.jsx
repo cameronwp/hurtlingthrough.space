@@ -2,26 +2,26 @@ import React from 'react'
 
 import { Follow } from 'react-twitter-widgets'
 import { rhythm } from '../utils/typography'
-import './bio.scss'
+import './footer.scss'
 
 function year() {
   const d = new Date()
   return d.getFullYear()
 }
 
-class Bio extends React.Component {
+class Footer extends React.Component {
   render() {
     return (
-      <div style={{ display: 'flex', justifyContent: 'space-around', marginBottom: rhythm(2.5) }}>
-        <div className='follow'>
+      <div className='footer-container'>
+        <p className='follow'>
           <Follow username='cwpittman' options={{ size: 'medium', dnt: true }} />
-        </div>
-        <div>
-          © <strong>Cameron Pittman</strong> {year()}.
-        </div>
+        </p>
+        <p>
+          © <strong><a href='/about'>Cameron Pittman</a></strong> {year()}.
+        </p>
       </div>
     )
   }
 }
 
-export default Bio
+export default Footer

@@ -31,6 +31,7 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
     },
   ],
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
+    // blogs
     blockquote: {
       fontStyle: 'inherit',
       textAlign: 'justify',
@@ -47,7 +48,12 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
     },
     'blockquote > *not(:last-child)': {
       paddingBottom: '0.5'
-    }
+    },
+    // mars-three pages
+    '.fade-in-black-to-blue': {
+      height: '100vh',
+      background: `linear-gradient(180deg, #000 0%, #09f 100%)`,
+    },
   })
 }))
 

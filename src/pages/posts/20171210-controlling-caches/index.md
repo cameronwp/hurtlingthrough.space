@@ -3,7 +3,7 @@ title: Controlling Caches
 date: 2017-12-10T12:01:29-06:00
 tags:
   - caching
-  - browsers
+  - blog
   - aws
   - s3
   - cloudfront
@@ -14,9 +14,9 @@ After initially [deploying this blog](/posts/20171204-building-a-blog/) a few we
 
 ### Routing Issues
 
-For instance, if you land on the main page and click on a post, the app performs client side routing to load the post and display a `posts/date-title/` URL, which worked (and still works) just fine. However, if you shared that `posts/date-title/` URL with someone else, they would get a 404. Interestingly `posts/date-title/index.html` still worked. This was obviously disconcerting and it's the main reason that I've been hesitant about actually sharing this site with other people.
+For instance, if you were to land on the main page and then click on a post, the app would perform client side routing to load the post and display a `posts/date-title/` URL, which worked (and still works) just fine. However, if you shared that `posts/date-title/` URL with someone else, they would get a 404. Interestingly `posts/date-title/index.html` still worked. This was obviously disconcerting and it's the main reason that I've been hesitant about actually sharing this site with other people.
 
-After a few days of searching, I came across [this post](http://someguyontheinter.net/blog/serving-index-pages-from-a-non-root-location-via-cloudfront/) that finally put the pieces together. The idea of a `posts/date-title/` route works because usually a server will automatically respond with `foo/index.html` when a request comes in for `foo/`. The [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli) development server works this way, as does like every server I've ever worked with. I never considered that a bare S3 bucket does not, but, in fact, it doesn't. Definitely goes to show that you should always check your assumptions!
+After a few days of searching, I came across [this post](http://someguyontheinter.net/blog/serving-index-pages-from-a-non-root-location-via-cloudfront/) that finally put the pieces together. A `posts/date-title/` route works because the vast majority of server software automatically responds with `foo/index.html` when a request comes in for `foo/`. The [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli) development server works this way, as does like every server I've ever worked with. I never considered that a bare S3 bucket does not follow this same behavior, but, in fact, it does not. Definitely goes to show that you should always check your assumptions!
 
 I set up CloudFront to pull objects directly from my bucket. When a request comes in for `https://hurtlingthrough.space/posts/20171210-controlling-caches/index.html`, CloudFront makes a request to `my-s3-bucket.amazonaws.com/posts/20171210-controlling-caches/index.html` and returns the result to the original requester. This is good. However, when CloudFront tries to find the resource for a request like `https://hurtlingthrough.space/posts/20171210-controlling-caches/` (note the missing `index.html`), S3 interprets the request as one for the literal key `/posts/20171210-controlling-caches/`, treating the trailing `/` as a literal character as part of the key. This does not exist, so the "missing key" error gets returned to the original requester. This is bad.
 
