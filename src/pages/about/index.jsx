@@ -44,7 +44,7 @@ class About extends React.Component {
         </ul>
         <h1>How is Cameron?</h1>
         <ul>
-          <li>Oh good, this makes sense.</li>
+          <li>Oh good, this almost makes sense.</li>
           <li><a href='/posts/20171204-building-a-blog/'>How this blog was made</a> (and the <a href='/posts/20171210-controlling-caches/'>follow up</a>)</li>
           <li><a href='https://github.com/cameronwp/personal-web'>This site's source code</a></li>
         </ul>

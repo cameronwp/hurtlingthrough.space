@@ -6,17 +6,10 @@ import SiteTitle from '../components/site-title'
 
 import "prismjs/themes/prism.css"
 
-function aboutPage() {
-  return (
-    <h3><a href='/about'>about</a></h3>
-  )
-}
-
 function postContainer(isRoot, children) {
   return (
     <TextContainer>
       <SiteTitle size={isRoot ? 'large' : 'small'} />
-      {isRoot && aboutPage()}
       {children()}
     </TextContainer>
   )
@@ -40,12 +33,11 @@ class Template extends React.Component {
   render() {
     const { location, children } = this.props
 
-    const rootPath = `/`
+    const rootPath = '/'
     const isRoot = location.pathname === rootPath
-    const isPost = _.startsWith(location.pathname, '/posts/')
-    const isTag = _.startsWith(location.pathname, '/tags/')
+    const isMarsThree = _.startsWith(location.pathname, '/mars-three/')
 
-    if (isRoot || isPost || isTag) {
+    if (!isMarsThree) {
       return postContainer(isRoot, children)
     }
 

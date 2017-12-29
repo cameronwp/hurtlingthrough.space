@@ -1,3 +1,20 @@
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 .follow {
   padding-top: 5px;
+}
+
+@media (max-width: 540px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-container > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

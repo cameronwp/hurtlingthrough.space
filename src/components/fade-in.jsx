@@ -6,7 +6,7 @@ import config from '../../gatsby-config'
 
 class FadeIn extends React.Component {
   render() {
-    const { startcolor, endcolor, text, textcolor} = this.props
+    const { startcolor, endcolor, text, textcolor } = this.props
 
     // certain styles get overwritten by the wordpress template here. use the overwrite class function in typography instead
     return (
