@@ -10,6 +10,8 @@ import Footer from '../components/footer'
 import Tag from '../components/tag'
 import { rhythm, scale } from '../utils/typography'
 
+import 'katex/dist/katex.min.css'
+import 'prismjs/themes/prism.css'
 import './blog-post.scss'
 
 function renderTag(tag, index) {
@@ -62,6 +64,7 @@ class BlogPostTemplate extends React.Component {
           </div>
         </section>
 
+        {/* <div dangerouslySetInnerHTML={{ __html: stringifyKatex(post.html) }} /> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <section className='share-section'>

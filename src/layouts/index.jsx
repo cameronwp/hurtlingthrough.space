@@ -4,8 +4,6 @@ import TextContainer from '../components/text-container'
 import { rhythm } from '../utils/typography'
 import SiteTitle from '../components/site-title'
 
-import "prismjs/themes/prism.css"
-
 function postContainer(isRoot, children) {
   return (
     <TextContainer>
