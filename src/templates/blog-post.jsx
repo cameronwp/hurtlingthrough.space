@@ -47,7 +47,7 @@ class BlogPostTemplate extends React.Component {
           <meta property="og:title" content={comboTitle} />
           <meta property="og:url" content={pageURL} />
           <meta property="article:published_time" content={new Date(date).toISOString()} />
-          {(tags || []).map(tag => <meta property="article:tag" content={tag} />)}
+          {(tags || []).map((tag, i) => <meta key={`tag:${i}`} property="article:tag" content={tag} />)}
         </Helmet>
 
         <h1>{`${title}${draft ? ' (draft)' : ''}`}</h1>
@@ -56,7 +56,7 @@ class BlogPostTemplate extends React.Component {
             <div className='date'>{date}</div>
             <div className='tags'>
               <div className='flex-row'>
-                {tags.map(renderTag)}
+                {(tags || []).map(renderTag)}
               </div>
             </div>
           </div>
