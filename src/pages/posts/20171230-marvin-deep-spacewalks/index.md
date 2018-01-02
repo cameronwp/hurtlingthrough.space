@@ -8,6 +8,7 @@ tags:
   - basalt
   - neemo
 summary: The future of spacewalks. How NASA astronauts and flight controllers manage EVAs, and the software we're building to support them on Mars and beyond.
+twitterprompt: Cameron explores more efficient ways to perform spacewalks
 draft: true
 ---
 
