@@ -7,7 +7,6 @@ tags:
   - nasa
   - basalt
   - neemo
-math: true
 draft: true
 ---
 
@@ -49,18 +48,18 @@ _I took this picture of an exhibit at Adler Planetarium in Chicago. This Gemini 
 
 <><>image of ISS EVA timeline?<><>
 
-For reasons beyond the scope of this blog post, ops still follows some of the same general methodology from the Gemini and Apollo years. There have been many advances, of course, but they have yet to completely separate from pencil-and-paper tracking. During an EVA, ops personnel need to track the time remaining until LSS can no longer support operations (this is a nice euphamism for "time until astronauts will die because they're out of oxygen"). There are four resources that could potentially be _limiting_ consumables - battery power, oxygen, CO<sub>2</sub> scrubbers, and water. The loss of any single consumable means the suit no longer supports survival. The _limiting consumable_ is the consumable resource of the four listed that will run out _first_, which may change moment-to-moment during an EVA. Thus, you calculate how much buffer an astronaut has to complete a mission using:
+For reasons beyond the scope of this blog post, ops still follows some of the same general methodology from the Gemini and Apollo years. There have been many advances, of course, but they have yet to completely separate from pencil-and-paper tracking. During an EVA, ops personnel need to track the time remaining until LSS can no longer support operations (this is a nice euphamism for "time until astronauts will die because they're out of oxygen"). There are four resources that could potentially be _limiting_ consumables - battery power, oxygen, CO<sub>2</sub> scrubbers, and water. The loss of any single consumable means the suit no longer supports survival. The _limiting consumable_ is the consumable resource of the four listed that will run out _first_, which may change moment-to-moment during an EVA. You calculate how much "buffer" an astronaut has to complete a mission using:
 
 $$
 \begin{aligned}
-t_{lc} &= \text{time until limiting consumable expires} \\
-t_{r} &= \text{time remaining to complete tasks} \\
-\text{buffer} &= t_{lc} - t_{r}
+t_{lc} &= \text{time until limiting consumable is depleted} \\
+t_{t} &= \text{time remaining to complete tasks} \\
+\text{buffer} &= t_{lc} - t_{t}
 \end{aligned}
 $$
 
-```
-buffer = time until limiting consumable runs out - time to complete the remaining tasks
-```
+Obviously, everyone wants to maximize this buffer. If it goes to low (or negative!), the team will start cutting tasks.
 
-Tracking a timeline by hand necessitates _manually_ calculating timeline progress. The timeline is the source of truth for expected task durations. Deviations from expected durations must be marked and then a
+Similarly, ops wants to know how far ahead or behind the EV crew currently is compared to a nominal (a more fun word for "normal") timeline. Missions often have hard time limits, eg. the crew cannot remain outside for more than four hours. Decisions to keep, cut, or, on rare occasions, add tasks to the timeline depending on an accurate and up-to-date time ahead / time behind calculation. This is a much more difficult calculation, because you have to consider the expected duration and completion state (started, completed, aborted, currently executing) of every single task in the timeline. There may be upwards of _hundreds_ of tasks with expected durations at varying levels of accuracy. With the way missions are planned, there are often durations associated with key transitions, such as reaching a traversal checkpoint in 30 minutes or finishing an installation in 75 minutes. At these transition points, it's easy to calculate time ahead / behind. In the middle of tasks, however, and the timeline looks fuzzier. Ops may even depend more on intuition than calculations to estimate time ahead / behind.
+
+Tracking a timeline by hand necessitates _manually_ calculating timeline progress.
