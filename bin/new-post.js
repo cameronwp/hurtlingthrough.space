@@ -63,7 +63,7 @@ function promptForTitle() {
 
 function buildDirectory() {
   const date = `${now.getFullYear()}${twoDigitPad(now.getMonth()+1)}${twoDigitPad(now.getDate())}`;
-  newdirtitle = `${date}-${hyphenate(title)}`;
+  newdirtitle = `${date}-${hyphenate(stripNonAlphanumeric(title))}`;
   newdirectory = directory(newdirtitle);
 
   return new Promise((resolve, reject) => {
@@ -79,7 +79,7 @@ function buildDirectory() {
 
 function writeFile() {
   const data = `---
-title: ${title}
+title: "${title}"
 date: ${getLocalISO(now)}
 tags: ${tags.length > 0 && yamlizeTags()}
 draft: true
@@ -99,7 +99,12 @@ type something smart here
   })
 }
 
-function hyphenate() {
+// keeps spaces though
+function stripNonAlphanumeric(phrase) {
+  return phrase.replace(/[^\w\s]/g, '');
+}
+
+function hyphenate(title) {
   return title.split(' ').map(word => {
     return word.toLowerCase()
   }).join('-');
