@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Hurtling through Space',
     author: 'Cameron Pittman',
-    description: '42',
+    description: 'Cameron Pittman talks software, aerospace engineering, book reviews, and lots more.',
     siteUrl: 'https://hurtlingthrough.space',
   },
   plugins: [

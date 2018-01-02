@@ -28,7 +28,14 @@ class BlogPostTemplate extends React.Component {
     const { pathname } = this.props.location
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const { excerpt } = post
-    const { date, draft, tags, title, twitterprompt } = post.frontmatter
+    const {
+      date,
+      draft,
+      summary,
+      tags,
+      title,
+      twitterprompt
+    } = post.frontmatter
     const pageURL = `${config.siteMetadata.siteUrl}${pathname}`
 
     const sectionStyle = {
@@ -44,11 +51,14 @@ class BlogPostTemplate extends React.Component {
       <div>
         <Helmet title={comboTitle}>
           <meta itemprop="name" content={comboTitle} />
-          <meta name="twitter:title" content={comboTitle} />
-          <meta name="twitter:description" content={excerpt} />
+          <meta name="description" content={summary || excerpt} />
+          <meta itemprop="description" content={summary || excerpt} />
+          <meta property="article:published_time" content={new Date(date).toISOString()} />
+          <meta property="og:description" content={summary || excerpt} />
           <meta property="og:title" content={comboTitle} />
           <meta property="og:url" content={pageURL} />
-          <meta property="article:published_time" content={new Date(date).toISOString()} />
+          <meta name="twitter:description" content={summary || excerpt} />
+          <meta name="twitter:title" content={comboTitle} />
           {(tags || []).map((tag, i) => <meta key={`tag:${i}`} property="article:tag" content={tag} />)}
         </Helmet>
 
@@ -106,6 +116,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "DD MMMM YYYY")
         draft
+        summary
         tags
         title
         twitterprompt
