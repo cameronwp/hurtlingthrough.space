@@ -7,6 +7,7 @@ tags:
   - nasa
   - basalt
   - neemo
+summary: The future of spacewalks. How NASA astronauts and flight controllers manage EVAs, and the software we're building to support them on Mars and beyond.
 draft: true
 ---
 
@@ -58,8 +59,8 @@ t_{t} &= \text{time remaining to complete tasks} \\
 \end{aligned}
 $$
 
-Obviously, everyone wants to maximize this buffer. If it goes to low (or negative!), the team will start cutting tasks.
+Obviously, everyone wants to maximize this buffer. If it goes too low (or negative!), the team will start cutting tasks.
 
-Similarly, ops wants to know how far ahead or behind the EV crew currently is compared to a nominal (a more fun word for "normal") timeline. Missions often have hard time limits, eg. the crew cannot remain outside for more than four hours. Decisions to keep, cut, or, on rare occasions, add tasks to the timeline depending on an accurate and up-to-date time ahead / time behind calculation. This is a much more difficult calculation, because you have to consider the expected duration and completion state (started, completed, aborted, currently executing) of every single task in the timeline. There may be upwards of _hundreds_ of tasks with expected durations at varying levels of accuracy. With the way missions are planned, there are often durations associated with key transitions, such as reaching a traversal checkpoint in 30 minutes or finishing an installation in 75 minutes. At these transition points, it's easy to calculate time ahead / behind. In the middle of tasks, however, and the timeline looks fuzzier. Ops may even depend more on intuition than calculations to estimate time ahead / behind.
+Similarly, ops wants to know how far ahead or behind the EV crew currently is compared to a nominal (a more fun word for "normal") timeline. Missions often have hard time limits, eg. the crew cannot remain outside for more than four hours. Decisions to keep, cut, or, on rare occasions, add tasks to the timeline depending on an accurate and up-to-date time ahead / time behind calculation. This is a much more difficult calculation, because you have to consider the expected duration and completion state (started, completed, aborted, currently executing) of every single task in the timeline. There may be upwards of _hundreds_ of tasks with expected durations at varying levels of accuracy. With the way missions are planned, there are often durations associated with key transitions, such as reaching a traversal checkpoint in 30 minutes or finishing an installation in 75 minutes. At these transition points, it's easy to calculate time ahead / behind. In the middle of tasks, however, and the timeline looks fuzzier. Ops may even depend more on intuition than calculations to estimate time ahead / behind. To make matters even worse, there are often multiple crew members outside simultaneously on EVA _performing separate tasks_. Each decision relies on taking each astronaut's individual timeline into account.
 
 Tracking a timeline by hand necessitates _manually_ calculating timeline progress.
