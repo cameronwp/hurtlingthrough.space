@@ -33,6 +33,11 @@ module.exports = class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
+          <link rel="icon" type="image/png" href="/favicon-16.png" sizes="16x16" />
+          <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32" />
+          <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />
+          <link rel="icon" type="image/png" href="/favicon-152.png" sizes="152x152" />
+          <link rel="icon" type="image/png" href="/favicon-300.png" sizes="300x300" />
 
           <meta itemprop="name" content={config.siteMetadata.title} />
           <meta name="description" content={config.siteMetadata.description} />
