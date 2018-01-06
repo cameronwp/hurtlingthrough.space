@@ -92,7 +92,7 @@ Throughout the EVA, the IV crew members were tasked with providing the time ahea
 
 <><>EMU graphs<><>
 
-I built the first version of the baseline tool almost two years ago. I started from blurry screenshots of the eponymous displays at MCC. I wanted to replicate the look and behavior of the displays. Matthew also needed to be able to upload arbitrary data to play out in front of the test subjects. He would start and stop the sim at will. He also needed to match IV actions with telemetry data. As such, there needed to be a server that Matthew could upload data to and later coordinate its presentation. At the time I started work on this project, I knew JavaScript and Node best, so that's what I used.
+I built the first version of the baseline tool almost two years ago. I started from blurry screenshots of the eponymous displays at MCC. I wanted to replicate the look and behavior of the displays. Matthew also needed to be able to upload arbitrary data to play out in front of the test subjects. He would start and stop the sim at will. He also needed to match IV actions with telemetry data. As such, there needed to be a server that Matthew could upload data to and later coordinate its presentation. At the time I started work on this project, I knew JavaScript and [Node](https://nodejs.org/en/) best, so that's what I used.
 
 I would love to simply post links to the GitHub repos here and point you to relevant sections, but everything I'm describing in this blog post is closed source. Both Georgia Tech and NASA own the code (gotta be honest, it felt really cool to type that sentence) so I'll post snippets where I can but otherwise you'll have to believe me that this is a real, working project.
 
@@ -108,11 +108,19 @@ I like starting from the end. The front end client was a [Polymer](https://www.p
 
 The final design of the site took advantage of ideas I had gleaned from the first few videos the React team released, namely the focus on a one-way flow. Inside the app, there was a `Model` dict that held the source of truth for each data point. I used a "flag and fetch" technique. The components themselves have a string attribute indicating what key in the `Model` they should display. Each component also held an update flag. When new data arrived and the `Model` got updated, the app would flip the flag and component would retrieve the new value to be displayed. Originally, I bound telemetry data directly to each component but this led to performance issues. There were dozens of components and each new piece of data (later, the key in the `Model`) would trigger a new cycle of JS, layout, compositing and painting. As a result, Polymer would attempt to update the display so rapidly that the framerate would grind to a halt.
 
-I used D3 to build the graphs. The D3 components simply aggregated data into connected points for line graphs. While this worked well, the graphs could only render what data they had received. Given that Matthew wanted to drop test subjects into the middle of an EVA, I had to develop a way to render the "earlier" parts of the telemetry graphs. I'm still not convinced I took the right strategy here, but I wound up using a server technique to blast early data for the graphs before a run started. The graphs also had a quirk in that I never developed a way to remove data. If you never refreshed the page, old line graphs would awkwardly stack on top of each other, so Matthew was tasked with refreshing all of the graph pages between runs.
+I used [D3](https://d3js.org/) to build the graphs. The D3 components simply aggregated data into connected points for line graphs. While this worked well, the graphs could only render what data they had received. Given that Matthew wanted to drop test subjects into the middle of an EVA, I had to develop a way to render the "earlier" parts of the telemetry graphs. I'm still not convinced I took the right strategy here, but I wound up using a server-side technique to blast earlier timeseries data before a run started. Matthew would essentially fast-forward to the starting point in the EVA. The graphs also had a quirk in that I never developed a way to remove data. If you never refreshed the page, old line graphs would awkwardly stack on top of each other, so Matthew was tasked with refreshing all of the graph pages between runs.
 
 ### Servers
 
-Yes, server**s**. I used three Node apps and a Redis database to mimic a hardware sensor monitoring flow.
+Yes, "server**s**." I used three Node apps and a [Redis](https://redis.io/) database to mimic a hardware sensor monitoring flow. Here's how it looked.
+
+```
+CSV -> Hardware app -> Sensor app -> Redis database -> Client app -> clients
+```
+
+To be fair, I liked that the apps were separate. I thought it was reasonable to imagine that you would have separate servers in an EVA scenario. The Hardware app would simulate the hardware generating the actual data. The Sensor app would simulate some kind of receiver tasked with reading raw hardware data and turning it into structured information. You would want that information to be stored in a database, hence the Redis database. And you would want to be able to broadcast that information, which was the job of the Client app. This is, of course, a hypothetical. In no way, shape, or form would this app ever be used in a flight-like environment. To be fair though, I still think this flow makes sense and even if I might structure the system differently, there isn't necessarily an inherent gain in merging the separate apps into a monolithic app. It would just be a bit simpler to deploy.
+
+The Hardware app existed to read an uploaded CSV and control the current time of the EVA. Each row in the CSV contained a mission time column (called PET or "phased elapsed time"). The Hardware 
 
 ## The Advanced DSS
 
