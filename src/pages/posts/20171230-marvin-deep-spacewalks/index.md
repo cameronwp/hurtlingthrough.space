@@ -144,18 +144,12 @@ Early on, Matthew and I started brainstorming what the workflow for an IV operat
 
 _The Marvin timeline view_
 
+<><>screenshot of Inbox<><>
+
 Marvin consists of a UI that I <strike>basically stole</strike> borrowed from [Google Inbox](https://www.google.com/inbox/) (a fantastic replacement for the traditional gmail UI). Inbox makes it easier to navigate your inbox by giving you separate categories into which your emails get sorted. You don't see emails when you open Inbox, you see categories. Click on a category and it expands to show your recent emails. In a way, your inbox gains a hierarchy that makes it easier to grok. This hierarchy reflected the hierarchy we wanted for steps.
-
-
-
-
-Incidentally, we realized that no one wanted collapsible categories in Marvin and it was removed for later versions.
 
 We started with brainstorming sessions. We started with markers on a whiteboard and then I asked Matthew to build digital mockups (he wound up using Apple Keynote).
 
 <><>image of one of the first mockups<><>
 
-
-
-
-
+Incidentally, we realized that no one wanted collapsible categories in Marvin and it was removed for later versions.
