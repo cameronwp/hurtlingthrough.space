@@ -86,11 +86,37 @@ _This is a working clone of MCC's telemetry display. More on this in a bit._
 
 Throughout the EVA, the IV crew members were tasked with providing the time ahead / time behind calculation and the buffer (also known as the margin) to EV when asked. They had to perform the same calculations whenever the EV crew finished a task, and then write down the results in the timeline. While working, they had to maintain a conversation with the EV crew about science objectives, as well as keep an eye on the EMU telemetry displays to alert the crew if or when they saw anomalous sensor readings. The full results of the experiment live <><>[here in Matthew's dissertation](link to dissertation<><>)<><>, but the gist of the findings is that the IV crew takes upwards of almost two minutes to perform timeline calculations by hand, with an error of **±1 hour** (an EVA is generally 4-6 hours). This is, of course, very significant. You could easily argue that selecting better IV operators and putting them through extensive training would improve speed and reduce errors, and you would be right. But there is more to being a good astronaut than quickly doing math in your head. Computers are _really_ good at math - why not make them do the calculations for us?
 
-## Interlude - Building the Baseline Tool
+## Interlude - Building the Baseline EMU Telemetry Displays
+
+<><>EMU close up (maybe a gif zooming into it?)<><>
+
+<><>EMU graphs<><>
+
+I built the first version of the baseline tool almost two years ago. I started from blurry screenshots of the eponymous displays at MCC. I wanted to replicate the look and behavior of the displays. Matthew also needed to be able to upload arbitrary data to play out in front of the test subjects. He would start and stop the sim at will. He also needed to match IV actions with telemetry data. As such, there needed to be a server that Matthew could upload data to and later coordinate its presentation. At the time I started work on this project, I knew JavaScript and Node best, so that's what I used.
+
+I would love to simply post links to the GitHub repos here and point you to relevant sections, but everything I'm describing in this blog post is closed source. Both Georgia Tech and NASA own the code (gotta be honest, it felt really cool to type that sentence) so I'll post snippets where I can but otherwise you'll have to believe me that this is a real, working project.
+
+I should probably mention at this point that I have a known problem when it comes to any work related to space and astronauts - my imagination takes over. Matthew says, "we're going to test this with surrogate astronauts" and I hear, "we're going to start with surrogate astronauts, but we should be running live missions on ISS in the next 6 months." I make more work for myself. This is a pattern that started here and continued until I became cognizant of the issue and adjusted for it. ("Hey, maybe I don't need to design this HTTP logic around a 22 minute time delay and can stick with, you know, Earth assumptions for now.")
+
+My imagination issue first surfaced here. I wanted to design a system that would mimic a real-world hardware setup as closely as possible... because you never know when you're going to get the call to deploy in ISS. When Matthew and I started working together, I told him this project would be no problem. But truth be told, this was my first large-ish application I was going to build from scratch. It's evident in a few things, like the lack of tests (I didn't know how to write them) and the poor organization (I didn't really understand composing modules and libraries). But I'm still quite proud of what I built and how I managed to create a fairly reliable application.
+
+I separated the task into a linear flow of information. Matthew would upload a CSV with a timeseries of telemetry data. My servers would be responsible for parsing the information and eventually uploading it to front end clients.
+
+### Front End
+
+I like starting from the end. The front end client was a [Polymer](https://www.polymer-project.org/) app. I picked Polymer because I was spending those days working with a lot of Googlers working on front end courses at Udacity. I liked the way Polymer used more native APIs to achieve componentization. I appreciated how Polymer got out of the way and allowed me to use normal HTML, JS and CSS to build sites, as opposed to the hotness at the time, Angular 1, that was, and still is, a monster. Given that I was building a "dumb" display without the need to accept any input from the user, Polymer felt like a good choice.
+
+The final design of the site took advantage of ideas I had gleaned from the first few videos the React team released, namely the focus on a one-way flow. Inside the app, there was a `Model` dict that held the source of truth for each data point. I used a "flag and fetch" technique. The components themselves have a string attribute indicating what key in the `Model` they should display. Each component also held an update flag. When new data arrived and the `Model` got updated, the app would flip the flag and component would retrieve the new value to be displayed. Originally, I bound telemetry data directly to each component but this led to performance issues. There were dozens of components and each new piece of data (later, the key in the `Model`) would trigger a new cycle of JS, layout, compositing and painting. As a result, Polymer would attempt to update the display so rapidly that the framerate would grind to a halt.
+
+I used D3 to build the graphs. The D3 components simply aggregated data into connected points for line graphs. While this worked well, the graphs could only render what data they had received. Given that Matthew wanted to drop test subjects into the middle of an EVA, I had to develop a way to render the "earlier" parts of the telemetry graphs. I'm still not convinced I took the right strategy here, but I wound up using a server technique to blast early data for the graphs before a run started. The graphs also had a quirk in that I never developed a way to remove data. If you never refreshed the page, old line graphs would awkwardly stack on top of each other, so Matthew was tasked with refreshing all of the graph pages between runs.
+
+### Servers
+
+Yes, server**s**. I used three Node apps and a Redis database to mimic a hardware sensor monitoring flow.
 
 ## The Advanced DSS
 
-Early on, Matthew and I started brainstorming what the workflow for an IV operator in deep space should look like. What kind of information would they want? What kind of actions could we reasonably expect an IV operator to take? Remember, this IV operator would be in a loud, small, metal tube with a dozen voices in their ears, a half-dozen screens in front of them, tasked with monitoring the life support of the EV crew and their own, keeping track of astronaut work, coordinating with scientists and flight controllers in Houston, making sure scientific objectives get hit, and this will be going on for hours. With a plate that full, what can we add that's both easy to do and high fidelity enough to be helpful? We landed on a single click.
+Early on, Matthew and I started brainstorming what the workflow for an IV operator in deep space should look like. What kind of information would they want? What kind of actions could we reasonably expect an IV operator to take? Remember, this IV operator would be in a loud, small, metal tube with a dozen voices in their ears, a half-dozen screens in front of them, monitoring the life support of the EV crew and their home vessel, keeping track of EVA progress, coordinating with scientists and flight controllers in Houston, making sure scientific objectives get hit, and this will be going on for hours. With a plate that full, what can we add that's both easy to do and high fidelity enough to be helpful? We landed on a single click.
 
 <><>image of Marvin UI<><>
 
