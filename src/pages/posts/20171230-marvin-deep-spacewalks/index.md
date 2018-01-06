@@ -138,7 +138,7 @@ At the end of the pipeline, the Client app received new readings from Redis and 
 
 ## The Advanced DSS, aka Marvin v1
 
-Early on, Matthew and I started brainstorming what the workflow for an IV operator in deep space should look like. What kind of information would they want? What kind of actions could we reasonably expect an IV operator to take? Remember, this IV operator would be in a loud, small, metal tube with a dozen voices in their ear, a half-dozen screens in front of them, monitoring the life support of the EV crew and their home vessel, keeping track of EVA progress, coordinating with scientists and flight controllers in Houston, making sure scientific objectives get hit, and ultimately responsible for crew safety and mission success. These are long days with 8 or 10 hours devoted to missions. The IV operator may be stressed from the mission in general. With a plate so full, what could we add that's both easy to do and high fidelity enough to be helpful? We landed on a single click.
+Early on, Matthew and I started brainstorming what the workflow for an IV operator in deep space should look like. What kind of information would they want? What kind of actions could we reasonably expect an IV operator to take? Remember, this IV operator would be in a loud, small, metal tube with a dozen voices in their ear, a half-dozen screens in front of them, monitoring the life support of the EV crew and their home vessel, keeping track of EVA progress, coordinating with scientists and flight controllers in Houston, making sure scientific objectives get hit, and they are ultimately responsible for crew safety and mission success. These are long days with 8 or 10 hours devoted to missions. The IV operator may be stressed and exhausted. With a plate so full, what could we add that's both easy to do and high fidelity enough to be helpful? We landed on a single click.
 
 <><>image of Marvin UI<><>
 
@@ -146,10 +146,12 @@ _The Marvin timeline view_
 
 <><>screenshot of Inbox<><>
 
-Marvin consists of a UI that I <strike>basically stole</strike> borrowed from [Google Inbox](https://www.google.com/inbox/) (a fantastic replacement for the traditional gmail UI). Inbox makes it easier to navigate your inbox by giving you separate categories into which your emails get sorted. You don't see emails when you open Inbox, you see categories. Click on a category and it expands to show your recent emails. In a way, your inbox gains a hierarchy that makes it easier to grok. This hierarchy reflected the hierarchy we wanted for steps.
+Marvin consists of a UI that I <strike>basically stole</strike> borrowed from [Google Inbox](https://www.google.com/inbox/) (a fantastic replacement for the traditional gmail UI). Inbox makes it easier to navigate your inbox by giving you separate categories into which your emails get sorted. You don't see emails when you open Inbox, you see categories. Click on a category and it expands to show your recent emails. In a way, your inbox gains a hierarchy that makes it easier to grok. This hierarchy inspired the hierarchy we wanted for steps.
 
-We started with brainstorming sessions. We started with markers on a whiteboard and then I asked Matthew to build digital mockups (he wound up using Apple Keynote).
+We started with brainstorming sessions. The UI began with markers on a whiteboard and then turned into digital mockups built with Apple Keynote.
 
 <><>image of one of the first mockups<><>
+
+
 
 Incidentally, we realized that no one wanted collapsible categories in Marvin and it was removed for later versions.
