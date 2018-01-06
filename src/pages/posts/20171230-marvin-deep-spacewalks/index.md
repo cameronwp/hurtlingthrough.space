@@ -40,6 +40,16 @@ A NASA researcher, Matthew Miller, began working on this problem during his doct
 
 The key to greater independence is augmenting the observational and predictive capability of the IV crew member who remains inside the spacecraft while her EV counterparts perform tasks outside. If an IV is as capable as the ground, our thinking goes, then the crew can safely perform EVAs without real-time support from MCC. Matthew spent hundreds of hours learning from NASA mission operations controllers, including observing ISS EVAs from MCC and interviews designed to extract the flow of information and level of importance of information on decision making during EVAs. He and I also participated in multiple analog EVA missions, during which we simulated exploration-style EVAs alongside multidisciplinary scientists, flight controllers, and operations researchers in the field. Currently, Matthew is continuing his research at [Jacobs](https://www.wehavespaceforyou.com/), a NASA contractor, where he is building a hybrid reality (VR + interactive physical objects) lab capable of repeated, controlled simulated EVAs.
 
+Marvin (as in Marvin the Paranoid Android from _Hitchhiker's Guide to the Galaxy_) is the name of the software we eventually built to support EVA decision making.
+
+What follows is my account of the problems we wanted to solve, the research we (mostly Matthew) did, the prototypes we built, the technical problems and mistakes along the way, and the evolution of Marvin from idea to stable software to funded research project.
+
+### Why call it Marvin?
+
+[1] Matthew hadn't actually read Hitchhiker's Guide when I suggested Marvin as the name for the project. His response: "let me read the book first before I decide if it's okay for this name to end up in my dissertation." Not long after, the name Marvin became official.
+
+Marvin has a brain the size of the Universe but is stuck on board the Heart of Gold. I like his pithy quotes and quips about his intelligence. They felt right for a tool that would ultimately be used to help astronauts make decisions in space. I also like that it denotes some level of intelligence, like it's there to guide the crew (to safety?).
+
 ## The Baseline Control
 
 In order to build a case for an advanced DSS prototype, we needed to determine that current technology and methodology cannot feasibly support time delayed missions. To do so, Matthew recruited Georgia Tech undergrads to take part as simulated Martian astronauts. He pared down the scope of the workload in the lab to two EVA requirements - monitoring life support and tracking the mission timeline (basically the set of actions that astronauts are scheduled to perform during EVA). These two priorities fell out of the learnings from NASA mission operations folks and we thought they were possible to tackle in the time remaining before Matthew wanted to graduate (obviously the most pressing concern for any PhD student). Incidentally, I only needed to build an Extravehicular Mobility Unit (EMU) spacesuit telemetry display. Believe it or not (and I had a really hard time believing this), a huge portion of tracking the mission timeline is done _by hand_. A mission timeline is essentially a massive spreadsheet with expected task durations, descriptions, and priorities. It is printed, 3-hole-punched, and dropped into binders. Flight controllers use pencils and calculators to follow along and make decisions. We needed make our simulated astronauts follow the same paper-based procedures.
@@ -124,12 +134,28 @@ The Hardware app existed to read an uploaded CSV and control the current time of
 
 We devised a taxonomy of channel (EV1 or EV2), domain (H<sub>2</sub>O, battery, etc), and subdomain (volume remaining, amps remaining, etc) to describe each sensor. The Sensor app received readings from the Hardware app and determined to which sensor each belonged. The CSV included most, but not all, data. The Sensor app used some telemetry values to dynamically calculate others, such as the limiting consumable. Once finished, it fired off structured data to Redis for storage. I used Redis rather than a more traditional relational database (RDB) because of Redis' speed and publish/subscribe (pubsub) capabilities. While the Sensor app published data to Redis, the Client app would create subscriptions to receive new data as it arrives. In effect, Redis was a pipe that stored information as it was passed from the Sensor app to the Client app. In theory, this would allow us to retroactively determine what telemetry data was available at any given moment, however we never needed it. Given that Matthew was uploading CSVs with known data, we actually knew ahead of time what telemetry would be visible at every moment of the simulation. It's not hard to argue that the addition of Redis was an unnecessary layer of complexity caused by my overeager imagination.
 
-At the end of the pipeline, the Client app received new readings from Redis and then published them to front end clients using websocket (specifically, [socket.io](https://socket.io/)) connections.
+At the end of the pipeline, the Client app received new readings from Redis and then published them to front end clients using websocket connections (specifically, [socket.io](https://socket.io/)).
 
-## The Advanced DSS, aka Marvin
+## The Advanced DSS, aka Marvin v1
 
-Early on, Matthew and I started brainstorming what the workflow for an IV operator in deep space should look like. What kind of information would they want? What kind of actions could we reasonably expect an IV operator to take? Remember, this IV operator would be in a loud, small, metal tube with a dozen voices in their ears, a half-dozen screens in front of them, monitoring the life support of the EV crew and their home vessel, keeping track of EVA progress, coordinating with scientists and flight controllers in Houston, making sure scientific objectives get hit, and this will be going on for hours. With a plate that full, what can we add that's both easy to do and high fidelity enough to be helpful? We landed on a single click.
+Early on, Matthew and I started brainstorming what the workflow for an IV operator in deep space should look like. What kind of information would they want? What kind of actions could we reasonably expect an IV operator to take? Remember, this IV operator would be in a loud, small, metal tube with a dozen voices in their ear, a half-dozen screens in front of them, monitoring the life support of the EV crew and their home vessel, keeping track of EVA progress, coordinating with scientists and flight controllers in Houston, making sure scientific objectives get hit, and ultimately responsible for crew safety and mission success. These are long days with 8 or 10 hours devoted to missions. The IV operator may be stressed from the mission in general. With a plate so full, what could we add that's both easy to do and high fidelity enough to be helpful? We landed on a single click.
 
 <><>image of Marvin UI<><>
+
+_The Marvin timeline view_
+
+Marvin consists of a UI that I <strike>basically stole</strike> borrowed from [Google Inbox](https://www.google.com/inbox/) (a fantastic replacement for the traditional gmail UI). Inbox makes it easier to navigate your inbox by giving you separate categories into which your emails get sorted. You don't see emails when you open Inbox, you see categories. Click on a category and it expands to show your recent emails. In a way, your inbox gains a hierarchy that makes it easier to grok. This hierarchy reflected the hierarchy we wanted for steps.
+
+
+
+
+Incidentally, we realized that no one wanted collapsible categories in Marvin and it was removed for later versions.
+
+We started with brainstorming sessions. We started with markers on a whiteboard and then I asked Matthew to build digital mockups (he wound up using Apple Keynote).
+
+<><>image of one of the first mockups<><>
+
+
+
 
 
