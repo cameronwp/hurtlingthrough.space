@@ -164,5 +164,78 @@ We needed to create a well-defined structure for steps in the timeline. This sta
 We agreed that it contained enough information and I translated it to JavaScript. It was ugly.
 
 ```js
-
+class Step {
+  ... properties
+  children = [];
+}
 ```
+
+The `children` array took a naive view on representing nested `Steps`. We made child `Step`s literal children of their parents. In order to find `Step`s in the timeline, I implemented a depth-first search with a number of options for filtering and sorting results.
+
+```js
+<><>insert depth first search<><>
+```
+
+I modeled this API after the nodes and `document.querySelector` APIs in the browser. Note that there is no early termination in the base-implementation. We run searches against the timeline in `O(N)`, regardless of when we find a hit. We noticed that performance took a noticeable hit as we built timelines with realistic levels of detail. Each timeline calculation could cause dozens of traverses through the timeline. In some implementations, the performance hit was worse because we established a pattern of destroying and rebuilding the timeline between each "tick" in the timeline (usually running at a 1 second tick).
+
+In the first implementation of Marvin, I built a self-contained Electron app. The app included a PouchDB in-memory database, JavaScript for timeline calculations (the library is called EVA.js), an app-side front-end for rendering the timeline, and it exposed an ExpressJS server that served the exact same rendered front-end, the only notable difference being that the served front-end clients would receive timeline changes over the network.
+
+I separated timeline data into two distinct domains - metadata and ephemeral run data. Metadata included information that would remain the same between runs, such as the name of tasks and expected durations. Ephemeral timing data was the record of when the timeline started and stopped as well as when each individual `Step` started and stopped. I recorded ephemeral timing data in PouchDB, which, like Redis, supports pubsub. My front-end clients listened for timing information from PouchDB and then updated and re-rendered their timelines. If a user clicked on a step to indicate that the step was completed, they would send an event to PouchDB, which would subsequently notify all other clients, who would re-calculate timeline metrics and re-render their displays.
+
+I finished a stable build just in time for BASALT November 2016  at Mauna Loa, Hawaii. Matthew ran Marvin on his laptop, which our simulated IV operators used to time the mission. Here, we used Marvin in conjunction with other tools to test its results compared to what the team was already using, like spreadsheets with custom macros.
+
+Let's take a look at some snippets of code and see how we could have improved performance.
+
+### Memoizing
+
+<><>show the unoptimized devtools timeline<><>
+
+This is a screenshot of devtools in the midst of running timeline calculations. You can see that there are repeated deep, thin chunks of work. These are the aforementioned timeline traversals. Blargh, Paul would not be happy.
+
+In this build of Marvin, we made the assumption that timeline metadata would not change during a mission. Hence, the structure of the timeline doesn't change either. If that's the case, each query for a `Step` in the timeline is deterministic and there's no need to re-traverse the entire timeline to find one that's already been accessed. Rather than optimizing searching itself, I implemented a simple memoizer<><>link?<><> that would return previously queried for `Step`s from a cache. Here's what the timeline looked like afterwards! The performance felt noticeably better too.
+
+<><>image of post-memoized timeline<><>
+
+### Pessimistic vs Optimistic Time Calculations
+
+We ran into an interesting issue at BASALT when we compared our results to the team's existing results. Marvin originally took a  pessimistic view when calculating time remaining in a step. For example, assume you have a parent with children that looks like so:
+
+<><>parent with a couple children, the first few are done, the last few are not<><>
+
+In this case, Marvin would sum up the completed tasks and subtract that from the overall expected duration:
+
+```js
+pull code from EVA.js about time remaining
+```
+
+Note that we _do not_ subtract the time that has passed in the _current_ `Step`. This means that we do not assume a step will finish on time before it has been marked complete. This led to us overestimating the amount of time before a parent is complete. We found that this was undesirable as the team's existing tools _would_ assume that a `Step` is going to be completed on time unless it has already gone over. Here's what the updated algorithm looks like:
+
+```js
+algorithm where we subtract time elapsed
+```
+
+This brings up the importance of detail. As time elapses in a single step, our calculations would get worse and worse as we always assumed worse-case scenario until the IV operator proved us wrong and check off the step. Essentially, the timeline became less accurate as time elapsed _after_ checking off a step. If these `Step`s are multi-hour, high-level activities, it isn't hard to imagine that our calculated time remaining could be wrong by hours as well. This adds incentive to make detailed timelines. Of course, it also penalizes you for using a less than detailed timeline. Especially at this early stage of adoption, it makes sense to avoid disincentivising anyone from using Marvin, so the switch to a lenient time remaining calculation made sense.
+
+## Marvin v2
+
+In the run up to NEEMO 2017, I decided that the previous version of Marvin was too unstable for my liking. We were reliant on the stability of a _browser window_, something that may crash at any time for no reason whatsoever. Chrome is already a memory hog, and we needed to load a few hundred more megs of RAM into a window, constantly run CPU intensive calculations, and hope that it could somehow remain stable for hours at a time. NEEMO was a huge opportunity. Actual astronauts using Marvin! It’s a collaboration between NASA, ESA, and JAXA. An underwater base of operations in the Florida Keys where astronauts and researchers meet to study and practice EVAs on a Coral Reef. Aquarius Reef Base has been called the most realistic setting to ISS - it’s a cramped metal tube where multiple people are stuck for long periods of time. There is no immediate rescue. In fact, it’s actually faster to get back to Earth from ISS. Astronauts can evacuate ISS into a capsule and reach the ground in about 6 hours. Due to being depth saturated in Aquarius, aquanauts need a full day to depressurize and surface safely (there are special depressurization chambers on land in the event of emergency).
+
+Given the chance to put my software in the hands of real astronauts, I couldn’t risk hinging stability on a _Chrome tab_.  Furthermore, I needed to integrate telemetry, which Matthew had been running separately with the baseline tool<><>link<><>. I decided it made sense to reengineer Marvin as a small cluster of microservices <><>link<><>. I decided to call the new system the Heart of Gold, named after Marvin’s home ship in HHG2G. Here’s the architecture I ended on:
+
+<><>insert image of heart of gold architecture<><>
+
+### Heart of Gold Architecture and Communications between components
+
+### Deploying
+
+### Using TypeScript
+
+### Tests (probably more on tests everywhere)
+
+### Monitoring
+
+### improving front-end performance by moving all calculation logic away
+
+### Improved database capabilities - graphql
+
+### 
