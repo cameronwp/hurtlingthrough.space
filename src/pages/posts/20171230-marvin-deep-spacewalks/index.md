@@ -146,12 +146,23 @@ _The Marvin timeline view_
 
 <><>screenshot of Inbox<><>
 
-Marvin consists of a UI that I <strike>basically stole</strike> borrowed from [Google Inbox](https://www.google.com/inbox/) (a fantastic replacement for the traditional gmail UI). Inbox makes it easier to navigate your inbox by giving you separate categories into which your emails get sorted. You don't see emails when you open Inbox, you see categories. Click on a category and it expands to show your recent emails. In a way, your inbox gains a hierarchy that makes it easier to grok. This hierarchy inspired the hierarchy we wanted for steps.
+Marvin consists of a UI that I <strike>basically stole</strike> borrowed from [Google Inbox](https://www.google.com/inbox/) (a fantastic replacement for the traditional gmail UI). Inbox makes it easier to navigate your inbox by giving you separate categories into which your emails get sorted. You don't see emails when you open Inbox, you see categories. Click on a category and it expands to show your recent emails. In a way, your inbox gains a hierarchy that makes it easier to grok. This hierarchy inspired the hierarchy we wanted for steps. Incidentally, we realized that no one wanted collapsible categories in Marvin and it was removed for later versions.
+
 
 We started with brainstorming sessions. The UI began with markers on a whiteboard and then turned into digital mockups built with Apple Keynote.
 
 <><>image of one of the first mockups<><>
 
+We decided to give IV operators a single click to indicate when a task is complete. We envisioned that as the mission progresses, the operator checks off tasks. Each click updates a high level display at the top of the UI with timeline calculations, including the time ahead / time behind, the timeline buffer, the time until the next activity starts, the time until the limiting consumable expires, and the predicted time until the mission ends (the exact metrics changed between missions). We wanted to give IV operators two ways to view the timeline - in detail and at a high level. We wanted to give them a way to quickly spot where the crew is in relation to the rest of the timeline. This feature wound up being useful in our _in situ_ trials but went unused at NEEMO.
 
+### Timeline Hierarchy
 
-Incidentally, we realized that no one wanted collapsible categories in Marvin and it was removed for later versions.
+We needed to create a well-defined structure for steps in the timeline. This started with a sketch in my notebook.
+
+<><>image of notebook with hierarchy<><>
+
+We agreed that it contained enough information and I translated it to JavaScript. It was ugly.
+
+```js
+
+```
