@@ -9,6 +9,7 @@ tags:
   - neemo
 summary: The future of spacewalks. How NASA astronauts and flight controllers manage EVAs, and the software we're building to support them on Mars and beyond.
 twitterprompt: Cameron explores more efficient ways to perform spacewalks
+marvin: 1-Backstory
 draft: true
 ---
 
@@ -218,24 +219,61 @@ This brings up the importance of detail. As time elapses in a single step, our c
 
 ## Marvin v2
 
-In the run up to NEEMO 2017, I decided that the previous version of Marvin was too unstable for my liking. We were reliant on the stability of a _browser window_, something that may crash at any time for no reason whatsoever. Chrome is already a memory hog, and we needed to load a few hundred more megs of RAM into a window, constantly run CPU intensive calculations, and hope that it could somehow remain stable for hours at a time. NEEMO was a huge opportunity. Actual astronauts using Marvin! It’s a collaboration between NASA, ESA, and JAXA. An underwater base of operations in the Florida Keys where astronauts and researchers meet to study and practice EVAs on a Coral Reef. Aquarius Reef Base has been called the most realistic setting to ISS - it’s a cramped metal tube where multiple people are stuck for long periods of time. There is no immediate rescue. In fact, it’s actually faster to get back to Earth from ISS. Astronauts can evacuate ISS into a capsule and reach the ground in about 6 hours. Due to being depth saturated in Aquarius, aquanauts need a full day to depressurize and surface safely (there are special depressurization chambers on land in the event of emergency).
+In the run up to NEEMO 2017, I decided that the previous version of Marvin was too unstable for my liking. We were reliant on the stability of a _browser window_, something that may crash at any time for no reason whatsoever. Chrome is already a memory hog, and we needed to load a few hundred more megs of RAM into a window, constantly run CPU intensive calculations, and hope that it could somehow remain stable for hours at a time while people depend on it. NEEMO was a huge opportunity. Actual astronauts using Marvin! It’s a collaboration between NASA, ESA, and JAXA. An underwater base of operations in the Florida Keys where astronauts and researchers meet to study and practice EVAs on a Coral Reef. Aquarius Reef Base has been called the most realistic setting to ISS - it’s a cramped metal tube where multiple people are stuck for long periods of time. There is no immediate rescue. In fact, it’s actually faster to get back to Earth from ISS. Astronauts can evacuate ISS into a capsule and reach the ground in about 6 hours. Due to being depth saturated in Aquarius, aquanauts need a full day to depressurize and surface safely (there are special depressurization chambers on land in the event of emergency).
 
-Given the chance to put my software in the hands of real astronauts, I couldn’t risk hinging stability on a _Chrome tab_.  Furthermore, I needed to integrate telemetry, which Matthew had been running separately with the baseline tool<><>link<><>. I decided it made sense to reengineer Marvin as a small cluster of microservices <><>link<><>. I decided to call the new system the Heart of Gold, named after Marvin’s home ship in HHG2G. Here’s the architecture I ended on:
+Given the chance to put my software in the hands of real astronauts, I couldn’t risk hinging stability on a _Chrome tab_.  Furthermore, I needed to integrate telemetry, which Matthew had been running separately with the baseline tool<><>link<><>. I decided it made sense to reengineer Marvin as a small cluster of microservices <><>link<><> that I deployed with `docker compose` <><>link<><>. I decided to call the new system the Heart of Gold, named after Marvin’s home ship in HHG2G. Here’s the architecture I ended on:
 
 <><>insert image of heart of gold architecture<><>
 
-### Heart of Gold Architecture and Communications between components
+In the name of stability, I separated Marvin's timeline calculations from the rest of the app. I called this service the Infinite Improbability Drive (IID), named after the engine of the Heart of Gold (which moves by "simulating every possible universe simultaneously" <><>check quote<><>). Besides performing timeline calculations, the IID merged timeline metadata and ephemeral timing information into a single JSON structure called the Merged Timeline. I sent the merged timeline to clients, which simply received and rendered the information. I put a GraphQL API <><>link<><> in front of the new database and separated each front-end client into its own NGINX container. I refactored both the timeline front-end and the telemetry front-end to use websockets to receive new timeline data from the API.
+
+Here's what a tick in the Heart of Gold looks like:
+
+<><>insert image showing flow of information<><>
+
+I designed the Heart of Gold to be stateless. The development timeline was tight. Even in the best case scenario, my time for thorough stress testing would have been limited to a few practice runs before the mission (which is pretty much what happened). I did not want to design a stateful system with uncertain stability, as that was the whole problem I wanted to avoid with the Electron version of Marvin. Being stateless meant that I could take advantage of docker composes' ability to automatically restart unresponsive containers and avoid downtime. I experimented with a few different container orchestrators like docker swarm and Kubernetes before landing on docker compose. Docker swarm was designed to run copies of a single container across multiple machines, which wasn't what I was going for. Kubernetes seemed perfectly capable of giving me the ability to run multiple containers and control restarting, however I decided it would have been more trouble than it's worth. I've heard that it's a pain to setup. I enjoyed the tutorials, but felt it was overkill. I decided to stick with docker compose because it's super simple to use and it meets my minimum criteria. I just needed to avoid state at all costs. I sacrificed timeline calculation performance to avoid state.
+
+The IID ticked every second. A tick would start by requesting the last timeline from the API, turning the response into a live `Timeline`, calculating new values for each timeline metric (worth noting that some of these metrics lived on individual `Step`s), merging the high-level metrics, metadata and ephemeral data into the merged timeline, and sending the new merged timeline to the API, which would save it to the database and broadcast it to all connected clients. I made sure that if the IID or API were to crash, nothing would be lost. Over the course of the deployment, I saw large GraphQL queries crash the API and the IID crashed a few times during missions. But no one noticed! In every case, docker compose spun up a new container almost instantly which picked up where the previous container left off. Easy! No downtime! It was goddamn glorious.
+
+I used websockets to communicate between components. These were a pain. I used socket.io, which is great, but the API is uneven. The client and server side of the API _look_ very similar but have enough differences that the experience is frustrating. Early on, I wrote wrappers around the client and server. These were a constant source of frustration. Even though they were well tested, I consistently ran into bugs that were traced back to my socket.io wrappers. I know I'm not alone with this frustration - we implemented similar abstractions at Udacity for livechat-style features that were buggy and error prone. It's not hard to screw up.
+
+Here's what my APIs looked like:
+
+```js
+<><>insert endpoint API?<><>
+```
 
 ### Deploying
 
+I used docker compose's ability to compose docker-compose.ymls to create separate development and production deployments. Here's how they looked.
+
+```yaml
+<><>base<><>
+```
+
+```yaml
+<><>dev<><>
+```
+
+```yaml
+<><>prod<><>
+```
+
 ### Using TypeScript
 
-### Tests (probably more on tests everywhere)
+TypeScript is one of the reasons I was able to build so quickly. Basic type checking gave me confidence that my code at least wasn't going to crash and burn immediately. It cut out a whole class of typechecking runtime errors. Amazing.
+
+### Debugging and Tests (probably more on tests everywhere)
+
+Testing done with mocha <><>link<><> mostly. It works well and is easy to use.
+
+Debugging with VS Code is just amazing.
 
 ### Monitoring
 
-### improving front-end performance by moving all calculation logic away
+Custom docker compose ... thingy for nicely formatted monitoring with golang templates
+
 
 ### Improved database capabilities - graphql
 
-### 
+###
