@@ -52,21 +52,15 @@ A NASA researcher, Matthew Miller, began working on this problem during his doct
 
 The key to greater independence is augmenting the observational and predictive capability of the IV crew member who remains inside the spacecraft while her EV counterparts perform tasks outside. If an IV is as situationally aware of an EVA as the ground, our thinking goes, then the crew can safely perform EVAs without real-time support from MCC. Matthew spent hundreds of hours learning from NASA mission operations controllers, including observing ISS EVAs from MCC and interviews designed to extract the flow of information and level of importance of information on decision making during EVAs. He and I also participated in multiple analog EVA missions, during which we simulated exploration-style EVAs alongside multidisciplinary scientists, flight controllers, and operations researchers in the field. Currently, Matthew is continuing his research at [Jacobs](https://www.wehavespaceforyou.com/), a NASA contractor, where he is building a hybrid reality (VR + interactive physical objects) lab capable of repeated, controlled simulated EVAs (among other EVA-related projects).
 
-I’m a huge fan of sci-fi and _Hitchhiker’s Guide to the Galaxy_. Marvin the Paranoid Android constantly complains about the odds of everyone’s survival. I figured that’s the perfect name for a DSS keeping people alive in space. Incidentally, Matthew hadn't read it when I suggested Marvin as the name for the project. His response: "let me read the book first before I decide if it's okay for this name to end up in my thesis because that thing is kinda forever.” Not long after, the name Marvin became official. We developed a HHG2G naming theme as the project grew. I called the eventual server running Marvin the Heart of Gold, which is Marvin the Paranoid Android’s ship. The Infinite Improbability Drive was responsible for running calculations and predictions, and it’s the name of the engine in the Heart of Gold that moves the ship by “[passing] through every conceivable point in every conceivable universe simultaneously.”
+## Why Marvin?
 
-The name Marvin led to some funny conversations. Everything in the space industry is an acronym.
+I’m a huge fan of sci-fi and _Hitchhiker’s Guide to the Galaxy_. Marvin the Paranoid Android constantly complains about the odds of everyone’s survival. I figured that Marvin is the perfect name for a DSS keeping people alive in space. Incidentally, Matthew hadn't read it when I suggested Marvin as the name for the project. His response: "let me read the book first before I decide if it's okay for this name to end up in my thesis because that thing is kinda forever.” Not long after, the name Marvin became official.
 
-“So what does MARVIN stand for?”
+(The name Marvin led to some funny conversations. Everything in the space industry is an acronym. I got a few responses like, “are you even _allowed_ to name something without an acronym?” when I told folks that Marvin is not MARVIN.)
 
-“Nothing, Marvin is just a name.”
+I’ll also [link to my coworker’s article](https://medium.com/@timvergenz/e511a4c5c88d) about naming conventions in software and how pop culture references aren’t always a good idea. There’s a difference between making a useful comparison and obfuscating the purpose of code. I’d argue that Marvin itself was an acceptable reference, but I think I toed the line later on when I extended the analogy to lesser known nouns in the HHG2G universe. I called the eventual server running Marvin the Heart of Gold, which is Marvin the Paranoid Android’s ship. The Infinite Improbability Drive was responsible for running calculations and predictions in Marvin. It got its name from the engine in the Heart of Gold that moves the ship by “[passing] through every conceivable point in every conceivable universe simultaneously.” Both examples make sense, but only if you know HHG2G. If Marvin ever expands to a team with more developers, these names will need to change.
 
-Then they would cock their heads sideways with an “oh…” and a squint like _are you allowed to name something without an acronym?_ 
-
-Of course, most people in the space industry also love sci-fi, so I got lots of nods of approvals about the name.
-
-(I’ll also [link](https://medium.com/@timvergenz/e511a4c5c88d) to my coworker’s article about naming conventions in software. I’d argue this was an acceptable case of pulling a name from pop culture, but I think I toed the line between making a useful comparison and obfuscating the purpose of my code.)
-
-_Coming up next: creating a control group for EVA research_
+_Coming up next: creating a control group for EVA research._
 
 ## The Baseline Control
 
