@@ -54,9 +54,17 @@ The key to greater independence is augmenting the observational and predictive c
 
 ## Why Marvin?
 
-I’m a huge fan of sci-fi and _Hitchhiker’s Guide to the Galaxy_. Marvin the Paranoid Android constantly complains about the odds of everyone’s survival. I figured that Marvin is the perfect name for a DSS keeping people alive in space. Incidentally, Matthew hadn't read it when I suggested Marvin as the name for the project. His response: "let me read the book first before I decide if it's okay for this name to end up in my thesis because that thing is kinda forever.” Not long after, the name Marvin became official.
+I’m a huge fan of sci-fi and _Hitchhiker’s Guide to the Galaxy_. Marvin the Paranoid Android constantly complains about how smart he is and how slim the odds are for survival. I figured that Marvin is the perfect name for a DSS keeping people alive in space.
 
-(The name Marvin led to some funny conversations. Everything in the space industry is an acronym. I got a few responses like, “are you even _allowed_ to name something without an acronym?” when I told folks that Marvin is not MARVIN.)
+> I have a million ideas. They all point to certain death.
+
+> I’ve calculated your chance of survival, but I don’t think you’ll like it.
+
+<><>cite these quotes?<><>
+
+Incidentally, Matthew hadn't read it when I suggested Marvin for the name for the project. His response: "let me read the book first before I decide if it's okay for this name to end up in my thesis because that thing is kinda forever.” Not long after, the name Marvin became official.
+
+(The name Marvin led to some funny conversations. Everything in the space industry is an acronym. I got a few responses like, “are you even _allowed_ to name something without an acronym?” when I explained that Marvin is not MARVIN.)
 
 I’ll also [link to my coworker’s article](https://medium.com/@timvergenz/e511a4c5c88d) about naming conventions in software and how pop culture references aren’t always a good idea. There’s a difference between making a useful comparison and obfuscating the purpose of code. I’d argue that Marvin itself was an acceptable reference, but I think I toed the line later on when I extended the analogy to lesser known nouns in the HHG2G universe. I called the eventual server running Marvin the Heart of Gold, which is Marvin the Paranoid Android’s ship. The Infinite Improbability Drive was responsible for running calculations and predictions in Marvin. It got its name from the engine in the Heart of Gold that moves the ship by “[passing] through every conceivable point in every conceivable universe simultaneously.” Both examples make sense, but only if you know HHG2G. If Marvin ever expands to a team with more developers, these names will need to change.
 
