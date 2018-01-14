@@ -30,12 +30,13 @@ function uploadFiles() {
         Bucket: process.env.BUCKET
       },
       getS3Params: (localFile, stat, callback) => {
-        // cache HTML files (and rss.xml) for an hour, everything else 14 days
-        const isHTML = _.endsWith(localFile, '.html')
-        const isXML = _.endsWith(localFile, '.xml')
+        // cache HTML, JS files (and rss.xml) for an hour, everything else 14 days
+        const isHTML = _.endsWith(localFile, '.html');
+        const isXML = _.endsWith(localFile, '.xml');
+        const isJS = _.endsWith(localFile, '.js');
         const params = {
           ACL: 'public-read',
-          CacheControl: `max-age=${(isHTML || isXML ? '3600' : '1209600')}`
+          CacheControl: `public, max-age=${((isHTML || isXML || isJS) ? '3600, must-revalidate' : '1209600')}`
         }
         callback(null, params);
       }
