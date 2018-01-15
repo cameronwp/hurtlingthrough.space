@@ -43,6 +43,6 @@ jobs:
       - deploy:
           name: Publish new version (master, --preview branches only)
           command: |
-            if [[ "${CIRCLE_BRANCH}" =~ (^master$)|(.*--preview$) ]]; then
+            if [[ ${CIRCLE_BRANCH} =~ (^master$)|(.*--preview$) ]]; then
               ./bin/deploy.js
             fi
