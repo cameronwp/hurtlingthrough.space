@@ -15,13 +15,17 @@ draft: false
 
 ![<-FULLWIDTH->astronaut Bruce McCandless II free floating in a spacesuit over the earth](freeflyer_nasa_cropped.jpg)
 
-_Astronaut Bruce McCandless II free floating 100m from the space shuttle Challenger. See [APOD](https://apod.nasa.gov/apod/ap120101.html) for more info. Image copyright NASA._
+_Bruce McCandless II free floating 100m from the space shuttle Challenger. See [APOD](https://apod.nasa.gov/apod/ap120101.html) for more info. Image copyright NASA._
 
 Human beings in spacesuits outside of spacecraft have taken some of the most remarkable pictures of the modern age.
 
 ![<-FULLWIDTH->astronaut Aki Hoshide taking a self portrait in a spacesuit with the sun behind him and the camera and ISS visible in his visor](aki_selfportrait.jpg)
 
-_JAXA Astronaut Aki Hoshide taking a selfie on a spacewalk. See [APOD](https://apod.nasa.gov/apod/ap120918.html) for more info. Image copyright NASA._
+_JAXA astronaut Aki Hoshide taking a selfie on a spacewalk. See [APOD](https://apod.nasa.gov/apod/ap120918.html) for more info. Image copyright NASA._
+
+![<-FULLWIDTH->astronaut Edward White in space with the earth below him. a gold tether keeps him attached to Gemini 4.](ed_white_first_spacewalk.jpg)
+
+_Edward White outside Gemini 4 on the first ever spacewalk on 3 June 1965. See [APOD](https://apod.nasa.gov/apod/ap150606.html) for more info. Image copyright NASA._
 
 I’ve been fortunate enough to work with the space community for the last two years on a project to make their jobs easier. What follows is my account of the problems we wanted to solve, the research we (mostly my colleague Matthew Miller) did, the prototypes we built, the technical problems and mistakes along the way, and the evolution of Marvin, our software suite, from idea to stable software and funded research project.
 
@@ -31,13 +35,17 @@ Spacewalks fall under a broad mission category known as extravehicular activity 
 
 Astronauts perform spacewalks routinely, but they're anything but routine. Crew members leave the spacecraft only when necessary, such as for hardware installations, repairs, and, during the Apollo missions, exploration.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wbAF1EExpek?rel=0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+![<-FULLWIDTH->a black and white photo of astronaut Alan Bean collecting lunar soil.](bean_conrad_moon.jpg)
 
-_Funnily enough, this is one of the most realistic examples of EVA chatter I've seen in a movie (minus the fact they omitted the Earth-Mars time delay)._
+_Pete Conrad took this photo of Alan Bean exploring the Moon on EVA. Here he is collecting lunar soil samples during Apollo 12. See [APOD](https://apod.nasa.gov/apod/ap060121.html) for more info. Image copyright NASA._
 
 Every astronaut on EVA faces heightened risk. They rely on localized life support systems (LSS), which provide limited consumable resources like oxygen and battery power. They face direct exposure to space, an already hostile environment even before considering the possibility of hardware malfunctions, micrometeroid impacts, sudden solar flares, and a million other incapacitating events. In the event of an emergency, crew members must react quickly and precisely to stave off disaster. In fact, over the nearly sixty-year history of EVAs, about 30%<><>cite with matthew's thesis<><> of EVAs have experienced some kind of incapacitating event that led to early ingress (_ingress_ refers to entering a spacecraft or habitat, as opposed to _egress_ when a crew member exits).
 
 Given the risk inherent to EVAs as well as the general complexity of EVA tasks, each EVA is a highly choreographed event, sometimes years in the making. As an extreme example, the alpha magnetic spectrometer (AMS)<><>link<><>, an external piece of hardware onboard the International Space Station (ISS), currently needs repair (I believe a valve needs to be repaired, and it's unfortunately tucked deep within a nasty nest of sharp surfaces in an awkward location). NASA built a full-scale replica of the AMS for use underwater at the Neutral Buoyancy Lab (NBL, basically a massive swimming pool for weightlessness training) and astronauts will be training for at least two years for the mission.<><>cite if possible<><> Like every EVA, the crew members repairing the AMS will be in continuous, direct contact with personnel in Mission Control Center (MCC) throughout the mission. In fact, mission operations / flight controllers at MCC (who I'll frequently abbreviate as "ops") will effectively call every shot. They will keep track of the mission timeline, task status, and suit telemetry (data describing the state of the spacesuit), and they will control most assets like the Canadarm 2<><>link<><> as well. The astronauts themselves are almost robots or actresses following a script with little opportunity for ad-libbing. An additional crew member (or crew members) inside the spacecraft, known as the intervehicle (IV) crew member, will monitor many of the same variables as ground and will also communicate with extravehicle (EV) crew members.
+
+![<-FULLWIDTH->astronaut peggy whitson with ISS equipment behind her, including Canadarm 2. she's holding what looks like tubing outside ISS. her face is actually visible through the visor](peggy_whitson_expedition50.jpg)
+
+_Peggy Whitson on her 7th EVA outside ISS in January of 2017. During this EVA, she and Shane Kimbrough hooked up new batteries and performed a photo survey of AMS. Note the cue cards on her left forearm. EV crews like to keep detailed procedures handy. Image copyright [NASA](https://www.nasa.gov/image-feature/astronaut-peggy-whitson-during-a-spacewalk)._
 
 The few people at risk in space benefit from dozens (maybe hundreds) of experts on the ground analyzing, predicting, and optimizing for mission success. In low Earth orbit (LEO), cis-lunar space (between Earth and the Moon) or on lunar EVAs, keeping MCC in the loop for all decision-making is a viable operations concept because the speed of light allows it. ISS orbits a few hundred kilometers above the ground, where the communication lag is somewhere in the hundreds of milliseconds - too high for most online video games but still good enough for FaceTime. Their latency is mostly a factor of the relative positions of ground and satellite relays rather than actual distance to Earth. In more official terms, we call the lag one-way latency time (OWLT). The Moon has an OWLT of just over one second. MCC to Moon communications are awkward (think a bad connection on an overseas video conference), but they still enable real-time communication and decision making.
 
