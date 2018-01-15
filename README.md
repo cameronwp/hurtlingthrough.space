@@ -1,8 +1,16 @@
 # hurtlingthrough.space
 
-Personal site and such. Published at [hurtlingthrough.space](https://hurtlingthrough.space).
+Personal site and such: https://hurtlingthrough.space
 
-Based on [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog).
+How it was built: [part 1](https://hurtlingthrough.space/posts/20171204-building-a-blog/) and [part 2](https://hurtlingthrough.space/posts/20171210-controlling-caches/)
+
+## Installation
+
+```sh
+yarn
+```
+
+It's probably worth noting that this repo uses a custom Gatsby plugin for processing markdown images (see plugins/gatsby-remark-images-full-width).
 
 ## New Post
 
