@@ -74,7 +74,6 @@ class BlogPostTemplate extends React.Component {
           </div>
         </section>
 
-        {/* <div dangerouslySetInnerHTML={{ __html: stringifyKatex(post.html) }} /> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <section className='share-section'>
