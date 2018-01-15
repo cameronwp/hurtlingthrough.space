@@ -55,19 +55,21 @@ A NASA researcher, Matthew Miller, began working on this problem during his doct
 
 ![<-FULLWIDTH->an aquanaut moving coral samples on a PVC pipe rig on a coral reef](neemo_coral_collection.jpg)
 
-<em>An aquanaut working with coral samples in Key Largo as part of NEEMO 22 in June 2017. Image copyright <a href="https://www.nasa.gov/mission_pages/NEEMO/index.html">NASA</a>.</em>
+_An aquanaut working with coral samples in Key Largo as part of NEEMO 22 in June 2017. Image copyright [NASA](https://www.nasa.gov/mission%5Fpages/NEEMO/index.html)._
 
 ![<-FULLWIDTH->two simulated astronauts walking around on mountainous, basalt-y terrain. they have backpacks with communication equipment and appear to be surveying the surrounding area for potential sample locations](basalt_surveying.jpg)
 
 _NASA researchers Kara Beaton and Rick Elphic survey volcanic terrain on Mauna Loa as part of BASALT in August 2016. I actually took this picture._
 
-The key to greater independence is augmenting the observational and predictive capability of the IV crew member who remains inside the spacecraft while her EV counterparts perform tasks outside. If an IV is as situationally aware of an EVA as the ground, our thinking goes, then the crew can safely perform EVAs without real-time support from MCC. Matthew spent hundreds of hours learning from NASA mission operations controllers, including observing ISS EVAs from MCC and interviews designed to extract the flow of information and level of importance of information on decision making during EVAs. He and I also participated in multiple analog EVA missions, during which we simulated exploration-style EVAs alongside multidisciplinary scientists, flight controllers, and operations researchers in the field. Currently, Matthew is continuing his research at [Jacobs](https://www.wehavespaceforyou.com/), a NASA contractor, where he is building a hybrid reality (VR + interactive physical objects) lab capable of repeated, controlled simulated EVAs (among other EVA-related projects).
+The key to greater independence is augmenting the observational and predictive capability of the IV crew member who remains inside the spacecraft while her EV counterparts perform tasks outside. If an IV is as situationally aware of an EVA as the ground, our thinking goes, then the crew can safely perform EVAs without real-time support from MCC. Matthew spent hundreds of hours learning from NASA mission operations controllers, including observing ISS EVAs from MCC and interviews designed to extract the flow of information and level of importance of information on decision making during EVAs. He and I also participated in multiple analog EVA missions, during which we simulated exploration-style EVAs alongside multidisciplinary scientists, flight controllers, and operations researchers in the field. Currently, Matthew is continuing his research at [Jacobs](https://www.wehavespaceforyou.com), a NASA contractor, where he is building a hybrid reality (VR + interactive physical objects) lab capable of repeated, controlled simulated EVAs (among other EVA-related projects).
 
 ## Why Marvin?
 
-I’m a huge fan of sci-fi and _Hitchhiker’s Guide to the Galaxy_. Marvin the Paranoid Android constantly complains about how smart he is and how slim the odds are for survival. I figured that Marvin is the perfect name for a DSS keeping people alive in space.
+I’m a huge fan of sci-fi and _Hitchhiker’s Guide to the Galaxy_ (HHG2G). Marvin the Paranoid Android constantly complains about how smart he is and how slim the odds are for survival. I figured that Marvin is the perfect name for a DSS keeping people alive in space.
 
-<><>non-full-width pic of Marvin<><>
+![Marvin the Paranoid Android with Arthur and Ford from the older BBC series.](old_marvin.jpg)
+
+_I was going to post a picture of Marvin from the newer HHG2G, but this one was just too good to pass up. Image pulled from [here](http://hitchhikers.wikia.com/wiki/Marvin?file=Marvin%5Fmeets%5FFord%5Fand%5FArthur.jpg)._
 
 > I have a million ideas. They all point to certain death.
 
