@@ -13,6 +13,8 @@ marvin: 1-Backstory
 draft: true
 ---
 
+# MASTER DRAFT
+
 <><>start off with an image of an astronaut<><>
 
 Human beings in spacesuits outside of spacecraft have taken some of the most remarkable pictures of the modern age.
@@ -21,16 +23,7 @@ Human beings in spacesuits outside of spacecraft have taken some of the most rem
 
 I’ve been fortunate enough to work with the space community for the last two years on a project to make their jobs easier. What follows is my account of the problems we wanted to solve, the research we (mostly my colleague Matthew Miller) did, the prototypes we built, the technical problems and mistakes along the way, and the evolution of Marvin, our software suite, from idea to stable software and funded research project.
 
-## Related Publications
-
-Looking for something more formal than a blog post? All the research and work I’m referencing here has been covered in detail in the papers below.
-
-[Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. . 10.13140/RG.2.2.17731.30248.](https://doi.org/10.13140/rg.2.2.17731.30248) (Matthew’s PhD Dissertation)
-
-[Miller, M., Pittman, C., & Feigh, K. 2017, '
-Next-Generation Human Extravehicular Spaceflight Operations Support Systems Development', IAC 2017. Adelaide, SA.](https://www.researchgate.net/publication/320290594_Next-Generation_Human_Extravehicular_Spaceflight_Operations_Support_Systems_Development)
-
-## The Backstory
+---
 
 Spacewalks fall under a broad mission category known as extravehicular activity (EVA).
 
@@ -70,11 +63,16 @@ I’ll also [link to my coworker’s article](https://medium.com/@timvergenz/e51
 
 _Coming up next: creating a control group for EVA research._
 
+<sub>[Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. . 10.13140/RG.2.2.17731.30248.](https://doi.org/10.13140/rg.2.2.17731.30248) (Matthew’s PhD Dissertation)</sub>
+
+<sub>[Miller, M., Pittman, C., & Feigh, K. 2017, '
+Next-Generation Human Extravehicular Spaceflight Operations Support Systems Development', IAC 2017. Adelaide, SA.](https://www.researchgate.net/publication/320290594_Next-Generation_Human_Extravehicular_Spaceflight_Operations_Support_Systems_Development)</sub>
+
 ## The Baseline Control
 
 In order to build a case for an advanced DSS prototype, we needed to determine that current technology and methodology cannot feasibly support time delayed missions. To do so, Matthew recruited Georgia Tech undergrads to take part as simulated Martian astronauts. He pared down the scope of the workload in the lab to two EVA requirements - monitoring life support and tracking the mission timeline (basically the set of actions that astronauts are scheduled to perform during EVA). These two priorities fell out of the learnings from NASA mission operations folks and we thought they were possible to tackle in the time remaining before Matthew wanted to graduate (obviously the most pressing concern for any PhD student). Incidentally, I only needed to build an Extravehicular Mobility Unit (EMU) spacesuit telemetry display. Believe it or not (and I had a really hard time believing this), a huge portion of tracking the mission timeline is done _by hand_. A mission timeline is essentially a massive spreadsheet with expected task durations, descriptions, and priorities. It is printed, 3-hole-punched, and dropped into binders. Flight controllers use pencils and calculators to follow along and make decisions. We needed make our simulated astronauts follow the same paper-based procedures.
 
-![gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
+![<-FULLWIDTH->gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
 
 _I took this picture of an exhibit at Adler Planetarium in Chicago. This Gemini 12 flight plan looks almost identical to the mission timelines for ISS EVAs._
 
