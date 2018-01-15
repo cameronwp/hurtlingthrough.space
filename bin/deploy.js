@@ -29,15 +29,22 @@ function uploadFiles() {
       s3Params: {
         Bucket: process.env.BUCKET
       },
-      getS3Params: (localFile, stat, callback) => {
-        // cache HTML, JS files (and rss.xml) for an hour, everything else 14 days
-        const isHTML = _.endsWith(localFile, '.html');
-        const isXML = _.endsWith(localFile, '.xml');
-        const isJS = _.endsWith(localFile, '.js');
-        const params = {
+      getS3Params: (filepath, stat, callback) => {
+        // do not cache non-static files, everything else cached 1 year
+        // https://www.gatsbyjs.org/docs/caching/
+
+        const baseParams = {
           ACL: 'public-read',
-          CacheControl: `public, max-age=${((isHTML || isXML || isJS) ? '3600, must-revalidate' : '1209600')}`
-        }
+          CacheControl: 'public, max-age=0, must-revalidate'
+        };
+
+        const cacheParams = {
+          CacheControl: 'public, max-age=31536000, immutable'
+        };
+
+        const isStatic = /\/static\//g.test(filepath);
+        const params = _.assign(baseParams, isStatic ? cacheParams : {});
+
         callback(null, params);
       }
     });
