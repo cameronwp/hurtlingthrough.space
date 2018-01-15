@@ -61,7 +61,7 @@ BUCKET=
 CLOUDFRONT_DISTRIBUTION_ID=
 ```
 
-If you set up a CircleCI deployment, you'll need to set the aforementioned environment variables in the project settings.
+If you set up a CircleCI deployment, you'll need to set the aforementioned environment variables in the project settings. You can deploy to an S3 bucket called `preview.[BUCKET]` if you append `--preview` to the branch name.
 
 ## Troubleshooting
 

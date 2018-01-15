@@ -15,6 +15,8 @@ AWS.config.apiVersions = {
 };
 AWS.config.update({region: process.env.AWS_REGION});
 
+const isPreviewDeploy = /.*\-\-preview$/g.test(process.env.CIRCLE_BRANCH)
+
 function uploadFiles() {
   return new Promise((resolve, reject) => {
     const awsS3Client = new AWS.S3();
@@ -27,7 +29,7 @@ function uploadFiles() {
       localDir: 'public',
       deleteRemoved: false, // don't remove old files in case they're still being used by a cache
       s3Params: {
-        Bucket: process.env.BUCKET
+        Bucket: `${isPreviewDeploy ? 'preview.' : ''}${process.env.BUCKET}`
       },
       getS3Params: (filepath, stat, callback) => {
         // do not cache non-static files, everything else cached 1 year
@@ -55,6 +57,11 @@ function uploadFiles() {
 
 function invalidateCache() {
   return new Promise((resolve, reject) => {
+    // don't invalidate the cache if we aren't updating prod
+    if (isPreviewDeploy) {
+      return resolve();
+    }
+
     const cloudfront = new AWS.CloudFront();
     const reference = Date.now();
 
