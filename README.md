@@ -62,3 +62,7 @@ CLOUDFRONT_DISTRIBUTION_ID=
 ```
 
 If you set up a CircleCI deployment, you'll need to set the aforementioned environment variables in the project settings.
+
+## Troubleshooting
+
+* `gatsby-transformer-remark` seems to barf on `[links](https://example.com/something_like_this)` with `_` in them. Replace the `_`s in the URL with their URL encoding, `%5F` and you should be good to go.
