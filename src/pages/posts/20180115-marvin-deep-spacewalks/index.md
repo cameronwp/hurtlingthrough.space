@@ -27,7 +27,7 @@ _JAXA astronaut Aki Hoshide taking a selfie on a spacewalk in September of 2012.
 
 _Edward White outside Gemini 4 on the first ever spacewalk on 3 June 1965. See [APOD](https://apod.nasa.gov/apod/ap150606.html) for more info. Image copyright NASA._
 
-I’ve been fortunate enough to work with the space community for the last two years on a project to make their jobs easier. What follows is my account of the problems we wanted to solve, the learnings from our research, the prototypes we built, the mistakes we made, and the evolution of Marvin, our software suite, from idea to stable software and funded research project.
+I’ve been fortunate enough to work with the space community for the last two years on a project to make their jobs easier. What follows is my account of the problems we wanted to solve, the learnings from our research, the prototypes we built, the mistakes we made, and the evolution of Marvin, our software suite, from idea to stable software and funded research project.<sup>1</sup>
 
 ---
 
@@ -39,7 +39,7 @@ Astronauts perform spacewalks routinely, but they're anything but routine. Crew 
 
 _Pete Conrad took this photo of Alan Bean exploring the Moon on EVA. Here he is collecting lunar soil samples during Apollo 12. See [APOD](https://apod.nasa.gov/apod/ap060121.html) for more info. Image copyright NASA._
 
-Every astronaut on EVA faces heightened risk. They rely on localized life support systems (LSS), which provide limited consumable resources like oxygen and battery power. They face direct exposure to space, an already hostile environment even before considering the possibility of hardware malfunctions, micrometeroid impacts, sudden solar flares, and a million other incapacitating events. In the event of an emergency, crew members must react quickly and precisely to stave off disaster. In fact, over the nearly sixty-year history of EVAs, about 30%<><>cite with matthew's thesis<><> of EVAs have experienced some kind of incapacitating event that led to early ingress (_ingress_ refers to entering a spacecraft or habitat, as opposed to _egress_ when a crew member exits).
+Every astronaut on EVA faces heightened risk. They rely on localized life support systems (LSS), which provide limited consumable resources like oxygen and battery power. They face direct exposure to space, an already hostile environment even before considering the possibility of hardware malfunctions, micrometeroid impacts, sudden solar flares, and a million other incapacitating events. In the event of an emergency, crew members must react quickly and precisely to stave off disaster. In fact, over the nearly sixty-year history of EVAs, almost 30% of EVAs have experienced some kind of incapacitating event that led to early ingress (_ingress_ refers to entering a spacecraft or habitat, as opposed to _egress_ when a crew member exits).<sup>2</sup>
 
 Given the risk and complexity of EVAs, each one is a highly choreographed event, sometimes years in the making. As an extreme example, the [Alpha Magnetic Spectrometer](https://www.nasa.gov/mission_pages/station/research/experiments/742.html) (AMS), an external particle detector onboard the International Space Station (ISS), [currently needs repair](https://arstechnica.com/science/2017/04/nasa-is-planning-a-daring-repair-mission-to-save-a-2-billion-particle-detector/). It has already outlived its planned three-year mission and cooling pumps have been failing. As they weren't designed to be replaced, they're tucked inside a nasty nest of sharp surfaces at an already awkward location. NASA built a full-scale replica of the AMS for use underwater at the Neutral Buoyancy Lab (NBL, basically a massive swimming pool for weightlessness training) and astronauts will have been training for years for the mission by the time repairs begin. Like every EVA, the crew members repairing the AMS will be in constant, direct contact with personnel in Mission Control Center (MCC) throughout the mission. In fact, mission operations / flight controllers at MCC (who I'll frequently abbreviate as "ops") will effectively call every shot. They will keep track of the mission timeline, task status, and suit telemetry (data describing the state of the spacesuit), and they will control most assets like the [Canadarm 2](https://www.nasa.gov/image-feature/htv-6-captured-with-the-canadarm2) as well. The astronauts themselves are almost robots or actresses following a script with little opportunity for ad-libbing. An additional crew member (or crew members) inside the spacecraft, known as the intervehicle (IV) crew member, will monitor many of the same variables as ground and will also communicate with extravehicle (EV) crew members.
 
@@ -69,23 +69,29 @@ I’m a huge fan of sci-fi and _Hitchhiker’s Guide to the Galaxy_ (HHG2G). Mar
 
 ![Marvin the Paranoid Android with Arthur and Ford from the older BBC series.](old_marvin.jpg)
 
-_I was going to post a picture of Marvin from the newer HHG2G, but this one was just too good to pass up. Image pulled from [here](http://hitchhikers.wikia.com/wiki/Marvin?file=Marvin%5Fmeets%5FFord%5Fand%5FArthur.jpg)._
+_I was going to post a picture of [Marvin](http://hitchhikers.wikia.com/wiki/Marvin?file=Marvin.jpg) from the newer HHG2G, but Arthur's bathrobe was just too good to pass up. Image pulled from [here](http://hitchhikers.wikia.com/wiki/Marvin?file=Marvin%5Fmeets%5FFord%5Fand%5FArthur.jpg)._
 
 > I have a million ideas. They all point to certain death.
+>
+> <cite>Marvin the Paranoid Android</cite>
 
 > I’ve calculated your chance of survival, but I don’t think you’ll like it.
+>
+> <cite>Marvin the Paranoid Android</cite>
 
-<><>cite these quotes?<><>
+Incidentally, Matthew hadn't read HHG2G when I suggested Marvin for the name for the project. His response: "let me read the book first before I decide if it's okay for this name to end up in my thesis because it's going to be around forever.” Not long after, the name Marvin became official.
 
-Incidentally, Matthew hadn't read it when I suggested Marvin for the name for the project. His response: "let me read the book first before I decide if it's okay for this name to end up in my thesis because that thing is kinda forever.” Not long after, the name Marvin became official.
+(This led to some funny conversations. Everything in the space industry is an acronym. I got a few responses like, “are you even _allowed_ to name something without an acronym?” when I would explain that Marvin is in fact not MARVIN.)
 
-(The name Marvin led to some funny conversations. Everything in the space industry is an acronym. I got a few responses like, “are you even _allowed_ to name something without an acronym?” when I explained that Marvin is not MARVIN.)
+> If the name doesn’t mean anything, then it becomes increasingly hard to remember what the service does if you see it in code.
+> 
+> <cite>one of my colleagues (we've got a lot of services at Udacity named after obscure Star Wars planets and Game of Thrones cities)</cite>
 
-I’ll also [link to my coworker’s article](https://medium.com/@timvergenz/e511a4c5c88d) about naming conventions in software and how pop culture references aren’t always a good idea. There’s a difference between making a useful comparison and obfuscating the purpose of code. I’d argue that Marvin itself was an acceptable reference, but I think I toed the line later on when I extended the analogy to lesser known nouns in the HHG2G universe. I called the eventual server running Marvin the Heart of Gold, which is Marvin the Paranoid Android’s ship. The Infinite Improbability Drive was responsible for running calculations and predictions in Marvin. It got its name from the engine in the Heart of Gold that moves the ship by “[passing] through every conceivable point in every conceivable universe simultaneously.” Both examples make sense, but only if you know HHG2G. If Marvin ever expands to a team with more developers, these names will need to change.
+Naming your services after pop culture references isn't always a good idea. There’s a difference between making a useful comparison and obfuscating the purpose of code. I’d argue that Marvin itself was an acceptable reference, but I think I toed the line later on when I extended the analogy to lesser known nouns in the HHG2G universe. I called the eventual server running Marvin the _Heart of Gold_, Marvin the Paranoid Android’s home ship. The _Infinite Improbability Drive_ was responsible for running calculations and predictions in Marvin. It got its name from the eponymous engine in the Heart of Gold that moves the ship by “[passing] through every conceivable point in every conceivable universe simultaneously.” Both examples make sense, but only if you know HHG2G. If Marvin ever expands to a team with more developers, these names will need to change.
 
 _Coming up next: creating a control group for EVA research._
 
-<sub><sup>1</sup> [Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. . 10.13140/RG.2.2.17731.30248.](https://doi.org/10.13140/rg.2.2.17731.30248) (Matthew’s PhD Dissertation)</sub>
-
-<sub><sup>2</sup> [Miller, M., Pittman, C., & Feigh, K. 2017, '
+<sub><sup>1</sup> We presented an overview of our research and prototypes at [IAC 2017](http://www.iafastro.org/events/iac/iac-2017/): [Miller, M., Pittman, C., & Feigh, K. 2017, '
 Next-Generation Human Extravehicular Spaceflight Operations Support Systems Development', IAC 2017. Adelaide, SA.](https://www.researchgate.net/publication/320290594_Next-Generation_Human_Extravehicular_Spaceflight_Operations_Support_Systems_Development)</sub>
+
+<sub><sup>2</sup> See page 42 of Matthew’s PhD thesis: "As of July 27th, 2016, NASA had performed 391 EVAs, 28% of which experienced significant incidents such as crew injury, early termination, system and operational issues (Packham and Stockton, 2016)." [Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. . 10.13140/RG.2.2.17731.30248.](https://doi.org/10.13140/rg.2.2.17731.30248)</sub>
