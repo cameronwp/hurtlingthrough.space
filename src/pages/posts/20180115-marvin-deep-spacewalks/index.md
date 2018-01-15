@@ -53,13 +53,21 @@ Exploration targets past the Moon increasingly isolate crew members. Most reason
 
 A NASA researcher, Matthew Miller, began working on this problem during his doctoral research at Georgia Tech. He asked how crew members could support themselves on EVA under time-delayed operational constraints. He envisioned a multi-pronged approach, where a mix of operational changes and technology would afford crew members greater independence. In a friend-of-a-friend set of circumstances, Matthew and I met two years ago and I agreed to help with the technology for his thesis, primarily by building the decision support system (DSS) software behind both the control group and an advanced prototype with independence-enabling features. In the two years since then, we've been able to test our prototype with real astronauts on EVAs underwater on coral reefs in the Florida Keys, simulated astronauts hiking around lava flows in Hawaii and Idaho, and undergrads playing Martian explorers in laboratory controlled exercises at Georgia Tech.
 
-<><>BASALT and NEEMO images<><>
+![<-FULLWIDTH->an aquanaut moving coral samples on a PVC pipe rig on a coral reef](neemo_coral_collection.jpg)
+
+<em>An aquanaut working with coral samples in Key Largo as part of NEEMO 22 in June 2017. Image copyright <a href="https://www.nasa.gov/mission_pages/NEEMO/index.html">NASA</a>.</em>
+
+![<-FULLWIDTH->two simulated astronauts walking around on mountainous, basalt-y terrain. they have backpacks with communication equipment and appear to be surveying the surrounding area for potential sample locations](basalt_surveying.jpg)
+
+_NASA researchers Kara Beaton and Rick Elphic survey volcanic terrain on Mauna Loa as part of BASALT in August 2016. I actually took this picture._
 
 The key to greater independence is augmenting the observational and predictive capability of the IV crew member who remains inside the spacecraft while her EV counterparts perform tasks outside. If an IV is as situationally aware of an EVA as the ground, our thinking goes, then the crew can safely perform EVAs without real-time support from MCC. Matthew spent hundreds of hours learning from NASA mission operations controllers, including observing ISS EVAs from MCC and interviews designed to extract the flow of information and level of importance of information on decision making during EVAs. He and I also participated in multiple analog EVA missions, during which we simulated exploration-style EVAs alongside multidisciplinary scientists, flight controllers, and operations researchers in the field. Currently, Matthew is continuing his research at [Jacobs](https://www.wehavespaceforyou.com/), a NASA contractor, where he is building a hybrid reality (VR + interactive physical objects) lab capable of repeated, controlled simulated EVAs (among other EVA-related projects).
 
 ## Why Marvin?
 
 I’m a huge fan of sci-fi and _Hitchhiker’s Guide to the Galaxy_. Marvin the Paranoid Android constantly complains about how smart he is and how slim the odds are for survival. I figured that Marvin is the perfect name for a DSS keeping people alive in space.
+
+<><>non-full-width pic of Marvin<><>
 
 > I have a million ideas. They all point to certain death.
 
