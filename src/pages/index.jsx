@@ -18,6 +18,8 @@ class BlogIndex extends React.Component {
         <Helmet title={siteTitle} />
         {posts.map(({ node }, index) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
+          const summary = get(node, 'frontmatter.summary') || node.excerpt
+
           return (
             <div key={node.fields.slug}>
               <h3 style={{ marginBottom: rhythm(1 / 4) }}>
@@ -26,7 +28,7 @@ class BlogIndex extends React.Component {
                 </Link>
               </h3>
               <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <p dangerouslySetInnerHTML={{ __html: summary }} />
             </div>
           )
         })}
@@ -57,6 +59,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             date(formatString: "DD MMMM YYYY")
+            summary
             title
           }
         }
