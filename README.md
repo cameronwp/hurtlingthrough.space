@@ -18,7 +18,7 @@ It's probably worth noting that this repo uses a custom Gatsby plugin for proces
 yarn new
 ```
 
-Note that new posts automatically are set to `draft: true`. Change this to `draft: false` when you're ready to publish. Note that pages with `draft: true`
+Note that new posts automatically are set to `draft: true`. Change this to `draft: false` when you're ready to publish. Note that posts with `draft: true`
 do not show up in the homepage, but are still accessible directly.
 
 ## Fun with Frontmatter
@@ -40,7 +40,7 @@ This makes the Twitter prompt: "Cameron makes a huge mistake. https://hurtlingth
 
 ## Running in development
 
-`gatsby develop`
+`yarn develop`
 
 ## Publishing
 
@@ -65,4 +65,4 @@ If you set up a CircleCI deployment, you'll need to set the aforementioned envir
 
 ## Troubleshooting
 
-* `gatsby-transformer-remark` seems to barf on `[links](https://example.com/something_like_this)` with `_` in them. Replace the `_`s in the URL with their URL encoding, `%5F` and you should be good to go.
+* `gatsby-transformer-remark` seems to barf on `[links](https://example.com/something_like_this)` with `_` in them. Replace the `_`s in the URL with their URL encoding, `%5F` and you should be good to go, eg. `[links](https://example.com/something%5Flike%5Fthis)`.
