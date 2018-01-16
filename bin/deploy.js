@@ -24,12 +24,13 @@ function uploadFiles() {
       s3Client: awsS3Client
     };
     const client = s3.createClient(config);
+    const bucket = `${isPreviewDeploy ? 'preview.' : ''}${process.env.BUCKET}`;
 
     const uploader = client.uploadDir({
       localDir: 'public',
       deleteRemoved: false, // don't remove old files in case they're still being used by a cache
       s3Params: {
-        Bucket: `${isPreviewDeploy ? 'preview.' : ''}${process.env.BUCKET}`
+        Bucket: bucket
       },
       getS3Params: (filepath, stat, callback) => {
         // do not cache non-static files, everything else cached 1 year
@@ -51,7 +52,10 @@ function uploadFiles() {
       }
     });
     uploader.on('error', reject);
-    uploader.on('end', () => resolve());
+    uploader.on('end', () => {
+      console.log(`Success uploading files to ${bucket}`);
+      resolve()
+    });
   })
 }
 
@@ -79,6 +83,7 @@ function invalidateCache() {
       if (err) {
         reject(err);
       } else {
+        console.log('Success invalidating cache');
         console.log(data);
         resolve();
       }
