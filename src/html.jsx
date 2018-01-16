@@ -25,7 +25,7 @@ module.exports = class HTML extends React.Component {
     // lots of these meta tags get overwritten in posts
 
     return (
-      <html {...this.props.htmlAttributes}>
+      <html {...this.props.htmlAttributes} lang="en">
         <head>
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
