@@ -8,17 +8,22 @@ tags:
   - basalt
   - neemo
 summary: The future of spacewalks. How NASA astronauts and flight controllers manage EVAs, and the software we're building to support them on Mars and beyond.
-twitterprompt: Cameron explores more efficient ways to perform spacewalks
+twitterprompt: Cameron wants to go on a spacewalk
+marvin: 1-Backstory
 draft: true
 ---
 
+# MASTER DRAFT
+
 <><>start off with an image of an astronaut<><>
 
-Human beings in spacesuits outside of spacecraft have taken some of the most remarkable pictures of the space age.
+Human beings in spacesuits outside of spacecraft have taken some of the most remarkable pictures of the modern age.
 
 <><>insert more images of astronauts<><>
 
-## The Backstory
+I’ve been fortunate enough to work with the space community for the last two years on a project to make their jobs easier. What follows is my account of the problems we wanted to solve, the research we (mostly my colleague Matthew Miller) did, the prototypes we built, the technical problems and mistakes along the way, and the evolution of Marvin, our software suite, from idea to stable software and funded research project.
+
+---
 
 Spacewalks fall under a broad mission category known as extravehicular activity (EVA).
 
@@ -28,33 +33,46 @@ Astronauts perform spacewalks routinely, but they're anything but routine. Crew 
 
 _Funnily enough, this is one of the most realistic examples of EVA chatter I've seen in a movie (minus the fact they omitted the Earth-Mars time delay)._
 
-Every astronaut on EVA faces heightened risk. They rely on localized life support systems (LSS), which provide limited consumable resources like oxygen and battery power. They face direct exposure to space, an already hostile environment even before considering the possibility of hardware malfunctions, micrometeroid impacts, sudden solar flares, and a million other incapacitating events. In the event of an emergency, crew members must react quickly and precisely to stave off disaster. In fact, over the nearly sixty-year history of EVAs, about 30%<><>cite with matthew's thesis<><> of EVAs have experienced some kind of incapacitating event that led to early ingress (coming back into the spacecraft, as opposed to egress, when a crew member exits the spacecraft).
+Every astronaut on EVA faces heightened risk. They rely on localized life support systems (LSS), which provide limited consumable resources like oxygen and battery power. They face direct exposure to space, an already hostile environment even before considering the possibility of hardware malfunctions, micrometeroid impacts, sudden solar flares, and a million other incapacitating events. In the event of an emergency, crew members must react quickly and precisely to stave off disaster. In fact, over the nearly sixty-year history of EVAs, about 30%<><>cite with matthew's thesis<><> of EVAs have experienced some kind of incapacitating event that led to early ingress (_ingress_ refers to entering a spacecraft or habitat, as opposed to _egress_ when a crew member exits).
 
-Given the risk inherent to EVAs as well as the general complexity of EVA tasks, each EVA is a highly choreographed event, sometimes years in the making. As an extreme example, the alpha magnetic spectrometer (AMS), an external piece of hardware onboard the International Space Station (ISS), currently needs repair (I believe a valve needs to be repaired, and it's unfortunately tucked deep within a nasty nest of sharp surfaces in an awkward location). NASA built a full-scale replica of the AMS for use underwater at the Neutral Buoyancy Lab (NBL, basically a massive swimming pool for weightlessness training) and astronauts will be training for at least two years for the mission.<><>cite if possible<><> During this mission and every other EVA, crew members will be / are in constant, direct contact with personnel in Mission Control Center (MCC) at Johnson Space Center in Houston. In fact, mission operations / flight controllers at MCC (which I'll frequently abbreviate as "ops") will effectively call every shot. They will keep track of the mission timeline, task status, and suit telemetry (data describing the state of the spacesuit), and they will control most assets like the Canadarm 2 as well. The astronauts themselves are almost robots or actresses following a script with little opportunity for ad-libbing. An additional crew member inside the spacecraft, known as the intervehicle (IV) crew member, monitors many of the same variables as ground and can communicate directly with the extravehicle (EV) crew member.
+Given the risk inherent to EVAs as well as the general complexity of EVA tasks, each EVA is a highly choreographed event, sometimes years in the making. As an extreme example, the alpha magnetic spectrometer (AMS)<><>link<><>, an external piece of hardware onboard the International Space Station (ISS), currently needs repair (I believe a valve needs to be repaired, and it's unfortunately tucked deep within a nasty nest of sharp surfaces in an awkward location). NASA built a full-scale replica of the AMS for use underwater at the Neutral Buoyancy Lab (NBL, basically a massive swimming pool for weightlessness training) and astronauts will be training for at least two years for the mission.<><>cite if possible<><> Like every EVA, the crew members repairing the AMS will be in continuous, direct contact with personnel in Mission Control Center (MCC) throughout the mission. In fact, mission operations / flight controllers at MCC (who I'll frequently abbreviate as "ops") will effectively call every shot. They will keep track of the mission timeline, task status, and suit telemetry (data describing the state of the spacesuit), and they will control most assets like the Canadarm 2<><>link<><> as well. The astronauts themselves are almost robots or actresses following a script with little opportunity for ad-libbing. An additional crew member (or crew members) inside the spacecraft, known as the intervehicle (IV) crew member, will monitor many of the same variables as ground and will also communicate with extravehicle (EV) crew members.
 
-The few people at risk in space benefit from dozens (maybe hundreds) of experts on the ground analyzing, predicting, and optimizing for mission success. In low Earth orbit (LEO), cis-lunar space (between Earth and the Moon) or on lunar EVAs, keeping MCC in the loop for all decision making is a viable operations concept because the speed of light allows it. ISS is only a few hundred kilometers above the ground, where the communication lag is low enough that space crew and ground personnel could reasonably play online video games together. In more official terms, we call the lag one-way latency time (OWLT). The OWLT of ISS is measured in the 10s of milliseconds.<><>check<><>. The Moon has an OWLT of just over one second. MCC to Moon communications are awkward (think a bad connection on an overseas video conference), but they still enable real-time communication and decision making. Exploration targets past the Moon, however, increasingly isolate crew members.
+The few people at risk in space benefit from dozens (maybe hundreds) of experts on the ground analyzing, predicting, and optimizing for mission success. In low Earth orbit (LEO), cis-lunar space (between Earth and the Moon) or on lunar EVAs, keeping MCC in the loop for all decision-making is a viable operations concept because the speed of light allows it. ISS orbits a few hundred kilometers above the ground, where the communication lag is somewhere in the hundreds of milliseconds - too high for most online video games but still good enough for FaceTime. Their latency is mostly a factor of the relative positions of ground and satellite relays rather than actual distance to Earth. In more official terms, we call the lag one-way latency time (OWLT). The Moon has an OWLT of just over one second. MCC to Moon communications are awkward (think a bad connection on an overseas video conference), but they still enable real-time communication and decision making.
 
-Most reasonable near-Earth asteroid targets are distant enough that OWLT is measured in minutes. Mars has a OWLT between 4 and 22 minutes, depending on our orbital orientation. In the worst-case scenario, roundtrip communications between Earth and Mars take a minimum of 45 minutes. Ground cannot provide anything resembling real-time direction if we're hamstrung by question-response cycles that take the better part of an hour. Clearly, we need to rethink our EVA operations concept before we get to Mars.
+Exploration targets past the Moon increasingly isolate crew members. Most reasonable near-Earth asteroid targets are distant enough that OWLT is measured in minutes. Mars has a OWLT between 4 and 22 minutes, depending on our orbital orientation. Ground cannot provide anything resembling real-time direction if we're hamstrung by question-response cycles that could take the better part of an hour. Clearly, we need to rethink our EVA operations concept before we get to Mars.
 
-A NASA researcher, Matthew Miller, began working on this problem during his doctoral research at Georgia Tech. He asked how crew members could support themselves on EVA under time-delayed operations constraints. He envisioned a multi-pronged approach, where a mix of operational changes and technology would afford crew members greater independence. In a friend-of-a-friend set of circumstances, Matthew and I met two years ago and I agreed to help with the technology for his thesis, primarily by building the decision support system (DSS) software behind both the control group and a prototype with independence-enabling features. In the two years since then, we've been able to test our prototype with real astronauts on EVAs underwater on coral reefs in the Florida Keys, simulated astronauts hiking around lava flows in Hawaii and Idaho, and undergrads playing Martian explorers in laboratory controlled exercises at Georgia Tech.
+A NASA researcher, Matthew Miller, began working on this problem during his doctoral research at Georgia Tech. He asked how crew members could support themselves on EVA under time-delayed operational constraints. He envisioned a multi-pronged approach, where a mix of operational changes and technology would afford crew members greater independence. In a friend-of-a-friend set of circumstances, Matthew and I met two years ago and I agreed to help with the technology for his thesis, primarily by building the decision support system (DSS) software behind both the control group and a prototype with independence-enabling features. In the two years since then, we've been able to test our prototype with real astronauts on EVAs underwater on coral reefs in the Florida Keys, simulated astronauts hiking around lava flows in Hawaii and Idaho, and undergrads playing Martian explorers in laboratory controlled exercises at Georgia Tech.
 
-The key to greater independence is augmenting the observational and predictive capability of the IV crew member who remains inside the spacecraft while her EV counterparts perform tasks outside. If an IV is as capable as the ground, our thinking goes, then the crew can safely perform EVAs without real-time support from MCC. Matthew spent hundreds of hours learning from NASA mission operations controllers, including observing ISS EVAs from MCC and interviews designed to extract the flow of information and level of importance of information on decision making during EVAs. He and I also participated in multiple analog EVA missions, during which we simulated exploration-style EVAs alongside multidisciplinary scientists, flight controllers, and operations researchers in the field. Currently, Matthew is continuing his research at [Jacobs](https://www.wehavespaceforyou.com/), a NASA contractor, where he is building a hybrid reality (VR + interactive physical objects) lab capable of repeated, controlled simulated EVAs.
+The key to greater independence is augmenting the observational and predictive capability of the IV crew member who remains inside the spacecraft while her EV counterparts perform tasks outside. If an IV is as situationally aware of an EVA as the ground, our thinking goes, then the crew can safely perform EVAs without real-time support from MCC. Matthew spent hundreds of hours learning from NASA mission operations controllers, including observing ISS EVAs from MCC and interviews designed to extract the flow of information and level of importance of information on decision making during EVAs. He and I also participated in multiple analog EVA missions, during which we simulated exploration-style EVAs alongside multidisciplinary scientists, flight controllers, and operations researchers in the field. Currently, Matthew is continuing his research at [Jacobs](https://www.wehavespaceforyou.com/), a NASA contractor, where he is building a hybrid reality (VR + interactive physical objects) lab capable of repeated, controlled simulated EVAs (among other EVA-related projects).
 
-Marvin (as in Marvin the Paranoid Android from _Hitchhiker's Guide to the Galaxy_) is the name of the software we eventually built to support EVA decision making.
+## Why Marvin?
 
-What follows is my account of the problems we wanted to solve, the research we (mostly Matthew) did, the prototypes we built, the technical problems and mistakes along the way, and the evolution of Marvin from idea to stable software to funded research project.
+I’m a huge fan of sci-fi and _Hitchhiker’s Guide to the Galaxy_. Marvin the Paranoid Android constantly complains about how smart he is and how slim the odds are for survival. I figured that Marvin is the perfect name for a DSS keeping people alive in space.
 
-### Why call it Marvin?
+> I have a million ideas. They all point to certain death.
 
-[1] Matthew hadn't actually read Hitchhiker's Guide when I suggested Marvin as the name for the project. His response: "let me read the book first before I decide if it's okay for this name to end up in my dissertation." Not long after, the name Marvin became official.
+> I’ve calculated your chance of survival, but I don’t think you’ll like it.
 
-Marvin has a brain the size of the Universe but is stuck on board the Heart of Gold. I like his pithy quotes and quips about his intelligence. They felt right for a tool that would ultimately be used to help astronauts make decisions in space. I also like that it denotes some level of intelligence, like it's there to guide the crew (to safety?).
+<><>cite these quotes?<><>
+
+Incidentally, Matthew hadn't read it when I suggested Marvin for the name for the project. His response: "let me read the book first before I decide if it's okay for this name to end up in my thesis because that thing is kinda forever.” Not long after, the name Marvin became official.
+
+(The name Marvin led to some funny conversations. Everything in the space industry is an acronym. I got a few responses like, “are you even _allowed_ to name something without an acronym?” when I explained that Marvin is not MARVIN.)
+
+I’ll also [link to my coworker’s article](https://medium.com/@timvergenz/e511a4c5c88d) about naming conventions in software and how pop culture references aren’t always a good idea. There’s a difference between making a useful comparison and obfuscating the purpose of code. I’d argue that Marvin itself was an acceptable reference, but I think I toed the line later on when I extended the analogy to lesser known nouns in the HHG2G universe. I called the eventual server running Marvin the Heart of Gold, which is Marvin the Paranoid Android’s ship. The Infinite Improbability Drive was responsible for running calculations and predictions in Marvin. It got its name from the engine in the Heart of Gold that moves the ship by “[passing] through every conceivable point in every conceivable universe simultaneously.” Both examples make sense, but only if you know HHG2G. If Marvin ever expands to a team with more developers, these names will need to change.
+
+_Coming up next: creating a control group for EVA research._
+
+<sub>[Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. . 10.13140/RG.2.2.17731.30248.](https://doi.org/10.13140/rg.2.2.17731.30248) (Matthew’s PhD Dissertation)</sub>
+
+<sub>[Miller, M., Pittman, C., & Feigh, K. 2017, '
+Next-Generation Human Extravehicular Spaceflight Operations Support Systems Development', IAC 2017. Adelaide, SA.](https://www.researchgate.net/publication/320290594_Next-Generation_Human_Extravehicular_Spaceflight_Operations_Support_Systems_Development)</sub>
 
 ## The Baseline Control
 
 In order to build a case for an advanced DSS prototype, we needed to determine that current technology and methodology cannot feasibly support time delayed missions. To do so, Matthew recruited Georgia Tech undergrads to take part as simulated Martian astronauts. He pared down the scope of the workload in the lab to two EVA requirements - monitoring life support and tracking the mission timeline (basically the set of actions that astronauts are scheduled to perform during EVA). These two priorities fell out of the learnings from NASA mission operations folks and we thought they were possible to tackle in the time remaining before Matthew wanted to graduate (obviously the most pressing concern for any PhD student). Incidentally, I only needed to build an Extravehicular Mobility Unit (EMU) spacesuit telemetry display. Believe it or not (and I had a really hard time believing this), a huge portion of tracking the mission timeline is done _by hand_. A mission timeline is essentially a massive spreadsheet with expected task durations, descriptions, and priorities. It is printed, 3-hole-punched, and dropped into binders. Flight controllers use pencils and calculators to follow along and make decisions. We needed make our simulated astronauts follow the same paper-based procedures.
 
-![gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
+![<-FULLWIDTH->gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
 
 _I took this picture of an exhibit at Adler Planetarium in Chicago. This Gemini 12 flight plan looks almost identical to the mission timelines for ISS EVAs._
 
@@ -132,13 +150,13 @@ To be fair, I liked that the apps were separate. I thought it was reasonable to 
 
 The Hardware app existed to read an uploaded CSV and control the current time of the EVA. Each row in the CSV contained a mission time column (called PET or "phased elapsed time"). The Hardware app read from the CSV and exposed an admin website. On the admin site, Matthew could upload CSV files as well as start and stop the EVA. Additionally, I added a hack to fast-forward mission time by simply looping through timestamps and broadcasting data until it reached the desired time. Fast-forwarding allowed Matthew to start EVA simulations at arbitrary mission times and the participants would see graphs with data from before the handoff.
 
-We devised a taxonomy of channel (EV1 or EV2), domain (H<sub>2</sub>O, battery, etc), and subdomain (volume remaining, amps remaining, etc) to describe each sensor. The Sensor app received readings from the Hardware app and determined to which sensor each belonged. The CSV included most, but not all, data. The Sensor app used some telemetry values to dynamically calculate others, such as the limiting consumable. Once finished, it fired off structured data to Redis for storage. I used Redis rather than a more traditional relational database (RDB) because of Redis' speed and publish/subscribe (pubsub) capabilities. While the Sensor app published data to Redis, the Client app would create subscriptions to receive new data as it arrives. In effect, Redis was a pipe that stored information as it was passed from the Sensor app to the Client app. In theory, this would allow us to retroactively determine what telemetry data was available at any given moment, however we never needed it. Given that Matthew was uploading CSVs with known data, we actually knew ahead of time what telemetry would be visible at every moment of the simulation. It's not hard to argue that the addition of Redis was an unnecessary layer of complexity caused by my overeager imagination.
+We devised a taxonomy of channel (EV1 or EV2), domain (H<sub>2</sub>O, battery, etc), and subdomain (volume remaining, voltage, etc) to describe each sensor. The Sensor app received readings from the Hardware app and determined to which sensor each belonged. The CSV included most, but not all, data. The Sensor app used some telemetry values to dynamically calculate others, such as the limiting consumable. Once finished, it fired off structured data to Redis for storage. I used Redis rather than a more traditional relational database (RDB) because of Redis' speed and publish/subscribe (pubsub) capabilities. While the Sensor app published data to Redis, the Client app would create subscriptions to receive new data as it arrives. Redis acted as a pipe that stored information as it was passed from the Sensor app to the Client app. In theory, this would allow us to retroactively determine what telemetry data was available at any given moment, however we never needed this feature. Given that Matthew was uploading CSVs with known data, we actually knew ahead of time what telemetry would be visible at every moment of the simulation. It's not hard to argue that the addition of Redis was an unnecessary layer of complexity caused by my overeager imagination.
 
 At the end of the pipeline, the Client app received new readings from Redis and then published them to front end clients using websocket connections (specifically, [socket.io](https://socket.io/)).
 
 ## The Advanced DSS, aka Marvin v1
 
-Early on, Matthew and I started brainstorming what the workflow for an IV operator in deep space should look like. What kind of information would they want? What kind of actions could we reasonably expect an IV operator to take? Remember, this IV operator would be in a loud, small, metal tube with a dozen voices in their ear, a half-dozen screens in front of them, monitoring the life support of the EV crew and their home vessel, keeping track of EVA progress, coordinating with scientists and flight controllers in Houston, making sure scientific objectives get hit, and they are ultimately responsible for crew safety and mission success. These are long days with 8 or 10 hours devoted to missions. The IV operator may be stressed and exhausted. With a plate so full, what could we add that's both easy to do and high fidelity enough to be helpful? We landed on a single click.
+Early on, Matthew and I started brainstorming what the workflow for an IV operator in deep space should look like. What kind of information would they want? What kind of actions could we reasonably expect an IV operator to take? Remember, this IV operator would be in a loud, small, metal tube with overlapping voices in their ear, a half-dozen screens in front of them, monitoring the life support of the EV crew and their home vessel, keeping track of EVA progress, coordinating with scientists and flight controllers in Houston, making sure scientific objectives get hit, all while ultimately taking responsibility for crew safety and mission success. These are long days with 8 or 10 hours devoted to missions. The IV operator may be stressed and exhausted. With a plate so full, what could we add that's both easy to do and high fidelity enough to be helpful? We landed on a single click.
 
 <><>image of Marvin UI<><>
 
@@ -146,12 +164,135 @@ _The Marvin timeline view_
 
 <><>screenshot of Inbox<><>
 
-Marvin consists of a UI that I <strike>basically stole</strike> borrowed from [Google Inbox](https://www.google.com/inbox/) (a fantastic replacement for the traditional gmail UI). Inbox makes it easier to navigate your inbox by giving you separate categories into which your emails get sorted. You don't see emails when you open Inbox, you see categories. Click on a category and it expands to show your recent emails. In a way, your inbox gains a hierarchy that makes it easier to grok. This hierarchy inspired the hierarchy we wanted for steps.
+Marvin consists of a UI that I <strike>basically stole</strike> borrowed from [Google Inbox](https://www.google.com/inbox/) (a fantastic replacement for the traditional gmail UI). Inbox makes it easier to navigate your inbox by giving you separate categories into which your emails get sorted. You don't see emails when you open Inbox, you see categories. Click on a category and it expands to show your recent emails. In a way, your inbox gains a hierarchy that makes it easier to grok. This hierarchy inspired the hierarchy we wanted for steps. Incidentally, we realized that no one wanted collapsible categories in Marvin and it was removed for later versions.
+
 
 We started with brainstorming sessions. The UI began with markers on a whiteboard and then turned into digital mockups built with Apple Keynote.
 
 <><>image of one of the first mockups<><>
 
+We decided to give IV operators a single click to indicate when a task is complete. We envisioned that as the mission progresses, the operator checks off tasks. Each click updates a high level display at the top of the UI with timeline calculations, including the time ahead / time behind, the timeline buffer, the time until the next activity starts, the time until the limiting consumable expires, and the predicted time until the mission ends (the exact metrics changed between missions). We wanted to give IV operators two ways to view the timeline - in detail and at a high level. We wanted to give them a way to quickly spot where the crew is in relation to the rest of the timeline. This feature wound up being useful in our _in situ_ trials but went unused at NEEMO.
+
+### Timeline Hierarchy
+
+We needed to create a well-defined structure for steps in the timeline. This started with a sketch in my notebook.
+
+<><>image of notebook with hierarchy<><>
+
+We agreed that it contained enough information and I translated it to JavaScript. It was ugly.
+
+```js
+class Step {
+  ... properties
+  children = [];
+}
+```
+
+The `children` array took a naive view on representing nested `Steps`. We made child `Step`s literal children of their parents. In order to find `Step`s in the timeline, I implemented a depth-first search with a number of options for filtering and sorting results.
+
+```js
+<><>insert depth first search<><>
+```
+
+I modeled this API after the nodes and `document.querySelector` APIs in the browser. Note that there is no early termination in the base-implementation. We run searches against the timeline in `O(N)`, regardless of when we find a hit. We noticed that performance took a noticeable hit as we built timelines with realistic levels of detail. Each timeline calculation could cause dozens of traverses through the timeline. In some implementations, the performance hit was worse because we established a pattern of destroying and rebuilding the timeline between each "tick" in the timeline (usually running at a 1 second tick).
+
+In the first implementation of Marvin, I built a self-contained Electron app. The app included a PouchDB in-memory database, JavaScript for timeline calculations (the library is called EVA.js), an app-side front-end for rendering the timeline, and it exposed an ExpressJS server that served the exact same rendered front-end, the only notable difference being that the served front-end clients would receive timeline changes over the network.
+
+I separated timeline data into two distinct domains - metadata and ephemeral run data. Metadata included information that would remain the same between runs, such as the name of tasks and expected durations. Ephemeral timing data was the record of when the timeline started and stopped as well as when each individual `Step` started and stopped. I recorded ephemeral timing data in PouchDB, which, like Redis, supports pubsub. My front-end clients listened for timing information from PouchDB and then updated and re-rendered their timelines. If a user clicked on a step to indicate that the step was completed, they would send an event to PouchDB, which would subsequently notify all other clients, who would re-calculate timeline metrics and re-render their displays.
+
+I finished a stable build just in time for BASALT November 2016  at Mauna Loa, Hawaii. Matthew ran Marvin on his laptop, which our simulated IV operators used to time the mission. Here, we used Marvin in conjunction with other tools to test its results compared to what the team was already using, like spreadsheets with custom macros.
+
+Let's take a look at some snippets of code and see how we could have improved performance.
+
+### Memoizing
+
+<><>show the unoptimized devtools timeline<><>
+
+This is a screenshot of devtools in the midst of running timeline calculations. You can see that there are repeated deep, thin chunks of work. These are the aforementioned timeline traversals. Blargh, Paul would not be happy.
+
+In this build of Marvin, we made the assumption that timeline metadata would not change during a mission. Hence, the structure of the timeline doesn't change either. If that's the case, each query for a `Step` in the timeline is deterministic and there's no need to re-traverse the entire timeline to find one that's already been accessed. Rather than optimizing searching itself, I implemented a simple memoizer<><>link?<><> that would return previously queried for `Step`s from a cache. Here's what the timeline looked like afterwards! The performance felt noticeably better too.
+
+<><>image of post-memoized timeline<><>
+
+### Pessimistic vs Optimistic Time Calculations
+
+We ran into an interesting issue at BASALT when we compared our results to the team's existing results. Marvin originally took a  pessimistic view when calculating time remaining in a step. For example, assume you have a parent with children that looks like so:
+
+<><>parent with a couple children, the first few are done, the last few are not<><>
+
+In this case, Marvin would sum up the completed tasks and subtract that from the overall expected duration:
+
+```js
+pull code from EVA.js about time remaining
+```
+
+Note that we _do not_ subtract the time that has passed in the _current_ `Step`. This means that we do not assume a step will finish on time before it has been marked complete. This led to us overestimating the amount of time before a parent is complete. We found that this was undesirable as the team's existing tools _would_ assume that a `Step` is going to be completed on time unless it has already gone over. Here's what the updated algorithm looks like:
+
+```js
+algorithm where we subtract time elapsed
+```
+
+This brings up the importance of detail. As time elapses in a single step, our calculations would get worse and worse as we always assumed worse-case scenario until the IV operator proved us wrong and check off the step. Essentially, the timeline became less accurate as time elapsed _after_ checking off a step. If these `Step`s are multi-hour, high-level activities, it isn't hard to imagine that our calculated time remaining could be wrong by hours as well. This adds incentive to make detailed timelines. Of course, it also penalizes you for using a less than detailed timeline. Especially at this early stage of adoption, it makes sense to avoid disincentivising anyone from using Marvin, so the switch to a lenient time remaining calculation made sense.
+
+## Marvin v2
+
+In the run up to NEEMO 2017, I decided that the previous version of Marvin was too unstable for my liking. We were reliant on the stability of a _browser window_, something that may crash at any time for no reason whatsoever. Chrome is already a memory hog, and we needed to load a few hundred more megs of RAM into a window, constantly run CPU intensive calculations, and hope that it could somehow remain stable for hours at a time while people depend on it. NEEMO was a huge opportunity. Actual astronauts using Marvin! It’s a collaboration between NASA, ESA, and JAXA. An underwater base of operations in the Florida Keys where astronauts and researchers meet to study and practice EVAs on a Coral Reef. Aquarius Reef Base has been called the most realistic setting to ISS - it’s a cramped metal tube where multiple people are stuck for long periods of time. There is no immediate rescue. In fact, it’s actually faster to get back to Earth from ISS. Astronauts can evacuate ISS into a capsule and reach the ground in about 6 hours. Due to being depth saturated in Aquarius, aquanauts need a full day to depressurize and surface safely (there are special depressurization chambers on land in the event of emergency).
+
+Given the chance to put my software in the hands of real astronauts, I couldn’t risk hinging stability on a _Chrome tab_.  Furthermore, I needed to integrate telemetry, which Matthew had been running separately with the baseline tool<><>link<><>. I decided it made sense to reengineer Marvin as a small cluster of microservices <><>link<><> that I deployed with `docker compose` <><>link<><>. I decided to call the new system the Heart of Gold, named after Marvin’s home ship in HHG2G. Here’s the architecture I ended on:
+
+<><>insert image of heart of gold architecture<><>
+
+In the name of stability, I separated Marvin's timeline calculations from the rest of the app. I called this service the Infinite Improbability Drive (IID), named after the engine of the Heart of Gold (which moves by "simulating every possible universe simultaneously" <><>check quote<><>). Besides performing timeline calculations, the IID merged timeline metadata and ephemeral timing information into a single JSON structure called the Merged Timeline. I sent the merged timeline to clients, which simply received and rendered the information. I put a GraphQL API <><>link<><> in front of the new database and separated each front-end client into its own NGINX container. I refactored both the timeline front-end and the telemetry front-end to use websockets to receive new timeline data from the API.
+
+Here's what a tick in the Heart of Gold looks like:
+
+<><>insert image showing flow of information<><>
+
+I designed the Heart of Gold to be stateless. The development timeline was tight. Even in the best case scenario, my time for thorough stress testing would have been limited to a few practice runs before the mission (which is pretty much what happened). I did not want to design a stateful system with uncertain stability, as that was the whole problem I wanted to avoid with the Electron version of Marvin. Being stateless meant that I could take advantage of docker composes' ability to automatically restart unresponsive containers and avoid downtime. I experimented with a few different container orchestrators like docker swarm and Kubernetes before landing on docker compose. Docker swarm was designed to run copies of a single container across multiple machines, which wasn't what I was going for. Kubernetes seemed perfectly capable of giving me the ability to run multiple containers and control restarting, however I decided it would have been more trouble than it's worth. I've heard that it's a pain to setup. I enjoyed the tutorials, but felt it was overkill. I decided to stick with docker compose because it's super simple to use and it meets my minimum criteria. I just needed to avoid state at all costs. I sacrificed timeline calculation performance to avoid state.
+
+The IID ticked every second. A tick would start by requesting the last timeline from the API, turning the response into a live `Timeline`, calculating new values for each timeline metric (worth noting that some of these metrics lived on individual `Step`s), merging the high-level metrics, metadata and ephemeral data into the merged timeline, and sending the new merged timeline to the API, which would save it to the database and broadcast it to all connected clients. I made sure that if the IID or API were to crash, nothing would be lost. Over the course of the deployment, I saw large GraphQL queries crash the API and the IID crashed a few times during missions. But no one noticed! In every case, docker compose spun up a new container almost instantly which picked up where the previous container left off. Easy! No downtime! It was goddamn glorious.
+
+I used websockets to communicate between components. These were a pain. I used socket.io, which is great, but the API is uneven. The client and server side of the API _look_ very similar but have enough differences that the experience is frustrating. Early on, I wrote wrappers around the client and server. These were a constant source of frustration. Even though they were reasonably well tested (at least, _I_ thought they were), I consistently ran into bugs that I traced back to my socket.io wrappers. I know I'm not alone with this frustration - we implemented similar abstractions at Udacity for livechat-style features that were buggy and error prone. They aren’t hard to screw up.
+
+Here's what my APIs looked like:
+
+```js
+<><>insert endpoint API?<><>
+```
+
+<><>more on the open sourced APIs<><>
+
+### Deploying
+
+I used docker compose's ability to compose docker-compose.ymls to create separate development and production deployments. Here's how they looked.
+
+```yaml
+<><>base<><>
+```
+
+```yaml
+<><>dev<><>
+```
+
+```yaml
+<><>prod<><>
+```
+
+### Using TypeScript
+
+TypeScript is one of the reasons I was able to build so quickly. Basic type checking gave me confidence that my code at least wasn't going to crash and burn immediately. It cut out a whole class of typechecking runtime errors. Amazing.
+
+### Debugging and Tests (probably more on tests everywhere)
+
+Testing done with mocha <><>link<><> mostly. It works well and is easy to use.
+
+Debugging with VS Code is just amazing.
+
+### Monitoring
+
+Custom docker compose ... thingy for nicely formatted monitoring with golang templates
 
 
-Incidentally, we realized that no one wanted collapsible categories in Marvin and it was removed for later versions.
+### Improved database capabilities - graphql
+
+###

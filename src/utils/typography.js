@@ -2,6 +2,7 @@ import _ from 'lodash'
 import Typography from 'typography'
 import Wordpress2016 from 'typography-theme-wordpress-2016'
 
+// https://github.com/KyleAMathews/typography.js/blob/master/packages/typography-theme-wordpress-2016/src/index.js
 Wordpress2016.overrideThemeStyles = () => ({
   'a.gatsby-resp-image-link': {
     boxShadow: 'none',
@@ -9,7 +10,7 @@ Wordpress2016.overrideThemeStyles = () => ({
 })
 
 const typography = new Typography(_.assign({}, Wordpress2016, {
-  bodyFontFamily: ['Arvo', 'sans-serif'],
+  bodyFontFamily: ['Arvo', 'serif'],
   headerFontFamily: ['Montserrat', 'Arvo', 'sans-serif'],
   googleFonts: [
     {

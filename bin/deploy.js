@@ -15,6 +15,8 @@ AWS.config.apiVersions = {
 };
 AWS.config.update({region: process.env.AWS_REGION});
 
+const isPreviewDeploy = /.*\-\-preview$/g.test(process.env.CIRCLE_BRANCH)
+
 function uploadFiles() {
   return new Promise((resolve, reject) => {
     const awsS3Client = new AWS.S3();
@@ -22,31 +24,48 @@ function uploadFiles() {
       s3Client: awsS3Client
     };
     const client = s3.createClient(config);
+    const bucket = `${isPreviewDeploy ? 'preview.' : ''}${process.env.BUCKET}`;
 
     const uploader = client.uploadDir({
       localDir: 'public',
       deleteRemoved: false, // don't remove old files in case they're still being used by a cache
       s3Params: {
-        Bucket: process.env.BUCKET
+        Bucket: bucket
       },
-      getS3Params: (localFile, stat, callback) => {
-        // cache HTML files (and rss.xml) for an hour, everything else 14 days
-        const isHTML = _.endsWith(localFile, '.html')
-        const isXML = _.endsWith(localFile, '.xml')
-        const params = {
+      getS3Params: (filepath, stat, callback) => {
+        // do not cache non-static files, everything else cached 1 year
+        // https://www.gatsbyjs.org/docs/caching/
+
+        const baseParams = {
           ACL: 'public-read',
-          CacheControl: `max-age=${(isHTML || isXML ? '3600' : '1209600')}`
-        }
+          CacheControl: 'public, max-age=0, must-revalidate'
+        };
+
+        const cacheParams = {
+          CacheControl: 'public, max-age=31536000, immutable'
+        };
+
+        const isStatic = /\/static\//g.test(filepath);
+        const params = _.assign(baseParams, isStatic ? cacheParams : {});
+
         callback(null, params);
       }
     });
     uploader.on('error', reject);
-    uploader.on('end', () => resolve());
+    uploader.on('end', () => {
+      console.log(`Success uploading files to ${bucket}`);
+      resolve()
+    });
   })
 }
 
 function invalidateCache() {
   return new Promise((resolve, reject) => {
+    // don't invalidate the cache if we aren't updating prod
+    if (isPreviewDeploy) {
+      return resolve();
+    }
+
     const cloudfront = new AWS.CloudFront();
     const reference = Date.now();
 
@@ -64,6 +83,7 @@ function invalidateCache() {
       if (err) {
         reject(err);
       } else {
+        console.log('Success invalidating cache');
         console.log(data);
         resolve();
       }

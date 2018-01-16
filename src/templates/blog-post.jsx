@@ -16,8 +16,8 @@ import './blog-post.scss'
 
 function renderTag(tag, index) {
   return (
-    <div className='tag'>
-      <Tag name={tag} key={index} />
+    <div className='tag' key={`TAG-${index}`}>
+      <Tag name={tag} />
     </div>
   )
 }
@@ -74,7 +74,6 @@ class BlogPostTemplate extends React.Component {
           </div>
         </section>
 
-        {/* <div dangerouslySetInnerHTML={{ __html: stringifyKatex(post.html) }} /> */}
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
         <section className='share-section'>

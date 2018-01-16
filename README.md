@@ -1,8 +1,16 @@
 # hurtlingthrough.space
 
-Personal site and such. Published at [hurtlingthrough.space](https://hurtlingthrough.space).
+Personal site and such: https://hurtlingthrough.space
 
-Based on [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog).
+How it was built: [part 1](https://hurtlingthrough.space/posts/20171204-building-a-blog/) and [part 2](https://hurtlingthrough.space/posts/20171210-controlling-caches/)
+
+## Installation
+
+```sh
+yarn
+```
+
+It's probably worth noting that this repo uses a custom Gatsby plugin for processing markdown images (see plugins/gatsby-remark-images-full-width).
 
 ## New Post
 
@@ -53,4 +61,8 @@ BUCKET=
 CLOUDFRONT_DISTRIBUTION_ID=
 ```
 
-If you set up a CircleCI deployment, you'll need to set the aforementioned environment variables in the project settings.
+If you set up a CircleCI deployment, you'll need to set the aforementioned environment variables in the project settings. You can deploy to an S3 bucket called `preview.[BUCKET]` if you append `--preview` to the branch name.
+
+## Troubleshooting
+
+* `gatsby-transformer-remark` seems to barf on `[links](https://example.com/something_like_this)` with `_` in them. Replace the `_`s in the URL with their URL encoding, `%5F` and you should be good to go.
