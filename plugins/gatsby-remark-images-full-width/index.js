@@ -8,7 +8,7 @@ var isRelativeUrl = require('is-relative-url');
 var _ = require('lodash');
 
 var _require = require('gatsby-plugin-sharp'),
-    responsiveSizes = _require.responsiveSizes;
+    sizes = _require.sizes;
 
 var Promise = require('bluebird');
 var cheerio = require('cheerio');
@@ -96,7 +96,7 @@ module.exports = function (_ref, pluginOptions) {
               }
 
               _context.next = 15;
-              return responsiveSizes({
+              return sizes({
                 file: imageNode,
                 args: options
               });
