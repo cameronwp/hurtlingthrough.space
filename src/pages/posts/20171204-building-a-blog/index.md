@@ -18,7 +18,7 @@ Being an anal-retentive engineer, I wanted my blog publishing flow to match the 
 
 ## Final Product
 
-[Repo](https://github.com/cameronwp/personal-web) (Feel free to fork!)
+[Repo](https://github.com/cameronwp/hurtling-through-space) (Feel free to fork!)
 
 * Blog: [GatsbyJS](https://gatsbyjs.org) (written in [React](https://reactjs.org/))
 * Hosting: [S3](https://aws.amazon.com/s3/pricing/)
@@ -88,7 +88,7 @@ I was able to keep my [S3 bucket private while only allowing CloudFront access](
 
 ### Deployment
 
-Any pushes to GitHub trigger a [CircleCI](https://circleci.com/) build, which is configured [here](https://github.com/cameronwp/personal-web/blob/master/.circleci/config.yml)). If the branch happens to be `master`:
+Any pushes to GitHub trigger a [CircleCI](https://circleci.com/) build, which is configured [here](https://github.com/cameronwp/hurtling-through-space/blob/master/.circleci/config.yml)). If the branch happens to be `master`:
 1. it generates new static files in public/
 2. it uploads the public/ directory to S3
 3. it invalidates CloudFront's cache, so that changes go live in less than a minute instead of when caches expire.

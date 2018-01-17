@@ -57,7 +57,7 @@ A NASA researcher, Matthew Miller, began working on this problem during his doct
 
 _An aquanaut working with coral samples in Key Largo as part of NEEMO 22 in June 2017. Image copyright [NASA](https://www.nasa.gov/mission%5Fpages/NEEMO/index.html)._
 
-![<-FULLWIDTH->two simulated astronauts walking around on mountainous, basalt-y terrain. they have backpacks with communication equipment and appear to be surveying the surrounding area for potential sample locations](./basalt_surveying.jpg)
+![<-FULLWIDTH->two simulated astronauts walking around on mountainous, basalt-y terrain. they have backpacks with communication equipment and appear to be surveying the surrounding area for potential sample locations](./basalt_surveying_2.jpg)
 
 _NASA researchers Kara Beaton and Rick Elphic survey volcanic terrain on Mauna Loa as part of BASALT in August 2016. I actually took this picture._
 
