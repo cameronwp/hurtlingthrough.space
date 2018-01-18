@@ -2,6 +2,8 @@
 
 Personal site and such: https://hurtlingthrough.space
 
+[![CircleCI](https://circleci.com/gh/cameronwp/hurtling-through-space/tree/master.svg?style=shield&circle-token=471090fb75fbeb5b65d53f583c230c1232817f0e)](https://circleci.com/gh/cameronwp/hurtling-through-space/tree/master)
+
 How it was built: [part 1](https://hurtlingthrough.space/posts/20171204-building-a-blog/) and [part 2](https://hurtlingthrough.space/posts/20171210-controlling-caches/).
 
 ## Installation
