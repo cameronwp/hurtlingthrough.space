@@ -35,6 +35,7 @@ The human element in an EVA makes it difficult to plan. Every moment is at the w
 
 * brief intro
 * review of the paper
+	- note challenge of matching as-planned and actual timelines. crew often called out completion of tasks in bulk rather than instantly when done
 * deconstruct a timeline (apollo / iss ?)
 	- activity, task, subtask, procedure
 * interlude: telemetry in Mission Control (shot that Matthew took?)
@@ -48,3 +49,16 @@ The human element in an EVA makes it difficult to plan. Every moment is at the w
 * some high level results re: timing
 
 ![<-FULLWIDTH->gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
+
+"In particular, the Apollo program pioneered
+the concept of incorporating a team of scientists to support real-time and strategic
+decision making regarding human surface operations" p5
+
+section 1.2 - all about structure of timelines
+
+"An EVA timeline is
+a compiled, sequenced set of tasks at various levels of description which contains
+the geospatial and temporal information associated with all tasks to be performed" p8
+
+p15, 16 - start description of timeline structure
+p18 - measuring tasks. is a task duration really the diff between its start time and the next's? (probably good to hint at Marvin's step duration definition (no dead time))
