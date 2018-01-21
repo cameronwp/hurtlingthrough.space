@@ -13,23 +13,28 @@ twitterprompt: Cameron plans his spacewalk
 draft: true
 ---
 
-_This is part 2 of the Marvin series. Here’s part 1._
+_This is part 2 of the Marvin series. Here’s part 1 about why EVA operations research matters._
 
-Picture yourself in a meeting room at NASA with scientists, engineers, flight controllers, and astronauts in the early 1960s. It's easy to ignore that your eyes are watering and you can't breathe from all the cigarette smoke because you’re talking about visiting the Moon in the next decade. You’re talking about rocket thrust, fuel, cost, and engineering timelines. You’re talking about the controls of the lander. You’re talking about life support and staying alive in a vacuum. You’re talking about public appearances and drumming up support and beating the Russians who just put Yuri Gagarin in space. And pertinently to this series of articles, the topic of what to _do_ on the Moon comes up and what the scientists want collected.
+<span class="lead-in">It's the early 1960s.</span> Picture yourself in a meeting at NASA with scientists, engineers, flight controllers, and astronauts. Maybe your eyes are watering and you're stifling a cough because it’s the 1960s and everyone smokes cigarettes like it's their life's mission to deplete the world's tobacco supply. It's easy to ignore all that though because you’re talking about landing on the Moon in the next decade. This is exciting! The astronauts want to know what kind of flight controls they'll have with the lander <><>use actual name of lander?<><>. The engineers are wringing their hands about about life support systems because humans are so much more difficult to keep functioning than lifeless satellites. There's an administrator who wants the astronauts to make public appearances to drum up support about beating the Russians who just put Yuri Gagarin in space. With a polite _ahem_, the scientists bring up the topic of what exactly the astronauts should sample on the Moon. The flight controllers nod in agreement.
 
-This is where our story picks up - planning EVAs. Perfect timing too because this paper just came out on EVA timelines.<><>footnote cite<><>
+"Yes," the flight controllers say, "we're glad you brought that up."
 
-For the first and only time in our history, we had to decide what we wanted to do on the Moon. These were our first steps on a different world, wholly unconnected from everything humans had ever known. How do you balance all of the exploration against safety concerns and engineering limits? The surface area of the Moon is [slightly less than Asia](https://www.universetoday.com/20489/moon-compared-to-earth/) after all. What do you want to see? How do you decide what science to support and what science will have to wait a few years (or a century?) for us to revisit?
+This is where our story picks up - planning EVAs. As part of his research, Matthew needed historical exploration EVA data, notably the comparison between plans for EVAs and how teams actually executed them. There have been 16 exploration EVAs, all of which took place on the Moon's surface during Apollo 11 - 17.  <><>right? cite<><> Comprehensive data on their timelines did not exist, so Matthew had to compile it.<sup>1</sup> Here are some interesting findings:
 
-I wonder if EVA timeline planning got overlooked in those meetings. The answer, is no. 13 hours of training to every hour of EVA. Now it's 3 to 1. <><>cite new paper<><>
+* 13 hours of training to every hour of EVA. Now it's 3 to 1.
+* time ahead / time behind statistics
+	* best, worst, average, trends as mission dragged on, sources of delay
+* phases of operation
+* metabolic activity?
+* 
 
-"What will we do once we get there?"
+The timelines themselves could be broken into (arguably <><>cite<><>) three phases - traversal, overhead, and station activities. During traversal phases, EV crews are relocating. Once they reach a destination, they generally begin an overhead phase, where EV crews prepare whatever equipment they need for the next phase, station activity, during which time they are using equipment for its intended purpose. Once EV crews finish station activities, they reenter overhead while they pack up equipment, clean up their worksite, and likely reenter a traversal period. This general pattern repeats itself throughout an EVA.
 
-"Get rocks."
+During the Apollo missions, EV crews stuck to a "buddy system," whereby there were two EVs and one IV, the Lunar Module Pilot (LMP) <><>right? cite?<><>
 
-"Great."
+What's remarkable is that modern ISS timelines look remarkably similar to Apollo timelines. They follow the same basic structure.
 
-Of course, this is wrong. This is a big deal, especially to the geologists. I've been in meetings where we have a 20 minute discussion about the different ways to strike a rock with a hammer and what they're called. There were factions within the geologists, notably by nationality. At one point, a Brit tossed out the term "cheeky knock," which instantly became canon and I'm sure has since been published in geology papers about BASALT.
+This is a big deal, especially to the geologists. I've been in meetings where we have a 20 minute discussion about the different ways to strike a rock with a hammer and what they're called. There were factions within the geologists, notably by nationality. At one point, a Brit tossed out the term "cheeky knock," which instantly became canon and I'm sure has since been published in geology papers about BASALT.
 
 The human element in an EVA makes it difficult to plan. Every moment is at the whim of what samples the fates have left nearby and what the crew notice and ultimately think of what they find. As a result, there's a _laissez faire_ attitude with exploration EVAs. Each one is going to be different. Each one will present new challenges and  reasons for delays. Each delay will be different. Every timeline will look different and the time ahead t/ time behind will look different.
 
@@ -62,3 +67,5 @@ the geospatial and temporal information associated with all tasks to be performe
 
 p15, 16 - start description of timeline structure
 p18 - measuring tasks. is a task duration really the diff between its start time and the next's? (probably good to hint at Marvin's step duration definition (no dead time))
+
+<sub><sup>1</sup>Last year, Matthew and co. published this data in a paper titled "Operational Assessment of Apollo Lunar Surface Extravehicular Activity." <><>link<><> </sub>
