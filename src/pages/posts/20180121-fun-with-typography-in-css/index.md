@@ -68,4 +68,4 @@ Kindling the energy hidden in matter, Flatland colonies, globular star cluster n
 
 _Lorem ipsum from [Sagan Ipsum](http://saganipsum.com/?p=1)._
 
-It's probably worth mentioning that these are style luxuries for screens with a lot of real estate. You would't want a single letter to take up half a screen. If you look at the mobile version of Mozilla, the first paragraph loses its styling and renders as normal text.
+It's probably worth mentioning that these styles are luxuries for screens with a lot of real estate. You would't want a single letter to take up half a screen. If you look at the mobile version of Mozilla, the first paragraph loses its styling and renders as normal text.
