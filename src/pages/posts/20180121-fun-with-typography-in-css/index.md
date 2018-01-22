@@ -13,5 +13,8 @@ Drop caps
 
 `first-line`
 
-`first-letter`
+`:first-letter`
 
+example: https://blog.mozilla.org/blog/2018/01/16/mozilla-files-suit-fcc-protect-net-neutrality/
+
+They use `:first-letter`, `:first-child`, and `:first-line`
