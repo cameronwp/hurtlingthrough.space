@@ -43,11 +43,12 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
     },
     code: {
       fontFamily: ['Fira Mono', 'monospace'].join(','),
-      fontWeight: 500
+      fontWeight: 500,
+      fontSize: '1em',
+      lineHeight: '1.5rem'
     },
     'p > code': {
       background: '#f3f0ee',
-      fontSize: '0.95em',
       fontWeight: 400
     },
     'blockquote > *not(:last-child)': {

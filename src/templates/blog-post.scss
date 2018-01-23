@@ -61,6 +61,13 @@
   .lead-in:first-line {
     font-size: 32px;
   }
+
+  // firefox only
+  @supports (-moz-appearance:none) {
+    .lead-in:first-line {
+      line-height: 1;
+    }
+  }
 }
 
 .share-section {
