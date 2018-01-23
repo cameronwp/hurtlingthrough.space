@@ -21,7 +21,7 @@ _Mozilla used drops caps and a few other lead-in techniques with their [blog pos
 
 I love everything here. Neat trick of inverting the colors on the dropped cap. Great font (which I believe is custom). The first line is a bit larger and captures your attention. In the same way, the whole first paragraph is larger, which makes sense because it's a summary and should grab your attention. And not to mention, I like it because I support their efforts.
 
-It's probably worth mentioning that these styles are luxuries for screens with a lot of real estate. You would't want a single letter to take up half a screen. If you look at the mobile version of Mozilla, the first paragraph loses its styling and renders as normal text.
+It's probably worth mentioning that these styles are luxuries for screens with a lot of real estate. You wouldn't want a single letter to take up half a screen. If you look at the mobile version of Mozilla, the first paragraph loses its styling and renders as normal text.
 
 In researching how to replicate drop caps and lead in paragraphs, I came across a few CSS pseudoselectors I wasn't aware of:
 
