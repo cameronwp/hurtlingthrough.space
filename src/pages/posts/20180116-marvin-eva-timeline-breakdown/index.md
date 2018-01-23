@@ -76,6 +76,11 @@ Matthew and I went back and forth about how a timeline is structured. I emphasiz
 <><>what we came up with<><>
 <><>start discussion about JS implementation. pros and cons about performance?<><>
 
+<><>hierarchy diagram<><>
+
+<><>how the hierarchy has affected decision making - less flexibility for on-the-fly changes. difficulty with unknown number of cycles<><>
+
+
 
 I've been in meetings where we have a 20 minute discussion about the different ways to strike a rock with a hammer and what they're called. There were factions within the geologists, notably by nationality. At one point, a Brit tossed out the term "cheeky knock," which instantly became canon and I'm sure has since been published in geology papers about BASALT.
 
