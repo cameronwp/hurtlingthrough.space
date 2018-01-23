@@ -89,7 +89,7 @@ Incidentally, Matthew hadn't read HHG2G when I suggested Marvin for the name for
 
 Naming your services after pop culture references isn't always a good idea. There’s a difference between making a useful comparison and obfuscating the purpose of code. I’d argue that Marvin itself was an acceptable reference, but I think I toed the line later on when I extended the analogy to lesser known nouns in the HHG2G universe. I called the eventual server running Marvin the _Heart of Gold_, Marvin the Paranoid Android’s home ship. The _Infinite Improbability Drive_ was responsible for running calculations and predictions in Marvin. It got its name from the eponymous engine in the Heart of Gold that moves the ship by “[passing] through every conceivable point in every conceivable universe simultaneously.” Both examples make sense, but only if you know HHG2G. If Marvin ever expands to a team with more developers, these names will need to change.
 
-_Coming up next: creating a control group for EVA research._
+_Coming up next: breaking down an exploration EVA timeline._
 
 <sub><sup>1</sup> We presented an overview of our research and prototypes at [IAC 2017](http://www.iafastro.org/events/iac/iac-2017/): [Miller, M., Pittman, C., & Feigh, K. 2017, '
 Next-Generation Human Extravehicular Spaceflight Operations Support Systems Development', IAC 2017. Adelaide, SA.](https://www.researchgate.net/publication/320290594_Next-Generation_Human_Extravehicular_Spaceflight_Operations_Support_Systems_Development)</sub>
