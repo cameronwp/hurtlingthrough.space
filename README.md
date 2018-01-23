@@ -20,12 +20,13 @@ It's probably worth noting that this repo uses a custom Gatsby plugin for proces
 yarn new
 ```
 
-Note that new posts automatically are set to `draft: true`. Change this to `draft: false` when you're ready to publish. Note that posts with `draft: true`
-do not show up in the homepage, but are still accessible directly.
+Note that new posts automatically are set to `draft: true`. Change this to `draft: false` when you're ready to publish. Note that posts with `draft: true` do not show up in the homepage, but are still accessible directly.
+
+NOTE: posts that are `draft: true` in the `master` branch will show up in rss.xml! Strongly advise avoiding merging drafts into master. Use the `--preview` flow described below instead.
 
 ## Fun with Frontmatter
 
-### Publish a post.
+### Publish a post
 
 ```md
 draft: false
@@ -39,6 +40,14 @@ twitterprompt: Cameron makes a huge mistake.
 ```
 
 This makes the Twitter prompt: "Cameron makes a huge mistake. https://hurtlingthrough.space/... via @cwpittman"
+
+### Custom summary
+
+The homepage will either display the excerpt for each post (the first ~200 chars?) or a predefined summary.
+
+```md
+summary: A day in the life of my dog. Her perspective on going to the park, sniffing butts, and more with lots of pictures.
+```
 
 ## Running in development
 
