@@ -71,3 +71,56 @@ Kindling the energy hidden in matter, Flatland colonies, globular star cluster n
 _Lorem ipsum from [Sagan Ipsum](http://saganipsum.com/?p=1)._
 
 Billions!
+
+_Update!_ There's a difference between the way Chrome and Firefox render the drop cap. I switch back and forth between Firefox and Chrome in my usual workflow and I noticed the drop cap shifting vertically. At first I thought I wasn't being careful with my CSS, which wouldn't be unusual. But no, this is an actual bug. I'll show you the Mozilla blog again.
+
+<><>annotated mozilla on Firefox<><>
+
+_Looks right, which makes sense given that Firefox is Mozilla's browser._
+
+<><>annotated mozilla on Chrome<><>
+
+_Doesn't quite look right. The 'T' has been shifted downward._
+
+Here's what I was seeing. I did my final spot checks before publishing using Chrome.
+
+<><>annotated lorem ipsum on Chrome<><>
+
+_The top of the 'N' matches the top first line and the bottom of the 'N' matches the bottom of the second line._
+
+<><>annotated lorem ipsum on Firefox<><>
+
+_The 'N' has been shifted upward._
+
+It looks like Firefox prioritizes and applies `line-height` differently when you define `first-letter` and `first-line`. I'm not 100% sure why but [this thread](https://bugzilla.mozilla.org/show_bug.cgi?id=371787) might be relevant? I really dislike browser hacks, but I'm also anal retentive about this sort of thing so I went looking for hacks. I came across [`@-moz-document`](https://developer.mozilla.org/en-US/docs/Web/CSS/@document), which I liked for its declarative specificity but no, it's [a security risk and will be dropped in Firefox 59](https://www.fxsitecompat.com/en-CA/docs/2015/moz-document-support-will-be-dropped/). Diving deeper, I found the [`@supports` query](https://css-tricks.com/the-at-rules-of-css/#article-header-id-10). It's even hackier, but you can check if a browser supports a specific CSS property and then apply styles accordingly. Here's how I changed my media query to account for Firefox's weirdness.
+
+```css
+@media (min-width: 600px) {
+  .lead-in {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .lead-in:first-letter {
+    float: left;
+    font-size: 78px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-left: 2px;
+    line-height: 1;
+  }
+
+  .lead-in:first-line {
+    font-size: 32px;
+  }
+
+  /* firefox only */
+  @supports (-moz-appearance:none) {
+    .lead-in:first-line {
+      line-height: 1;
+    }
+  }
+}
+```
+
+I'm checking if the browser supports [`-moz-appearance`](https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance), which is a buggy, experimental technology but not one that's slated to be deprecated. In any case, I'm not actually using it, just checking if it's available. Badda bing badda boom, now my drop caps look great everywhere!
