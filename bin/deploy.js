@@ -53,7 +53,7 @@ function uploadFiles() {
     });
     uploader.on('error', reject);
     uploader.on('end', () => {
-      console.log(`Success uploading files to ${bucket}`);
+      console.log(`Success uploading files to ${isPreviewDeploy ? 'preview' : 'production'} bucket`);
       resolve()
     });
   })
