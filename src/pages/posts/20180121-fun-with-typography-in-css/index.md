@@ -72,7 +72,11 @@ _Lorem ipsum from [Sagan Ipsum](http://saganipsum.com/?p=1)._
 
 Billions!
 
-_Update!_ There's a difference between the way Chrome and Firefox render the drop cap. I switch back and forth between Firefox and Chrome in my usual workflow and I noticed the drop cap shifting vertically. At first I thought I wasn't being careful with my CSS, which wouldn't be unusual. But no, this is an actual bug. I'll show you the Mozilla blog again.
+---
+
+_Update!_
+
+There's a difference between the way Chrome and Firefox render the drop cap. I switch back and forth between Firefox and Chrome in my usual workflow and I noticed the drop cap shifting vertically. At first I thought I wasn't being careful with my CSS, which wouldn't be unusual. But no, this is an actual bug. I'll show you the Mozilla blog again.
 
 <><>annotated mozilla on Firefox<><>
 
@@ -86,11 +90,11 @@ Here's what I was seeing. I did my final spot checks before publishing using Chr
 
 <><>annotated lorem ipsum on Chrome<><>
 
-_The top of the 'N' matches the top first line and the bottom of the 'N' matches the bottom of the second line._
+_The top of the 'N' matches the top first line and the bottom of the 'N' matches the bottom of the second line. This is right._
 
 <><>annotated lorem ipsum on Firefox<><>
 
-_The 'N' has been shifted upward._
+_The 'N' has been shifted upward. This is not quite right._
 
 It looks like Firefox prioritizes and applies `line-height` differently when you define `first-letter` and `first-line`. I'm not 100% sure why but [this thread](https://bugzilla.mozilla.org/show_bug.cgi?id=371787) might be relevant? I really dislike browser hacks, but I'm also anal retentive about this sort of thing so I went looking for hacks. I came across [`@-moz-document`](https://developer.mozilla.org/en-US/docs/Web/CSS/@document), which I liked for its declarative specificity but no, it's [a security risk and will be dropped in Firefox 59](https://www.fxsitecompat.com/en-CA/docs/2015/moz-document-support-will-be-dropped/). Diving deeper, I found the [`@supports` query](https://css-tricks.com/the-at-rules-of-css/#article-header-id-10). It's even hackier, but you can check if a browser supports a specific CSS property and then apply styles accordingly. Here's how I changed my media query to account for Firefox's weirdness.
 
