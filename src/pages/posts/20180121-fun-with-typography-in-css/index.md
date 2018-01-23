@@ -15,7 +15,7 @@ _[Not this fancy](https://commons.wikimedia.org/wiki/File:Emphasis%5Ftypography2
 
 The big first letter is something called "drop caps," which was news to me. You see this on the web too.
 
-![screenshot of mozilla's blog with drop caps. the first letter is big. the first line is a lot larger than normal text. the first paragraph is a bit larger than normal text](./mozilla-drop-caps.png)
+![screenshot of mozilla's blog with drop caps. the first letter is big. the first line is a lot larger than normal text. the first paragraph is a bit larger than normal text](./mozilla-drop-caps-2.png)
 
 _Mozilla used drops caps and a few other lead-in techniques with their [blog post](https://blog.mozilla.org/blog/2018/01/16/mozilla-files-suit-fcc-protect-net-neutrality/) about fighting the FCC's decision to revoke Net Neutrality._
 
@@ -76,25 +76,27 @@ Billions!
 
 _Update!_
 
-There's a difference between the way Chrome and Firefox render the drop cap. I switch back and forth between Firefox and Chrome in my usual workflow and I noticed the drop cap shifting vertically. At first I thought I wasn't being careful with my CSS, which wouldn't be unusual. But no, this is an actual bug. I'll show you the Mozilla blog again.
+There's a difference between the way Chrome and Firefox render the drop cap. I switch back and forth between Firefox and Chrome in my usual workflow and I noticed the drop cap shifting vertically. At first I thought I wasn't being careful with my CSS, which wouldn't be unusual. But no, this looks like an actual bug. There are slight differences between the Firefox and Chrome rendering of the Mozilla drop cap.
 
-<><>annotated mozilla on Firefox<><>
+![on firefox, the bottom of the T cuts through the middle of the first line](./mozilla-on-firefox-2.png)
 
-_Looks right, which makes sense given that Firefox is Mozilla's browser._
+_Firefox_
 
-<><>annotated mozilla on Chrome<><>
+![on chrome, the bottom of the T cuts is below the first line](./mozilla-on-chrome-2.png)
 
-_Doesn't quite look right. The 'T' has been shifted downward._
+_Chrome_
 
-Here's what I was seeing. I did my final spot checks before publishing using Chrome.
+The inverted background on the drop cap makes it hard to notice the difference, but it's there. I actually think the Chrome version looks a little better as the bottom of the background on the 'T' lines up with the bottom of the second line of text.
 
-<><>annotated lorem ipsum on Chrome<><>
+Here's what I was seeing on my blog. I did my final spot checks before publishing using Chrome.
 
-_The top of the 'N' matches the top first line and the bottom of the 'N' matches the bottom of the second line. This is right._
+![on firefox, the bottom of the N is in the middle of the first line](./blog-on-firefox.png)
 
-<><>annotated lorem ipsum on Firefox<><>
+_Firefox_
 
-_The 'N' has been shifted upward. This is not quite right._
+![on chrome, the bottom of the N is close to the bottom of the first line](./blog-on-chrome.png)
+
+_Chrome_
 
 It looks like Firefox prioritizes and applies `line-height` differently when you define `first-letter` and `first-line`. I'm not 100% sure why but [this thread](https://bugzilla.mozilla.org/show_bug.cgi?id=371787) might be relevant? I really dislike browser hacks, but I'm also anal retentive about this sort of thing so I went looking for hacks. I came across [`@-moz-document`](https://developer.mozilla.org/en-US/docs/Web/CSS/@document), which I liked for its declarative specificity but no, it's [a security risk and will be dropped in Firefox 59](https://www.fxsitecompat.com/en-CA/docs/2015/moz-document-support-will-be-dropped/). Diving deeper, I found the [`@supports` query](https://css-tricks.com/the-at-rules-of-css/#article-header-id-10). It's even hackier, but you can check if a browser supports a specific CSS property and then apply styles accordingly. Here's how I changed my media query to account for Firefox's weirdness.
 
@@ -127,4 +129,4 @@ It looks like Firefox prioritizes and applies `line-height` differently when you
 }
 ```
 
-I'm checking if the browser supports [`-moz-appearance`](https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance), which is a buggy, experimental technology but not one that's slated to be deprecated. In any case, I'm not actually using it, just checking if it's available. Badda bing badda boom, now my drop caps look great everywhere!
+I'm checking if the browser supports [`-moz-appearance`](https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance), which is a buggy, experimental technology but not one that's slated to be deprecated. In any case, I'm not actually using it, just checking if it's available. Badda bing badda boom, now the drop caps look great everywhere!
