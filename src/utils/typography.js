@@ -10,8 +10,8 @@ Wordpress2016.overrideThemeStyles = () => ({
 })
 
 const typography = new Typography(_.assign({}, Wordpress2016, {
-  bodyFontFamily: ['Arvo', 'serif'],
-  headerFontFamily: ['Montserrat', 'Arvo', 'sans-serif'],
+  bodyFontFamily: ['Bitter', 'serif'],
+  headerFontFamily: ['Montserrat', 'Bitter', 'sans-serif'],
   googleFonts: [
     {
       name: 'Fira Mono',
@@ -22,7 +22,7 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
       styles: ['700', '900'],
     },
     {
-      name: 'Arvo',
+      name: 'Bitter',
       styles: [
         '400',
         '400i',
@@ -37,6 +37,9 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
       fontStyle: 'inherit',
       textAlign: 'justify',
       textIndent: '2em'
+    },
+    p: {
+      fontSize: '18px'
     },
     code: {
       fontFamily: ['Fira Mono', 'monospace'].join(','),
