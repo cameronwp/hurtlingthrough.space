@@ -21,7 +21,7 @@ The astronauts want to know what kind of flight controls the Lunar Module will h
 
 "Yes," the flight controllers say, "we're glad you brought that up."
 
-This is where the story of Marvin picks up - planning EVAs. Looking through the history of space exploration, human-performed exploration is a rare phenomenon. All astronauts are explorers in the philosophical sense, but only a few astronauts have explored in the Darwin-in-the-Galapagos kind of way. The first EVAs tested engineering limits. Like the shuttle crews before them, modern ISS EV crews perform engineering tasks on engineered surfaces. They are construction workers and repairmen in space. Only the EV crews on Apollo 15 - 17 stepped out of an airlock with the goal of finding something cool outside.
+This is where the story of Marvin picks up - planning EVAs. Looking through the history of space exploration, human-performed exploration is a rare phenomenon. All astronauts are explorers in the philosophical sense, but only a few astronauts have explored in the Darwin-in-the-Galapagos kind of way. The first EVAs tested engineering limits. Same as the shuttle crews before them, modern ISS EV crews are construction workers in space performing engineering tasks on engineered surfaces. Only the EV crews on Apollo 15 - 17 stepped out of an airlock with the goal of finding something cool outside.
 
 ## Apollo Moonwalks
 
@@ -48,21 +48,34 @@ EVAs begin with egress and equipment checks. Once complete, they go into a cycle
 
 ![a graph with time behind data points from apollo 14 - 17 EVAs. the trend lines go up mostly, with a slight downward trend near the end before sharply rising back up to finish.](./fig33.png)
 
-_This graph shows how the time behind varied on average for Apollo 14 - 17 EVAs.<><>cite p66, figure 33<><> The x-axis shows PET and the y-axis is time behind. Phase 1 is egress, phase 2 and 3 consist of traversal-overhead-station activity cycles. Phase 4 is ingress. <><>check!<><>_
+_This graph shows how the time behind varied on average for Apollo 14 - 17 EVAs.<><>cite p66, figure 33<><> The x-axis shows PET and the y-axis is time behind. Phase 1 is egress, phase 2 and 3 consist of traversal-overhead-station activity cycles. Phase 4 is clean up and ingress.<><>check!<><>_
 
 Time behind got worse as EVAs progressed. Egressing generally proceeded at a nominal pace (NASA-speak for "expected" or "within acceptable bounds"), but pretty much everything else took longer than expected. In fact, 80% of the timeline data points used to generate this graph were behind schedule.<><>cite<><> The few points that contradict the general trend almost always benefitted from cutting prior tasks from the as-performed timeline.
 
-I'll leave diving into the full set of a statistics as an exercise for the reader.<><>cite<><> Suffice it to say that science _always_ takes more time than you think. But that's no excuse for failing to stick to a timeline when you're aware of the issue and you've got the time to prepare for it.<><>reword?<><> Marvin is our attempt at subverting fashionably late exploration EVAs. The first step to running tighter EVA timelines is creating a detailed language to describe them. In other words, we needed a schema.
+I'll leave diving into the full set of a statistics as an exercise for the curious.<><>cite<><> Suffice it to say that science _always_ takes more time than you think. But that's no excuse for failing to stick to a timeline when you're aware of the tendency for delays and you've got the time to prepare for it. Marvin is our attempt at subverting fashionably late exploration EVAs. The first step to running tighter EVA timelines was to create a detailed language to describe them. In other words, we needed a schema.
 
 ## Timeline Schemas
 
+Timelines haven't changed much since the 1960s.
+
 ![gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
 
-_I took this picture of an exhibit at Adler Planetarium in Chicago. This Gemini 12 flight plan looks almost identical to the mission timelines for ISS EVAs._
+_I took this picture of an exhibit at Adler Planetarium in Chicago of a Gemini 12 flight plan._
 
+<><>pull image of an apollo timeline from the paper<><>
 
+<><>pull image of an ISS timeline<><>
 
-What's remarkable is that modern ISS timelines look remarkably similar to Apollo timelines. They follow the same basic structure.
+Modern ISS timelines follow basically the same structure as early Gemini and Apollo timelines. Each one consists of high-level plans that describe broad phases of the mission and low-level procedures for the minute-by-minute, atomic level details. They are generally presented as such.
+
+<><>image of timeline with inset<><>
+
+Matthew and I went back and forth about how a timeline is structured. I emphasized being as specific as possible with our definitions.
+
+<><>why being specific matter<><>
+<><>what we came up with<><>
+<><>start discussion about JS implementation. pros and cons about performance?<><>
+
 
 I've been in meetings where we have a 20 minute discussion about the different ways to strike a rock with a hammer and what they're called. There were factions within the geologists, notably by nationality. At one point, a Brit tossed out the term "cheeky knock," which instantly became canon and I'm sure has since been published in geology papers about BASALT.
 
