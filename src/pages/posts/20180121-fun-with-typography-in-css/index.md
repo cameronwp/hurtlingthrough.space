@@ -58,7 +58,7 @@ Here's how I'll be using them:
 <p class="lead-in">Lorem ipsum dolor sit amet...</p>
 ```
 
-Which renders like so (you have to be on desktop to see it):
+Which renders [like so](/hts-drop-caps.png):
 
 ---
 
