@@ -23,15 +23,15 @@ The astronauts want to know what kind of flight controls the Lunar Module will h
 
 This is where the story of Marvin picks up - planning EVAs. Looking through the history of space exploration, human-performed exploration is a rare phenomenon. All astronauts are explorers in the philosophical sense, but only a few astronauts have explored in the Darwin-in-the-Galapagos kind of way. The first EVAs tested engineering limits. Like the shuttle crews before them, modern ISS EV crews perform engineering tasks on engineered surfaces. They are construction workers and repairmen in space. Only the EV crews on Apollo 15 - 17 stepped out of an airlock with the goal of finding something cool outside.
 
-Early Martian EVAs will likely mimic the pattern established in the Apollo missions. Engineering objectives outweighed scientific objectives on the first lunar landings, Apollo 11 - 14, during which lunar pioneers _egressed_ (left the airlock, as opposed to _ingressed_, or reentered the airlock) to stretch their legs on the regolith and test equipment and procedures. The EV crews on the later missions, Apollo 15 - 17, focused on lunar science. Notably, the Apollo 17 crew included Harrison Schmitt, the only PhD geologist to ever do field work on a different world.<><>link?<><>
+Early Martian EVAs will likely mimic the pattern established in the Apollo missions. Engineering objectives outweighed scientific objectives on the first lunar landings, Apollo 11 - 14, during which lunar pioneers _egressed_ (meaning they left the airlock; as opposed to _ingressed_ when a crew reenters the airlock) to stretch their legs on the regolith and test equipment and procedures. The EV crews on the later missions, Apollo 15 - 17, focused on lunar science. Notably, the Apollo 17 crew included Harrison Schmitt, the only PhD geologist to ever do field work on a different world.<><>link?<><>
 
 <><>cool apollo pictures?<><>
 
 If you want to optimize a procedure, whether it's tying a shoe or doing interplanetary science, you need to test. You need to make mistakes and learn from them. In that vein, exploration EVAs are uncharted territory. There are only nine examples of exploration EVAs, all of which come from Apollo 15 - 17. As the possibility of future lunar, asteroidal, and Martian EVAs looms on the horizon in the next decades, researchers like Matthew Miller have been [revisiting Apollo missions](http://www.news.gatech.edu/features/lunar-landing-logs) in an effort to learn as much as possible about the human factors and operational concepts that influence EVA mission success.
 
-NASA obsessively plans EVAs, for good reason. With higher resolution understanding of the state of the EVA, the better we can prevent unforeseen circumstances from derailing objectives. Apollo EVA planned timelines have minute level resolution, as in, we know what astronauts _should_ have been doing during every 60 second period of the mission. Of course, what _actually_ happened is a different story.
+NASA obsessively plans EVAs for good reason. With higher resolution understanding of the state of an EVA, the better we can prevent unforeseen circumstances from derailing objectives. Apollo EVA planned timelines have minute level resolution, as in, we know what astronauts _should_ have been doing during every 60 second period of the mission. Of course, what _actually_ happened is a different story.
 
-In a paper last year, Matthew and other operations researchers compared planned and executed timelines from Apollo 14 - 17 EVAs.<sup>1</sup> In general, we call the comparison _time behind_, which reflects the fact that most EVAs fall behind schedule. Given that a timeline consists of an un-gapped sequence of tasks (more on how tasks are defined in a moment), each with a defined start time, you can calculate the deviation between the planned and executed timeline with
+In a paper last year, Matthew and other operations researchers compared planned and executed timelines from Apollo 14 - 17 EVAs.<sup>1</sup> In general, we call the comparison _time behind_, which reflects the fact that most EVAs fall behind schedule. Given that a timeline consists of an un-gapped sequence of tasks, each with a defined start time (more on how tasks are defined in a moment), you can calculate the deviation between the planned and executed timeline with
 
 $$
 \begin{aligned}
@@ -40,11 +40,13 @@ $$
 \end{aligned}
 $$
 
-We call the mission clock the Phased Elapsed Time (PET), measured in HH:MM. It starts at 00:00 when the first crew member egresses and counts up until the last crew member ingresses.
+We call the mission clock the Phased Elapsed Time (PET). It starts at 00:00 (HH:MM usually) when the first crew member egresses and counts up until the last crew member ingresses.
 
 ![a graph with time behind data points from apollo 14 - 17 EVAs. the trend lines go up mostly, with a slight downward trend near the end before sharply rising back up to finish.](./fig33.png)
 
-_This graph shows how the time behind varied on average for Apollo 14 - 17 EVAs.<><>cite p66, figure 33<><> The x-axis shows PET and the y-axis is time behind. Time behind got worse as EVAs progressed. In fact, most data points that contradict this trend were the result of cutting tasks from the as-performed timeline._
+_This graph shows how the time behind varied on average for Apollo 14 - 17 EVAs.<><>cite p66, figure 33<><> The x-axis shows PET and the y-axis is time behind._
+
+Time behind got worse as EVAs progressed. In fact, 80% of the timeline data points used to generate this graph were behind schedule.<><>cite<><> The few points that contradict the general  trend were the result of cutting tasks from the as-performed timeline.
 
 EVAs begin with egress and equipment checks. Once complete, they go into a cycle where EV crews move to a location, set up equipment, do something with the equipment, pack everything up, and move on to another location before finally ingressing. You can group these phases of operation into three broad categories - traversal, overhead, and station activities. During traversal phases, EV crews are relocating. Once they reach a destination, they generally begin an overhead phase, where EV crews prepare whatever equipment they need for the next phase, station activity, during which time they are using equipment for its intended purpose. Once EV crews finish station activities, they reenter overhead while they pack up equipment, clean up their worksite, and then likely reenter a traversal period.
 
