@@ -76,6 +76,8 @@ Matthew and I went back and forth about how a timeline is structured. I emphasiz
 
 After a few days of looking at timelines and sussing out what each aspect of the written procedures represents, we came up with a hierarchical schema. In it, we defined levels of resolution. As you move down in the hierarchy, what it describes becomes more and more specific.
 
+Let's take a look at an envisioned Martian spacewalk.
+
 <><>hierarchy diagram<><>
 
 _An example timeline with child, parent, sibling pointed out._
