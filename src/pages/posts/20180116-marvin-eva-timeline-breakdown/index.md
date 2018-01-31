@@ -17,11 +17,11 @@ _This is part 2 of the Marvin series. Here’s [part 1](/posts/20180115-marvin-d
 
 <p class="lead-in">It's the early 1960s. Picture yourself in a meeting at NASA with scientists, engineers, flight controllers, and astronauts. The summer humidity in Houston makes the air sticky. You feel your allergies flaring up from the cigarette smoke wafting over the table. It's easy to ignore your discomfort though because you’re talking about landing on the Moon in the next decade.</p>
 
-The astronauts want to know what kind of flight controls the Lunar Module will have. The engineers are wringing their hands about life support systems because humans are so damned difficult to keep functioning compared to lifeless satellites. An administrator hounds the astronauts about their scheduled public appearances to drum up support about beating the Russians who just put Yuri Gagarin in space. With a polite _ahem_, the scientists bring up the topic of what exactly the astronauts should sample on the Moon. The flight controllers nod in agreement.
+The astronauts want to know what kind of flight controls the Lunar Module will have. The engineers are wringing their hands about life support systems because humans are so damned difficult to keep functioning compared to abiotic satellites. An administrator hounds the astronauts about their scheduled public appearances to drum up support about beating the Russians who just put Yuri Gagarin in space. With a polite _ahem_, the scientists bring up the topic of what exactly the astronauts should sample on the Moon. The flight controllers nod in agreement.
 
 "Yes," the flight controllers say, "we're glad you brought that up."
 
-This is where the story of Marvin picks up - planning EVAs. Looking through the history of space exploration, human-performed exploration is a rare phenomenon. All astronauts are explorers in the philosophical sense, but only a few astronauts have explored in the Darwin-in-the-Galapagos kind of way. The first EVAs tested engineering limits. Same as the shuttle crews before them, modern ISS EV crews are construction workers in space performing engineering tasks on engineered surfaces. Only the EV crews on Apollo 15 - 17 stepped out of an airlock with the goal of finding something cool outside.
+This is where the story of Marvin picks up - planning spacewalks. Looking through the history of space exploration, human-performed exploration is a rare phenomenon. All astronauts are explorers in the philosophical sense, but only a few astronauts have explored in the Darwin-in-the-Galapagos kind of way. The first EVAs tested engineering limits. Same as the shuttle crews before them, modern ISS EV crews are construction workers in space performing engineering tasks on engineered surfaces. Only the EV crews on Apollo 15 - 17 stepped out of an airlock with the goal of finding something cool outside.
 
 ## Apollo Moonwalks
 
@@ -31,7 +31,7 @@ Early Martian EVAs will likely mimic the pattern established in the Apollo missi
 
 If you want to optimize a procedure, whether it's tying a shoe or doing interplanetary science, you need to test. You need to make mistakes and learn from them. In that vein, exploration EVAs are uncharted territory. There are only nine examples of exploration EVAs, all of which come from Apollo 15 - 17. As the possibility of future lunar, asteroidal, and Martian EVAs looms on the horizon in the next decades, researchers like Matthew Miller have been [revisiting Apollo missions](http://www.news.gatech.edu/features/lunar-landing-logs) in an effort to learn as much as possible about the human factors and operational concepts that influence EVA mission success.
 
-NASA obsessively plans EVAs for good reason. With higher resolution understanding of the state of an EVA, the better we can prevent unforeseen circumstances from derailing objectives. Apollo EVA planned timelines have minute level resolution, as in, we know what astronauts _should_ have been doing during every 60 second period of the mission. Of course, what _actually_ happened is a different story.
+NASA obsessively plans EVAs for good reason. With higher resolution understanding of the state of an EVA, the better we can prevent unforeseen circumstances from derailing objectives. Apollo EVA planned timelines have minute level resolution, as in we know what astronauts _should_ have been doing during every 60 second period of the mission. Of course, what _actually_ happened is a different story.
 
 In a paper last year, Matthew and other operations researchers compared planned and executed timelines from the lunar EVAs of Apollo 14 - 17.<sup>1</sup> We generally call this comparison the _time behind_, which reflects the fact that most EVAs fall behind schedule. Given that a timeline consists of an un-gapped sequence of tasks, each with a defined start time (more on how tasks are defined in a moment), you can calculate the deviation between the planned and executed timeline with
 
@@ -44,13 +44,13 @@ $$
 
 The mission clock is called the Phased Elapsed Time (PET). It starts at 00:00 (HH:MM usually) when the first crew member egresses and counts up until the last crew member ingresses.
 
-EVAs begin with egress and equipment checks. Once complete, they go into a cycle where EV crews move through three types of activity - traversal, overhead, and station activities. During traversal activities EV crews relocate to a worksite. Once they reach it, they generally begin an overhead phase, where they unpack and prepare equipment they need for the next phase, station activity. Crews complete most of their overall mission objectives during station activities. Once finished, they reenter an overhead activity while they pack up equipment, clean up their worksite, and likely move into another traversal. The cycle repeats N times before before EV crews finally ingress.
+EVAs begin with egress and equipment checks. Once complete, they go into a cycle where EV crews move through three types of activities - traversal, overhead, and station activities. During traversal activities EV crews relocate to a worksite. Once they reach it, they generally begin an overhead phase, where they unpack and prepare equipment they need for the next phase, station activity. Here, crews use equipment to perform tasks and complete mission objectives.<sup>2</sup> Once finished, they reenter an overhead activity while they pack up equipment, clean up their worksite, and likely move into another traversal. The cycle repeats multiple times before before EV crews finally ingress.
 
 Matthew and co. took a look at how time behind varied on average throughout Apollo 14 - 17 EVAs. Take a look at this graph.
 
 ![a graph with time behind data points from apollo 14 - 17 EVAs. the trend lines go up mostly, with a slight downward trend near the end before sharply rising back up to finish.](./fig33.png)
 
-_Average time behind for Apollo 14 - 17 EVAs.<><>cite p66, figure 33<><> Time behind generally increased as missions progressed. The x-axis shows PET and the y-axis is time behind. Phase 1 is egress, phase 2 and 3 consist of traversal-overhead-station activity cycles. Phase 4 is clean up and ingress.<><>check!<><>_
+_<><>cite p66, figure 33<><> Average time behind for Apollo 14 - 17 EVAs. Time behind generally increased as missions progressed. The x-axis shows PET and the y-axis is time behind. Phase 1 is egress, phase 2 and 3 consist of traversal-overhead-station activity cycles. Phase 4 is clean up and ingress.<><>check!<><>_
 
 Time behind got worse as EVAs progressed. Egressing generally proceeded at a nominal pace (NASA-speak for "expected" or "within acceptable bounds"), but pretty much everything else took longer than expected. In fact, 80% of the data points used to generate this graph were behind schedule.<><>cite<><> The few points that contradict the general trend almost always benefited from cutting prior tasks from the as-performed timeline.
 
@@ -78,31 +78,73 @@ After a few days of looking at timelines and sussing out what each aspect of the
 
 <><>hierarchy diagram<><>
 
-_An example timeline._
+_An example timeline with child, parent, sibling pointed out._
 
 Activity -> Task -> Subtask -> Procedure
 
 
 
-We generalized the idea of an action the astronauts could take on EVA to something we called a Step, with a capital 'S'. A Step only needs to include a short description that identifies it and an expected duration.
+We generalized the idea of an action the astronauts could take on EVA to something we called a Step, with a capital 'S' because it is the formal name of a defined data structure (from now on, capitalized versions of Step, Timeline, Activity, Task, Subtask, and Procedure represent the coded data structure manifestations of their real-life counterparts). A Step only needs a short description to identify it and an expected duration.
 
-```go
-// Step describes a general action the crew will take.
-type Step struct {
-	Description      string
-	ExpectedDuration int
+```ts
+// Step describes a general action the crew will take
+class Step {
+	description:      string;
+	expectedDuration: int;
 }
 ```
 
-Additionally, a Step can have zero or more children. This is how we build the hierarchy of the overall timeline.
+Additionally, a Step can have zero or more children. This is how we built the hierarchy of the overall timeline.
 
-```go
-// Step describes a general action the crew will take.
-type Step struct {
-	Description      string
-	ExpectedDuration int
-	Children         []Step // means a list of other Steps
+```ts
+class Step {
+	description:      string;
+	expectedDuration: int;
+	children:         Array<Step>; // means a list of other Steps
 }
+```
+
+As per our definition, an Activity can only have Task children.
+
+```ts
+class Activity extends Step {
+	// everything is the same except...
+	children: Array<Task>;
+}
+```
+
+Let's imagine we have a Timeline that looks like so.
+
+<><>Image of a traversal activity with two tasks for reaching checkpoints<><>
+
+The Activity is the top of the Timeline, so let's create that first.
+
+```ts
+let activity = new Activity();  // creates an Activity
+activity.description = 'Traverse to target alpha';
+activity.expectedDuration = 20; // time in minutes to reach the target location
+```
+
+An Activity can only have Task children. Let's create the Tasks that we expect astronauts to perform on the way to target alpha.
+
+```ts
+let task1 = new Task();
+task1.description = 'Drive to checkpoint alpha alpha';
+task1.expectedDuration = 14; // 14 minutes of drive time
+
+let task2 = new Task();
+task2.description = 'Photographic survey of outcrop at alpha alpha';
+task2.expectedDuration= 2; // 2 minutes to take photos
+
+let task3 = new Task();
+task3.description = 'Finish drive to target alpha';
+task3.expectedDuration = 4; // 4 minutes to finish the drive
+```
+
+Right now, we have four freefloating Steps: `activity`, `task1`, `task2`, and `task3`. We need to give them some structure. To do so, we're putting the Tasks in a list and making them the children of the Activity.
+
+```ts
+activity.children = [task1, task2, task3];
 ```
 
 
@@ -131,6 +173,8 @@ p15, 16 - start description of timeline structure
 p18 - measuring tasks. is a task duration really the diff between its start time and the next's? (probably good to hint at Marvin's step duration definition (no dead time))
 
 <sub><sup>1</sup>Comprehensive data on their timelines did not exist, so Matthew had to compile it. Last year, Matthew and co. published this data in a paper titled "Operational Assessment of Apollo Lunar Surface Extravehicular Activity." <><>link with formal citation<><> </sub>
+
+<sub><sup>2</sup>Most but not necessarily all mission objectives are met during station activities. <><>give an example?<><></sub>
 
 
 ## outline
