@@ -68,25 +68,23 @@ _I took this picture of an exhibit at Adler Planetarium in Chicago of a Gemini 1
 
 <><>pull image of an ISS timeline<><>
 
-Modern ISS timelines follow basically the same structure as early Gemini and Apollo timelines. Each one consists of high-level plans that describe broad phases of the mission and low-level procedures for the minute-by-minute, atomic level details. They are generally presented as such.
+The structure of modern ISS timelines closely resemble early Gemini and Apollo timelines. High-level outlines describe broad phases of the mission and low-level procedures provide minute-by-minute, atomic level details.
 
 <><>image of timeline with inset<><>
 
-Matthew and I went back and forth about how a timeline is structured. I emphasized being as specific as possible with our definitions. The better we define what happens in a timeline, the better we can later analyze it. In many of my web performance classes, I repeat the mantra that "you can't optimize what you can't measure." The same is true here. We can't optimize an EVA timeline if we can't measure it. And we can't measure it if we don't know how to define it. The more granular our definitions, the better resolution we'll have on the effects of our work against improving EVA timeline performance.
+After a few days of looking at timelines and sussing out what each aspect of the written procedures represents, we came up with a hierarchical schema with four levels. As you move down in the hierarchy, what it describes becomes more and more specific.
 
-After a few days of looking at timelines and sussing out what each aspect of the written procedures represents, we came up with a hierarchical schema. In it, we defined levels of resolution. As you move down in the hierarchy, what it describes becomes more and more specific.
+<><>image of a full Timeline hierarchy<><>
+
+_The hierarchy is as follows: Activity -> Task -> Subtask -> Procedure. At the bottom, a Procedure represents an a single action, such as tightening a bolt. At the top, an Activity describes upwards of hours of mission time._
 
 Let's take a look at an envisioned Martian spacewalk.
 
 <><>hierarchy diagram<><>
 
-_An example timeline with child, parent, sibling pointed out._
-
-Activity -> Task -> Subtask -> Procedure
+_A small example timeline with child, parent, sibling pointed out._
 
 <><>check the tense of the examples here<><>
-
-<><>why being specific matter<><>
 
 We generalized the idea of an action the astronauts could take on EVA to something we called a Step, with a capital 'S' because it is the formal name of a defined data structure (from now on, capitalized versions of Step, Timeline, Activity, Task, Subtask, and Procedure represent the coded data structure manifestations of their real-life counterparts). A Step only needs a short description to identify it and an expected duration.
 
@@ -154,6 +152,8 @@ activity.children = [task1, task2, task3];
 Now that there is a relationship between all of the Steps so far, we can start to plot how to do timeline calculations.
 
 
+<><>the problems the linear timeline solved<><>
+
 <><>how the hierarchy has affected decision making - less flexibility for on-the-fly changes. difficulty with unknown number of cycles<><>
 
 
@@ -176,21 +176,3 @@ p18 - measuring tasks. is a task duration really the diff between its start time
 <sub><sup>1</sup>Comprehensive data on their timelines did not exist, so Matthew had to compile it. Last year, Matthew and co. published this data in a paper titled "Operational Assessment of Apollo Lunar Surface Extravehicular Activity." <><>link with formal citation<><> </sub>
 
 <sub><sup>2</sup>Most but not necessarily all mission objectives are met during station activities. <><>give an example?<><></sub>
-
-
-## outline
-* brief intro
-* review of the paper
-	- comparison to other industries
-	- note challenge of matching as-planned and actual timelines. crew often called out completion of tasks in bulk rather than instantly when done
-* deconstruct a timeline (apollo / iss ?)
-	- activity, task, subtask, procedure
-* interlude: telemetry in Mission Control (shot that Matthew took?)
-* show timeline of GT experiment
-* break down how the GT experiment worked
-	- the EV actors
-	- the IV
-	- what's on the screen, what's on paper
-	- the scenario the IV crew were given
-		+ how we tweaked it
-* some high level results re: timing
