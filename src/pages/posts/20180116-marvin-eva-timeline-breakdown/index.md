@@ -82,24 +82,26 @@ _An example timeline with child, parent, sibling pointed out._
 
 Activity -> Task -> Subtask -> Procedure
 
+<><>check the tense of the examples here<><>
 
+<><>why being specific matter<><>
 
 We generalized the idea of an action the astronauts could take on EVA to something we called a Step, with a capital 'S' because it is the formal name of a defined data structure (from now on, capitalized versions of Step, Timeline, Activity, Task, Subtask, and Procedure represent the coded data structure manifestations of their real-life counterparts). A Step only needs a short description to identify it and an expected duration.
 
 ```ts
 // Step describes a general action the crew will take
 class Step {
-	description:      string;
-	expectedDuration: int;
+	description:      string; // a few word description
+	expectedDuration: number; // time in minutes this Step should take
 }
 ```
 
-Additionally, a Step can have zero or more children. This is how we built the hierarchy of the overall timeline.
+Additionally, a Step can have zero or more children. This is how we build the hierarchy of the overall timeline.
 
 ```ts
 class Step {
 	description:      string;
-	expectedDuration: int;
+	expectedDuration: number;
 	children:         Array<Step>; // means a list of other Steps
 }
 ```
@@ -147,11 +149,8 @@ Right now, we have four freefloating Steps: `activity`, `task1`, `task2`, and `t
 activity.children = [task1, task2, task3];
 ```
 
+Now that there is a relationship between all of the Steps so far, we can start to plot how to do timeline calculations.
 
-
-<><>why being specific matter<><>
-<><>what we came up with<><>
-<><>start discussion about JS implementation. pros and cons about performance?<><>
 
 <><>how the hierarchy has affected decision making - less flexibility for on-the-fly changes. difficulty with unknown number of cycles<><>
 
