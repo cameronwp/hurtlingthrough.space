@@ -70,7 +70,7 @@ I'll leave diving into the full set of statistics as an exercise for the curious
 
 ## Timeline Schemas
 
-Timelines haven't changed much since the 1960s.
+Looking at the timelines below, it's clear that they haven't changed much since the 1960s. High-level outlines describe broad phases of the mission and low-level procedures provide minute-by-minute, atomic level details.
 
 ![Gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
 
@@ -86,13 +86,9 @@ _A page from the first EVA of Apollo 17. Note that there are both high level det
 
 _The high level summary and an example detailed task view from the timeline for US EVA 22 on 9 July 2013. Astronauts Chris Cassidy and Luca Parmitano [began preparations to install a new ISS module](http://www.spaceflight101.net/iss-expedition-36-us-eva-22.html), the [Russian Multipurpose Laboratory Module](http://www.russianspaceweb.com/iss%5ffgb2.html) (Nauka or Нау́ка in Russian). They completed this 6 hour timeline almost perfectly on time. Take a look at the bottom of the first column - you can see boxes where the IV is expected to record the number of turns used to install bolts. This level of detail is not uncommon. Check out the [full timeline](https://www.nasa.gov/sites/default/files/files/US%5fEVA%5f22%5fTimeline.pdf) to see why it takes years to prepare for a single spacewalk._
 
-The structure of modern ISS timelines closely resembles early Gemini and Apollo timelines. High-level outlines describe broad phases of the mission and low-level procedures provide minute-by-minute, atomic level details.
+After a few days of looking at timelines and sussing out what each aspect of the written procedures represents, Matthew and I came up with a hierarchical schema with four levels. As you move down in the hierarchy, what it describes becomes more and more specific.
 
-<><>image of timeline with inset<><>
-
-After a few days of looking at timelines and sussing out what each aspect of the written procedures represents, we came up with a hierarchical schema with four levels. As you move down in the hierarchy, what it describes becomes more and more specific.
-
-<><>image of a full Timeline hierarchy<><>
+![a timeline hierarchy tree data-structure](./hierarchy.png)
 
 _The hierarchy is as follows: Activity -> Task -> Subtask -> Procedure. At the bottom, a Procedure represents an a single action, such as tightening a bolt. At the top, an Activity describes upwards of hours of mission time._
 
