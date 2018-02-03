@@ -74,7 +74,7 @@ Looking at the timelines below, it's clear that they haven't changed much since 
 
 ![Gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
 
-_I took this picture of an exhibit at Adler Planetarium in Chicago of a Gemini 12 flight plan. Not the same thing as an EVA timeline, but the structure is similar._
+_I took this picture of an exhibit of a Gemini 12 flight plan at Adler Planetarium in Chicago. Not the same thing as an EVA timeline, but the structure is similar._
 
 ![Apollo 17 timeline that looks like a spreadsheet with insets](./apollo-17-timeline.png)
 
@@ -84,58 +84,64 @@ _A page from the first EVA of Apollo 17. Note that there are both high level det
 
 ![ISS detailed procedures from the same timeline with a column of equipment diagrams, and columns with minute-by-minute procedures for EV1 and EV2](./iss-detailed-procedures.png)
 
-_The high level summary and an example detailed task view from the timeline for US EVA 22 on 9 July 2013. Astronauts Chris Cassidy and Luca Parmitano [began preparations to install a new ISS module](http://www.spaceflight101.net/iss-expedition-36-us-eva-22.html), the [Russian Multipurpose Laboratory Module](http://www.russianspaceweb.com/iss%5ffgb2.html) (Nauka or Нау́ка in Russian). They completed this 6 hour timeline almost perfectly on time. Take a look at the bottom of the first column - you can see boxes where the IV is expected to record the number of turns used to install bolts. This level of detail is not uncommon. Check out the [full timeline](https://www.nasa.gov/sites/default/files/files/US%5fEVA%5f22%5fTimeline.pdf) to see why it takes years to prepare for a single spacewalk._
+_The high level summary and an example detailed task view from the timeline for US EVA 22 on 9 July 2013. Astronauts Chris Cassidy and Luca Parmitano [began preparations to install a new ISS module](http://www.spaceflight101.net/iss-expedition-36-us-eva-22.html), the [Russian Multipurpose Laboratory Module](http://www.russianspaceweb.com/iss%5ffgb2.html) (Nauka or Нау́ка in Russian). They completed this 6 hour timeline almost perfectly on time. Take a look at the bottom of the first column - you can see boxes where the IV is expected to record the number of turns used to install bolts. This level of detail is not uncommon. Check out the [full timeline](https://www.nasa.gov/sites/default/files/files/US%5fEVA%5f22%5fTimeline.pdf) to see why it takes years to prepare for a single spacewalk. Also interesting to note: you can see that EV2 was asked to take a survey photo of the Alpha Magnetic Spectrometer (AMS). This EVA occurred two years after the AMS was launched and, at the time, did not yet need the repairs discussed [before](/posts/20180115-marvin-deep-spacewalks/) - this was just a survey to assess its health._
 
-After a few days of looking at timelines and sussing out what each aspect of the written procedures represents, Matthew and I came up with a hierarchical schema with four levels. As you move down in the hierarchy, what it describes becomes more and more specific.
+Using modern and historical timelines as inspiration, Matthew and I designed a hierarchical schema that adequately encapsulates all the information from high level summaries to detailed, minute-by-minute procedures. It's easy to translate current timelines to our chosen data structure. As you move down in the hierarchy, what it describes becomes more and more specific.
 
 ![a timeline hierarchy tree data-structure](./hierarchy.png)
 
-_The hierarchy is as follows: Activity -> Task -> Subtask -> Procedure. At the bottom, a Procedure represents an a single action, such as tightening a bolt. At the top, an Activity describes upwards of hours of mission time._
+_The hierarchy is as follows: Activity → Task → Subtask → Procedure. At the bottom, a Procedure represents an a single action, such as tightening a bolt. At the top, an Activity describes upwards of hours of mission time._
 
-Let's take a look at an envisioned Martian spacewalk.
+![an ISS timeline with annotations to show where each level of the timeline is described](./timeline-annotated.png)
 
-<><>hierarchy diagram<><>
+_This is how we translated ISS timelines to the schema we designed. For example, you can see that the Task of SSU CLEAN UP has seven Subtasks that belong to it, and the third Subtask has some procedural information that belongs to it. From Matthew's PhD thesis,[^4] page 138, figure 4.16._
 
-_A small example timeline with child, parent, sibling pointed out._
+[^4]: [Matthew's thesis](https://doi.org/10.13140/rg.2.2.17731.30248):<br>Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. . 10.13140/RG.2.2.17731.30248.
 
-<><>check the tense of the examples here<><>
+We generalized the idea of an action the astronauts could take on EVA to something we called a Step, with a capital 'S' to distinguish it as a formal name for a defined data structure (from now on, capitalized versions of Step, Timeline, Activity, Task, Subtask, and Procedure represent the digital manifestations of their operational counterparts). A Step only needs a short description to identify it. An expected duration provides the timing data needed to do timeline calculations.
 
-We generalized the idea of an action the astronauts could take on EVA to something we called a Step, with a capital 'S' because it is the formal name of a defined data structure (from now on, capitalized versions of Step, Timeline, Activity, Task, Subtask, and Procedure represent the coded data structure manifestations of their real-life counterparts). A Step only needs a short description to identify it and an expected duration.
-
-```ts
+```typescript
 // Step describes a general action the crew will take
 class Step {
 	description:      string; // a few word description
-	expectedDuration: number; // time in minutes this Step should take
+	expectedDuration: number; // the amount of time in minutes this Step should take
 }
 ```
 
 Additionally, a Step can have zero or more children. This is how we build the hierarchy of the overall timeline.
 
-```ts
+```typescript
 class Step {
 	description:      string;
 	expectedDuration: number;
-	children:         Array<Step>; // means a list of other Steps
+	children:         Array<Step>; // a list of other Steps
 }
 ```
 
 As per our definition, an Activity can only have Task children.
 
-```ts
+```typescript
 class Activity extends Step {
 	// everything is the same except...
 	children: Array<Task>;
 }
 ```
 
-Let's imagine we have a Timeline that looks like so.
+## An Envisioned Martian Spacewalk
+
+In order to get a sense for the strengths and weaknesses of this Timeline schema, let's imagine what a Timeline might look like when the first people are roving around, doing science on Mars. The Timeline looks like so for a traverse to a geologically interesting station:
+
+<><>table of a timeline?<><>
 
 <><>Image of a traversal activity with two tasks for reaching checkpoints<><>
 
+_A small example timeline with child, parent, sibling pointed out._
+
+<><>check the tense of the examples here<><>
+
 The Activity is the top of the Timeline, so let's create that first.
 
-```ts
+```typescript
 let activity = new Activity();  // creates an Activity
 activity.description = 'Traverse to Station 1';
 activity.expectedDuration = 20; // time in minutes to reach the target location
@@ -143,7 +149,7 @@ activity.expectedDuration = 20; // time in minutes to reach the target location
 
 An Activity can only have Task children. Let's create the Tasks that we expect astronauts to perform on the way to target alpha.
 
-```ts
+```typescript
 let task1 = new Task();
 task1.description = 'Drive to checkpoint alpha';
 task1.expectedDuration = 14; // 14 minutes of drive time
@@ -159,11 +165,16 @@ task3.expectedDuration = 4; // 4 minutes to finish the drive
 
 Right now, we have four freefloating Steps: `activity`, `task1`, `task2`, and `task3`. We need to give them some structure. To do so, we're putting the Tasks in a list and making them the children of the Activity.
 
-```ts
+```typescript
 activity.children = [task1, task2, task3];
 ```
 
 Now that there is a relationship between all of the Steps so far, we can start to plot how to do timeline calculations.
+
+
+## Limitations of our Design
+
+We took a naïve approach in developing the Timeline.
 
 
 <><>the problems the linear timeline solved<><>
