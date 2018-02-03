@@ -17,16 +17,6 @@ module.exports = (
   { files, markdownNode, markdownAST, pathPrefix, getNode },
   pluginOptions
 ) => {
-  const defaults = {
-    maxWidth: 650,
-    wrapperStyle: ``,
-    backgroundColor: `white`,
-    linkImagesToOriginal: true,
-    pathPrefix,
-  }
-
-  const options = _.defaults(pluginOptions, defaults)
-
   // This will only work for markdown syntax image tags
   const markdownImageNodes = select(markdownAST, `image`)
 
@@ -36,6 +26,15 @@ module.exports = (
   // Takes a node and generates the needed images and then returns
   // the needed HTML replacement for the image
   const generateImagesAndUpdateNode = async function(node, resolve) {
+    const defaults = {
+      maxWidth: 650,
+      wrapperStyle: ``,
+      backgroundColor: `white`,
+      linkImagesToOriginal: true,
+      pathPrefix,
+    }
+    const options = _.assign({}, pluginOptions, defaults)
+
     // Check if this markdownNode has a File parent. This plugin
     // won't work if the image isn't hosted locally.
     const parentNode = getNode(markdownNode.parent)
