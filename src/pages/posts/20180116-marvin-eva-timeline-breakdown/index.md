@@ -23,7 +23,7 @@ The astronauts want to know what kind of flight controls the Lunar Module will h
 
 ![a tight shot on a young Yuri Gagarin smiling inside his spacesuit](gagarin.jpg)
 
-_Yuri Gagarin, a cosmonaut and the first person in space. What a badass. He orbited the Earth for the first time on 12 April 1961, adding fuel to NASA's drive to beat ROSCOSMOS (POCKOCMOC) to the Moon. Image from [here](https://news.nationalgeographic.com/news/2011/04/110412-yuri-gagarin-anniversary-google-doodle-first-orbit-space-science/#/34466.jpg) by Popperfoto/Getty Images._
+_Yuri Gagarin, a cosmonaut and the first person in space. What a badass. He orbited the Earth for the first time on 12 April 1961, adding fuel to NASA's drive to beat ROSCOSMOS (or Роскосмос in Russian) to the Moon. Image from [here](https://news.nationalgeographic.com/news/2011/04/110412-yuri-gagarin-anniversary-google-doodle-first-orbit-space-science/#/34466.jpg) by Popperfoto/Getty Images._
 
 This is where the story of Marvin picks up - planning spacewalks. Looking through the history of space exploration, human-performed exploration is a rare phenomenon. All astronauts are explorers in the philosophical sense, but only a few astronauts have explored in the Darwin-in-the-Galapagos kind of way. The first EVAs tested engineering limits. Same as the shuttle crews before them, modern spacewalkers on the International Space Station (ISS) are construction workers in space performing engineering tasks on engineered surfaces. Only the EV crews on Apollo 15 - 17 stepped out of an airlock with the goal of finding something cool outside.
 
@@ -72,15 +72,19 @@ I'll leave diving into the full set of statistics as an exercise for the curious
 
 Timelines haven't changed much since the 1960s.
 
-![gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
+![Gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
 
 _I took this picture of an exhibit at Adler Planetarium in Chicago of a Gemini 12 flight plan. Not the same thing as an EVA timeline, but the structure is similar._
 
-![apollo 17 timeline that looks like a spreadsheet with insets](./apollo-17-timeline.png)
+![Apollo 17 timeline that looks like a spreadsheet with insets](./apollo-17-timeline.png)
 
 _A page from the first EVA of Apollo 17. Note that there are both high level details ("EGRESS") with detailed procedures ("TURN ON 16 MM CAMERA") as insets. Miller et al,[^1] page 9, figure 2._
 
-<><>pull image of an ISS timeline<><>
+![ISS high level summary of a timeline that looks like a spreadsheet with 3 columns of tasks - IV, EV1, and EV2](./iss-high-level-summary.png)
+
+![ISS detailed procedures from the same timeline with a column of equipment diagrams, and columns with minute-by-minute procedures for EV1 and EV2](./iss-detailed-procedures.png)
+
+_The high level summary and an example detailed task view from the timeline for US EVA 22 on 9 July 2013. Astronauts Chris Cassidy and Luca Parmitano [began preparations to install a new ISS module](http://www.spaceflight101.net/iss-expedition-36-us-eva-22.html), the [Russian Multipurpose Laboratory Module](http://www.russianspaceweb.com/iss%5ffgb2.html) (Nauka or Нау́ка in Russian). They completed this 6 hour timeline almost perfectly on time. Take a look at the bottom of the first column - you can see boxes where the IV is expected to record the number of turns used to install bolts. This level of detail is not uncommon. Check out the [full timeline](https://www.nasa.gov/sites/default/files/files/US%5fEVA%5f22%5fTimeline.pdf) to see why it takes years to prepare for a single spacewalk._
 
 The structure of modern ISS timelines closely resembles early Gemini and Apollo timelines. High-level outlines describe broad phases of the mission and low-level procedures provide minute-by-minute, atomic level details.
 
