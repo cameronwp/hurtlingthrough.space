@@ -74,7 +74,7 @@ Timelines haven't changed much since the 1960s.
 
 ![gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
 
-_I took this picture of an exhibit at Adler Planetarium in Chicago of a Gemini 12 flight plan._
+_I took this picture of an exhibit at Adler Planetarium in Chicago of a Gemini 12 flight plan. Not the same thing as an EVA timeline, but the structure is similar._
 
 ![apollo 17 timeline that looks like a spreadsheet with insets](./apollo-17-timeline.png)
 
@@ -82,7 +82,7 @@ _A page from the first EVA of Apollo 17. Note that there are both high level det
 
 <><>pull image of an ISS timeline<><>
 
-The structure of modern ISS timelines closely resemble early Gemini and Apollo timelines. High-level outlines describe broad phases of the mission and low-level procedures provide minute-by-minute, atomic level details.
+The structure of modern ISS timelines closely resembles early Gemini and Apollo timelines. High-level outlines describe broad phases of the mission and low-level procedures provide minute-by-minute, atomic level details.
 
 <><>image of timeline with inset<><>
 
