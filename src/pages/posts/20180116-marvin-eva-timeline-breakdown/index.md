@@ -86,17 +86,25 @@ _A page from the first EVA of Apollo 17. Note that there are both high level det
 
 _The high level summary and an example detailed task view from the timeline for US EVA 22 on 9 July 2013. Astronauts Chris Cassidy and Luca Parmitano [began preparations to install a new ISS module](http://www.spaceflight101.net/iss-expedition-36-us-eva-22.html), the [Russian Multipurpose Laboratory Module](http://www.russianspaceweb.com/iss%5ffgb2.html) (Nauka or Нау́ка in Russian). They completed this 6 hour timeline almost perfectly on time. Take a look at the bottom of the first column - you can see boxes where the IV is expected to record the number of turns used to install bolts. This level of detail is not uncommon. Check out the [full timeline](https://www.nasa.gov/sites/default/files/files/US%5fEVA%5f22%5fTimeline.pdf) to see why it takes years to prepare for a single spacewalk. Also interesting to note: you can see that EV2 was asked to take a survey photo of the Alpha Magnetic Spectrometer (AMS). This EVA occurred two years after the AMS was launched and, at the time, did not yet need the repairs discussed [before](/posts/20180115-marvin-deep-spacewalks/) - this was just a survey to assess its health._
 
-Using modern and historical timelines as inspiration, Matthew and I designed a hierarchical schema that adequately encapsulates all the information from high level summaries to detailed, minute-by-minute procedures. It's easy to translate current timelines to our chosen data structure. As you move down in the hierarchy, what it describes becomes more and more specific.
+Using modern and historical timelines as inspiration, Matthew and I designed a hierarchical schema that adequately encapsulates all the information from high level summaries to detailed, minute-by-minute procedures. As you move down in the hierarchy what it describes becomes more and more specific.
 
 ![a timeline hierarchy tree data-structure](./hierarchy.png)
 
-_The hierarchy is as follows: Activity → Task → Subtask → Procedure. At the bottom, a Procedure represents an a single action, such as tightening a bolt. At the top, an Activity describes upwards of hours of mission time._
+The hierarchy is as follows: Activity → Task → Subtask → Procedure. At the bottom, a Procedure represents an a single action, such as tightening a bolt. At the top, an Activity describes upwards of hours of mission time.
+
+![a diagram showing that a node with other nodes that belong to it is the parent of the other nodes, and the other nodes are children of the first. two child nodes of the same parent are siblings.](./hierarchy-relationships.png)
+
+It's useful to apply familial terms to describe the relationship between elements in a tree like this one. An Activity is a _parent_ of a Task, while a Task is a _child_ of an Activity. Two Tasks that belong to the same Activity are _siblings_.
+
+It's easy to translate current timelines to our chosen data structure.
 
 ![an ISS timeline with annotations to show where each level of the timeline is described](./timeline-annotated.png)
 
 _This is how we translated ISS timelines to the schema we designed. For example, you can see that the Task of SSU CLEAN UP has seven Subtasks that belong to it, and the third Subtask has some procedural information that belongs to it. From Matthew's PhD thesis,[^4] page 138, figure 4.16._
 
 [^4]: [Matthew's thesis](https://doi.org/10.13140/rg.2.2.17731.30248):<br>Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. . 10.13140/RG.2.2.17731.30248.
+
+<><>check the tense of this section<><>
 
 We generalized the idea of an action the astronauts could take on EVA to something we called a Step, with a capital 'S' to distinguish it as a formal name for a defined data structure (from now on, capitalized versions of Step, Timeline, Activity, Task, Subtask, and Procedure represent the digital manifestations of their operational counterparts). A Step only needs a short description to identify it. An expected duration provides the timing data needed to do timeline calculations.
 
@@ -108,7 +116,7 @@ class Step {
 }
 ```
 
-Additionally, a Step can have zero or more children. This is how we build the hierarchy of the overall timeline.
+Additionally, a Step can have zero or more children. This is how we built parent-child relationships.
 
 ```typescript
 class Step {
@@ -118,7 +126,7 @@ class Step {
 }
 ```
 
-As per our definition, an Activity can only have Task children.
+Specifically, an Activity can only have Task children.
 
 ```typescript
 class Activity extends Step {
@@ -127,9 +135,11 @@ class Activity extends Step {
 }
 ```
 
+Tasks and Subtasks look the same except for their type of children. Procedures do not have children.
+
 ## An Envisioned Martian Spacewalk
 
-In order to get a sense for the strengths and weaknesses of this Timeline schema, let's imagine what a Timeline might look like when the first people are roving around, doing science on Mars. The Timeline looks like so for a traverse to a geologically interesting station:
+In order to get a sense for the strengths and weaknesses of this Timeline schema, let's imagine what a Timeline might look like when the first people are roving around doing science on Mars. It might look like this when they traverse to a geologically interesting station:
 
 <><>table of a timeline?<><>
 
