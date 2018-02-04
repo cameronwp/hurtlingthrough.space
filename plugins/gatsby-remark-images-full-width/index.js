@@ -37,7 +37,7 @@ module.exports = function (_ref, pluginOptions) {
   // the needed HTML replacement for the image
   var generateImagesAndUpdateNode = function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(node, resolve) {
-      var defaults, options, parentNode, imagePath, imageNode, fwToken, isFullWidth, responsiveSizesResult, ratio, originalImg, fallbackSrc, srcSet, presentationWidth, srcSplit, fileName, fileNameNoExt, defaultAlt, rawHTML;
+      var defaults, options, parentNode, imagePath, imageNode, fwToken, isFullWidth, nlToken, isNoLink, responsiveSizesResult, ratio, originalImg, fallbackSrc, srcSet, presentationWidth, srcSplit, fileName, fileNameNoExt, defaultAlt, rawHTML;
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
@@ -87,21 +87,30 @@ module.exports = function (_ref, pluginOptions) {
             case 12:
               fwToken = '<-FULLWIDTH->';
               isFullWidth = _.startsWith(node.alt, fwToken);
+              nlToken = '<-NOLINK->';
+              isNoLink = _.startsWith(node.alt, nlToken);
 
 
               if (isFullWidth) {
                 node.alt = node.alt.slice(fwToken.length); // get rid of the token
                 options.maxWidth = 3840; // up to 4K images
-                options.linkImagesToOriginal = false; // no need for links
               }
 
-              _context.next = 17;
+              if (isNoLink) {
+                node.alt = node.alt.slice(nlToken.length);
+              }
+
+              if (isFullWidth || isNoLink) {
+                options.linkImagesToOriginal = false;
+              }
+
+              _context.next = 21;
               return sizes({
                 file: imageNode,
                 args: options
               });
 
-            case 17:
+            case 21:
               responsiveSizesResult = _context.sent;
 
 
@@ -135,7 +144,7 @@ module.exports = function (_ref, pluginOptions) {
 
               return _context.abrupt('return', rawHTML);
 
-            case 30:
+            case 34:
             case 'end':
               return _context.stop();
           }

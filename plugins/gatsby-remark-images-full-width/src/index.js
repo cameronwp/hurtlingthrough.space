@@ -55,13 +55,22 @@ module.exports = (
       return resolve()
     }
 
-    const fwToken = '<-FULLWIDTH->';
+    const fwToken = '<-FULLWIDTH->'
     const isFullWidth = _.startsWith(node.alt, fwToken)
+    const nlToken = '<-NOLINK->'
+    const isNoLink = _.startsWith(node.alt, nlToken)
 
     if (isFullWidth) {
       node.alt = node.alt.slice(fwToken.length) // get rid of the token
       options.maxWidth = 3840 // up to 4K images
-      options.linkImagesToOriginal = false  // no need for links
+    }
+
+    if (isNoLink) {
+      node.alt = node.alt.slice(nlToken.length)
+    }
+
+    if (isFullWidth || isNoLink) {
+      options.linkImagesToOriginal = false
     }
 
     let responsiveSizesResult = await sizes({
