@@ -84,11 +84,11 @@ _The high level summary (top) and an example detailed task view (bottom) from th
 
 Using modern and historical timelines as inspiration, Matthew and I designed a hierarchical schema that adequately encapsulates all the information from high level summaries to detailed, minute-by-minute procedures. (Though, as we'll see in a later post, it does not facilitate timeline calculations in and of itself.) As you move down in the hierarchy what it describes becomes more and more specific.
 
-![a timeline hierarchy tree data-structure](./hierarchy.png)
+![<-NOLINK->a timeline hierarchy tree data-structure](./hierarchy.png)
 
 The hierarchy is as follows: Activity → Task → Subtask → Procedure. At the bottom, a Procedure represents an a single action, such as tightening a bolt. At the top, an Activity describes upwards of hours of mission time. We generalized the idea of an action the astronauts could take on EVA to something we called a Step, with a capital 'S' to distinguish it as a formal name for a defined data structure (from now on, capitalized versions of Step, Timeline, Activity, Task, Subtask, and Procedure represent the digital manifestations of their operational counterparts).
 
-![a diagram showing that a node with other nodes that belong to it is the parent of the other nodes, and the other nodes are children of the first. two child nodes of the same parent are siblings.](./hierarchy-relationships.png)
+![<-NOLINK->a diagram showing that a node with other nodes that belong to it is the parent of the other nodes, and the other nodes are children of the first. two child nodes of the same parent are siblings.](./hierarchy-relationships.png)
 
 It's useful to apply familial terms to describe the relationship between elements in a tree like the Timeline. An Activity is a _parent_ of a Task, while a Task is a _child_ of an Activity. Two Tasks that belong to the same Activity are _siblings_.
 
