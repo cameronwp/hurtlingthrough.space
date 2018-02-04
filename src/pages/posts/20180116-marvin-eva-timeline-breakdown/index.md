@@ -72,19 +72,19 @@ Looking at the timelines below, it's clear that they haven't changed much since 
 
 _This Gemini 12 flight plan has the same structure as today's EVA timelines. I took this picture at Adler Planetarium in Chicago._
 
-![Apollo 17 timeline that looks like a spreadsheet with insets](./apollo-17-timeline.png)
+![Apollo 17 timeline that looks like a spreadsheet with insets](./apollo-17-timeline.jpg)
 
 _A page from the first EVA of Apollo 17. Note that there are both high level details ("EGRESS") with detailed procedures ("TURN ON 16 MM CAMERA") as insets. Miller et al,[^1] page 9, figure 2._
 
-![ISS high level summary of a timeline that looks like a spreadsheet with 3 columns of tasks - IV, EV1, and EV2](./iss-high-level-summary.png)
+![ISS high level summary of a timeline that looks like a spreadsheet with 3 columns of tasks - IV, EV1, and EV2](./iss-high-level-summary.jpg)
 
-![ISS detailed procedures from the same timeline with a column of equipment diagrams, and columns with minute-by-minute procedures for EV1 and EV2](./iss-detailed-procedures.png)
+![ISS detailed procedures from the same timeline with a column of equipment diagrams, and columns with minute-by-minute procedures for EV1 and EV2](./iss-detailed-procedures.jpg)
 
 _The high level summary (top) and an example detailed task view (bottom) from the timeline for US EVA 22 on 9 July 2013. Astronauts Chris Cassidy and Luca Parmitano [began preparations to install a new ISS module](http://www.spaceflight101.net/iss-expedition-36-us-eva-22.html), the [Russian Multipurpose Laboratory Module](http://www.russianspaceweb.com/iss%5ffgb2.html) (Nauka or Нау́ка in Russian). They completed this 6 hour timeline almost perfectly on time. Take a look at the bottom of the first column of the detailed task view - you can see boxes where the intravehicular (IV) crew member - the astronaut inside the habitat - is expected to record the number of turns used to install bolts. This level of detail is not uncommon. Check out the [full timeline](https://www.nasa.gov/sites/default/files/files/US%5fEVA%5f22%5fTimeline.pdf) to see why it takes years to prepare for a single spacewalk. Also interesting to note: you can see that EV2 was asked to take a survey photo of the Alpha Magnetic Spectrometer (AMS). This EVA occurred two years after the AMS was launched and, at the time, did not yet need the repairs discussed [before](/posts/20180115-marvin-deep-spacewalks/) - this was just a survey to assess its health._
 
 Using modern and historical timelines as inspiration, Matthew and I designed a hierarchical schema that adequately encapsulates all the information from high level summaries to detailed, minute-by-minute procedures. (Though, as we'll see in a later post, it does not facilitate timeline calculations in and of itself.) As you move down in the hierarchy what it describes becomes more and more specific.
 
-![<-NOLINK->a timeline hierarchy tree data-structure](./hierarchy.png)
+![<-NOLINK->a timeline hierarchy tree data-structure](./hierarchy.jpg)
 
 The hierarchy is as follows: Activity → Task → Subtask → Procedure. At the bottom, a Procedure represents an a single action, such as tightening a bolt. At the top, an Activity describes upwards of hours of mission time. We generalized the idea of an action the astronauts could take on EVA to something we called a Step, with a capital 'S' to distinguish it as a formal name for a defined data structure (from now on, capitalized versions of Step, Timeline, Activity, Task, Subtask, and Procedure represent the digital manifestations of their operational counterparts).
 
@@ -140,11 +140,9 @@ In order to get a sense for how our Timeline works and its strengths and weaknes
 
 _Maybe this is what they'll see? The Curiosity Mars rover took [this amazing panorama](https://photojournal.jpl.nasa.gov/catalog/PIA22210) of Gale Crater in October 2017. Image copyright NASA/JPL._
 
-<><>Image of a traversal activity Timeline with two tasks for reaching checkpoints<><>
+![<-NOLINK->a Timeline tree that includes one activity with three children](./mars-sample-timeline.jpg)
 
-_A small example timeline with child, parent, and sibling pointed out._
-
-<><>check the tense of the examples here<><>
+_In this sample Timeline, there is a traversal Activity to Station 1. During the Activity, the EV crew will perform 3 Tasks: drive to checkpoint alpha, perform a photographic survey of a rock outcropping there, and finish the drive._
 
 The Activity is the top of the Timeline, so let's create that first.
 
@@ -158,15 +156,15 @@ An Activity can only have Task children. Let's create the Tasks that we expect a
 
 ```typescript
 let task1 = new Task();
-task1.description = 'Drive to checkpoint alpha';
+task1.description = 'Drive to Checkpoint Alpha';
 task1.expectedDuration = 14; // 14 minutes of drive time
 
 let task2 = new Task();
-task2.description = 'Photographic survey of outcrop at alpha alpha';
-task2.expectedDuration= 2; // 2 minutes to take photos
+task2.description = 'Photographic Survey of Outcropping at Alpha';
+task2.expectedDuration = 2; // 2 minutes to take photos
 
 let task3 = new Task();
-task3.description = 'Finish drive to checkpoint alpha';
+task3.description = 'Finish Drive to Station 1';
 task3.expectedDuration = 4; // 4 minutes to finish the drive
 ```
 
@@ -176,7 +174,9 @@ Right now, we have four freefloating Steps: `activity`, `task1`, `task2`, and `t
 activity.children = [task1, task2, task3];
 ```
 
-Now that there is a relationship between all of the Steps so far, we can start to plot how to do timeline calculations.
+Now that there is a relationship between the Steps, we can try some basic timeline calculations.
+
+<><>show task 1 done<><>
 
 
 ## Limitations of our Design
