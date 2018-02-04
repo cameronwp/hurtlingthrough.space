@@ -17,16 +17,6 @@ module.exports = (
   { files, markdownNode, markdownAST, pathPrefix, getNode },
   pluginOptions
 ) => {
-  const defaults = {
-    maxWidth: 650,
-    wrapperStyle: ``,
-    backgroundColor: `white`,
-    linkImagesToOriginal: true,
-    pathPrefix,
-  }
-
-  const options = _.defaults(pluginOptions, defaults)
-
   // This will only work for markdown syntax image tags
   const markdownImageNodes = select(markdownAST, `image`)
 
@@ -36,6 +26,15 @@ module.exports = (
   // Takes a node and generates the needed images and then returns
   // the needed HTML replacement for the image
   const generateImagesAndUpdateNode = async function(node, resolve) {
+    const defaults = {
+      maxWidth: 650,
+      wrapperStyle: ``,
+      backgroundColor: `white`,
+      linkImagesToOriginal: true,
+      pathPrefix,
+    }
+    const options = _.assign({}, pluginOptions, defaults)
+
     // Check if this markdownNode has a File parent. This plugin
     // won't work if the image isn't hosted locally.
     const parentNode = getNode(markdownNode.parent)
@@ -56,13 +55,22 @@ module.exports = (
       return resolve()
     }
 
-    const fwToken = '<-FULLWIDTH->';
+    const fwToken = '<-FULLWIDTH->'
     const isFullWidth = _.startsWith(node.alt, fwToken)
+    const nlToken = '<-NOLINK->'
+    const isNoLink = _.startsWith(node.alt, nlToken)
 
     if (isFullWidth) {
       node.alt = node.alt.slice(fwToken.length) // get rid of the token
       options.maxWidth = 3840 // up to 4K images
-      options.linkImagesToOriginal = false  // no need for links
+    }
+
+    if (isNoLink) {
+      node.alt = node.alt.slice(nlToken.length)
+    }
+
+    if (isFullWidth || isNoLink) {
+      options.linkImagesToOriginal = false
     }
 
     let responsiveSizesResult = await sizes({

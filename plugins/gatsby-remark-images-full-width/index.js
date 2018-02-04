@@ -27,16 +27,6 @@ module.exports = function (_ref, pluginOptions) {
       pathPrefix = _ref.pathPrefix,
       getNode = _ref.getNode;
 
-  var defaults = {
-    maxWidth: 650,
-    wrapperStyle: '',
-    backgroundColor: 'white',
-    linkImagesToOriginal: true,
-    pathPrefix: pathPrefix
-  };
-
-  var options = _.defaults(pluginOptions, defaults);
-
   // This will only work for markdown syntax image tags
   var markdownImageNodes = select(markdownAST, 'image');
 
@@ -47,29 +37,39 @@ module.exports = function (_ref, pluginOptions) {
   // the needed HTML replacement for the image
   var generateImagesAndUpdateNode = function () {
     var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(node, resolve) {
-      var parentNode, imagePath, imageNode, fwToken, isFullWidth, responsiveSizesResult, ratio, originalImg, fallbackSrc, srcSet, presentationWidth, srcSplit, fileName, fileNameNoExt, defaultAlt, rawHTML;
+      var defaults, options, parentNode, imagePath, imageNode, fwToken, isFullWidth, nlToken, isNoLink, responsiveSizesResult, ratio, originalImg, fallbackSrc, srcSet, presentationWidth, srcSplit, fileName, fileNameNoExt, defaultAlt, rawHTML;
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
+              defaults = {
+                maxWidth: 650,
+                wrapperStyle: '',
+                backgroundColor: 'white',
+                linkImagesToOriginal: true,
+                pathPrefix: pathPrefix
+              };
+              options = _.assign({}, pluginOptions, defaults);
+
               // Check if this markdownNode has a File parent. This plugin
               // won't work if the image isn't hosted locally.
+
               parentNode = getNode(markdownNode.parent);
               imagePath = void 0;
 
               if (!(parentNode && parentNode.dir)) {
-                _context.next = 6;
+                _context.next = 8;
                 break;
               }
 
               imagePath = slash(path.join(parentNode.dir, node.url));
-              _context.next = 7;
+              _context.next = 9;
               break;
 
-            case 6:
+            case 8:
               return _context.abrupt('return', null);
 
-            case 7:
+            case 9:
               imageNode = _.find(files, function (file) {
                 if (file && file.absolutePath) {
                   return file.absolutePath === imagePath;
@@ -78,30 +78,39 @@ module.exports = function (_ref, pluginOptions) {
               });
 
               if (!(!imageNode || !imageNode.absolutePath)) {
-                _context.next = 10;
+                _context.next = 12;
                 break;
               }
 
               return _context.abrupt('return', resolve());
 
-            case 10:
+            case 12:
               fwToken = '<-FULLWIDTH->';
               isFullWidth = _.startsWith(node.alt, fwToken);
+              nlToken = '<-NOLINK->';
+              isNoLink = _.startsWith(node.alt, nlToken);
 
 
               if (isFullWidth) {
                 node.alt = node.alt.slice(fwToken.length); // get rid of the token
                 options.maxWidth = 3840; // up to 4K images
-                options.linkImagesToOriginal = false; // no need for links
               }
 
-              _context.next = 15;
+              if (isNoLink) {
+                node.alt = node.alt.slice(nlToken.length);
+              }
+
+              if (isFullWidth || isNoLink) {
+                options.linkImagesToOriginal = false;
+              }
+
+              _context.next = 21;
               return sizes({
                 file: imageNode,
                 args: options
               });
 
-            case 15:
+            case 21:
               responsiveSizesResult = _context.sent;
 
 
@@ -135,7 +144,7 @@ module.exports = function (_ref, pluginOptions) {
 
               return _context.abrupt('return', rawHTML);
 
-            case 28:
+            case 34:
             case 'end':
               return _context.stop();
           }
