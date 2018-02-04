@@ -90,7 +90,7 @@ The hierarchy is as follows: Activity → Task → Subtask → Procedure. At the
 
 ![<-NOLINK->a diagram showing that a node with other nodes that belong to it is the parent of the other nodes, and the other nodes are children of the first. two child nodes of the same parent are siblings.](./hierarchy-relationships.png)
 
-It's useful to apply familial terms to describe the relationship between elements in a tree like the Timeline. An Activity is a _parent_ of a Task, while a Task is a _child_ of an Activity. Two Tasks that belong to the same Activity are _siblings_.
+It's useful to apply familial terms to describe the relationship between elements in a tree like the Timeline. An Activity is the _parent_ to a Task, while a Task is a _child_ of an Activity. Two Tasks that belong to the same Activity are _siblings_.
 
 It's easy to translate current timelines to our chosen data structure.
 
@@ -100,14 +100,11 @@ _This is how we translated ISS timelines to the schema we designed. For example,
 
 [^3]: [Matthew's thesis](https://doi.org/10.13140/rg.2.2.17731.30248):<br>Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. . 10.13140/RG.2.2.17731.30248.
 
-<><>check the tense of this section<><>0
-
-The naïve (but still useful) approach to building a Timeline is relatively straightforward. I'm going to use [TypeScript](https://www.typescriptlang.org/) to exemplify how we built it.
+The naive (but still useful) approach to building a Timeline is relatively straightforward. I'm going to use [TypeScript](https://www.typescriptlang.org/) to exemplify how we built it.
 
 A Step only needs a short description to identify it. An expected duration provides the timing data needed to do timeline calculations.
 
 ```typescript
-// Step describes a general action the crew will take
 class Step {
 	description:      string; // a few word description
 	expectedDuration: number; // the amount of time in minutes this Step should take
@@ -120,7 +117,7 @@ Additionally, a Step can have zero or more children. This is how we built parent
 class Step {
 	description:      string;
 	expectedDuration: number;
-	children:         Array<Step>; // a list of other Steps
+	children:         Step[]; // a list of other Steps
 }
 ```
 
@@ -129,7 +126,7 @@ Specifically, an Activity can only have Task children.
 ```typescript
 class Activity extends Step {
 	// everything is the same except...
-	children: Array<Task>;
+	children: Task[]; // a list of Tasks
 }
 ```
 
@@ -137,13 +134,15 @@ Tasks and Subtasks look the same except for their type of children. Procedures d
 
 ## An Envisioned Martian Spacewalk
 
-In order to get a sense for the strengths and weaknesses of this Timeline schema, let's imagine what a Timeline might look like when the first people are roving around doing science on Mars. It might look like this when they traverse to a geologically interesting station:
+In order to get a sense for how our Timeline works and its strengths and weaknesses, let's imagine what one might look like when the first people are roving around doing science on Mars.
 
-<><>table of a timeline?<><>
+![<-FULLWIDTH->a panorama on mars. the sky is tinted blue, a drop into a valley is in the foreground, with the rising edge of a crater in the background](./mars-pano.jpg)
 
-<><>Image of a traversal activity with two tasks for reaching checkpoints<><>
+_Maybe this is what they'll see? The Curiosity Mars rover took [this amazing panorama](https://photojournal.jpl.nasa.gov/catalog/PIA22210) of Gale Crater in October 2017. Image copyright NASA/JPL._
 
-_A small example timeline with child, parent, sibling pointed out._
+<><>Image of a traversal activity Timeline with two tasks for reaching checkpoints<><>
+
+_A small example timeline with child, parent, and sibling pointed out._
 
 <><>check the tense of the examples here<><>
 
@@ -182,7 +181,7 @@ Now that there is a relationship between all of the Steps so far, we can start t
 
 ## Limitations of our Design
 
-We took a naïve approach in developing the Timeline.
+We took a naive approach in developing the Timeline.
 
 
 <><>the problems the linear timeline solved<><>
