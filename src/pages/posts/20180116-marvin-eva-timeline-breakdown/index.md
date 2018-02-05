@@ -13,6 +13,8 @@ draft: false
 
 _This is part 3 of the Marvin series. Here’s [part 1](/posts/20180115-marvin-deep-spacewalks/) about why extravehicular activity (EVA) operations research matters and [part 2](/posts/20180204-marvin-apollo-timelines/) about the way timelines played out on the Moon._
 
+If you remember from last time, exploration EVAs tend to run behind.
+
 Looking at the timelines below, it's clear that they haven't changed much since the 1960s. High-level outlines describe broad phases of the mission and low-level procedures provide minute-by-minute, atomic level details.
 
 ![Gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
