@@ -56,6 +56,10 @@ The EVA clock is called the Phased Elapsed Time (PET). It starts at 00:00:00 (HH
 
 EV crews from Apollo can be classified as performing three different categories of activities: traverse, overhead, and station activities. EVAs began with egress and overhead tasks like equipment checks. Once complete, they generally cycled between traverse and station activities. During traverse activities, EV crews relocated to a worksite - in the case of Apollo 15-17 they took advantage of a lunar rover to reach distant sample sites. Either before they left or once they arrived at the worksite, they performed station related tasks such as collecting samples or making observations with the scientific equipment they brought along. Once finished, they would either traverse to another station or head back to the Lunar Module to perform a final overhead activity to prepare for ingress.
 
+![<-FULLWIDTH->astronaut Jim Irwin stands next to the lunar rover on the moon, with a mountain in the background](./apollo-15-rover.jpg)
+
+_David Scott took this amazing shot of Jim Irwin and the Lunar Roving Vehicle from EVA 1 of Apollo 15. Mount Hadley rises in the background. Photo by NASA/David Scott [Public domain], via [Wikimedia Commons](https://commons.wikimedia.org/wiki/File%3AApollo%5f15%5fLunar%5fRover%5fand%5fIrwin.jpg)._
+
 Matthew and co. took a look at how time behind varied throughout Apollo 14 - 17 exploration EVAs. Take a look at this graph.
 
 ![a graph with time behind data points from Apollo 14 - 17 EVAs. the trend lines go up mostly, with a slight downward trend near the end before sharply rising back up to finish.](./fig33.png)
