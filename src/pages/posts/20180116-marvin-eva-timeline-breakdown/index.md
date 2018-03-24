@@ -13,9 +13,9 @@ draft: false
 
 _This is part 3 of the Marvin series. Here’s [part 1](/posts/20180115-marvin-deep-spacewalks/) about why extravehicular activity (EVA) operations research matters and [part 2](/posts/20180204-marvin-apollo-timelines/) about the way timelines played out on the Moon._
 
-If you remember from last time, exploration EVAs tend to run behind.
+If you don't remember from [last time](/posts/20180204-marvin-apollo-timelines/), exploration EVAs tend to run behind. If we want to plan better, it's worth looking at the way we currently describe timelines.
 
-Looking at the timelines below, it's clear that they haven't changed much since the 1960s. High-level outlines describe broad phases of the mission and low-level procedures provide minute-by-minute, atomic level details.
+Take a look at the series of paper-based timelines below. Compare how the Mercury and Apollo programs were planned to modern ISS missions. There isn't appreciable difference in the structure of the plans. High-level outlines describe broad phases of the mission and low-level procedures provide minute-by-minute, atomic level details.
 
 ![Gemini 12 flight plan that looks like a spreadsheet](gemini_12_flight_plan.jpg)
 
@@ -31,7 +31,7 @@ _A page from the first EVA of Apollo 17. Note that there are both high level det
 
 _The high level summary (top) and an example detailed task view (bottom) from the timeline for US EVA 22 on 9 July 2013. Astronauts Chris Cassidy and Luca Parmitano [began preparations to install a new ISS module](http://www.spaceflight101.net/iss-expedition-36-us-eva-22.html), the [Russian Multipurpose Laboratory Module](http://www.russianspaceweb.com/iss%5ffgb2.html) (Nauka or Нау́ка in Russian). They completed this 6 hour timeline almost perfectly on time. Take a look at the bottom of the first column of the detailed task view - you can see boxes where the intravehicular (IV) crew member - the astronaut inside the habitat - is expected to record the number of turns used to install bolts. This level of detail is not uncommon. Check out the [full timeline](https://www.nasa.gov/sites/default/files/files/US%5fEVA%5f22%5fTimeline.pdf) to see why it takes years to prepare for a single spacewalk. Also interesting to note: you can see that EV2 was asked to take a survey photo of the Alpha Magnetic Spectrometer (AMS). This EVA occurred two years after the AMS was launched and, at the time, did not yet need the repairs discussed [before](/posts/20180115-marvin-deep-spacewalks/) - this was just a survey to assess its health._
 
-Using modern and historical timelines as inspiration, Matthew and I designed a hierarchical schema that adequately encapsulates all the information from high level summaries to detailed, minute-by-minute procedures. (Though, as we'll see in a later post, it does not facilitate timeline calculations in and of itself.) As you move down in the hierarchy what it describes becomes more and more specific.
+Using modern and historical timelines as inspiration, Matthew and I designed a hierarchical schema that encapsulates all the information from high level summaries to detailed, minute-by-minute procedures. (Though, as we'll see in a later post, it does not facilitate timeline calculations in and of itself.) As you move down in the hierarchy what it describes becomes more and more specific.
 
 ![<-NOLINK->a timeline hierarchy tree data-structure](./hierarchy.png)
 
@@ -41,15 +41,15 @@ The hierarchy is as follows: Activity → Task → Subtask → Procedure. At the
 
 It's useful to apply familial terms to describe the relationship between elements in a tree like the Timeline. An Activity is the _parent_ to a Task, while a Task is a _child_ of an Activity. Two Tasks that belong to the same Activity are _siblings_.
 
-It's easy to translate current timelines to our chosen data structure.
+We can translate ISS timelines to our data structure.
 
 ![an ISS timeline with annotations to show where each level of the timeline is described](./timeline-annotated.png)
 
-_This is how we translated ISS timelines to the schema we designed. For example, you can see that the Task of SSU CLEAN UP has seven Subtasks that belong to it, and the third Subtask has some procedural information that belongs to it. From Matthew's PhD thesis,[^3] page 138, figure 4.16._
+_This is how we translated ISS timelines to the schema we designed. For example, you can see that the Task of SSU CLEAN UP has seven Subtasks that belong to it, and the third Subtask has some procedural information that belongs to it. From Matthew's PhD thesis,[^1] page 138, figure 4.16._
 
-[^3]: [Matthew's thesis](https://doi.org/10.13140/rg.2.2.17731.30248):<br>Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. . 10.13140/RG.2.2.17731.30248.
+[^1]: [Matthew's thesis](https://doi.org/10.13140/rg.2.2.17731.30248):<br>Miller, Matthew. (2017). Decision Support System Development for Human Extravehicular Activity. 10.13140/RG.2.2.17731.30248.
 
-The naive (but still useful) approach to building a Timeline is relatively straightforward. I'm going to use [TypeScript](https://www.typescriptlang.org/) to exemplify how we built it.
+The naive approach to building a Timeline is relatively straightforward. I'm going to use [TypeScript](https://www.typescriptlang.org/) to exemplify how we built it.
 
 A Step only needs a short description to identify it. An expected duration provides the timing data needed to do timeline calculations.
 
@@ -95,7 +95,7 @@ _A small example timeline with child, parent, and sibling pointed out._
 
 <><>check the tense of the examples here<><>
 
-The Activity is the top of the Timeline, so let's create that first.
+The Activity is the highest level of the Timeline, so let's create one first.
 
 ```typescript
 let activity = new Activity();  // creates an Activity
@@ -103,19 +103,19 @@ activity.description = 'Traverse to Station 1';
 activity.expectedDuration = 20; // time in minutes to reach the target location
 ```
 
-An Activity can only have Task children. Let's create the Tasks that we expect astronauts to perform on the way to target alpha.
+An Activity can only have Task children. Let's create the Tasks that we expect astronauts to perform on the way to Station 1.
 
 ```typescript
 let task1 = new Task();
-task1.description = 'Drive to checkpoint alpha';
+task1.description = 'Drive to Checkpoint Alpha';
 task1.expectedDuration = 14; // 14 minutes of drive time
 
 let task2 = new Task();
-task2.description = 'Photographic survey of outcrop at alpha alpha';
+task2.description = 'Photographic survey of outcrop at Alpha';
 task2.expectedDuration= 2; // 2 minutes to take photos
 
 let task3 = new Task();
-task3.description = 'Finish drive to checkpoint alpha';
+task3.description = 'Finish drive to Station 1';
 task3.expectedDuration = 4; // 4 minutes to finish the drive
 ```
 
@@ -125,25 +125,21 @@ Right now, we have four freefloating Steps: `activity`, `task1`, `task2`, and `t
 activity.children = [task1, task2, task3];
 ```
 
-Now that there is a relationship between all of the Steps so far, we can start to plot how to do timeline calculations.
+Now that there is a relationship between all of the Steps so far, we can begin plotting how to do timeline calculations.
+
+## Calculations
+
 
 
 ## Limitations of our Design
 
-We took a naive approach in developing the Timeline.
+
 
 
 <><>the problems the linear timeline solved<><>
 
 <><>how the hierarchy has affected decision making - less flexibility for on-the-fly changes. difficulty with unknown number of cycles<><>
 
-
-
-I've been in meetings where we have a 20 minute discussion about the different ways to strike a rock with a hammer and what they're called. There were factions within the geologists, notably by nationality. At one point, a Brit tossed out the term "cheeky knock," which instantly became canon and I'm sure has since been published in geology papers about BASALT.
-
-"In particular, the Apollo program pioneered
-the concept of incorporating a team of scientists to support real-time and strategic
-decision making regarding human surface operations" p5
 
 section 1.2 - all about structure of timelines
 
