@@ -39,9 +39,9 @@ NASA obsessively plans EVAs for good reason. With higher resolution understandin
 
 [^1]: Miller, M. J., Claybrook, A., Greelund, S., Marquez, J., Feigh, K (2017). Operational Assessment of Apollo Lunar Surface Extravehicular Activity. NASA/TP-2017-219457, ARC-E-DAA-TN39193, NASA Ames Research Center https://ntrs.nasa.gov/search.jsp?R=20170007261
 
-[^2]: Miller, M. J., Claybrook, A., Greenlund, S., & Feigh, K. M. (2016). "Operational Assessment of Apollo Lunar Surface Extravehicular Activity Timeline Execution", AIAA SPACE 2016, AIAA SPACE Forum, (AIAA 2016-5391) https://doi.org/10.2514/6.2016-5391 
+[^2]: Miller, M. J., Claybrook, A., Greenlund, S., & Feigh, K. M. (2016). "Operational Assessment of Apollo Lunar Surface Extravehicular Activity Timeline Execution", AIAA SPACE 2016, AIAA SPACE Forum, (AIAA 2016-5391) https://doi.org/10.2514/6.2016-5391
 
-[^3]: Greenlund, S., Miller, M. J., & Feigh, K. M. (2017). "Operational Assessment of Apollo Lunar Surface Extravehicular Activity Metabolic Rate", AIAA SPACE and Astronautics Forum and Exposition, AIAA SPACE Forum, (AIAA 2017-5115) https://doi.org/10.2514/6.2017-5115 
+[^3]: Greenlund, S., Miller, M. J., & Feigh, K. M. (2017). "Operational Assessment of Apollo Lunar Surface Extravehicular Activity Metabolic Rate", AIAA SPACE and Astronautics Forum and Exposition, AIAA SPACE Forum, (AIAA 2017-5115) https://doi.org/10.2514/6.2017-5115
 
 $$
 \begin{aligned}
@@ -80,4 +80,4 @@ _A quick look at Marvin's timeline interface. I won't be going into details abou
 
 In order to build an interactive timeline or calculate time behind, we needed to describe every component of a timeline and their relationships. Anyone who has worked with a database before would recognize this as a [schema](http://database.guide/what-is-a-database-schema/), or a formal method for representing relationships between data.
 
-_Coming up next: I'll be diving into Marvin's schema and applying it to a Martian EVA._
+_Coming up next in [part 3](/posts/20180516-marvin-eva-timeline-breakdown/): I'll be diving into Marvin's schema and applying it to a Martian EVA._

@@ -23,8 +23,8 @@ class About extends React.Component {
         </ul>
         <h1>What is Cameron?</h1>
         <ul>
-          <li>Udacity full-stack software engineer</li>
-          <li>engineer on Marvin - spacewalk planning software</li>
+          <li>software engineer at NASA Johnson Space Center under the <a href='https://ares.jsc.nasa.gov' target='blank'>ARES directorate</a></li>
+          <li>former Udacity full-stack software engineer</li>
           <li>designed and taught web and self-driving car classes at Udacity</li>
           <li>former high school physics teacher (taught <a href='http://physicswithportals.com' target='blank'>physics with <em>Portal 2</em></a> for a bit)</li>
         </ul>
