@@ -54,7 +54,6 @@
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "develop": "./node_modules/gatsby-cli/lib/index.js develop",
     "new": "./bin/new-post.js",
     "build": "./node_modules/gatsby-cli/lib/index.js build",
     "deploy": "./node_modules/gatsby-cli/lib/index.js build && ./bin/deploy.js",
