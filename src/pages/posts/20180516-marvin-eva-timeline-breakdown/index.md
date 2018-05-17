@@ -1,12 +1,12 @@
 ---
 title: "Marvin: EVA Timeline Breakdown"
-date: 2018-01-16T22:19:52-06:00
-tags:
+date: 2018-05-16T22:30:45-05:00
+tags: 
   - marvin
   - eva
   - nasa
 marvin: 02-timeline
-summary: Taking a look at existing timelines and how we translated them to usable data structures.
+summary: Examining spacewalk timelines and how we translated them into usable data structures.
 twitterprompt: Cameron plans his spacewalk
 draft: false
 ---
@@ -89,11 +89,9 @@ In order to get a sense for how our Timeline works and its strengths and weaknes
 
 _Maybe this is what they'll see? The Curiosity Mars rover took [this amazing panorama](https://photojournal.jpl.nasa.gov/catalog/PIA22210) of Gale Crater in October 2017. Image copyright NASA/JPL._
 
-<><>Image of a traversal activity Timeline with two tasks for reaching checkpoints<><>
+![<-NOLINK->a timeline with an activity parent and three task children](./mars-timeline.png)
 
 _A small example timeline with child, parent, and sibling pointed out._
-
-<><>check the tense of the examples here<><>
 
 The Activity is the highest level of the Timeline, so let's create one first.
 
@@ -125,27 +123,6 @@ Right now, we have four freefloating Steps: `activity`, `task1`, `task2`, and `t
 activity.children = [task1, task2, task3];
 ```
 
-Now that there is a relationship between all of the Steps so far, we can begin plotting how to do timeline calculations.
+Now that there is a relationship between all of the Steps so far, we can sketch what timeline calculations look like.
 
-## Calculations
-
-
-
-## Limitations of our Design
-
-
-
-
-<><>the problems the linear timeline solved<><>
-
-<><>how the hierarchy has affected decision making - less flexibility for on-the-fly changes. difficulty with unknown number of cycles<><>
-
-
-section 1.2 - all about structure of timelines
-
-"An EVA timeline is
-a compiled, sequenced set of tasks at various levels of description which contains
-the geospatial and temporal information associated with all tasks to be performed" p8
-
-p15, 16 - start description of timeline structure
-p18 - measuring tasks. is a task duration really the diff between its start time and the next's? (probably good to hint at Marvin's step duration definition (no dead time))
+_Coming up next: math!_
