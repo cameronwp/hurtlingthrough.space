@@ -11,11 +11,11 @@ tags:
 draft: false
 ---
 
-*Skip down to [here](#Actual%20Strategy) if you just want the technical info about setting up `crontab` scripts. I'm going to talk about Jira and work philosophy first.*
+*Skip down to [Actual Strategy](#actual-strategy) if you just want the technical info about setting up `crontab` scripts. I'm going to talk about Jira and work philosophy first.*
 
-I run my own personal Jira and Confluence instances on home server. I got reliant on Jira at Udacity. I actually think it's fantastic. With lots of projects always going on at work and at home, it helps me wade through the chaos to find out what exactly I should be working on.
+I run my own personal [Jira](https://www.atlassian.com/software/jira) and [Confluence](https://www.atlassian.com/software/confluence) instances on home server. I got reliant on Jira at Udacity. I actually think it's fantastic. With lots of projects always going on at work and at home, it helps me wade through the chaos to find out what exactly I should be working on.
 
-The Jira + Confluence combo is kind of overkill for a personal setup given the focus on enterprise and the insane level of customization available. But I enjoy the level of control it affords. And price-wise it works out great. With the server editions, it's $10 for lifetime access to Jira software and an additional $10 for access to Confluence. This isn't bad given that most hosted options will charge at least a few dollars a month for similar capabilities. Of course, it also helps that I already have a capable server running 24/7, which makes server hardware a sunk cost in this equation.
+The Jira + Confluence combo is kind of overkill for a personal setup given the focus on enterprise and the insane level of customization available. But I enjoy the level of control it affords. And price-wise it works out great. With the server editions, it's \$10 for lifetime access to Jira software and an additional \$10 for access to Confluence. This isn't bad given that most hosted options will charge at least a few dollars a month for similar capabilities. Of course, it also helps that I already have a capable server running 24/7, which makes server hardware a sunk cost in this equation.
 
 However, the one thing missing is cloud storage and backup. I back Jira and Confluence with a database running on the same machine (just a PostgreSQL container). If something were to happen to my server, all would be lost. When I first spun up my Jira and Confluence instances, I was aware of this fact and accepted it. I'm making an effort to make more intelligent ([lazy](http://wiki.c2.com/?OptimizeLater)) decisions as a software engineer. In my earlier days, I loved [premature optimizations](http://wiki.c2.com/?PrematureOptimization). I would jump at any opportunity to design and build what I would have considered a robust and thorough system as early in a project as possible. I wasted time building and planning for features I imagined I *might* need two or three iterations later. I recently poked through code I wrote a few years ago and I saw evidence of this everywhere. Modules and classes that exist because "I may want this later." Logic split between packages in half-assed attempts to make code DRYer and more modular. Logging systems that never needed to exist and that actually make it harder to find errors.
 
@@ -23,7 +23,7 @@ Nowadays, I do as little as possible. I was fine leaving my Jira and Confluence 
 
 I decided that backing up the data was worth the effort this week. I found myself reaching for a Confluence page to jot down notes I most definitely did not want to risk losing. And I have almost 100 Jira issues across four projects actively tracked (and all assigned to me!). Now that I not only have important information there but I'm becoming reliant on it, I need to make sure my life won't spiral out of control if, say, my adorable husky found a way to knock my server off the bureau in my office. Here's what I came up with.
 
-### Actual Strategy
+<h3 id="actual-strategy">Actual Strategy</h3>
 
 If you follow the same path as me, you'll get a quick intro to the `awscli` tool and `crontab`, both of which are super useful.
 
