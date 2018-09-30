@@ -11,7 +11,7 @@ tags:
 draft: false
 ---
 
-*Skip down to **Actual Strategy** if you just want the technical info about setting up `crontab` scripts. I'm going to talk about Jira and work philosophy first.*
+*Skip down to __Actual Strategy__ if you just want the technical info about setting up `crontab` scripts. I'm going to talk about Jira and work philosophy first.*
 
 I run my own personal [Jira](https://www.atlassian.com/software/jira) and [Confluence](https://www.atlassian.com/software/confluence) instances on home server. I got reliant on Jira at Udacity. I actually think it's fantastic. With lots of projects always going on at work and at home, it helps me wade through the chaos to find out what exactly I should be working on.
 
