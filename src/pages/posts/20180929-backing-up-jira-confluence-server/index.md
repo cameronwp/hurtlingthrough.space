@@ -11,7 +11,7 @@ tags:
 draft: false
 ---
 
-*Skip down to __Actual Strategy__ if you just want the technical info about setting up `crontab` scripts. I'm going to talk about Jira and work philosophy first.*
+*Skip down to [Actual Strategy](#actual-strategy) if you just want the technical info about setting up `crontab` scripts. I'm going to talk about Jira and work philosophy first.*
 
 I run my own personal [Jira](https://www.atlassian.com/software/jira) and [Confluence](https://www.atlassian.com/software/confluence) instances on home server. I got reliant on Jira at Udacity. I actually think it's fantastic. With lots of projects always going on at work and at home, it helps me wade through the chaos to find out what exactly I should be working on.
 
@@ -23,7 +23,7 @@ Nowadays, I do as little as possible. I was fine leaving my Jira and Confluence 
 
 I decided that backing up the data was worth the effort this week. I found myself reaching for a Confluence page to jot down notes I most definitely did not want to risk losing. And I have almost 100 Jira issues across four projects actively tracked (and all assigned to me!). Now that I not only have important information there but I'm becoming reliant on it, I need to make sure my life won't spiral out of control if, say, my adorable husky found a way to knock my server off the bureau in my office. Here's what I came up with.
 
-### Actual Strategy
+<h3 id="actual-strategy">Actual Strategy</h3>
 
 If you follow the same path as me, you'll get a quick intro to the `awscli` tool and `crontab`, both of which are super useful.
 
