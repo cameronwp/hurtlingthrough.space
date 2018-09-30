@@ -9,7 +9,7 @@ tags:
   - aws
   - s3
 twitterprompt: Cameron is afraid of losing his TODO list
-summary: How to back up Jira and Confluence server instances to the cloud. Bonus: my thoughts on the importance of being a lazy software engineer.
+summary: "How to back up Jira and Confluence server instances to the cloud. Bonus: my thoughts on the importance of being a lazy software engineer."
 draft: false
 ---
 
