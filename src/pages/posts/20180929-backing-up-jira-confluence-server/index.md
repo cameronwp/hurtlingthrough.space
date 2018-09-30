@@ -8,6 +8,8 @@ tags:
   - crontab
   - aws
   - s3
+twitterprompt: Cameron is afraid of losing his TODO list
+summary: How to back up Jira and Confluence server instances to the cloud. Bonus: my thoughts on the importance of being a lazy software engineer.
 draft: false
 ---
 
@@ -27,12 +29,12 @@ I decided that backing up the data was worth the effort this week. I found mysel
 
 If you follow the same path as me, you'll get a quick intro to the `awscli` tool and `crontab`, both of which are super useful.
 
-* Repo [here](https://github.com/cameronwp/atlassian-server).
+* Repo [here](https://github.com/cameronwp/atlassian-sync).
 * Official [Jira](https://confluence.atlassian.com/adminjiraserver071/backing-up-data-802592964.html) and [Confluence](https://confluence.atlassian.com/doc/production-backup-strategy-38797389.html) backup advice.
 
 I want to back up everything that I would need to restart Jira or Confluence from scratch. This includes the database as well as data / attachment folders. I'm using AWS S3 as my storage mechanism.
 
-Once a day, a cronjob runs on my server. See the [repo](https://github.com/cameronwp/atlassian-server) for the full scripts and installation instructions. The gist of it is:
+Once a day, a cronjob runs on my server. See the [repo](https://github.com/cameronwp/atlassian-sync) for the full scripts and installation instructions. The gist of it is:
 
 ```sh
 #!/bin/bash
