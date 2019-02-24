@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { Follow } from 'react-twitter-widgets'
-import { rhythm } from '../utils/typography'
 import './footer.scss'
 
 function year() {
@@ -12,12 +11,21 @@ function year() {
 class Footer extends React.Component {
   render() {
     return (
-      <div className='footer-container'>
-        <div className='follow'>
-          <Follow username='cwpittman' options={{ size: 'medium', dnt: true }} />
+      <div>
+        <div className='follow-container'>
+          <div className='follow'>
+            <Follow username='cwpittman' options={{ size: 'medium', dnt: true }} />
+          </div>
+          <div>
+            © <strong><a href='/about'>Cameron Pittman</a></strong> {year()}
+          </div>
         </div>
-        <div>
-          © <strong><a href='/about'>Cameron Pittman</a></strong> {year()}.
+        <div className='licenses'>
+          All Rights Reserved, except for the parts enumerated below:
+          <ul>
+            <li>The source code of this project is covered by the <a href="https://opensource.org/licenses/MIT">MIT license</a>.</li>
+            <li>The content of this project (eg. blog posts) is covered by the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0 license</a>.</li>
+          </ul>
         </div>
       </div>
     )
