@@ -77,3 +77,7 @@ If you set up a CircleCI deployment, you'll need to set the aforementioned envir
 ## Troubleshooting
 
 * `gatsby-transformer-remark` seems to barf on `[links](https://example.com/something_like_this)` with `_` in them. Replace the `_`s in the URL with their URL encoding, `%5F` and you should be good to go, eg. `[links](https://example.com/something%5Flike%5Fthis)`.
+
+## Licenses
+
+The content and source code of this project are covered under two difference licenses. Source code is covered under the [MIT license](https://opensource.org/licenses/MIT), while blog content is covered under the [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) license. The directories containing files and content to which the CC BY-SA license applies have separate LICENSE files.

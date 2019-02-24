@@ -1,4 +1,4 @@
-.footer-container {
+.follow-container {
   display: flex;
   justify-content: space-around;
 }
@@ -7,15 +7,29 @@
   padding-top: 5px;
 }
 
+.licenses {
+  color: hsla(0,0%,0%,0.6);
+  margin-top: -20px;
+
+  li {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 540px) {
-  .footer-container {
+  .follow-container {
     display: flex;
     flex-direction: column;
   }
 
-  .footer-container > div {
+  .follow-container > div {
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .licenses {
+    margin-top: 0;
+    margin-left: 0;
   }
 }
