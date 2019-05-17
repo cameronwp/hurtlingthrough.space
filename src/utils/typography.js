@@ -57,11 +57,6 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
     'a.gatsby-resp-image-link': {
       boxShadow: 'none'
     },
-    // mars-three pages
-    '.fade-in-black-to-blue': {
-      height: '100vh',
-      background: `linear-gradient(180deg, #000 0%, #09f 100%)`,
-    },
   })
 }))
 
