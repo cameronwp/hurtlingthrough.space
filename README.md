@@ -28,14 +28,15 @@ NOTE: posts that are `draft: true` in the `master` branch will show up in rss.xm
 
 ### Publish a post
 
-```md
+```markdown
 draft: false
 ```
 
 ### Custom twitter prompt
 
 Twitter prompts default to "Check out 'title' URL via @cwpittman". Prompts will always end with the URL and "via @cwpittman", but you can change the first part.
-```md
+
+```markdown
 twitterprompt: Cameron makes a huge mistake.
 ```
 
@@ -45,7 +46,7 @@ This makes the Twitter prompt: "Cameron makes a huge mistake. https://hurtlingth
 
 The homepage will either display the excerpt for each post (the first ~200 chars?) or a predefined summary.
 
-```md
+```markdown
 summary: A day in the life of my dog. Her perspective on going to the park, sniffing butts, and more with lots of pictures.
 ```
 
