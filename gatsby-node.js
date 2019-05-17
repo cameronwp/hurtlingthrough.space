@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
@@ -23,7 +22,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
   const BlogPost = path.resolve('./src/templates/blog-post.jsx')
   const TagPage = path.resolve('./src/templates/tag-page.jsx')
-  const MarsThree = path.resolve('./src/templates/mars-three.jsx')
   let tags = []
 
   createPages = edges => {
@@ -40,16 +38,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         })
 
         tags = _.union(tags, edge.node.frontmatter.tags)
-      }
-
-      if (_.startsWith(slug, '/mars-three/')) {
-        createPage({
-          path: slug,
-          component: MarsThree,
-          context: {
-            slug
-          },
-        })
       }
     })
   }

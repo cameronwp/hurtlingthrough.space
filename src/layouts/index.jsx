@@ -13,33 +13,13 @@ function postContainer(isRoot, children) {
   )
 }
 
-function fullWidthContainer(children) {
-  const fullWidthStyles = {
-    width: '100vw',
-    maxWidth: '100vw',
-    padding: 0
-  }
-
-  return (
-    <Container style={fullWidthStyles}>
-      {children()}
-    </Container>
-  )
-}
-
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
 
     const rootPath = '/'
     const isRoot = location.pathname === rootPath
-    const isMarsThree = _.startsWith(location.pathname, '/mars-three/')
-
-    if (!isMarsThree) {
-      return postContainer(isRoot, children)
-    }
-
-    return fullWidthContainer(children)
+    return postContainer(isRoot, children)
   }
 }
 
