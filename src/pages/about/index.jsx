@@ -1,6 +1,7 @@
 import React from 'react'
 import { rhythm, scale } from '../../utils/typography'
 import Footer from '../../components/footer'
+import Helmet from 'react-helmet'
 
 class About extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class About extends React.Component {
 
     return (
       <section style={sectionStyle}>
+        <Helmet title="About - Hurtling through Space" />
         <h1>Who is Cameron?</h1>
         <ul>
           <li>puppy father</li>
