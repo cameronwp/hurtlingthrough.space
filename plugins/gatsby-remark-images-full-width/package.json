@@ -19,6 +19,7 @@
   "dependencies": {
     "babel-runtime": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
+    "gatsby": "^1.9.128",
     "gatsby-plugin-sharp": "^1.6.24",
     "is-relative-url": "^2.0.0",
     "jest": "^22.0.6",

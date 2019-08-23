@@ -1,0 +1,10 @@
+version: '3'
+services:
+  gatsby:
+    build:
+      context: ./
+    command: 'develop'
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app

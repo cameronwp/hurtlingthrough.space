@@ -6,6 +6,7 @@ const { sizes } = require(`gatsby-plugin-sharp`)
 const Promise = require(`bluebird`)
 const cheerio = require(`cheerio`)
 const slash = require(`slash`)
+const regeneratorRuntime = require('regenerator-runtime/runtime')
 
 // If the image is relative (not hosted elsewhere)
 // 1. Find the image file
