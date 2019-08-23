@@ -21,6 +21,7 @@ class Footer extends React.Component {
           </div>
         </div>
         <div className='licenses'>
+          All writings and opinions are my own and not the views of my employer.<br />
           All Rights Reserved, except for the parts enumerated below:
           <ul>
             <li>The source code of this project is covered by the <a href="https://opensource.org/licenses/MIT">MIT license</a>.</li>

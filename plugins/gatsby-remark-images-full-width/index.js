@@ -13,6 +13,7 @@ var _require = require('gatsby-plugin-sharp'),
 var Promise = require('bluebird');
 var cheerio = require('cheerio');
 var slash = require('slash');
+var regeneratorRuntime = require('regenerator-runtime/runtime');
 
 // If the image is relative (not hosted elsewhere)
 // 1. Find the image file
