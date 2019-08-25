@@ -9,6 +9,8 @@ twitterprompt: Career change strategies and how I became a NASA human spacefligh
 draft: false
 ---
 
+_Disclaimer: the opinions below are my own and not representative of my employer or NASA._
+
 I received an email from a Udacity student (and [Grow with Google](https://www.udacity.com/grow-with-google) scholar!) named Calvin recently. Calvin, like many people studying online, was interested in a career change. His work and educational experience spans civil engineering, structural engineering, Android, and front-end apps. He reached out because he, like me, wants to be a part of the human spaceflight resurgence we're seeing take shape.
 
 "I would love to follow a similar path and would love to ask you for any advice or tips you can give someone who loves science and education and coding to pursue a similar career path," Calvin asked. "I would love to someday play a role in helping advance space exploration and education and would love to do it with my skills in software and engineering."
