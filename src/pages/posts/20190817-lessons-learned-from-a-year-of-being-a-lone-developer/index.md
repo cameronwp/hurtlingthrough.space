@@ -25,13 +25,21 @@ Being a project with a long horizon, I've been able to take the time to refactor
 
 Had I spent more time early on fleshing out wireframes, especially interactive wireframes, I'm sure that I would have come to the same conclusions sooner and with less headache.
 
+## Work in the Open
+
+Especially if you're working by yourself, make sure your customers can play with your work early and often. Push to staging daily and ensure that all of your customers have access. Get as much feedback as possible. No surprises!
+
+I do a job that no one else on my team has any expertise in, and I perform my duties remotely. This is a potentially tentative situation - how can anyone on my team know if I'm _actually_ doing my job and meeting their needs if they never see me and don't know what I do?
+
+I want to avoid surprises as much as possible. To do so, I aggressively work in the open. Beyond simply having weekly standups and regular meetings with my manager, working in the open means that everyone can always know what you've done and what you're going to do next. In practice, this means I publish my task priorities and I keep staging up-to-date. 
+
 ## Choose Boring Technologies
 
 Many factors influence tech stack decisions - the ability of languages and frameworks to support the customer's primary requirements, your (team's) comfort with languages and frameworks, your existing infrastructure and processes, how much time you have, performance goals, and probably a million other things.
 
 All things being equal, I tend to make the boring choice.
 
-Boring technologies are widely used, well documented, and proven solutions at scale. Ideally, they have active maintainers and a helpful community.
+Boring technologies are widely used, well documented, and proven solutions at scale. Ideally, they have active maintainers and a helpful community. It's unlikely that you're going to try to do something with a boring technology that no one has tried and documented before.
 
 What picking boring technologies allows you to do is focus on business problems - not implementation problems. If you're working by yourself or face tight deadlines, you don't have the luxury to worry about implementation.
 
@@ -43,28 +51,28 @@ Accessibility is a must. No software platform comes close to the level of access
 
 ✔️ **Python Django backend**
 
-I love golang. It's a joy to read and write. It has fantastic APIs, superb documentation, and an unmatched toolchain. And its performance is bar none. I've used it in a number of projects in the past and always enjoyed the experience. But! It was the wrong language for this project. In exchange for performance, it suffers from verbosity and it forces you to think about low-level details. For a large team with high performance metrics, golang offers a lot. But that's not me here.
+This is the most important boring decision I made. While most frontend technologies are hot-swappable or interchangable to some extent, backend technologies are much more tightly integrated with your application's data.
 
-I needed a backend stack that would support my ability to focus on high level business goals without worrying about low-level minutia. Two stacks came to mind - Ruby on Rails and Python Django. Rails is great, but I _love_ Python. I considered Flask too, but the Django admin offers incomparable functionality out of the box. It's a huge win for both my workflows and my team's data administration needs. Overall Django is a mature, popular framework with a nice plugin ecosystem to boot.
+I needed a backend stack that would support my ability to focus on high level business goals without worrying about low-level minutia. Two stacks came to mind - Ruby on Rails and Python Django. Rails is fantastic, but I _love_ Python. I considered Flask too, but the Django admin offers incomparable functionality out of the box. It's a huge win for both my workflows and my team's data administration needs. Overall Django is a mature, popular framework with an easy plugin ecosystem to boot.
+
+✔️ **PostgreSQL Database**
+
+I considered PostgreSQL and MySQL. Both options are equally boring - they're each mature, proven databases and you can't go wrong with either one. Django works well with both, but there are some neat built-in extensions to Django's ORM that take advantage of PostgreSQL-only features. I'm also familiar with PostgreSQL, having used it across every company and project I've worked on. PostgreSQL was the most boring decision I could make here.
 
 ✔️ **React frontend**
 
 Django has an HTML template system built in, but... I'm not a huge fan. I've gotten used to a componentized frontend workflow. I know React well and I love its dev tools. The biggest concern with a frontend framework, though, is the staying power. Frontend devs have seen too many "new hotness" frameworks come and go over the years, so I wanted to make sure that 10 years from now whoever is maintaining the platform won't hate me for my choices now. Odds are, they will so 🤷‍♀️. React has a large ecosystem and appears to have lasting popularity, so I feel about as confident as I can that it's the right choice.
 
+For what it's worth, I also went with Redux. It appears to be a boring choice, though the addition of [React hooks](https://reactjs.org/docs/hooks-intro.html) has led me to rely on it less and less.
+
 ✔️ **NextJS Site Generator**
 
-You can't write React without Webpack, and Webpack is black magic. The less time wasted dealing with inane JSON configurations, the better. A few React site generators let you trade control over transpilation and project structure in exchange for streamlined development. The two I considered were GatsbyJS and NextJS. I had used Gatsby in the past (_Hurtling through Space_ was built with it!), but I was impressed with the simplicity of the NextJS demo and the size of its userbase. After a quick test I was sold.
+You can't write React without Webpack, and I stand by the statement that Webpack is black magic. The less time wasted finagling arcane ~rituals~ JSON configurations, the better. React site generators let you trade control over transpilation and project structure in exchange for streamlined development. This is the boring choice for me - let someone else worry about how all my JSX gets compiled to HTML!
 
-(Bonus points: NextJS now supports deploying to AWS Lambda, even with dynamic routing! I haven't tried it yet but it's in the backlog.)
+The two generators I considered were [GatsbyJS](https://nextjs.org/) and [NextJS](https://nextjs.org/). I had used Gatsby in the past (_Hurtling through Space_ was [built with it](/posts/20171204-building-a-blog/)!), but I was impressed with the simplicity of the NextJS demo and the size of its [userbase](https://nextjs.org/showcase). After a quick test I was sold.
+
+(Bonus points: NextJS now supports deploying to AWS Lambda, even with dynamic routing! I'd argue this makes my stack even more boring because it kills my responsibility in managing frontend servers. I haven't tried this yet but it's in the backlog.)
 
 ✔️ **Docker**
 
-Remember, I only need to support a few dozen active users. Even if there are performance issues, modern horizontal microservices design patterns means that most performance issues can be solved by throwing more servers at the problem. Container technology massively simplifies deployment and there never really was a question of whether or not I'd be Dockerizing this project.
-
-✔️ **Kubernetes**
-
-This one actually goes beyond this single project.
-
-## Work in the Open
-
-Especially if you're working by yourself, make sure your customers can play with your work early and often. Push to staging daily and ensure that all of your customers have access. Get as much feedback as possible. No surprises!
+Container technology massively simplifies deployment and scaling and there never really was a question of whether or not I'd be containerizing this project.
