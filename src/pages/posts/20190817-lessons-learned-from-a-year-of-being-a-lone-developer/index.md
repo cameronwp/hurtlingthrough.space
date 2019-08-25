@@ -18,26 +18,26 @@ draft: false
 _Disclaimer: all opinions below are my own and not representative of my employer or NASA._
 
 <p class="lead-in">
-I work on a number of projects at NASA JSC, most of which involve large teams of scientists and engineers. One project, though, is a bit lonely. I am the only engineer developing an imagery analysis sharing platform. The platform will support JSC photogrammetrists who will be scrutinizing every pixel in every image taken of the external surface of the Orion crew vehicle. They'll be looking for signs of damage, indications that specific events occurred successfully, and a million other variables. They'll use the platform during the upcoming Artemis missions to share their analyses with each other, flight controllers at JSC, and engineers across NASA centers.
+I work on a number of projects at NASA JSC, most of which involve large teams of scientists and engineers. One project, though, is a bit lonely. I am the only engineer developing an imagery analysis sharing platform. The platform will support JSC [photogrammetrists](https://en.wikipedia.org/wiki/Photogrammetry) who will be scrutinizing every pixel in every image taken of the external surface of the Orion crew vehicle. They'll be looking for signs of damage, indications that specific events occurred successfully, and a million other variables. They'll use the platform during the upcoming Artemis missions to share their analyses with each other, flight controllers at JSC, and engineers across NASA centers.
 </p>
 
-Being the ~lead~ lone engineer on a greenfield project has been a great learning experience. There won't be many users - maybe a few dozen active users at peak - but it's hard to find stakes higher than keeping people safe in space. Thus, I've been making choices to prioritize reliability, my own velocity, and long term maintenance. Here's what I've considered, the choices I made, and advice for other engineers in similar situations.
+Being the <s>lead</s> lone engineer on a greenfield project has been a great learning experience. There won't be many users - maybe a few dozen active at peak - but it's hard to find stakes higher than keeping people safe in space. Thus, I've been making choices to prioritize reliability, my own velocity, and long term maintenance. Here's what I've considered, the choices I made, and advice for other engineers in similar situations.
 
 ## Wireframe Early and Often
 
-I wish I had spent more time wireframing when we first started. Not being a designer by trade, I'm not inclined to spend hours in tools like Sketch or Photoshop. Rather, I whiteboarded some basic designs and asked the team if they were on point. I got a lukewarm reception, which I misinterpreted as my poor drawing skills not fully conveying my brilliant designs. I'm a better coder than I am artist so I took to my IDE to start coding up some "quick and dirty" prototypes.
+You can learn a lot in a short period of time with wireframes. Take the time to slow down and flesh out your design ideas before ever writing a line of code.
 
-This was a huge mistake. There's no such thing as a "quick and dirty" prototype - even the most basic functional designs need non-neglible infrastructure. I made hasty infrastructure choices to substantiate my prototypes, which turned into technical debt as the platform evolved. A few months into the project, I realized I was working the UX around the tech stack, rather than letting the UX lead the way. While it technically checked all the requirements boxes, the UX screamed "an engineer designed me." Frustrating and over-complicated.
+I wish I had spent more time wireframing when we first started. Not being a designer by trade, I'm not inclined to spend hours in tools like Sketch, Photoshop, or even Keynote. Rather, I whiteboarded some basic designs and asked the team if they were on point. I got a lukewarm reception, which I misinterpreted as my poor drawing skills not fully conveying my brilliant designs. I'm a better coder than I am artist so I took to my IDE to start coding up some "quick and dirty" prototypes.
+
+This was a huge mistake. There's no such thing as a "quick and dirty" prototype - even the most basic functional designs need non-neglible infrastructure. I made hasty choices to build prototypes, which rotted into technical debt almost immediately. A few months into the project, I realized I was working the UX around the tech stack, rather than letting the UX lead the way. While it technically checked all the requirements boxes, the UX screamed "an engineer designed me." Frustrating and over-complicated.
 
 Being a project with a long horizon, I've been able to take the time to refactor the tech stack to better suit the UX. This is pure luck. Had this platform been supporting an organization with a limited runway, my haste to start coding could have killed us before we left the starting line.
-
-Had I spent more time early on fleshing out wireframes, especially interactive wireframes, I'm sure that I would have come to the same conclusions sooner and with less headache.
 
 ## Work in the Open
 
 Avoid surprises! In practice, this means keeping staging up-to-date and publishing task priorities.
 
-If you are like me and you do a job that no one else on the team has any expertise in and you do so remotely, then you are in a scary employment situation. How can anyone on the team know if you're _actually_ fulfilling your duties and meeting their needs if they never see you and don't know what you do?
+If you are like me and you do a job that no one else on the team has any expertise in and you do so remotely, then you are in a tenuous employment situation. How can anyone on the team know if you're _actually_ fulfilling your duties and meeting their needs if they never see you and don't know what you do?
 
 I've found that frequently calling out new features in staging and setting up regular opportunities for demo sessions has been hugely helpful. Giving your customers access early and often to your project helps you get feedback faster and it helps them understand your development process and progress.
 
@@ -77,7 +77,7 @@ For what it's worth, I also went with Redux. It appears to be a boring choice, t
 
 ✔️ **NextJS Site Generator**
 
-You can't write React without Webpack, and I stand by the statement that Webpack is black magic. The less time wasted with arcane ~rituals~ JSON configurations, the better. React site generators let you trade control over transpilation and project structure in exchange for streamlined development. This is the boring choice for me - let someone else worry about how all my JSX gets compiled to HTML!
+You can't write React without Webpack, and I stand by the statement that Webpack is black magic. The less time wasted with arcane <s>rituals</s> JSON configurations, the better. React site generators let you trade control over transpilation and project structure in exchange for streamlined development. This is the boring choice for me - let someone else worry about how all my JSX gets compiled to HTML!
 
 The two generators I considered were [GatsbyJS](https://nextjs.org/) and [NextJS](https://nextjs.org/). I had used Gatsby in the past (_Hurtling through Space_ was [built with it](/posts/20171204-building-a-blog/)!), but I was impressed with the simplicity of the NextJS demo and the size of its [userbase](https://nextjs.org/showcase). After a quick test I was sold.
 
