@@ -4,14 +4,18 @@ date: 2019-08-17T22:23:37-04:00
 tags: 
   - nasa
   - lessons-learned
+summary: What to consider and advice for solo devs out there from my time working alone on a platform at NASA.
+twitterprompt: Cameron tries to give practical advice to software devs taking on big solo projects.
 draft: false
 ---
+
+_Disclaimer: the opinions below are my own and not representative of my employer or NASA._
 
 <p class="lead-in">
 I work on a number of projects at NASA JSC, most of which involve large teams of scientists and engineers. One project, though, is a bit lonely. I am the only engineer developing an imagery analysis sharing platform. The platform will support JSC photogrammetrists who will be scrutinizing every pixel in every image taken of the external surface of the Orion crew vehicle. They'll be looking for signs of damage, indications that specific events occurred successfully, and a million other variables. They'll use the platform during the upcoming Artemis missions to share their analyses with each other, flight controllers at JSC, and engineers across NASA centers.
 </p>
 
-I basically play all the roles you might find in a medium sized project - I work with stakeholders to determine requirements, I design wireframes and prototypes, I write and prioritize tickets, I do the actual coding, I maintain the production environment and its related devops, and I perform user research to inform future iterations. That's not to say I don't have help - I have a supportive boss and project manager who help me daily. The team is super helpful and actively encourages me to dig deep into their workflows to make sure the platform streamlines their work as much as possible. But the vast majority of the work rests on my shoulders.
+I basically play all the roles you might find in a medium sized project - I work with stakeholders to determine requirements, I design wireframes and prototypes, I write and prioritize tickets, I do the actual coding, I maintain the production environment and its related devops, and I perform user research to inform future iterations. That's not to say I don't have help - I have a supportive boss and a project manager who help me daily. The team is super helpful and actively encourages me to dig deep into their workflows to make sure the platform streamlines their work as much as possible. But the vast majority of the work rests on my shoulders.
 
 Being the ~lead~ lone engineer on a greenfield project has been a great learning experience. There won't be many users - maybe a few dozen active users at peak - but it's hard to find stakes higher than keeping people safe in space. Thus, I've been making choices to prioritize reliability, my own velocity, and long term maintenance. Here's what I've considered, the choices I made, and advice for other engineers in similar situations.
 
@@ -67,7 +71,7 @@ For what it's worth, I also went with Redux. It appears to be a boring choice, t
 
 ✔️ **NextJS Site Generator**
 
-You can't write React without Webpack, and I stand by the statement that Webpack is black magic. The less time wasted finagling arcane ~rituals~ JSON configurations, the better. React site generators let you trade control over transpilation and project structure in exchange for streamlined development. This is the boring choice for me - let someone else worry about how all my JSX gets compiled to HTML!
+You can't write React without Webpack, and I stand by the statement that Webpack is black magic. The less time wasted with arcane ~rituals~ JSON configurations, the better. React site generators let you trade control over transpilation and project structure in exchange for streamlined development. This is the boring choice for me - let someone else worry about how all my JSX gets compiled to HTML!
 
 The two generators I considered were [GatsbyJS](https://nextjs.org/) and [NextJS](https://nextjs.org/). I had used Gatsby in the past (_Hurtling through Space_ was [built with it](/posts/20171204-building-a-blog/)!), but I was impressed with the simplicity of the NextJS demo and the size of its [userbase](https://nextjs.org/showcase). After a quick test I was sold.
 
