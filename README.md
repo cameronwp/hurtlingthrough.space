@@ -81,6 +81,8 @@ If you set up a CircleCI deployment, you'll need to set the aforementioned envir
 
 * `gatsby-transformer-remark` seems to barf on `[links](https://example.com/something_like_this)` with `_` in them. Replace the `_`s in the URL with their URL encoding, `%5F` and you should be good to go, eg. `[links](https://example.com/something%5Flike%5Fthis)`.
 * Seeing an error about `vips`? If you've run `yarn` inside `plugins/gatsby-remark-images-full-width`, blow away its `node_modules` and rerun `yarn` from the root of the repo. The issue is that we need yarn to fulfill the version of sharp as specified in the root of the repo, which does not require libvips >= 8.6.
+* When running in a container, you apparently need to do the initial `build`, try running the container, watch images not get parsed, then exec into the container and follow ^^^ to handle images properly. I have no idea why it's not working as part of the last `RUN` in the Dockerfile.
+  * `docker-compose run gatsby rm -rf plugins/plugins/gatsby-remark-images-full-width`
 
 ## Licenses
 
