@@ -20,4 +20,3 @@ then
 else
   exec $@
 fi
-
