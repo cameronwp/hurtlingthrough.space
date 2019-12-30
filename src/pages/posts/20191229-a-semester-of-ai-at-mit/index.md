@@ -1,12 +1,14 @@
 ---
 title: "An Educator's Quick Review of a Semester of AI at MIT"
-date: 2019-12-29T22:26:09-05:00
+date: 2019-12-29T10:26:09-05:00
 tags:
   - mit
   - ai
   - lifelong-learning
   - grad-school
   - advanced-study-program
+twitterprompt: Cameron takes a grad level AI class at MIT and reflects on education
+summary: What a grad level AI class at MIT taught me about education.
 draft: false
 ---
 
