@@ -1,6 +1,6 @@
 ---
 title: "An Educator's Quick Review of a Semester of AI at MIT"
-date: 2019-12-29T22:26:09-05:00
+date: 2019-12-29T10:26:09-05:00
 tags:
   - mit
   - ai
