@@ -7,6 +7,8 @@ tags:
   - lifelong-learning
   - grad-school
   - advanced-study-program
+twitterprompt: Cameron takes a grad level AI class at MIT and reflects on education
+summary: What a grad level AI class at MIT taught me about education.
 draft: false
 ---
 
