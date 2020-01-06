@@ -83,7 +83,7 @@ title: "${title}"
 date: ${getLocalISO(now)}
 tags: ${tags.length > 0 && yamlizeTags()}
 summary: Pithy reason you should read this.
-twittersummary: Self-promoting wit to get you to click this link
+twitterprompt: Self-promoting wit to get you to click this link
 draft: true
 ---
 
