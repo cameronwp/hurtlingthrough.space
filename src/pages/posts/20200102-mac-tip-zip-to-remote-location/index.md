@@ -4,7 +4,7 @@ date: 2020-01-02T11:04:09-05:00
 tags: 
   - zip
   - mac
-summary: Using ditto to get data off a Mac
+summary: Using ditto to get data off a Mac.
 draft: false
 ---
 
