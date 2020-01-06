@@ -6,6 +6,7 @@ tags:
   - linux
   - thinkpad
   - gnome
+summary: New year, new laptop. Some helpful hints and complaints about Arch on a ThinkPad.
 draft: false
 ---
 
