@@ -1,10 +1,11 @@
 ---
-title: Annihilation
+title: "Book Review: Annihilation"
 date: 2017-12-21T11:30:44-06:00
 tags:
   - annihilation
   - jeff-vandermeer
   - book-review
+  - sci-fi
 draft: false
 twitterprompt: Cameron reviews Annihilation by Jeff VanderMeer - don't inhale the spores
 ---
