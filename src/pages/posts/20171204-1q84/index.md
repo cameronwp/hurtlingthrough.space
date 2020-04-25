@@ -1,9 +1,11 @@
 ---
-title: 1Q84
+title: "Book Review: 1Q84"
 date: 2017-12-04T22:55:09-06:00
 tags:
   - book-review
   - haruki-murakami
+  - 1q84
+  - sci-fi
 draft: false
 twitterprompt: Cameron reads a weird book.
 ---
