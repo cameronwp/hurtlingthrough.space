@@ -74,7 +74,7 @@ class About extends React.Component {
         </ul>
         <h2>Laptop</h2>
         <ul className="emoji-list">
-          <li>💻 <a href="https://support.apple.com/kb/sp649?locale=en_GB" target="_blank">2012 13" MacBook Pro</a></li>
+          <li>💻 <a href="https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x/X1-Carbon-Gen-7/p/22TP2TXX17G" target="_blank">Lenovo Thinkpad X1 Carbon Gen 7</a></li>
         </ul>
         <Footer />
       </section>
