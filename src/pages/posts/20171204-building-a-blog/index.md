@@ -9,6 +9,7 @@ tags:
   - cloudfront
   - circleci
   - git
+summary: How I built this blog as a static site with GatsbyJS and AWS.
 draft: false
 ---
 
