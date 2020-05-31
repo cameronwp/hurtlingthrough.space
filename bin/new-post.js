@@ -82,6 +82,8 @@ function writeFile() {
 title: "${title}"
 date: ${getLocalISO(now)}
 tags: ${tags.length > 0 && yamlizeTags()}
+summary: Pithy reason you should read this.
+twitterprompt: Self-promoting wit to get you to click this link
 draft: true
 ---
 

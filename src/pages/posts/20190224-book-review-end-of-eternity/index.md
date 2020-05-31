@@ -5,6 +5,7 @@ tags:
   - book-review
   - isaac-asimov
   - end-of-eternity
+  - sci-fi
 draft: false
 ---
 
