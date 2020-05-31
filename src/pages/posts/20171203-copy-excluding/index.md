@@ -4,6 +4,7 @@ date: 2017-12-03T22:13:32-06:00
 tags:
   - rsync
   - unix
+summary: Quick tip for rsync
 draft: false
 ---
 
