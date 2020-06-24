@@ -30,7 +30,7 @@ Being an anal-retentive engineer, I wanted my blog publishing flow to match the 
 ## Requirements (or "How to Make a Simple Task More Difficult Than It Needs to Be")
 
 * **Must serve over HTTPS.** It is the way of the future. Sites are already [getting shamed](https://motherboard.vice.com/en_us/article/xygdxq/google-will-soon-shame-all-websites-that-are-unencrypted-chrome-https) for not using HTTPS.
-* **Must be version controled with `git`.** I regularly work on multiple machines. Version control systems make life easy. Furthermore, I wanted to use `master` to deploy (more on this in **Workflow**).
+* **Must be version controled with `git`.** I regularly work on multiple machines. Version control systems make life easy. Furthermore, I wanted to use `master` to deploy (more on this in **Workflow**). *Edit: now deploys are associated with the `live` branch - [here's why](/posts/20200617-master-no-more/).*
 * **Must be able to write long form text with markdown.** Markdown is faster and easier to write than HTML. This requirement means that I need a way to convert markdown to HTML as part of the deployment process.
 * **Must be able to modify the UI using a JS framework.** I'm not going to enjoy writing a blog if I can't have fun with the UI :) Bonus points for React.
 * **Must be able to build static pages.** I wanted a cheap hosting solution, which means that I would be uploading static files. An SPA _could_ work, but being able to serve static pages for each blog post gives me more hosting flexibility.

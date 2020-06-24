@@ -2,7 +2,7 @@
 
 Personal site and such: https://hurtlingthrough.space
 
-[![CircleCI](https://circleci.com/gh/cameronwp/hurtling-through-space/tree/master.svg?style=shield&circle-token=471090fb75fbeb5b65d53f583c230c1232817f0e)](https://circleci.com/gh/cameronwp/hurtling-through-space/tree/master)
+[![CircleCI](https://circleci.com/gh/cameronwp/hurtling-through-space/tree/live.svg?style=shield&circle-token=471090fb75fbeb5b65d53f583c230c1232817f0e)](https://circleci.com/gh/cameronwp/hurtling-through-space/tree/live)
 
 How it was built: [part 1](https://hurtlingthrough.space/posts/20171204-building-a-blog/) and [part 2](https://hurtlingthrough.space/posts/20171210-controlling-caches/).
 
@@ -22,7 +22,7 @@ yarn new
 
 Note that new posts automatically are set to `draft: true`. Change this to `draft: false` when you're ready to publish. Note that posts with `draft: true` do not show up in the homepage, but are still accessible directly.
 
-NOTE: posts that are `draft: true` in the `master` branch will show up in rss.xml! Strongly advise avoiding merging drafts into master. Use the `--preview` flow described below instead.
+NOTE: posts that are `draft: true` in the `live` branch will show up in rss.xml! Strongly advise avoiding merging drafts into live. Use the `--preview` flow described below instead.
 
 ## Fun with Frontmatter
 
@@ -61,7 +61,7 @@ The dev site is available at [http://localhost:8000](http://localhost:8000). You
 Note that you must set `draft: false` in the frontmatter of whatever posts you
 want to be public.
 
-All merges to `master` automatically get published.
+All merges to `live` automatically get published.
 
 If you want to publish manually, run `yarn deploy` (with the env vars detailed below). It will `gatsby build` the production files and will run `./bin/deploy.js` to upload public/ to S3 and invalidate the CloudFront cache.
 
