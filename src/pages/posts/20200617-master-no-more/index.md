@@ -1,6 +1,6 @@
 ---
 title: "Master No More!"
-date: 2020-06-17T16:10:29-06:00
+date: 2020-06-24T07:30:29-06:00
 tags: 
   - blog
   - blm
