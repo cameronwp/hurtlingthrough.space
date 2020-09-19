@@ -36,21 +36,34 @@ The net effect of these requirements is that an IKE should make it easy to see a
 
 <em>Disclaimer: To be clear, what follows is **not** an in-depth how-to guide. I am just sharing my approach and toolset. But I'll include links to everything and all the documentation you need to setup your own IKE. If you want to setup an IKE with Emacs, you should know that this is going to take actual effort. You will benefit by explicitly spending time at the outset building a mental model of how Emacs works and how your configuration files and package manager interact. If you blindly start copy and pasting elisp, you are bound to be frustrated early in the process. This is a game for people who like to tinker. But if you are someone who just wants to be given a tool that works, that's fine too! I still think you ought to try this out because the benefits are totally worth every ounce of frustration you're going to have setting it up.</em>
 
+(insert screencast?)
+
 To understand how you can setup an IKE in Emacs, you have to start with Emacs basics.
 
+* **Keyboard Shortcuts**: Most keyboard shortcuts are combinations with prefix keys like, control, `C-`, and meta (alt), `M-`. The built-in tutorial that opens with Emacs is worth going through. There are [plenty of guides for learning Emacs](https://www.emacswiki.org/emacs/LearningEmacs) and an official [cheatsheet](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf). If you don't like the Emacs keyboard shortcuts, don't worry! You can change pretty much every single one.
 * **Frames**: [A system-level display](https://www.gnu.org/software/emacs/manual/html_node/emacs/Frames.html). What most other applications call a window.
 * **Buffers**: A thing with text in it. Usually a file but doesn't have to be.
 * **Windows**: A visible thing in the frame that renders 0+ buffers. One or more windows are visible at a time in Emacs.
-* **Keyboard Shortcuts**: Most keyboard shortcuts are combinations with prefix keys like, control, `C-`, and meta (alt), `M-`. The built-in tutorial that opens with Emacs is worth going through. There are [plenty of guides for learning Emacs](https://www.emacswiki.org/emacs/LearningEmacs) and an official [cheatsheet](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf). If you don't like the Emacs keyboard shortcuts, don't worry! You can change pretty much every single one, and that includes ditching the prefix keys.
 * **Modes**: When you open different kinds of files in Emacs, the editor goes into different [modes](https://www.gnu.org/software/emacs/manual/html_node/emacs/Modes.html). Each mode can have different behaviors and functionality associated with it. Elisp can target specific modes, or create new modes, to add useful behaviors when you're editing different types of files or in different situations.
 * **Package management**: At its core, a package is just 1+ elisp files that you can download and `(load)`. But you usually don't need to manually download anything because Emacs has a [built-in package manager](https://www.emacswiki.org/emacs/InstallingPackages) that connects with [MELPA](https://melpa.org/), the major repository for Emacs packages. You can install packages from within Emacs itself or declare dependencies on packages in your configuration files.
 * **Frameworks/Packages**: A framework is a curated and opinionated collection of packages that significantly changes the user experience. The two most popular,  [Spacemacs](https://www.spacemacs.org/) and [Doom](https://github.com/hlissner/doom-emacs], are essentially to Emacs what [Ubuntu is to Debian](https://ubuntu.com/community/debian). But there are [many other frameworks and packages](https://github.com/emacs-tw/awesome-emacs) with specific goals or functionality in mind. Many of them pull in functionality by running external commands and piping the input into an Emacs buffer.
+  * **Completion Frameworks**: A completion framework adds context to selection menus. Want a file picker? A completion framework is responsible for creating (or reading) a list of files and presenting them to you in a way that lets you select one. How about code completion? A language-specific tool for generating suggestions will plug into a completion framework to show you suggestions as you type. There are two major options: [Ivy](https://github.com/abo-abo/swiper) and [Helm](https://github.com/emacs-helm/helm).
+
+Now that that's out of the way, let's build the IKE.
 
 ### The Foundation - Org Mode
 
-The Emacs ecosystem has a unique note-taking file format called [Org mode](https://orgmode.org/), ostensibly named because it helps you organize your life. The word "mode" here specifically refers to an Emacs mode. On its surface, a `.org` file puts you in a mode where you write simple markup that is interpreted in a hierarchical structure with some formatting attached ([docs](https://orgmode.org/org.html)). 
+The Emacs ecosystem has a unique note-taking file format called [Org mode](https://orgmode.org/), ostensibly named because it helps you organize your life. On its surface, a `.org` file puts you in a mode where you write simple markup that is interpreted in a hierarchical structure with some formatting attached ([docs](https://orgmode.org/org.html)). 
+
+### Adding Context - org-roam
 
 Let's start with the end goal - seeing and creating links between ideas.
+
+### Reading PDFs
+
+### Academic Papers - org-ref + helm-bibtex
+
+### Bonus: Daily Notes and TODOs - org-journal
 
 
 [^1] Technically there are menus that let you change settings, but you'll probably notice that all that happens is that the menus add code to your configuration files. 
