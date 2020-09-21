@@ -40,7 +40,7 @@ The net effect of these requirements is that an IKE should make it easy to see a
 
 To understand how you can setup an IKE in Emacs, you have to start with Emacs basics.
 
-* **Keyboard Shortcuts**: Most keyboard shortcuts are combinations with prefix keys like, control, `C-`, and meta (alt), `M-`. The built-in tutorial that opens with Emacs is worth going through. There are [plenty of guides for learning Emacs](https://www.emacswiki.org/emacs/LearningEmacs) and an official [cheatsheet](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf). If you don't like the Emacs keyboard shortcuts, don't worry! You can change pretty much every single one.
+* **Keyboard Shortcuts**: Most keyboard shortcuts are combinations with prefix keys like, control, `C-`, and meta (alt), `M-`. The built-in tutorial that opens with Emacs is worth going through. There are [plenty of guides for learning Emacs](https://www.emacswiki.org/emacs/LearningEmacs) and an official [cheatsheet](https://www.gnu.org/software/emacs/refcards/pdf/refcard.pdf). If you don't like the default Emacs keyboard shortcuts, don't worry! You can change pretty much every single one.
 * **Frames**: [A system-level display](https://www.gnu.org/software/emacs/manual/html_node/emacs/Frames.html). What most other applications call a window.
 * **Buffers**: A thing with text in it. Usually a file but doesn't have to be.
 * **Windows**: A visible thing in the frame that renders 0+ buffers. One or more windows are visible at a time in Emacs.
