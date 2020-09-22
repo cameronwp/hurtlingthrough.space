@@ -35,6 +35,8 @@ Academic work shares many of the same characteristics as coding. Instead of conn
 
 The net effect of these requirements is that an IKE should make it easy to see and create links between ideas. As far as I know, there is no single piece of software that satisfies every requirement out of the box. However, with some configuration, Emacs can come very close.
 
+Emacs supports literate programming: http://www.howardism.org/Technical/Emacs/literate-programming-tutorial.html
+
 ## Quick Intro to Emacs
 
 <em>Disclaimer: To be clear, what follows is **not** an in-depth how-to guide. I am just sharing my approach and toolset. But I'll include links to everything and all the documentation you need to setup your own IKE. If you want to setup an IKE with Emacs, you should know that this is going to take actual effort. You will benefit by explicitly spending time at the outset building a mental model of how Emacs works and how your configuration files and package manager interact. If you blindly start copy and pasting elisp, you are bound to be frustrated early in the process. This is a game for people who like to tinker. But if you are someone who just wants to be given a tool that works, that's fine too! I still think you ought to try this out because the benefits are totally worth every ounce of frustration you're going to have setting it up.</em>
