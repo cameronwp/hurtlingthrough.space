@@ -19,7 +19,7 @@ Being an anal-retentive engineer, I wanted my blog publishing flow to match the 
 
 ## Final Product
 
-[Repo](https://github.com/cameronwp/hurtling-through-space) (Feel free to fork!)
+[Repo](https://github.com/cameronwp/hurtlingthrough.space) (Feel free to fork!)
 
 * Blog: [GatsbyJS](https://gatsbyjs.org) (written in [React](https://reactjs.org/))
 * Hosting: [S3](https://aws.amazon.com/s3/pricing/)
