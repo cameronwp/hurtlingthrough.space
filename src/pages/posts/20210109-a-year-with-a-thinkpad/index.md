@@ -98,7 +98,7 @@ Linux is my desktop OS of choice and this laptop provides an exemplary experienc
 
 #### Miscellaneous Thoughts
 
-- USB-C is a game changer. I love the fact that for my wife and I, our laptops, phones, and Nintendo Switch all share chargers. When I do travel, it's crazy that I only need to throw one charger in my bag to keep all of my devices happy.
+- USB-C is a game changer. I love the fact that for my wife and me, our laptops, phones, and Nintendo Switch all share chargers. When I do travel, it's crazy that I only need to throw one charger in my bag to keep all of my devices happy.
 - Gaming is obviously not great. I'll play retro games on here from time to time, but that's about it.
 - I swapped the Fn and left control keys in the BIOS. It was a great decision.
 
