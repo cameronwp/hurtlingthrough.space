@@ -1,7 +1,7 @@
 ---
 title: "A Year with a ThinkPad"
 date: 2021-01-09T12:41:05-05:00
-tags: 
+tags:
   - thinkpad
   - linux
   - manjaro
@@ -48,7 +48,7 @@ I've goofed around with the <strike>nub</strike> trackpoint, but it's just not f
 
 **Grade**: B
 
-I initially ordered the low power, non-touchscreen 1080p variant, but I RMA'd it after 5 minutes. The [ghosting](https://www.testufo.com/ghosting) was atrocious and instantly gave me a headache. Luckily, Lenovo customer service was cool about it and let me swap it for a model with a normal power 1080p touchscreen. That's what I'm using now. With a 14" screen, text is plenty sharp at 1080p. Colors are fine. Motion is fine. Pre-pandemic, it was great watching movies on it on airplanes. The screen gets more than bright enough even in direct sunlight. I picked a 1080p screen over the WQHD or 4K versions because the sharper screens didn't justify the battery drain to me.  It's no retina display, but I'm perfectly happy spending hours staring at it.
+I initially ordered the low power, non-touchscreen 1080p variant, but I RMA'd it after 5 minutes. The [ghosting](https://www.testufo.com/ghosting) was atrocious and instantly gave me a headache. Luckily, Lenovo customer service was cool about it and let me swap it for a model with a normal power 1080p touchscreen. That's what I'm using now. With a 14" screen, text is plenty sharp at 1080p. Colors are fine. Motion is fine. Pre-pandemic, it was great watching movies on it on airplanes. The screen gets more than bright enough even in direct sunlight. I picked a 1080p screen over the WQHD or 4K versions because the sharper screens didn't justify the battery drain to me. It's no retina display, but I'm perfectly happy spending hours staring at it.
 
 I would have preferred a 16x10 display over 16x9, but I knew what I was buying. The bezel is a little chunky, especially towards the bottom, so I have hopes that Lenovo will see to it to put a taller display into a machine of this form factor in the future.
 
@@ -56,7 +56,7 @@ I would have preferred a 16x10 display over 16x9, but I knew what I was buying. 
 
 **Grade**: B-
 
-This machine is almost all plastic, but it's a nice sturdy plastic that feels soft to the touch (and you'll know you touched it because you're going to leave fingerprints all over it). My machine doesn't have any visible scratches. The moving parts, like the screen hinge and trackpad buttons, all feel great after a year. You would hardly know they've been used.
+This machine is a mix of rubberized magnesium and plastic, but it's a nice sturdy plastic that feels soft to the touch (and you'll know you touched it because you're going to leave fingerprints all over it). My machine doesn't have any visible scratches. The moving parts, like the screen hinge and trackpad buttons, all feel great after a year. You would hardly know they've been used.
 
 That being said, I have to dock points off the build quality because I've had to send this machine in for repairs twice. To Lenovo's credit, they use two-day Fedex shipping so I was only without the machine for about a week for both repairs despite the fact that it had to get sent to their center in Texas. The first issue was that Lenovo apparently released a bad firmware update for the battery last summer that basically bricked it (the battery, not the whole laptop). And then around the 10 month mark I noticed that the screen panel itself was coming off the case shell. The screen still worked fine, but if you looked at the laptop sideways, you could see behind the panel and the inside of the case. It hasn't been a real problem so far because it was under warranty, but I'm a little nervous about the longevity of the hardware. This is an area where Apple really excels - it's not unreasonable for a MacBook to look and work like new even 10 years later. I've heard similar stories about Thinkpads, so I'm hoping that my early repair issues were a fluke.
 
@@ -98,7 +98,7 @@ Linux is my desktop OS of choice and this laptop provides an exemplary experienc
 
 #### Miscellaneous Thoughts
 
-- USB-C is a game changer. I love the fact that for my wife and I, our laptops, phones, and Nintendo Switch all share chargers. When I do travel, it's crazy that I only need to throw one charger in my bag to keep all of my devices happy.
+- USB-C is a game changer. I love the fact that for my wife and me, our laptops, phones, and Nintendo Switch all share chargers. When I do travel, it's crazy that I only need to throw one charger in my bag to keep all of my devices happy.
 - Gaming is obviously not great. I'll play retro games on here from time to time, but that's about it.
 - I swapped the Fn and left control keys in the BIOS. It was a great decision.
 
