@@ -14,7 +14,7 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
   headerFontFamily: ['Montserrat', 'Bitter', 'sans-serif'],
   googleFonts: [
     {
-      name: 'Fira Mono',
+      name: 'Roboto Mono',
       styles: ['400', '500']
     },
     {
@@ -42,10 +42,16 @@ const typography = new Typography(_.assign({}, Wordpress2016, {
       fontSize: '18px'
     },
     code: {
-      fontFamily: ['Fira Mono', 'monospace'].join(','),
+      fontFamily: ['Roboto Mono', 'monospace'].join(','),
       fontWeight: 500,
       fontSize: '1em',
       lineHeight: '1.5rem'
+    },
+    pre: {
+      fontFamily: ['Roboto Mono', 'monospace'].join(','),
+      fontWeight: 500,
+      fontSize: '1em',
+      lineHeight: '1.1rem'
     },
     'p > code': {
       background: '#f3f0ee',
