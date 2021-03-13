@@ -91,3 +91,12 @@ ul {
 .social {
   padding-top: 4px;
 }
+
+/* FYI https://en.wikipedia.org/wiki/Asterism_(typography)#Dinkus */
+.dinkus {
+  text-align: center;
+}
+
+.dinkus:after {
+  content: "* * *";
+}
