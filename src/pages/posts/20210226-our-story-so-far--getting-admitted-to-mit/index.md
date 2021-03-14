@@ -82,19 +82,27 @@ This felt like a low point. My big plans for a delayed start as an astronomy gra
 
 A few months later, between my second and third years of teaching, I realized I had a problem with my physics labs. The school had a small budget for lab equipment and the ordering process took almost a whole school year. I had the luxury of teaching a class without a standardized exam, which meant I had more freedom in the topics we covered. I liked being able to react to student interest. As such, I often felt frustrated that I didn't have the supplies for all the labs I wanted when I wanted them. I had some success getting creative cobbling together labs from the equipment I could find, and sometimes I spent my own money to buy the equipment I needed. What I really needed was time to requisition a closet full of physics equipment. Given it wasn't going to appear overnight, I started to think of alternatives.
 
-A physics simulator came to mind first. [Physlet](https://physlets.org/pp/start.html)-style apps had come in handy for a number of lessons. My favorites came from Colorado University's [PhET](https://phet.colorado.edu/). Assuming everyone in the class has access to a half-decent computer, virtual labs in a simulator could be cheap, easy, and flexible. The physlets had been great but they're all generally made to demonstrate a single concept. I wanted a general purpose simulator. I play a lot of video games. I realized that video game physics engines had potential to be the flexible physics lab tool I needed. It wasn't long until I landed on [_Portal_](https://en.wikipedia.org/wiki/Portal_(video_game)) as my physics lab environment of choice. Players explicitly solve physics puzzles and the game has a general science-y motif.
+A physics simulator came to mind first. [Physlet](https://physlets.org/pp/start.html)-style apps had come in handy for a number of lessons. My favorites came from Colorado University's [PhET](https://phet.colorado.edu/). Assuming everyone in the class had access to a half-decent computer, virtual labs in a simulator could be cheap, easy, and flexible. The physlets had been great but they're all generally made to demonstrate a single concept. I wanted a general purpose simulator. I play a lot of video games. I realized that video game physics engines had potential to be the flexible physics lab tool I needed. It wasn't long until I landed on [_Portal_](https://en.wikipedia.org/wiki/Portal_(video_game)) as my physics lab environment of choice. Players explicitly solve physics puzzles and the game has a general science-y motif.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PRXRFibYpnI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 _A demo of_ Portal.
 
-I needed a proof of concept lesson. I spent the next few days poring over the levels in _Portal_, looking for any environments that could be turned into a kinematics lab. I recognized that the tiles in the game were the key to labs. If you watch the trailer above, you'll see that each room is generally covered in square tiles. Being a standard size and shape, they made for a perfect unit of distance. That opened up a whole range of experiments in kinematics and even mechanics if you fudge the numbers a bit about masses.
+I needed a proof of concept lesson. I spent the next few days poring over the levels in _Portal_, looking for any environments that could be turned into a kinematics lab. I recognized that the tiles in the game were the key to labs. If you watch the trailer above, you'll see that each room is generally covered in square tiles. Being a standard size and shape, they make for a perfect unit of distance. That opened up a whole range of experiments in kinematics and mechanics.
 
 At the same time, I needed to prove to myself that _Portal's_ [Source Engine](https://en.wikipedia.org/wiki/Source_(game_engine)) mirrored real-world physics well enough to be useful. The physics didn't need to be perfect, just internally consistent and modeled close enough to real physics to be recognizable. I started running my own experiments. Remember, I had no idea how to code yet. I didn't know how to open the game console and run commands to pull measurements. Rather, I took the physicist approach. I staged experiments in the game, recorded videos, and used physics tracking software to analyze the motion of cubes. I tracked them falling, sliding, and colliding. Lo and behold, the Source Engine modeled realistic-ish physics.
 
-I wrote a lesson about projectile motion.
+I wrote my first unit of lesson plans about projectile motion. In it, I assumed that every student would have a laptop and a copy of the game to play independently. We had a cart of laptops at the school that met _Portal_'s minimum system requirements, so I wasn't worried about that. But there was the other issue of getting enough copies of _Portal_ for a whole class. I had an idea to ask the Internet for help. Valve Software, the makers of _Portal_, frequently gave out free copies of the game. I bet that a bunch of gamers out there had an extra copy of _Portal_ sitting around and maybe, I hoped, they would be willing to donate them to my class. I shared my lesson on reddit (on [r/portal](https://www.reddit.com/r/Portal/comments/j87zu/rportal_this_inner_city_high_school_physics/) and [r/gaming](https://www.reddit.com/r/gaming/comments/j88ft/rgaming_this_inner_city_high_school_physics/)) and asked for game donations.
 
-@@Portal free@@
+My plan worked. I netted about 20 copies of Portal over the next few days. But then, to my surprise, I found this message in my reddit inbox.
+
+> Title: hi from Valve
+>
+> I just saw your post about using Portal in your physics class, and  we'd love to help you out. We're actually investigating facilitating  exactly this with Portal 2, and we'd love to talk about what you're  doing and what you'd like to do.
+>
+> Email me at [name redacted]@valvesoftware.com, please, and we'll talk.
+
+This was 
 
 @@ref learning landscapes article@@
 
