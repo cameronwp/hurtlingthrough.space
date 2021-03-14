@@ -18,7 +18,7 @@ Big news! Last week I learned that I've been accepted to [MIT's Aeronautics and 
 
 This isn't the first time I applied to AeroAstro, or to grad school in general. I received a masters in teaching right after college through the [New Teacher Project](https://tntp.org/). During and after my teaching career right after college, I applied to grad programs in astronomy and educational technology. I was accepted to a few and almost enrolled a few times, but I kept bailing at the last second and deciding that I had better opportunities elsewhere. But this time it's really happening. This opportunity is too good to pass up. Twelve years after a bachelors in physics and astronomy, ten years after a masters in teaching, eight years after I taught myself how to code, and three years after I started [work at NASA](/posts/20190615-getting-into-nasa/), I wake up every morning and pinch myself that this is real.
 
-I applied to AeroAstro because I want my career to define the future of space exploration. It's the ultimate game. Studying astronomy gives you a longer perspective on human events. From the long view, Apollo 11 happened last night. The Wright brothers took flight a few hours before that. We're at the earliest stages of becoming a multi-planet species. I want to help us realize our destiny in the solar system.
+I applied to AeroAstro because I want my career to define the future of space exploration. It's the ultimate game. Studying astronomy gives you a longer perspective on human events. From the long view, Apollo 11 happened last night. The Wright brothers took flight a few hours before that. We're at the earliest stages of becoming a multi-planetary species. I want to help us realize our destiny in the solar system.
 
 This isn't a career switch. I feel fortunate to be a participating member of the human spaceflight community already. I develop decision support tools for spacewalks at NASA. I work with flight controllers and subject matter experts to build tools to help them make decisions about the what, when, and how of people working in space. This graduate degree represents an opportunity to unite the fields of autonomous exploration and human exploration. We can, and must, use robotic explorers and the lessons learned from endowing them with decision making capabilities to make future human explorers more autonomous and more capable.
 
@@ -102,19 +102,21 @@ My plan worked. I netted about 20 copies of Portal over the next few days. But t
 >
 > Email me at [name redacted]@valvesoftware.com, please, and we'll talk.
 
-This was 
+I idolized Valve Software. The _Half-Life_ series, the _Portal_ series, _Counter-Strike_, and _Team Fortress 2_ were some of my all-time favorite games. When I got an email from an employee there, it felt like a celebrity wanted to meet me. I couldn't believe it. I emailed them immediately and that started a relationship that would fundamentally alter the arc of my career.
+
+^^^ easy to say with hindsight, but I was just excited at the time to see where it led.
+
+
+
+@@backdrop of wanting to get away from nashville and start fresh. 3 years w/buddies after college was too much. still see them all the time (playing Valheim together now)@@
 
 @@ref learning landscapes article@@
 
-@@embed a video@@
-
-@@other teachers not really buying in at first@@
-
-@@reaching out to the internet despite being terrified@@
+@@embed a PwP video@@
 
 @@getting in touch with valve and the first of my crazy letters@@
 
-After four years of teaching, I left feeling exhausted and eager to get back to the role of student. I never felt bored, rather, I wanted to start learning again.
+@@no regrets, but I'm sad I was part of a system that sees a huge turnover rate at high needs high school. teachers need better pay@@
 
 
 
