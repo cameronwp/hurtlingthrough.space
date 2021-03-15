@@ -104,13 +104,23 @@ My plan worked. I netted about 20 copies of Portal over the next few days. But t
 
 I idolized Valve Software. The _Half-Life_ series, the _Portal_ series, _Counter-Strike_, and _Team Fortress 2_ were some of my all-time favorite games. When I got an email from an employee there, it felt like a celebrity wanted to meet me. I couldn't believe it. I emailed them immediately and that started a relationship that would fundamentally alter the arc of my career.
 
-With hindsight, it's easy to ascribe significance to events like this. Now, ten years later, I can say thing like "fundamentally alter the arc of my career" because I can clearly trace a series of events that originated from this one, each one marking a new chapter in my life. But the truth is that at the time I had no idea what this meant or what was going to happen. I was just excited to see where it led. I remember thinking that it could be something big or it could be nothing at all. Either way, this message alone meant I already came out ahead with the _Portal_ experiment.
+With hindsight, it's easy to ascribe meaning to events like this. Now, ten years later, I can make grandiose claims like "fundamentally alter the arc of my career" because I can clearly trace a series of significant events that originated from this one. But the truth is that at the time I had no idea what this meant or what was going to happen. I was just excited to see where it led. I remember thinking that it could be something big or it could be nothing at all. Either way, this message alone meant I already came out ahead with the _Portal_ experiment.
 
-After a few back-and-forths, I was put in touch with Valve's new person in charge of education, Leslie Redd.
+After a few back-and-forths, I was put in touch with Valve's new person in charge of education, Leslie Redd. The first thing that Leslie told me was that Valve could hook up my class with as many games as we needed, but the catch was they wanted me to use the newly released _Portal 2_ instead. This wasn't really a catch because _Portal 2_ included a an easy-to-use level editor. It would be a huge upgrade to my lessons. I began writing a series of lesson plans that would take advantage of the _Portal 2_ level editor. The level editor would let me reframe my lessons from "find cool physics in _Portal_ to study" to "build physics experiments in _Portal_ and predict the results." If you read through the lessons linked above, you'll see that I had students building contraptions and taking measurements in the game world. This let me task my students with challenges like determining exactly when, how, and by how much the physics in the game diverged from real-life physics (ignoring the fact that portals don't exist).
+
+In these first conversations with Leslie I learned that Valve wanted to support educators but they didn't know how to do it. They were excited to meet teachers like me who might be able to foster learning communities around their games. I learned that they had a new website in the works called Teach with Portals ([teachwithportals.com](http://teachwithportals.com) seems to have been given over to a group called foundry-10 I'm not familiar with, but they're still hosting my [physics lessons](http://www.foundry10.org/programs/games-and-learning/portal-2)!). They wanted teachers to share lesson plans that starred Valve games. I loved it. I was super proud to be a part of the effort to make video games a more mainstream teaching tool.
+
+![me watching a pod of students build experiments in Portal 2](./me-teaching.png)
+
+_My classroom in the fall of 2012. I'm with some of my 11th grade physics students working on their experiments in_ Portal 2.
+
+Valve's grand vision for education needed teacher evangelists with a ton of energy and creativity. I recognized an opportunity. They needed me.
+
+It's hard to know for sure, but I think this was my first time that I took a long view on my choices at hand. I thought Valve should give me a job to be that evangelist full-time.
 
 @@backdrop of wanting to get away from nashville and start fresh. 3 years w/buddies after college was too much. still see them all the time (playing Valheim together now)@@
 
-@@ref learning landscapes article@@
+I'll spoil the story of the _Portal_ saga for you. It started with me creating a blog, [Physics with Portals](https://physicswithportals.com), giving a number of presentations at education conferences, and finally publishing two journal articles. If you want to read about the lessons themselves, see [LEARNing Landscapes](https://www.learninglandscapes.ca/index.php/learnland/article/view/Teaching-With-Portals-the-Intersection-of-Video-Games-and-Physics-Education)[^3]. If you want to read my advice to teachers who want to try their own crazy lessons, see [Teacher Pioneers](https://press.etc.cmu.edu/index.php/product/teacher-pioneers/)[^4].
 
 @@embed a PwP video@@
 
@@ -125,3 +135,6 @@ Why "Our Story"? Why not "The Story". It took a lot of people to get here.
 [^1]: To be fair, some official responsibilities like coaching a team or leading the marching band do come with a small stipend at most schools, but it isn't remotely commensurate with the time and effort to do them _well_.
 
 [^2]: A broad and very shallow overview of physics and chemistry.
+[^3]: Pittman, C. W. (2013). Teaching with portals: The intersection of video games and physics education. *LEARNing Landscapes*, *6*(2), 341–360.
+[^4]: Pittman, C. "Conservation of Momentum". Williams-Pierce, C. (Ed.). (2016). *Teacher Pioneers*. pp 109-119. Carnegie Mellon: ETC Press. https://doi.org/10.1184/R1/6686936
+
