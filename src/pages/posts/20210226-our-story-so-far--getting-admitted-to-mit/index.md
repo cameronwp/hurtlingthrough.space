@@ -30,8 +30,6 @@ The rest of this post will tell the whole story of how I went from a high school
 
 My career aspirations failed to cement during undergrad at Vanderbilt. I started off as a biology major intending to become an academic in biological sciences, but this was a path I mostly fell into because I took a lot of biology in high school. I considered pursuing a pre-med path, but I never felt enthusiastic about being a doctor. At the beginning of college I was in a work-study program in lab with a zebrafish habitat. As the lowest ranking member of the lab, I spent most of my time performing rote tasks like cleaning tanks and checking pH and salinity levels. This was right around the time that podcasts were becoming really popular. I used to listen to all sorts of science podcasts while I worked, especially anything about space. I kept working in the lab over the summer between my freshman and sophomore years because my family lived just a few minutes away from the Vandy campus in Nashville. That summer, standing between racks of zebrafish, listening to space podcasts and wiping down fish tanks, I had an epiphany that I wanted to switch majors from biology to astronomy. It's the science I loved most after all, and Vandy had an astronomy department. I figured that even if I couldn't be an astronaut and go to space, I would at least be happy as a professional astronomer studying space. A few weeks later I met with the head of the astronomy department and submitted the forms to make the switch.
 
-@@TODO: talk about learning C++ for stellar astrophysics@@
-
 I had my first brush with programming in my senior year. I was studying stellar astrophysics, a mixed undergrad/grad level course about how stars work. Our final project was to write code to simulate the conditions inside a star. The final program would amount to iteratively solving seven equations for properties like heat, pressure, density, rate of fusion reactions, etc, at expanding radii and graphing the result. At the time, I had never written a line of code. I had been doing all the math for my homework assignments in Excel. I initially planned on doing the same for the final project, but it quickly became clear that the complexity of the math and the level of accuracy required would make Excel a bad choice.
 
 About a month before the project was due, I decided to switch gears and use an actual programming language for the project. I knew absolutely nothing about programming languages. I picked C++ just because I thought it had a cool name. I spent the next two weeks going through tutorials online to learn enough C++ to do math in loops and write to CSV files. It took me two more weeks to get my project working, but I did and I got an A. I was really proud of that A. In hindsight, this should have been a sign that I ought to take programming more seriously. Learning C++ on your own is no joke, especially when you are an absolute beginner. I really enjoyed it too. But unfortunately, I wouldn't open a code editor for almost another five years after I turned in that project.
@@ -102,11 +100,11 @@ My plan worked. I netted about 20 copies of Portal over the next few days. But t
 >
 > Email me at [name redacted]@valvesoftware.com, please, and we'll talk.
 
-I idolized Valve Software. The _Half-Life_ series, the _Portal_ series, _Counter-Strike_, and _Team Fortress 2_ were some of my all-time favorite games. When I got an email from an employee there, it felt like a celebrity wanted to meet me. I couldn't believe it. I emailed them immediately and that started a relationship that would fundamentally alter the arc of my career.
+I idolized Valve Software. The _Half-Life_ series, the _Portal_ series, _Counter-Strike_, and _Team Fortress 2_ were some of my all-time favorite games. When I got an email from an employee there, it felt like a celebrity wanted to meet me. I couldn't believe it. It was validation that I found a problem to solve that other people cared about. I emailed them immediately and that started a relationship that would fundamentally alter the arc of my career.
 
-With hindsight, it's easy to ascribe meaning to events like this. Now, ten years later, I can make grandiose claims like "fundamentally alter the arc of my career" because I can clearly trace a series of significant events that originated from this one. But the truth is that at the time I had no idea what this meant or what was going to happen. I was just excited to see where it led. I remember thinking that it could be something big or it could be nothing at all. Either way, this message alone meant I already came out ahead with the _Portal_ experiment.
+With hindsight, it's easy to ascribe meaning to events like this. Now, ten years later, I can make grandiose claims like "fundamentally alter the arc of my career" because I can clearly trace the series of significant events that originated from this one. But the truth is that at the time I had no idea what this meant or what was going to happen. I was just excited to see where it led. I remember thinking that it could be something big or it could be nothing at all. Either way, this message alone meant I already came out ahead with the _Portal_ experiment.
 
-After a few back-and-forths, I was put in touch with Valve's new person in charge of education, Leslie Redd. The first thing that Leslie told me was that Valve could hook up my class with as many games as we needed, but the catch was they wanted me to use the newly released _Portal 2_ instead. This wasn't really a catch because _Portal 2_ included a an easy-to-use level editor. It would be a huge upgrade to my lessons. I began writing a series of lesson plans that would take advantage of the _Portal 2_ level editor. The level editor would let me reframe my lessons from "find cool physics in _Portal_ to study" to "build physics experiments in _Portal_ and predict the results." If you read through the lessons linked above, you'll see that I had students building contraptions and taking measurements in the game world. This let me task my students with challenges like determining exactly when, how, and by how much the physics in the game diverged from real-life physics (ignoring the fact that portals don't exist).
+After a few back-and-forths, I was put in touch with Valve's new person in charge of education, Leslie Redd. The first thing that Leslie told me was that Valve could hook up my class with as many games as we needed, but the catch was they wanted me to use the newly released _Portal 2_ instead. This wasn't really a catch because _Portal 2_ included a an easy-to-use level editor. It would be a huge upgrade to my lessons. I began writing a series of lesson plans that would take advantage of the _Portal 2_ level editor. The level editor would let me reframe my lessons from "find cool physics in _Portal_ to study" to "build physics experiments in _Portal_ and predict the results." I wrote lessons where students would build contraptions and take measurements in the game world. This would let me task my students with challenges like determining exactly when and by how much the physics in the game diverged from real-life physics (ignoring the fact that portals don't exist).
 
 In these first conversations with Leslie I learned that Valve wanted to support educators but they didn't know how to do it. They were excited to meet teachers like me who might be able to foster learning communities around their games. I learned that they had a new website in the works called Teach with Portals ([teachwithportals.com](http://teachwithportals.com) seems to have been given over to a group called foundry-10 I'm not familiar with, but they're still hosting my [physics lessons](http://www.foundry10.org/programs/games-and-learning/portal-2)!). They wanted teachers to share lesson plans that starred Valve games. I loved it. I was super proud to be a part of the effort to make video games a more mainstream teaching tool.
 
@@ -114,13 +112,47 @@ In these first conversations with Leslie I learned that Valve wanted to support 
 
 _My classroom in the fall of 2012. I'm with some of my 11th grade physics students working on their experiments in_ Portal 2.
 
-Valve's grand vision for education needed teacher evangelists with a ton of energy and creativity. I recognized an opportunity. They needed me.
+Valve's grand vision for education needed teacher evangelists with a ton of energy and creativity. I recognized an opportunity. They needed me. So, six months after making contact with Valve I drafted this letter.
 
-It's hard to know for sure, but I think this was my first time that I took a long view on my choices at hand. I thought Valve should give me a job to be that evangelist full-time.
+> Hi Leslie,
+>
+> I hope you had a fantastic holiday season. I used my time away from work to gain some perspective on my career and the trajectory I think it should take. I came to the conclusion that I'd like to pursue a career with Valve.
+>
+> If Valve is serious about education, it will need people with an intuitive understanding of the way education, physics, and video games should interact and interplay. In light of my background in physics and education, I would be a leading asset in not only designing the next generation of virtual physics simulators, but also in promoting and distributing these simulators to educators. After almost three years of teaching, I know what teachers need to improve student learning. I understand the importance of feasible and effective classroom tools. I know how to maximize classroom resources to fit any grade level and ability. Having grown up in a family of educators, I am aware of the type of initiatives school districts are willing to support. I also speak the language of education, which allows me to successfully communicate and sell the utility of tools like the Portal 2 Puzzle Creator to educators.
+>
+> [A few more paragraphs on what I would do at Valve and my goals for the effort]
+>
+> Thank you Leslie! I really appreciate the opportunity to be involved in this exciting project. My experience with Valve so far has been nothing less than stellar, especially as a long time fan of your games. I hope my relationship with Valve is only beginning.
+>
+> Sincerely,
+>
+> Cameron
+
+It's hard to know for sure, but I think this was the first time that I took a long view on my choices at hand. I spent a week with this letter, tweaking every word and debating whether or not I should send it. I wasn't worried so much about being rejected, I was just  anxious about putting myself out there. I meant every word in that letter. What if I read the situation totally wrong and got embarrassed by this whole episode?
+
+I used to go on runs after school through the West End neighborhood of Nashville where I lived. I always daydream when I run. Two scenes kept recurring during those Nashville runs. In one, I imagined picking up a newspaper and reading that a newly selected astronaut started off their career as a high school teacher. To my surprise, it sounded possible. In the other scene, I imagined myself as a 90 year old man sitting in a rocking chair. 90 year old me would be reminiscing about their life and me now at this exact moment. What were they feeling? Was it regret? Disappointment? Pride? The answer was obvious. I sent the letter.
+
+I got a response from Leslie a few days later (I've been searching for that email but I think it's gone - I must have sent it with my school email address that I lost access to years ago). She said she agreed with me, and although a full-time job wasn't possible, Valve could start covering my time spent on lesson plans and such as a part-time consultant. Looking back, it's weird that I don't remember the moment of receiving Leslie's email very well. I was so nervous and stressed. I was initially disappointed about full-time but I came to realize that this was still a tremendous success. Here I was, some nobody teacher, and I found out how to claw my way to the outside world with a company that _mattered_.
+
+<p class="dinkus" />
+
+It really pains me to describe how hard I tried to leave teaching. It sounds so calloused, like I didn't care about the kids. Like I was just in it for me and I wanted get out as quickly as possible. It's obviously true that I wanted to change careers, but I've left out a lot of good times at school. The more time I spent teaching the more I loved it. I still think about my classes a lot. I go over conversations we had. I kick myself over all the mistakes I made in the classroom, especially early on. I hate that I left them. I hate that I was part of a system where the teacher turnover rate is upwards of 40% year-to-year and I'm one of the 40%. I am comforted by the fact that I worked hard to make the school system better for four years, but I wish I could have done more. I've held onto the dream that I'll retire and go back to teaching at the end of my career. It only makes sense to bookend my career with teaching.
+
+<p class="dinkus" />
+
+My participation in Teach with Portals ramped up quickly after the letter. Over the next few months, I wound up writing a lot more lessons and creating a blog, [Physics with Portals](https://physicswithportals.com), where I shared video demonstrations of the physics lessons.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/I12iKDxxcY4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+I did a few demos with students in the third year of teaching, but we had IT difficulties getting the laptops to install _Portal 2_. The fourth year was different.
+
+@@switching schools@@
+
+giving a number of presentations at education conferences with Leslie and a few other teachers in the Teach with Portals effort.
 
 @@backdrop of wanting to get away from nashville and start fresh. 3 years w/buddies after college was too much. still see them all the time (playing Valheim together now)@@
 
-I'll spoil the story of the _Portal_ saga for you. It started with me creating a blog, [Physics with Portals](https://physicswithportals.com), giving a number of presentations at education conferences, and finally publishing two journal articles. If you want to read about the lessons themselves, see [LEARNing Landscapes](https://www.learninglandscapes.ca/index.php/learnland/article/view/Teaching-With-Portals-the-Intersection-of-Video-Games-and-Physics-Education)[^3]. If you want to read my advice to teachers who want to try their own crazy lessons, see [Teacher Pioneers](https://press.etc.cmu.edu/index.php/product/teacher-pioneers/)[^4].
+I'll spoil the story of the _Portal_ saga for you. It started with me creating  and finally publishing two journal articles. If you want to read about the lessons themselves, see [LEARNing Landscapes](https://www.learninglandscapes.ca/index.php/learnland/article/view/Teaching-With-Portals-the-Intersection-of-Video-Games-and-Physics-Education)[^3]. If you want to read my advice to teachers who want to try their own crazy lessons, see [Teacher Pioneers](https://press.etc.cmu.edu/index.php/product/teacher-pioneers/)[^4].
 
 @@embed a PwP video@@
 
@@ -128,7 +160,7 @@ I'll spoil the story of the _Portal_ saga for you. It started with me creating a
 
 @@no regrets, but I'm sad I was part of a system that sees a huge turnover rate at high needs high school. teachers need better pay@@
 
-
+@@no doesn't mean "never." it means "not right now"@@
 
 Why "Our Story"? Why not "The Story". It took a lot of people to get here.
 
