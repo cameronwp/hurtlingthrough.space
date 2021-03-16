@@ -138,6 +138,8 @@ I got a response from Leslie a few days later (I've been searching for that emai
 
 It really pains me to describe how hard I tried to leave teaching. It sounds so calloused, like I didn't care about the kids. Like I was just in it for me and I wanted get out as quickly as possible. It's obviously true that I wanted to change careers, but I've left out a lot of good times at school. The more time I spent teaching the more I loved it. I still think about my classes a lot. I go over conversations we had. I kick myself over all the mistakes I made in the classroom, especially early on. I hate that I left them. I hate that I was part of a system where the teacher turnover rate is upwards of 40% year-to-year and I'm one of the 40%. I am comforted by the fact that I worked hard to make the school system better for four years, but I wish I could have done more. I've held onto the dream that I'll retire and go back to teaching at the end of my career. It only makes sense to bookend my career with teaching.
 
+Before I get back to the main story, I want to get on my soapbox for a moment about teacher salaries. Holy shit, they should be tripled. @@I was on the fence about leaving... politics, better respect, etc@@
+
 <p class="dinkus" />
 
 My participation in Teach with Portals ramped up quickly after the letter. Over the next few months, I wound up writing a lot more lessons and creating a blog, [Physics with Portals](https://physicswithportals.com), where I shared video demonstrations of the physics lessons.
