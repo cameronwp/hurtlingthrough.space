@@ -955,7 +955,8 @@ lesson plans into accessible content online. For most of the classes I made, I
 was both the teacher in the middle of the process and an engineer writing
 curricula.
 
-Here are a few random sample videos from the classes I helped make.
+Here are a few random sample videos from the classes I helped teach.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-FGtzWQWrMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 _This redwood video was me trying to channel my inner Carl Sagan._
@@ -970,15 +971,19 @@ _This was a fun style of video to make._
 
 I had to fully exercise the nascent leadership skills I developed way back when
 I was teaching. Organization, communication, and a clearly articulated shared
-team vision were essential for every class. I thoroughly enjoyed building
-productive working relationships with people from all kinds of backgrounds. This
-was a startup too, so there was a constant looming pressure forcing us to work
-hard and be direct with one another. But it was teaching, which should be joyful
-for the students. It was important to me that we felt the same sense of joy in
-the office. The video team was an especially fun group to work with. In
-preparing for the autobiography, I was able to get feedback from a few of my
-former colleagues. One of the lead video production members had this to say
-about working with me.
+team vision were essential for every class. I was pleased that one of my
+managers remembered that I was a "Direct, Solid Communicator" when asked about
+my strengths all these years later. They also hit on my attitude about
+collaboration: "Great teammate, always was a team player."
+
+I thoroughly enjoyed building productive working relationships with people from
+all kinds of backgrounds. This was a startup too, so there was a constant
+looming pressure forcing us to work hard and be direct with one another. But it
+was teaching, which should be joyful for the students. It was important to me
+that we felt the same sense of joy in the office. The video team was an
+especially fun group to work with. In preparing for the autobiography, I was
+able to get feedback from a few of my former colleagues. One of the lead video
+production members had this to say about working with me.
 
 > You were a great colleague and I appreciated your humor and humanity. I can
 > remember lots of times where you lightened a tense mood on set, listened to me
@@ -1144,7 +1149,10 @@ talk about the impact of my time at NASA. I've spent most of it working on two
 software projects - one that focuses on bolstering insights into EVAs, the other
 that focuses on helping image analysts share their findings.
 
-
+As a colleague, I got similar feedback about my strengths and weaknesses from
+the folks I work with at NASA. The key differentiator is that I hit my limit in
+my ability to multitask, and that led to some downstream effects that negatively
+impacted my colleagues.
 
 ## Random Pictures and Videos
 
@@ -1210,6 +1218,8 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * NASA - Matthew and the thesis handshake
 
 ### VI. Enablers and Blockers of My Best Performance
+
+* NASA Part 2 - performance being blocked by too much multitasking
 
 ### VII. Personal Vision
 
