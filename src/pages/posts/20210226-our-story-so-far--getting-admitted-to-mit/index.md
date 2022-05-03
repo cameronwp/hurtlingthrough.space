@@ -16,9 +16,10 @@ draft: false
 
 _This blog post is both for public consumption and it's being submitted as my
 autobiographical essay assignment for 16.990 Leading Creative Teams in
-Spring 2022. Because I've written the autobiography in chronological order, I've
-included a mapping at the bottom of this post that links the sections of this
-essay to the major sections required by the assignment._
+Spring 2022. Because I've written the autobiography in chronological order with
+a general philosophy of "show don't tell", I've included a mapping at the bottom of
+this post that links the sections of this essay to the major sections required
+by the assignment._
 
 Last fall, I started graduate school in the [MIT Department of Aeronautics and
 Astronautics](https://aeroastro.mit.edu/). I've been working on AI/autonomy in
@@ -1163,9 +1164,9 @@ that focuses on helping image analysts share their findings.
 As a colleague, I got similar feedback about my strengths and weaknesses from
 the folks I work with at NASA. In my survey, I heard that "Your enthusiasm and
 genuine personality is awesome to be around." Someone else said that I am a
-"Self-starter, highly skilled, interested in learning, can pull back from
-'interesting' approaches to favor practical approaches, [and] able to lead by
-example." My teaching background also came up as a positive. The same person
+"Self-starter, highly skilled, interested in learning, [Cameron] can pull back
+from 'interesting' approaches to favor practical approaches, [and is] able to lead
+by example." My teaching background also came up as a positive. The same person
 said that I am "Super helpful! Open to teaching team mates (especially me) in
 the name of project success."
 
@@ -1186,10 +1187,21 @@ This is a weakness I've worked hard to address. I don't like the feeling of
 letting others down. As we'll see later when I get into my career as a grad
 student, this is a blocker I'm still addressing.
 
-I wish I could go into more detail here about my career at NASA, but none of the
-work I've done is public. I hope some of it will be public soon, because I've
-been lucky to lead some projects that have made some really amazing software
-interfaces for EVAs that I'm sure people would love using themselves.
+I wish I could go into more of the specifics about my career at NASA, but none
+of the work I've done is public. I hope some of it will be public soon, because
+I've been lucky to lead some projects that have made some really amazing
+software interfaces for EVAs with which I'm sure the general public would love
+playing. In short, I've been lucky to architect one award-winning project, and
+another that's now being used for testing Artemis launches. My colleagues are
+incredibly bright and fun to work with, and I couldn't ask for a more
+interesting or motivating problem space.
+
+It's probably clear by now that I like looking for opportunities. I'm still
+testing my theory, but I think I found one in the world of EVAs. I'll take a
+quick aside to give some background about human spaceflight operations, which
+will motivate why I made my next set of career choices. 
+
+@@maybe just link to marvin blog posts instead? or can this be done in like 2 paragraphs?@@
 
 ## Principles of Autonomy and Decision Making
 
