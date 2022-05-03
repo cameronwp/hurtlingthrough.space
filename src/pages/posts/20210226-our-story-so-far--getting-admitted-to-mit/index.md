@@ -274,7 +274,7 @@ concentration.
 
 At high concentrations under STP, hydrochloric acid visibly off-gases enough
 that it looks like a witches brew. I don't know how I didn't have an alarm in my
-head blaring "🚨STOP YOU IDIOT THIS IS DANGEROUS🚨" when I poured a few
+head blaring 🚨STOP YOU IDIOT THIS IS DANGEROUS🚨 when I poured a few
 milliliters into a test tube and saw vapors forming. I must have been distracted
 by my usual classroom management issues. So there I was, standing behind a lab
 bench in front of a class of freshmen with hydrochloric acid vapors swirling
@@ -289,7 +289,7 @@ My students were understandably alarmed. My classroom management skills were so
 bad at that point that, to be honest, I had doubts that my students actually
 cared about me as a human being. I caught enough breath to start sputtering the
 name of the other chemistry teacher and the word "clinic." To my surprise, the
-two students closest to the door rushed out and got both of them, the rest
+two students closest to the door rushed out and got both of them, while the rest
 backed their desks as far away from me as they could.
 
 A few moments later the front of my classroom was covered in baking soda and I
@@ -653,8 +653,7 @@ that time, astrophotography.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jfzcG5yh4wk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-_The screenshot YouTube picked out makes it look like I'm carrying a rifle, but
-I swear it's just a small telescope._
+_I still wanted to be Carl Sagan, sharing a sense of wonder about the Universe._
 
 I haven't gone into much depth here about my classroom techniques and the
 physics lessons themselves because I wrote two pieces about the effort (and this
@@ -1136,11 +1135,12 @@ important number it produced was the timeline margin, or the amount of time
 between the predicted end of the EVA and when life support would run out. This
 meant we needed a way to collect information about the crew's progress during
 the EVA in as unobtrusive way as possible. Our interface was designed to be very
-simple - just checkboxes and timers that made sense at a glance.
+simple - just checkboxes and timers that made sense at a glance. If you're
+interested in learning more, check out the blog posts I wrote here and here and
+Matthew's thesis here @@cite@@.
 
-Matthew used my software to publish his thesis @@cite@@, got a job at NASA as a
-research engineer for human spaceflight, and I followed behind him a few months
-later.
+After he graduated with his PhD, Matthew got a job at NASA as a research
+engineer for human spaceflight, and I followed behind him a few months later.
 
 ## NASA Part 2 - Realizing (the Problem) Space is Bigger
 
@@ -1195,10 +1195,12 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * All the pictures and videos throughout the post
 * Intro talks about hopes and dreams for humanity
 * Teaching Part 1 - the colorful story about inhaling HCl
+* Constantly talking about how I want to be Carl Sagan :)
 
 ### II. Strengths Grounded in Self-Identity, Personality, and Other Traits
 
 * Undergrad section - strengths shown in the star simulation assignment
+* LearnBIG - learning how to code by giving myself exercises
 
 ### III. Strengths Grounded in Values, Principles, Virtues
 
