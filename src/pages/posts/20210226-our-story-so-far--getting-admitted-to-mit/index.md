@@ -958,11 +958,11 @@ curricula.
 Here are a few random sample videos from the classes I helped make.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/-FGtzWQWrMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-_I think Mike and I got this on the second take._
+_This redwood video was me trying to channel my inner Carl Sagan._
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3D7i4AScIuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-_This redwood video was me getting a chance to channel my inner Carl Sagan._
+_I think Mike and I got this on the second take._ 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/766JMEtZCPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -1040,6 +1040,87 @@ specific feedback to guide student thinking to be able to solve the problem. It
 was a blast and I wanted to chase that feeling. About two years into my Udacity
 career, I made the switch to fulltime engineer.
 
+I will admit that my career as a junior engineer at Udacity was productive but
+unremarkable from an outside perspective. I learned a lot and made some cool
+features for the website. It was primarily a time of learning and growth. I
+tried to glean as much wisdom and insight about engineering as I could from my colleagues. 
+
+Around this time, I started to get this itch. If I could go from zero to hero in
+web development in a matter of months, what else could I do? Could I revive my
+dream of space exploration? Why not?
+
+I assumed grad school would be useful at some point, so I started going through
+online courses for what I assumed would be the baseline knowledge set for a grad
+student. On nights and weekends, I would casually watch math lectures, take
+notes, do problem sets, and take self-assessed quizzes. I knew this was
+practically useful, but successfully making the jump into space exploration
+would require networking and learning a lot more about the industry. An
+opportunity soon presented itself.
+
+## NASA Part 1 - Interesting Problems and Novel Solutions
+
+Once again, through sheer luck, the person I was dating helped me make a
+connection. My girlfriend at the time (now my wife) has a brother who was in
+grad school studying aerospace engineering. Over a holiday, the topic of my itch
+to get into space exploration came up. He brought up the idea of talking to one
+of his classmates who was on a career track to work at NASA and needed some help
+with software. I actually turned him down at first.
+
+"No thanks", I stupidly said. "I'm going to stay focused on the online classes.
+I'm not ready to talk to him."
+
+It only took a day or two for me to realize how dumb I was. This was a golden
+opportunity to find a project that could lead to the space industry. I got back in touch
+with my now brother-in-law, and he connected me with his classmate, Matthew.
+
+Matthew and I got along instantly. We were on the same page about our working
+relationship. I thought his research into human spaceflight operations was
+insanely interesting, and he thought my ability to build interfaces was insanely
+useful. We shook hands and agreed that I would write software for his cognitive
+engineering research on workloads for astronauts and flight controllers, and he
+would connect me with people who could help me start a real career in the space
+industry. To spoil the ending, our handshake was a wild success for both of us.
+He got a PhD on schedule, and I got a career at NASA. We've been working
+together at NASA for a few years now, having produced award-winning interfaces
+for decision making and analysis of spacewalks. Our team is on track for making
+software to support decision making when the next humans walk on the Moon.
+
+When we shook hands, what I was really agreeing to was to give my nights and
+weekends over to the problem of understanding human spaceflight operations and
+writing software for addressing the perceived issues that Matthew wanted to
+address in his thesis. This meant a lot of conversations, studying, reading, and
+experimentation. I had to write a few novel algorithms for managing tasks and
+time constraints. We brainstormed and designed user interfaces together. I
+pushed code, he tested, and we deployed it to his on campus experiments where
+his classmates pretended to be astronauts and use the software to make decisions
+on Mars.
+
+This research exposed me to a whole new world I wasn't aware of - analog EVA
+testing (aka Extravehicular Activities aka spacewalks). These are simulated
+spacewalks that take place at various interesting locations on Earth that
+simulate some aspect of planetary or International Space Station (ISS)
+operations. There's an underwater facility in the Florida Keys called
+[NEEMO](https://www.nasa.gov/mission_pages/NEEMO/index.html) where astronauts
+and scientists live and work together, performing simulated spacewalks on coral
+reefs and scientific experiments in a habitat a lot like ISS. There's the
+[BASALT](https://www.nasa.gov/content/about-basalt) missions where astronauts
+and scientists go hike on lava flows around the world to better understand
+scientific sampling on planetary surfaces. There's the
+[NBL](https://en.wikipedia.org/wiki/Neutral_Buoyancy_Laboratory) at NASA Johnson
+Space Center where crews perform simulated spacewalks on a to-scale replica of
+ISS. What Matthew realized is that these facilities and experiments were perfect
+research opportunities for testing his ideas about reducing the cognitive work
+required when performing EVAs. As such, our goal became to integrate our
+software at one of these test sites and demonstrate its utility. I got a chance
+to visit some of these locations, deploy my software, and generally learn how I
+could best support human spaceflight operations.
+
+![<-FULLWIDTH->Me at the foot of a lava flow at Craters of the Moon National
+Park in Idaho. Two simulated astronauts are behind me](./basalt-idaho.jpg)
+
+_Me at the foot of a lava flow at Craters of the Moon National Park as part of
+BASALT in 2016. Two simulated astronauts are behind me._
+
 
 
 @@Don't wait for the perfect opportunity, figure out how to make opportunities
@@ -1074,6 +1155,7 @@ Roughly maps the sections of this essay with the autobiography assignment.
 
 ### I. Personal Portraits
 
+* All the pictures and videos throughout the post
 * Intro talks about hopes and dreams for humanity
 * Teaching Part 1 - the colorful story about inhaling HCl
 
@@ -1089,10 +1171,14 @@ Roughly maps the sections of this essay with the autobiography assignment.
 
 ### IV. Defining Events
 
+* Teaching Part 2 - _Portal 2_ as a teaching tool getting attention
+* NASA - getting involved in EVAs
+
 ### V. Relationships and Networks
 
 * Teaching Part 2, LearnBIG - developing a relationship with Leslie from Valve
 * Udacity - relationships with the video team, teaching colleagues
+* NASA - Matthew and the thesis handshake
 
 ### VI. Enablers and Blockers of My Best Performance
 
