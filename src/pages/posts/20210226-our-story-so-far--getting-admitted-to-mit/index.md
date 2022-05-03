@@ -1109,11 +1109,11 @@ scientific sampling on planetary surfaces. There's the
 [NBL](https://en.wikipedia.org/wiki/Neutral_Buoyancy_Laboratory) at NASA Johnson
 Space Center where crews perform simulated spacewalks on a to-scale replica of
 ISS. What Matthew realized is that these facilities and experiments were perfect
-research opportunities for testing his ideas about reducing the cognitive work
-required when performing EVAs. As such, our goal became to integrate our
-software at one of these test sites and demonstrate its utility. I got a chance
-to visit some of these locations, deploy my software, and generally learn how I
-could best support human spaceflight operations.
+research opportunities for testing his ideas about reducing the cognitive
+workload required for decision making during EVAs. As such, our goal became to
+integrate our software at one of these test sites and demonstrate its utility. I
+got a chance to visit some of these locations, deploy my software, and generally
+learn how I could best support human spaceflight operations.
 
 ![<-FULLWIDTH->Me at the foot of a lava flow at Craters of the Moon National
 Park in Idaho. Two simulated astronauts are behind me](./basalt-idaho.jpg)
@@ -1121,7 +1121,36 @@ Park in Idaho. Two simulated astronauts are behind me](./basalt-idaho.jpg)
 _Me at the foot of a lava flow at Craters of the Moon National Park as part of
 BASALT in 2016. Two simulated astronauts are behind me._
 
+There were sleepless nights and frantic rushes to test and deploy software. Each
+field deployment was an opportunity to demonstrate some unique value or test
+some interesting tech idea. We called our software Marvin, after Marvin the
+Paranoid Android from _Hitchhiker's Guide to the Galaxy_. We wanted it to reduce
+the mental math required to monitor the temporal constraints inherent in doing
+dangerous jobs while being kept alive by portable life support systems. The most
+important number it produced was the timeline margin, or the amount of time
+between the predicted end of the EVA and when life support would run out. This
+meant we needed a way to collect information about the crew's progress during
+the EVA in as unobtrusive way as possible. Our interface was designed to be very
+simple - just checkboxes and timers that made sense at a glance.
 
+Matthew used my software to publish his thesis @@cite@@, got a job at NASA as a
+research engineer for human spaceflight, and I followed behind him a few months
+later.
+
+## NASA Part 2 - Realizing (the Problem) Space is Bigger
+
+Much like I did in the Udacity section above, I'm going to jump around a bit to
+talk about the impact of my time at NASA. I've spent most of it working on two
+software projects - one that focuses on bolstering insights into EVAs, the other
+that focuses on helping image analysts share their findings.
+
+
+
+## Random Pictures and Videos
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZXY4Kk3y04g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+_A fun talk I gave about scaling online education in 2018._
 
 @@Don't wait for the perfect opportunity, figure out how to make opportunities
 work for you and move you in the right direction@@
