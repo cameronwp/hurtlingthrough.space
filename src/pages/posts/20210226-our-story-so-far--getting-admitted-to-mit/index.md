@@ -256,7 +256,7 @@ science.
 
 _My teaching idol._
 
-I taught freshman physical science[^2]in my first year of teaching. Students
+I taught freshman physical science[^2] in my first year of teaching. Students
 were learning about chemical reactions involving acids and bases, so I wanted to
 start class with this fun demonstration where you drop a small strip of
 magnesium in a test tube with hydrochloric acid and it produces hydrogen gas. If
@@ -323,15 +323,15 @@ my classes (I had just finished writing a 30-page mini textbook on astronomy for
 one of my interdisciplinary science classes). Of course, this application also
 got rejected. This would not be the last rejection letter I'd get from MIT.
 
-This felt like a low point. My big plans for a delayed start as an astronomy
-grad student completely fell through. I had no idea what to do next. I was
-starting to love teaching but I still couldn't quite imagine being a teacher for
-the rest of my life. I wanted new problems to solve and new skills to learn. I
-started thinking about starting fresh in another career, like maybe the
-military. But underneath all that frustration and disappointment was a sense of
-freedom too. I could be whatever I wanted to be. I had no real responsibilities
-outside work. No strings, no expectations. I could wing it and see where that
-led. I soon got the chance.
+This feels like a low point. My big plans for a delayed start as an astronomy
+grad student completely collapsed. I had no idea what to do next. I was starting
+to love teaching but I still couldn't quite imagine being a teacher for the rest
+of my life. I wanted new problems to solve and new skills to learn. I started
+thinking about starting fresh in another career, like maybe the military. But
+underneath all that frustration and disappointment was a sense of freedom too. I
+could be whatever I wanted to be. I had no real responsibilities outside work.
+No strings, no expectations. I could wing it and see where that led. I soon got
+the chance.
 
 ## Teacing Part 2 - Thinking with Portals
 
@@ -423,8 +423,22 @@ career" because I can clearly trace the cause and effect relationships between
 the series of events between this one and where I am now. But the truth is that
 at the time I had no idea what this meant or what was going to happen. I was
 just excited to see where it led. I remember thinking that it could be something
-big or it could be nothing at all. Either way, this message alone meant I
-already came out ahead in the _Portal_ experiment.
+big or it could be nothing at all. And I was okay with that. I used to go on
+runs after work in the West End neighborhood of Nashville where I lived. The
+quiet little voice in the back of my head wasn't so quiet. It was a record on
+repeat telling me that _I could be whatever I wanted to be_. The mantra had a
+weird intonation though. I can't describe it other than to say it emphasized
+that future. I had heard this phrase so many times growing up. My loving and
+supportive parents always told me so. My teachers told me so. But I think this
+might have been the first moment in my adult life where the idea of a
+self-deterministic future took hold in with full effect. I saw a life ahead of
+me. I saw hard work. I saw goals being accomplished. It was all the timelines of
+all the futures I could have all at once. It's a great feeling being young and
+seeing your whole life in front of you. Even though I won't be young forever, I
+hope I never lose it.
+
+Back to the story at hand, this one email I got from Valve meant I already came
+out ahead in the _Portal_ experiment.
 
 After a few back-and-forths, I was put in touch with Valve's new director of
 education, Leslie Redd. The first thing that Leslie told me was that Valve could
@@ -1150,9 +1164,34 @@ software projects - one that focuses on bolstering insights into EVAs, the other
 that focuses on helping image analysts share their findings.
 
 As a colleague, I got similar feedback about my strengths and weaknesses from
-the folks I work with at NASA. The key differentiator is that I hit my limit in
-my ability to multitask, and that led to some downstream effects that negatively
-impacted my colleagues.
+the folks I work with at NASA. In my survey, I heard that "Your enthusiasm and
+genuine personality is awesome to be around." Someone else said that I am a
+"Self-starter, highly skilled, interested in learning, can pull back from
+'interesting' approaches to favor practical approaches, [and] able to lead by
+example." My teaching background also came up as a positive. The same person
+said that I am "Super helpful! Open to teaching team mates (especially me) in
+the name of project success."
+
+What I see as a key differentiator between Udacity and NASA is that I hit my
+limit in my ability to multitask, and that led to some downstream effects that
+negatively impacted my colleagues.
+
+> We were working on a side project for a NASA analog a few years ago (pre
+> COVID) and we had started to converge on some expected functionality and I
+> thought we had a tangible path forward. But it wasn't until later that I
+> learned that his other project needed a lot of his attention and I wasn't
+> aware he was as oversubscribed as he was. Being more honest of availability
+> and anticipated work hours would help keep the expectations reasonable and
+> achievable. Fortunately, the analog never ended up happening so we never felt
+> the big crunch that would've likely been experienced.
+
+This is a weakness I've worked hard to address. I don't like the feeling of
+letting others down. As we'll see later when I get into my career as a grad
+student, this is a blocker I'm still addressing.
+
+## Principles of Autonomy and Decision Making
+
+@@link to blog post@@
 
 ## Random Pictures and Videos
 
@@ -1172,8 +1211,6 @@ lead to something cool too. Like working for G?@@
 
 @@no doesn't mean "never." it means "not right now"@@
 
-Why "Our Story"? Why not "The Story". It took a lot of people to get here.
-
 
 [^1]: To be fair, some official responsibilities like coaching a team or leading
     the marching band do come with a small stipend at most schools, but it isn't
@@ -1192,15 +1229,17 @@ Roughly maps the sections of this essay with the autobiography assignment.
 
 ### I. Personal Portraits
 
-* All the pictures and videos throughout the post
 * Intro talks about hopes and dreams for humanity
 * Teaching Part 1 - the colorful story about inhaling HCl
+* Teaching Part 2 - the little voice in my head
+* All the pictures and videos throughout the post
 * Constantly talking about how I want to be Carl Sagan :)
 
 ### II. Strengths Grounded in Self-Identity, Personality, and Other Traits
 
 * Undergrad section - strengths shown in the star simulation assignment
 * LearnBIG - learning how to code by giving myself exercises
+* NASA - helping my colleagues learn
 
 ### III. Strengths Grounded in Values, Principles, Virtues
 
