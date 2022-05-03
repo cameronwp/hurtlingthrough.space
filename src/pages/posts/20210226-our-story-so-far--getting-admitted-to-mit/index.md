@@ -850,9 +850,6 @@ of binary. He then walked over to a whiteboard, and wrote a two-line script that
 did the exact same thing. He also pointed out my sin of individually querying
 for each resource by ID in a loop instead of writing a `SELECT * FROM` query.
 
-This was the start of my lifelong learning with code that still is going on
-today. @@awk - find a place to include this@@
-
 Later that year, I had a meeting with the CEO and CTO and officially became a
 full-time software engineer. It was a win-win - the company needed engineers
 more than a Director of Content after the pivot, and they knew how much I loved
@@ -1188,6 +1185,11 @@ negatively impacted my colleagues.
 This is a weakness I've worked hard to address. I don't like the feeling of
 letting others down. As we'll see later when I get into my career as a grad
 student, this is a blocker I'm still addressing.
+
+I wish I could go into more detail here about my career at NASA, but none of the
+work I've done is public. I hope some of it will be public soon, because I've
+been lucky to lead some projects that have made some really amazing software
+interfaces for EVAs that I'm sure people would love using themselves.
 
 ## Principles of Autonomy and Decision Making
 
