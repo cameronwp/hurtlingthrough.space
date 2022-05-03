@@ -14,11 +14,11 @@ twitterprompt: And for my next act...
 draft: false
 ---
 
-_This blog post is both for public consumption and it's being submitted as an
-autobiographical assignment to 16.990 Leading Creative Teams (16.990). For the
-autobiography assignment specifically, I've included a mapping at the bottom of
-this post that links the sections of this essay to the major sections required
-by the assignment._
+_This blog post is both for public consumption and it's being submitted as my
+autobiographical essay assignment for 16.990 Leading Creative Teams in
+Spring 2022. Because I've written the autobiography in chronological order, I've
+included a mapping at the bottom of this post that links the sections of this
+essay to the major sections required by the assignment._
 
 Last fall, I started graduate school in the [MIT Department of Aeronautics and
 Astronautics](https://aeroastro.mit.edu/). I've been working on AI/autonomy in
@@ -71,14 +71,17 @@ the future (and my future), and how that shapes my decision making.
 
 <p class="lead-in">Growing up, I could have articulated the same goals about
 making humans a multi-planetary species without having any idea of how to make
-them happen. A career after college was a blank space in my mind, in its place
-was a vague notion that I wanted to make an impact on humanity's story. I grew
-up idolizing Carl Sagan and Bill Nye. For a while, I wanted to be a science
-popularizer. I wanted to be an astronomer. I wanted to be an academic. I wanted
-to write sci-fi and inspire others. What I really wanted was to be an astronaut,
-but that dream felt too big to pursue.</p>
+them happen. A career was a blank space in my mind, in its place was a vague
+notion that I wanted to make an impact on humanity's story. I grew up idolizing
+Carl Sagan and Bill Nye. For a while, I wanted to be a science popularizer. I
+wanted to be an astronomer. I wanted to be an academic. I wanted to write sci-fi
+and inspire others. What I really wanted was to be an astronaut, but that dream
+felt too big to pursue.</p>
 
-### Undergrad
+I had big dreams and loved science, but I didn't know what kind of career that
+would lead me to after college.
+
+## Undergrad
 
 My career aspirations failed to cement during undergrad at Vanderbilt. I started
 off as a biology major intending to become an academic in biological sciences,
@@ -153,7 +156,7 @@ Project](https://tntp.org/) that spring and started attending job fairs for new
 teachers. I was offered my first full-time job teaching science at a public high
 school in Nashville soon after.
 
-### Teaching
+## Teaching Part 1 - Classroom Management
 
 Teaching was the hardest job I've ever had or ever will have. I think most
 teachers would agree with me, especially anyone who went straight into teaching
@@ -182,8 +185,8 @@ in hand with the notion of finding a teaching personality. I didn't understand
 my [identity](/posts/20200424-book-review-exhalation/) yet. I still felt like a
 student. Was I still a college student, only looking out for myself? Was
 teaching going to be my career? Was I taking a detour in my career as a
-scientist? Or was there another career out there for me? I was all of these
-things, shifting between them moment to moment.
+scientist? Or was there another career out there for me? I was all of these timelines,
+shifting between them moment to moment.
 
 The first year was the hardest. I had no classroom management skills. It's
 unrealistic to expect that every single student in every single class is
@@ -194,22 +197,21 @@ classroom rules and teaching persona I could employ to could create a healthy
 learning environment. In my fourth year I felt like my classroom was finally
 running like a well-oiled machine.
 
-@@TODO@@ more strengths called out here
-
 The New Teacher Project, much like Teach for America, included a masters in
 education, which was required for the teaching certification. Ours was
 administered through Belmont University. Our first classes served as venting
 sessions. We met after school on Mondays and Wednesday. Our professors let us
 spend most of our time talking about the struggles we faced. My favorite part
-was the pre-class venting sessions we had at the nearby restaurants over sushi,
-burgers, and drinks.
+was the pre-class venting sessions we had over sushi, burgers, and drinks at the
+restaurants near campus.
 
 Teaching was more rewarding than anything else I have ever done. All the
 struggle and sleep deprivation were worth it because I got paid to do what I
 loved - geeking out with students about science. I was explicit that my goal
 wasn't to turn all of my students into professional scientists (though it has
 been gratifying to see that a few of them have!) - I just wanted my students to
-enjoy science! Maybe then science would feel accessible.
+enjoy science! Maybe then science would feel accessible. At the very least,
+making the world a little more understandable makes it a better place.
 
 I found that my best teaching persona is just being myself. At some point in
 that first year of teaching, I started opening every class with the [Astronomy
@@ -331,7 +333,7 @@ freedom too. I could be whatever I wanted to be. I had no real responsibilities
 outside work. No strings, no expectations. I could wing it and see where that
 led. I soon got the chance.
 
-### Thinking with Portals
+## Teacing Part 2 - Thinking with Portals
 
 A few months later, between my second and third years of teaching, I realized I
 had a problem with my physics labs. I had the luxury of teaching a class without
@@ -548,7 +550,7 @@ teaching at the end of my career. It only makes sense to bookend my career with
 teaching.
 
 Before I get back to the main story, I want to get on my soapbox for a moment
-about teacher salaries. Holy shit, they should be tripled.
+about teacher salaries. Holy cow, they should be tripled.
 
 Tripling teacher pay would immediately make teaching a much more competitive
 career. Teachers could be held to much higher standards because they would know
@@ -707,6 +709,8 @@ something to do with helping educators find useful teaching resources on the
 Internet. I don't know if she used the phrase "iTunes for education" on the
 phone, but eventually that's how we would explain it.
 
+## My First Startup Experience - LearnBIG
+
 I had no experience in the business world. No clue what it meant to work any job
 besides teaching. But I realized how unique this opportunity was. Very few
 people get a chance to start a business about their passion. I recognized that
@@ -714,7 +718,8 @@ this was the kind of opportunity I would have desperately wanted to find _after_
 going to grad school, so I figured why not skip grad school for now? Leslie's
 passion was infectious, and after tangentially working with her for two years, I
 was excited to dive into a project with her full-time. Two days after the school
-year ended, I found myself on a plane to Seattle with no return ticket.
+year ended, I found myself on a flight to Seattle with no return ticket. Leslie
+let me crash in her family's guest bedroom and we got to work.
 
 This startup turned into
 [LearnBIG](https://www.crunchbase.com/organization/learnbig). I started as the
@@ -908,7 +913,7 @@ The interview wasn't entirely smooth. At the time, Udacity had special catered
 lunches on Fridays, usually bringing in local restaurants to serve unusual
 cuisine. On the Friday of my interview, a French restaurant served sweet and
 savory crêpes. My interview started in the morning and went through lunch. My
-third interviewer, C-H, took me to the crêpe line. We jumped to the front, still
+third interviewer, C, took me to the crêpe line. We jumped to the front, still
 chitchatting while we ordered our crêpes. I got to the end of the serving area
 and scooped some salad on my plate with a drizzle of balsamic vinaigrette. We
 returned to our conference room and continued the interview over lunch. I took a
@@ -922,11 +927,120 @@ over my arugula.
 So, there I was, interviewing for one of the best jobs I could ask for, one that
 felt like it was tailor made for me at that exact moment in my life, smiling and
 eating arugula with caramel sauce on it. It took effort to keep a straight face
-while answering all of C-H's questions about my nascent technical background. I
+while answering all of C's questions about my nascent technical background. I
 still cleaned my plate and left him none the wiser. We actually wound up being
 roommates in a four bedroom apartment in San Francisco a few years later (two
 other Udacians lived there, making it the unofficial Udacity apartment in SF). I
 shared this story with him and he had no idea about my salad mixup.
+
+## Udacity
+
+I'm going to do a timejump in the story a little bit now. My career at Udacity
+was exciting and fun and I learned a lot and I loved my colleagues, but this is
+a period where things are more normal from a career and autobiography
+perspective. I'm going to be a little light on the storytelling and focus on an
+overview of the kinds of experiences that were formative for my current career.
+(For reference, I started working at Udacity around 2014. For the autobiography
+assignment, the earliest former colleagues I approached about getting feedback
+on my leadership skills were from Udacity. You'll start to see their responses
+from here on below.)
+
+While I was at Udacity, I worked alongside very creative and talented people to
+build online class experiences that make me proud. Making a class at Udacity
+required that people from multiple disciplines work together closely and
+communicate clearly. We had engineers and subject matter experts who would set
+curricula and goals, we had educators who would turn curricula into lesson plans
+with exercises and projects, and we had a video production team who would turn
+lesson plans into accessible content online. For most of the classes I made, I
+was both the teacher in the middle of the process and an engineer writing
+curricula.
+
+Here are a few random sample videos from the classes I helped make.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-FGtzWQWrMs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+_I think Mike and I got this on the second take._
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3D7i4AScIuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+_This redwood video was me getting a chance to channel my inner Carl Sagan._
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/766JMEtZCPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+_This was a fun style of video to make._
+
+I had to fully exercise the nascent leadership skills I developed way back when
+I was teaching. Organization, communication, and a clearly articulated shared
+team vision were essential for every class. I thoroughly enjoyed building
+productive working relationships with people from all kinds of backgrounds. This
+was a startup too, so there was a constant looming pressure forcing us to work
+hard and be direct with one another. But it was teaching, which should be joyful
+for the students. It was important to me that we felt the same sense of joy in
+the office. The video team was an especially fun group to work with. In
+preparing for the autobiography, I was able to get feedback from a few of my
+former colleagues. One of the lead video production members had this to say
+about working with me.
+
+> You were a great colleague and I appreciated your humor and humanity. I can
+> remember lots of times where you lightened a tense mood on set, listened to me
+> or other colleagues vent, and helped troubleshoot issues that weren't your
+> problem. I appreciated you as a coworker and friend.
+
+I took it upon myself to make sure each class was amazing. I was putting myself
+out there, creating content that would surely outlive anything else I had
+created up to that point. I wanted to set an example of good teamwork and
+positivity. That same video production colleague had this to say about working
+with me.
+
+> A project that Cameron was an instructor on was past deadline because of a
+> lack of organization/time management of someone on my team, his colleague and
+> my direct report. Instead of shrugging it off as not his problem or getting
+> angry about it, Cameron was proactive and helped me work through the issue,
+> doing everything he could to find a solution. It was a long time ago, but I'm
+> pretty sure I called him 3x time on a holiday weekend to ask questions when I
+> was in the office trying to find files!
+
+I had a similar impression on my teaching colleagues. Directly or indirectly, we
+always collaborated on building classes. I was able to get feedback from one of
+my teacher colleagues all these years later. This person and I worked closely
+together on a number of courses.
+
+> I was consistently impressed at how fully Cameron dove into technologies that
+> he didn't yet understand, and how completely he learned them. I definitely
+> appreciated collaborating with him on many courses because of how eager and
+> motivated of a partner he was in the process.
+
+That same passion worked against me sometimes. It makes me singleminded about
+pushing hard to produce what I perceive as the highest quality work, and in
+doing so it can create undue stress on the people around me. Once again, my
+video team colleague had this to say.
+
+> I dont [sic] remember too much detail, but there were a couple of times that
+> Cameron got attached to an idea of how we could shoot something for one of his
+> courses. When I told him it wasn't possible due to budget constraints or
+> timeline or whatever, he would sometimes continue to pursue the idea to the
+> point where I became frustrated and needed to have a stern conversation with
+> him and the rest of the course team to get them to move on and find a new
+> solution. This wasn't an issue unique to Cameron, to be fair, and I think was
+> just a product of his passion for the material. 
+
+In total, I directed the development of 11 classes at Udacity ranging from web
+development to self-driving cars. Each class let me learn something new. It
+didn't take long for me to realize that my job as a teacher meant I was actually
+a professional student. I realized I was getting more and more effective as an
+engineer. I started to love my job duties that required me to spend hours
+thinking about hard problems and writing code to solve them. At one point, I
+wanted to make an interactive exercise where students would make live changes to
+websites and get immediate feedback. I wrote a Chrome extension to grade them,
+which included the logic for both checking their work and generating useful
+feedback. For another class, I was dissatisfied with the options for providing
+useful feedback to students in the usual Udacity backend for grading quizzes. I
+wound up developing and sharing an entirely new feedback "engine" that was
+capable of running a robust set of tests against student code and returning
+specific feedback to guide student thinking to be able to solve the problem. It
+was a blast and I wanted to chase that feeling. About two years into my Udacity
+career, I made the switch to fulltime engineer.
+
+
 
 @@Don't wait for the perfect opportunity, figure out how to make opportunities
 work for you and move you in the right direction@@
@@ -935,6 +1049,8 @@ work for you and move you in the right direction@@
 lead to something cool too. Like working for G?@@
 
 @@Talked to Kay years later "how did you do it?" Never stopped learning@@
+
+@@history of conquering a problem and looking for new opportunities@@
 
 @@no doesn't mean "never." it means "not right now"@@
 
@@ -958,7 +1074,8 @@ Roughly maps the sections of this essay with the autobiography assignment.
 
 ### I. Personal Portraits
 
-* Intro section talks about hopes and dreams for humanity
+* Intro talks about hopes and dreams for humanity
+* Teaching Part 1 - the colorful story about inhaling HCl
 
 ### II. Strengths Grounded in Self-Identity, Personality, and Other Traits
 
@@ -966,16 +1083,21 @@ Roughly maps the sections of this essay with the autobiography assignment.
 
 ### III. Strengths Grounded in Values, Principles, Virtues
 
-* Teaching section - strengths shown in persevering through difficult teaching experiences
+* Teaching Part 1- strengths shown in persevering through difficult teaching
+  experiences
+* Teaching Part 1 - rant about teacher salaries
 
 ### IV. Defining Events
 
 ### V. Relationships and Networks
 
+* Teaching Part 2, LearnBIG - developing a relationship with Leslie from Valve
+* Udacity - relationships with the video team, teaching colleagues
+
 ### VI. Enablers and Blockers of My Best Performance
 
 ### VII. Personal Vision
 
-* Intro section talks about hopes and dreams for humanity and space exploration
+* Intro talks about hopes and dreams for humanity and space exploration
 
 
