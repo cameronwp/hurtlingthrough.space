@@ -1249,15 +1249,28 @@ Program](https://professional.mit.edu/advanced-study-program) (ASP). It seemed
 like a great fit. I was close enough to campus to take classes. Almost any class
 in the course catalog was available, so long as I could make a case that I had
 the listed prerequisites. I found [Principles of Autonomy and Decision
-Making](http://student.mit.edu/catalog/m16a.html#16.413), which seemed to speak
-directly to the kinds of problems and advanced decision making we'll face on
-planetary surfaces. Two months after getting a rejection letter, I was
+Making](http://student.mit.edu/catalog/m16a.html#16.413) (16.413), which seemed
+to speak directly to the kinds of problems and advanced decision making we'll
+face on planetary surfaces. Two months after getting a rejection letter, I was
 submitting another application to another program at MIT. This time, I was
-accepted! 
+accepted!
 
 ## Beginnings as a Researcher
 
-asdf
+I wrote about my experience in 16.413
+[previously](/posts/20191229-a-semester-of-ai-at-mit/). In short, I loved the
+class. There were clear applications of the model-based approaches to decision
+making and temporal reasoning with my work at NASA. This class felt right. These
+were the skills I wanted to integrate into my career. So, just as I had done
+before with Matthew to get into NASA, and with Leslie to turn _Portal 2_ into a
+teaching tool, I networked with the professor of 16.413, Brian Williams. I
+wanted to be honest with him and try to find a way to turn the skills we were
+learning in class into a new career. I grabbed him after class one day and give
+him a rundown of my background.
+
+"I am interested in getting a masters," I explained. "This class is amazing, and
+I see a huge amount of potential with the kind of decision making we're working
+on at NASA. I'd love to get involved with the lab."
 
 
 @@TODO backfill a few more references to assessments and such@@
@@ -1298,6 +1311,8 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * Teaching Part 2 - the little voice in my head
 * All the pictures and videos throughout the post
 * Constantly talking about how I want to be Carl Sagan :)
+* Repeatedly coming back to how I want to extend humanity's reach in the solar
+  system
 
 ### II. Strengths Grounded in Self-Identity, Personality, and Other Traits
 
@@ -1321,6 +1336,8 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * Teaching Part 2, LearnBIG - developing a relationship with Leslie from Valve
 * Udacity - relationships with the video team, teaching colleagues
 * NASA - Matthew and the thesis handshake
+* Connecting with Brian Williams to find a way to turn model-based decision
+  making into a career
 
 ### VI. Enablers and Blockers of My Best Performance
 
