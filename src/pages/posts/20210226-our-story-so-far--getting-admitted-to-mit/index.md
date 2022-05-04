@@ -17,9 +17,9 @@ draft: false
 _This blog post is both for public consumption and it's being submitted as my
 autobiographical essay assignment for 16.990 Leading Creative Teams in
 Spring 2022. Because I've written the autobiography in chronological order with
-a general philosophy of "show don't tell", I've included a mapping at the bottom of
-this post that links the sections of this essay to the major sections required
-by the assignment._
+a general philosophy of "show don't tell", I've included a [mapping](#lct) at
+the bottom of this post that links the sections of this essay to the major
+sections required by the assignment._
 
 Last fall, I started graduate school in the [MIT Department of Aeronautics and
 Astronautics](https://aeroastro.mit.edu/). I've been working on AI/autonomy in
@@ -197,6 +197,20 @@ teacher could have, but by the second year I started to understand what mix of
 classroom rules and teaching persona I could employ to could create a healthy
 learning environment. In my fourth year I felt like my classroom was finally
 running like a well-oiled machine.
+
+<span id="teaching-persona" />Two major factors contributed most of the impact to
+improving my classroom management: (1) I developed a teacher persona that worked
+for me, and (2) I learned to delegate.
+
+I started off as with a facade of being tough. These students came from rough
+backgrounds and I was very young and very fresh. I was afraid they would walk
+all over me if I didn't seem tough. So I rarely smiled and feigned anger to get
+their attention. This was a very poor choice.
+
+The students saw right through me. They immediately knew I was fake and hardly
+listened to a word I said. My classroom was a mess until I learned to use my
+true personality to shape my appearance in the classroom. In reality, I'm a
+nerd. I geek out about science and love making jokes.
 
 The New Teacher Project, much like Teach for America, included a masters in
 education, which was required for the teaching certification. Ours was
@@ -1312,39 +1326,105 @@ the pandemic swept it away, replacing disappointment with an overwhelming sense
 of dread. Clearly there were bigger problems in the world than a rejection
 letter.
 
-It took a few months for me to come back to the rejection and mentally process
-it. It hadn't shaken my resolve that I had found a career path and set of skills
-I wanted. Brian remained supportive and I dug in deeper in the lab. I got
-connected with a recent graduate, Nikhil, who had a paper in a topic I was
-interested in. Once again, it was a mutually beneficial relationship. Nikhil
-needed help revising the paper, notably reviewers said that it lacked scenarios
-and test cases that motivated the novel technique presented for modeling
-temporal networks. Planetary exploration seemed like the perfect fit. I got to
-work diving in to the paper and the supporting code base. I had to learn a new
-programming language and find my way around the lab's massive system of
+<span id="nikhil" />It took a few months for me to come back to the rejection and
+mentally process it. It hadn't shaken my resolve that I had found a career path
+and set of skills I wanted. Brian remained supportive and I dug in deeper in the
+lab. I got connected with a recent graduate, Nikhil, who had a paper in a topic
+I was interested in. Once again, it was a mutually beneficial relationship.
+Nikhil needed help revising the paper, notably reviewers said that it lacked
+scenarios and test cases that motivated the novel technique presented for
+modeling temporal networks. Planetary exploration seemed like the perfect fit. I
+got to work diving in to the paper and the supporting code base. I had to learn
+a new programming language and find my way around the lab's massive system of
 interconnected low level libraries for planning and temporal reasoning. I had to
 improve my academic writing skills and demonstrate fluency with the math and
 notations used to rigorously defend research claims.
 
-It's probably worth reminding you that I was still working for NASA full-time. I
-was doing all this research and grad school work on nights and weekends.
+It's probably worth mentioning that I was still working for NASA full-time. I
+was doing all this research and grad school work on nights and weekends. I felt
+overloaded, but it was a workload I could handle for a few months while I
+strategized and made one final push for grad school.
 
-@@something about being hectic@@
+If I wanted to make the strongest case possible for my application, I knew I
+would need to address my perceived weaknesses on previous applications. Research
+on temporal reasoning helped make a case for my capability to research. I also
+needed to demonstrate strong enough academic performance to distract the
+admissions committee from my lackluster (barely 3.0) undergraduate GPA. So I
+signed up for another class in the fall. Given the AeroAstro masters has a math
+requirement and I fared poorly in my undergrad math courses, I figured I should
+knock out the math requirement. I signed up for [Parallel Computing and
+Scientific Machine Learning](http://student.mit.edu/catalog/m18a.html#18.337)
+(18.337). It sounded like a nice blend of my programming experience and interest
+in machine learning. On top of everything, I prepared to submit a proposal to a
+[NASA fellowship](https://www.nasa.gov/directorates/spacetech/strg/nstgro/) to
+secure additional funding for grad school research.
+
+<span id="prove-self" />There was also a sense of dread that I needed to
+constantly prove myself. I was so close to this dream of mine, proving beyond a
+shadow of a doubt that I am a world class engineer, ready to take humanity to
+other planets. I wanted a chance to join a community where I could take part in
+education, mentorship, and networking that just aren't available anywhere else.
+I was right in the doorway, but I didn't know if they would let me in.
+
+<span id="apps-workload" />The workload turned overwhelming quickly. When the
+fall came around, grad school application responsibilities piled what felt like
+another 30-40 hours a week on top of my full-time job at NASA. But I could see
+the light at the end of the tunnel. I didn't take a day off from October to
+December. The stress eventually boiled over. By the end, the idea of sitting at
+a computer seemed abhorrent. Months of effectively two full-time jobs and
+constantly worrying about proving myself (and stress from COVID) broke me. I
+laid on the ground, hours before the last assignment was due. My wonderful wife
+helped me up and gave me perspective. I got back to work and finished.
+
+## The End of this Chapter
+
+So I got in to grad school. I'm studying autonomy and having the time of my
+(educational) life. Grad school challenges me in new ways every day, but I have
+a hard time not remaking on how far I've come since my first career teaching way
+back when.
+
+Though my skills and goals have changed over the years, I don't think much has
+changed in my personality. I still love teamwork and collaborating. One of my
+current classmates summarized my work in much the same way my old colleagues at
+Udacity did.
+
+> To me, Cameron is light-spirited and very enjoyable to work with. He is
+> hardworking and very reponsible in delivering his personal research product,
+> such as the journal paper on delay controllability. He is also willing to take
+> up a job for the benefits of everyone, like providing monitoring capabilities
+> for the group's architecture etc. He never misses our meetings. He is also
+> very responsive, and is active in chiming in his own ideas and thoughts, and
+> he also asks questions about the group's language lisp, so he is able to learn
+> fast. He is also passionate about his work!
+
+<span id="letting-others-down" />Of course, I'm still very hard on myself. I hold myself to high
+standards and I don't like the idea of letting other people down.
+
+> These are nice things about Cameron, but I don't want to make him suffer under
+> the burden of high expectations, so I wouldn't be worried if you miss a
+> meeting a few times
+
+I see myself as someone who enjoys working with others and leading teams. I want
+to be th ebest I can and I expect other people to work hard along with me. I
+value being able to learn from amazing people and finding new problems to solve.
+This drive to push myself to learn as much as I can and solve the hardest
+problems is what got me to this point; now I feel like a superhero. I haven't
+gone to space yet, but I think my 10 year old self would be proud of where I am now.
+
+<p class="dinkus" />
+
+@@pic from telescopes@@
+
+@@as a teacher, need to delegate to get buy-in@@
 
 @@TODO backfill a few more references to assessments and such@@
 
 @@Don't wait for the perfect opportunity, figure out how to make opportunities
 work for you and move you in the right direction@@
 
-@@Knew I'd be working with well connected people at udacity. Thought it could
-lead to something cool too. Like working for G?@@
-
 @@Talked to Kay years later "how did you do it?" Never stopped learning@@
 
 @@history of conquering a problem and looking for new opportunities@@
-
-@@no doesn't mean "never." it means "not right now"@@
-
 
 [^1]: To be fair, some official responsibilities like coaching a team or leading
     the marching band do come with a small stipend at most schools, but it isn't
@@ -1358,7 +1438,7 @@ lead to something cool too. Like working for G?@@
 [^5]: Miller, M. J. (2017). Decision Support System Development For Human
     Extravehicular Activity (Issue December). Georgia Institute of Technology. 
 
-## LCT Section Mapping
+## LCT Section Mapping<span id="lct" />
 
 Roughly maps the sections of this essay with the autobiography assignment.
 
@@ -1371,6 +1451,8 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * Constantly talking about how I want to be Carl Sagan :)
 * Repeatedly coming back to how I want to extend humanity's reach in the solar
   system
+  * Teaching Part 1 - developing a teaching persona <a
+    href="#teaching-persona">⬏</a>
 
 ### II. Strengths Grounded in Self-Identity, Personality, and Other Traits
 
@@ -1378,6 +1460,8 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * LearnBIG - learning how to code by giving myself exercises
 * NASA - helping my colleagues learn
 * Udacity, NASA colleagues talking about being a good teammate and collaborator
+* The End of this Chapter - high expectations <a
+  href="#letting-others-down">⬏</a>
 
 ### III. Strengths Grounded in Values, Principles, Virtues
 
@@ -1390,6 +1474,8 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * Teaching Part 2 - _Portal 2_ as a teaching tool getting attention
 * NASA - getting involved in EVAs
 * Beginnings as a Researcher - finding a way to do research
+* Beginnings as a Researcher - the end of the application process <a
+  href="#prove-self">⬏</a>
 
 ### V. Relationships and Networks
 
@@ -1399,11 +1485,13 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * Beginnings as a Researcher - connecting with Brian Williams to find a way to
   turn model-based decision making into a career
 * Beginnings as a Researcher - meeting Nikhil and finding a mutually beneficial
-  research collaboration
+  research collaboration <a href="#nikhil">⬏</a>
 
 ### VI. Enablers and Blockers of My Best Performance
 
 * NASA Part 2 - performance being blocked by too much multitasking
+* Beginnings as a Research - overwhelmed by the workload <a
+  href="#apps-workload">⬏<a>
 
 ### VII. Personal Vision
 
