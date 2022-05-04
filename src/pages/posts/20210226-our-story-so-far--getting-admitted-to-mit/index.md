@@ -1264,14 +1264,64 @@ making and temporal reasoning with my work at NASA. This class felt right. These
 were the skills I wanted to integrate into my career. So, just as I had done
 before with Matthew to get into NASA, and with Leslie to turn _Portal 2_ into a
 teaching tool, I networked with the professor of 16.413, Brian Williams. I
-wanted to be honest with him and try to find a way to turn the skills we were
-learning in class into a new career. I grabbed him after class one day and give
-him a rundown of my background.
+wanted to be honest with him to try to find a way to turn the skills we were
+learning in class into a new career. I grabbed him after class one day and gave him
+a rundown of my background.
 
 "I am interested in getting a masters," I explained. "This class is amazing, and
 I see a huge amount of potential with the kind of decision making we're working
 on at NASA. I'd love to get involved with the lab."
 
+He was supportive and invited me to join the lab's group meetings. Of course, I
+accepted.
+
+Over the course of the next year, I got to know Brian and the other members in
+the group better. At later group meetings, I presented on my work with EVAs and
+described how I had been implementing some of the temporal reasoning algorithms
+we were learning in class in the decision support systems at work. I signed up
+to take the follow up class to 16.413, 16.412 Cognitive Robotics, in the spring.
+
+With more conviction about my future as a researcher and practitioner of
+model-based automous systems, I applied to MIT AeroAstro again. Brian helped
+with my application, especially with respect to building a case that (a) there
+was a need in the field of planning for the research I wanted to perform and (b)
+my unusual career thus far made me a strong researcher.
+
+I was rejected again. I will never know for sure why I wasn't accepted, but it
+isn't hard to imagine that my poor undergraduate grades, unconventional
+background, and lack of concrete research experience in the field of autonomy
+weakened my application.
+
+This rejection stung a lot. In the back of my mind, I knew the "no" was still a
+"not this year," but I wanted them to say "yes" so much more. I was ready to
+start. I was taking classes (and getting A's!). I was working alongside other
+grad students. I was starting to dip my toes in research. I knew I could do the
+work and be successful, but the answer was still "no."
+
+The good and (extremely) bad news is that this happened in March of 2020, right
+when COVID lockdowns started. I actually forgot about the rejection. Fears of
+the pandemic swept it away, replacing disappointment with an overwhelming sense
+of dread. Clearly there were bigger problems in the world than a rejection
+letter.
+
+It took a few months for me to come back to the rejection and mentally process
+it. It hadn't shaken my resolve that I had found a career path and set of skills
+I wanted. Brian remained supportive and I dug in deeper in the lab. I got
+connected with a recent graduate, Nikhil, who had a paper in a topic I was
+interested in. Once again, it was a mutually beneficial relationship. Nikhil
+needed help revising the paper, notably reviewers said that it lacked scenarios
+and test cases that motivated the novel technique presented for modeling
+temporal networks. Planetary exploration seemed like the perfect fit. I got to
+work diving in to the paper and the supporting code base. I had to learn a new
+programming language and find my way around the lab's massive system of
+interconnected low level libraries for planning and temporal reasoning. I had to
+improve my academic writing skills and demonstrate fluency with the math and
+notations used to rigorously defend research claims.
+
+It's probably worth reminding you that I was still working for NASA full-time. I
+was doing all this research and grad school work on nights and weekends.
+
+@@something about being hectic@@
 
 @@TODO backfill a few more references to assessments and such@@
 
@@ -1319,6 +1369,7 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * Undergrad section - strengths shown in the star simulation assignment
 * LearnBIG - learning how to code by giving myself exercises
 * NASA - helping my colleagues learn
+* Udacity, NASA colleagues talking about being a good teammate and collaborator
 
 ### III. Strengths Grounded in Values, Principles, Virtues
 
@@ -1330,14 +1381,17 @@ Roughly maps the sections of this essay with the autobiography assignment.
 
 * Teaching Part 2 - _Portal 2_ as a teaching tool getting attention
 * NASA - getting involved in EVAs
+* Beginnings as a Researcher - finding a way to do research
 
 ### V. Relationships and Networks
 
 * Teaching Part 2, LearnBIG - developing a relationship with Leslie from Valve
 * Udacity - relationships with the video team, teaching colleagues
 * NASA - Matthew and the thesis handshake
-* Connecting with Brian Williams to find a way to turn model-based decision
-  making into a career
+* Beginnings as a Researcher - connecting with Brian Williams to find a way to
+  turn model-based decision making into a career
+* Beginnings as a Researcher - meeting Nikhil and finding a mutually beneficial
+  research collaboration
 
 ### VI. Enablers and Blockers of My Best Performance
 
