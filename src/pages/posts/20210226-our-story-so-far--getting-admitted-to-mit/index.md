@@ -988,14 +988,14 @@ managers remembered that I was a "Direct, Solid Communicator" when asked about
 my strengths all these years later. They also hit on my attitude about
 collaboration: "Great teammate, always was a team player."
 
-I thoroughly enjoyed building productive working relationships with people from
-all kinds of backgrounds. This was a startup too, so there was a constant
-looming pressure forcing us to work hard and be direct with one another. But it
-was teaching, which should be joyful for the students. It was important to me
-that we felt the same sense of joy in the office. The video team was an
-especially fun group to work with. In preparing for the autobiography, I was
-able to get feedback from a few of my former colleagues. One of the lead video
-production members had this to say about working with me.
+I enjoyed building productive working relationships with people from all kinds
+of backgrounds. This was a startup too, so there was a constant looming pressure
+forcing us to work hard and be direct with one another. But it was teaching,
+which should be joyful for the students. It was important to me that we felt the
+same sense of joy in the office. The video team was an especially fun group to
+work with. In preparing for the autobiography, I was able to get feedback from a
+few of my former colleagues. One of the lead video production members had this
+to say about working with me.
 
 > You were a great colleague and I appreciated your humor and humanity. I can
 > remember lots of times where you lightened a tense mood on set, listened to me
