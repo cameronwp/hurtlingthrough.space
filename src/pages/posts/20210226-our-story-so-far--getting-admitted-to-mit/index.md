@@ -974,7 +974,8 @@ _This redwood video was me trying to channel my inner Carl Sagan._
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3D7i4AScIuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-_I think Mike and I got this on the second take._ 
+_I think Mike and I got this on the second take. Also, I'm not sure why I wore
+the same shirt in both videos._ 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/766JMEtZCPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
