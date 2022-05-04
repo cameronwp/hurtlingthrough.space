@@ -29,7 +29,7 @@ jobs:
       - run:
           name: Dependencies
           command: |
-            rm -rf node_modules && yarn install --immutable --immutable-cache --check-cache
+            yarn install
 
       - save_cache:
           paths:
