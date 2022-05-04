@@ -40,12 +40,8 @@ technology. There were even a couple applications to graduate programs in
 scientific writing, with me thinking that I wanted to be a science popularizer
 like my hero, Carl Sagan. I was accepted to a couple programs and almost
 enrolled, but I kept bailing at the last second after deciding that I had better
-opportunities elsewhere. But this time it really happened. This opportunity is
-too good to pass up. Twelve years after a bachelors in physics and astronomy,
-ten years after a masters in teaching, eight years after I taught myself how to
-code, and three years after I started [work at
-NASA](/posts/20190615-getting-into-nasa/), I wake up every morning and keep
-pinching myself that this career is real. 
+opportunities elsewhere. But this time it really happened. This opportunity was
+too good to pass up. 
 
 I applied to AeroAstro because I want my career to define the future of space
 exploration. It's the ultimate game. Studying astronomy gives you a longer
@@ -54,13 +50,13 @@ The Wright brothers took flight a few hours before that. We're at the earliest
 stages of becoming a multi-planetary species. I want to help us realize our
 destiny in the solar system.
 
-I get these waves of disbelief that this is real life more frequently than I'm
-willing to admit. From the perspective of my 25 year old self, a high school
-teacher with no engineering experience, it seems pretty improbable that I would
-end up in a career that could impact the long-term direction of space
-exploration. I haven't forgotten that I'm a self-taught programmer with no
-formal engineering education, but here I am doing research and building systems
-to help people _work better in space_.
+Knowing myself as an engineer and knowing the kind of problems that pull me and
+don't let go, it makes perfect sense that I am where I am now. But from the
+perspective of my 21 year old self, a teacher with no engineering experience, it
+seems pretty improbable that I would end up in a career that could impact the
+long-term direction of space exploration. I haven't forgotten that I'm a
+self-taught programmer with no formal engineering education, but here I am doing
+research and building systems to help people _work better in space_.
 
 The rest of this post will be an autobiography. I want to start at the beginning
 of my career after college, when I was a high school teacher with a B- undergrad
@@ -68,7 +64,7 @@ GPA. I don't want anyone to read this and think it's an instruction manual.
 Unless you're going into a career with predefined paths like law or medicine, it
 doesn't make sense to try to make the same choices as someone and expect the
 same results. Rather, I want to shed light on who I am now, how I think about
-the future (and my future), and how that shapes my decision making.
+the future, and how that shapes my decision making.
 
 <p class="lead-in">Growing up, I could have articulated the same goals about
 making humans a multi-planetary species without having any idea of how to make
@@ -84,20 +80,20 @@ would lead me to after college.
 
 ## Undergrad
 
-My career aspirations failed to cement during undergrad at Vanderbilt. I started
-off as a biology major intending to become an academic in biological sciences,
-but this was a path I mostly fell into because I took a lot of biology in high
-school. I considered pursuing a pre-med path, but I never felt enthusiastic
-about being a doctor. At the beginning of college I was in a work-study program
-in lab with a zebrafish habitat. As the lowest ranking member of the lab, I
-spent most of my time performing rote tasks like cleaning tanks and checking pH
-and salinity levels. This was right around the time that podcasts were becoming
-really popular. I used to listen to all sorts of science podcasts while I
-worked, especially anything about space. I kept working in the lab over the
-summer between my freshman and sophomore years because my family lived just a
-few minutes away from the Vandy campus in Nashville. That summer, standing
-between racks of zebrafish, listening to space podcasts and wiping down fish
-tanks, I had an epiphany that I wanted to switch majors from biology to
+My career aspirations failed to fully cement during undergrad at Vanderbilt. I
+started off as a biology major intending to become an academic in biological
+sciences, but this was a path I mostly fell into because I took a lot of biology
+in high school. I considered pursuing a pre-med path, but I never felt
+enthusiastic about being a doctor. At the beginning of college I was in a
+work-study program in lab with a zebrafish habitat. As the lowest ranking member
+of the lab, I spent most of my time performing rote tasks like cleaning tanks
+and checking pH and salinity levels. This was right around the time that
+podcasts were becoming really popular. I used to listen to all sorts of science
+podcasts while I worked, especially anything about space. I kept working in the
+lab over the summer between my freshman and sophomore years because my family
+lived just a few minutes away from the Vandy campus in Nashville. That summer,
+standing between racks of zebrafish, listening to space podcasts and wiping down
+fish tanks, I had an epiphany that I wanted to switch majors from biology to
 astronomy. It's the science I loved most after all, and Vandy had an astronomy
 department. I figured that even if I couldn't be an astronaut and go to space, I
 would at least be happy as a professional astronomer studying space. A few weeks
@@ -113,6 +109,11 @@ been doing all the math for my homework assignments in Excel. I initially
 planned on doing the same for the final project, but it quickly became clear
 that the complexity of the math and the level of accuracy required would make
 Excel a bad choice.
+
+![With the telescopes at Cerra Tololo Interamerican Observatory](./chile-telescope.jpg)
+
+_With the telescopes at Cerra Tololo Interamerican Observatory, where I
+collected data that eventually turned into my honors thesis._
 
 About a month before the project was due, I decided to switch gears and use an
 actual programming language for the project. I knew absolutely nothing about
@@ -210,7 +211,24 @@ their attention. This was a very poor choice.
 The students saw right through me. They immediately knew I was fake and hardly
 listened to a word I said. My classroom was a mess until I learned to use my
 true personality to shape my appearance in the classroom. In reality, I'm a
-nerd. I geek out about science and love making jokes.
+nerd. I geek out about science and love making jokes. I found a balance
+somewhere in the middle. My teaching persona was my true persona, just with a
+stronger emphasis at making and upholding the rules of my classroom. Students
+responded well, and life in my classroom became a lot saner.
+
+The second emphasis, delegation, took work off my plate and created more
+engagement with the students. I heard a phrase that "a teacher should never do
+work a student could do for them," the idea being that students should take
+ownership of their learning spaces, with teachers there to facilitate and guide.
+I took this to heart. I learned that students enjoyed the millions of little
+tasks it takes to setup for class every day. They'll happily clean, organize,
+pass out papers, collect papers, grade each other (not for anything serious),
+decorate, plan, and otherwise keep the classroom running. My goal turned into
+doing as little work as possible while my classroom ran itself. It gave me time
+to focus on the important things, like designing lessons and addressing individual
+student needs.
+
+<p class="dinkus" />
 
 The New Teacher Project, much like Teach for America, included a masters in
 education, which was required for the teaching certification. Ours was
@@ -1201,9 +1219,9 @@ by example." My teaching background also came up as a positive. The same person
 said that I am "Super helpful! Open to teaching team mates (especially me) in
 the name of project success."
 
-What I see as a key differentiator between Udacity and NASA is that I hit my
-limit in my ability to multitask, and that led to some downstream effects that
-negatively impacted my colleagues.
+<span id="nasa-multitasking" />What I see as a key differentiator between Udacity
+and NASA is that I hit my limit in my ability to multitask, and that led to some
+downstream effects that negatively impacted my colleagues.
 
 > We were working on a side project for a NASA analog a few years ago (pre
 > COVID) and we had started to converge on some expected functionality and I
@@ -1217,6 +1235,25 @@ negatively impacted my colleagues.
 This is a weakness I've worked hard to address. I don't like the feeling of
 letting others down. As we'll see later when I get into my career as a grad
 student, this is a blocker I'm still addressing.
+
+Another colleague gave me some very insightful feedback about my growth as a
+leader and how I will need to adapt to managerial positions in the future.
+
+> Cameron is an excellent leader already and shows no indication of slowing in
+> his growth as a leader. Currently, Cameron works with people as good or less
+> skilled than he is, and as discussed above is able to perform at a very high
+> level in that role. All technical leaders hit a point where they are less
+> hands-on and members of their team are approaching problems differently than
+> the leader would, culminating in a situation where the leader is hands-off but
+> responsible for what is being produced by their team--who are approaching
+> problems differently than the leader would. Job satisfaction also comes less
+> regularly when you're a hands-off leader. One mitigating approach to
+> counteract this is for the leader to hire team personnel who are better than
+> they are at technical approach, putting themselves into an "enabler of
+> excellent work" role. This is a difficult transition for every technical
+> leader and will be especially difficult for Cameron given his very high level
+> of technical knowledge and experience. He'll have to search for a long time to
+> find team members more skilled than he is. 
 
 I wish I could go into more of the specifics about my career at NASA, but none
 of the work I've done is public. I hope some of it will be public soon, because
@@ -1389,13 +1426,13 @@ current classmates summarized my work in much the same way my old colleagues at
 Udacity did.
 
 > To me, Cameron is light-spirited and very enjoyable to work with. He is
-> hardworking and very reponsible in delivering his personal research product,
-> such as the journal paper on delay controllability. He is also willing to take
-> up a job for the benefits of everyone, like providing monitoring capabilities
-> for the group's architecture etc. He never misses our meetings. He is also
-> very responsive, and is active in chiming in his own ideas and thoughts, and
-> he also asks questions about the group's language lisp, so he is able to learn
-> fast. He is also passionate about his work!
+> hardworking and very reponsible [sic] in delivering his personal research
+> product, such as the journal paper on delay controllability. He is also
+> willing to take up a job for the benefits of everyone, like providing
+> monitoring capabilities for the group's architecture etc. He never misses our
+> meetings. He is also very responsive, and is active in chiming in his own
+> ideas and thoughts, and he also asks questions about the group's language
+> lisp, so he is able to learn fast. He is also passionate about his work!
 
 <span id="letting-others-down" />Of course, I'm still very hard on myself. I hold myself to high
 standards and I don't like the idea of letting other people down.
@@ -1405,26 +1442,16 @@ standards and I don't like the idea of letting other people down.
 > meeting a few times
 
 I see myself as someone who enjoys working with others and leading teams. I want
-to be th ebest I can and I expect other people to work hard along with me. I
+to be the best I can and I expect other people to work hard along with me. I
 value being able to learn from amazing people and finding new problems to solve.
 This drive to push myself to learn as much as I can and solve the hardest
 problems is what got me to this point; now I feel like a superhero. I haven't
-gone to space yet, but I think my 10 year old self would be proud of where I am now.
+gone to space yet, but I think my 10 year old self would be proud of where I am
+now.
 
 <p class="dinkus" />
 
-@@pic from telescopes@@
-
-@@as a teacher, need to delegate to get buy-in@@
-
 @@TODO backfill a few more references to assessments and such@@
-
-@@Don't wait for the perfect opportunity, figure out how to make opportunities
-work for you and move you in the right direction@@
-
-@@Talked to Kay years later "how did you do it?" Never stopped learning@@
-
-@@history of conquering a problem and looking for new opportunities@@
 
 [^1]: To be fair, some official responsibilities like coaching a team or leading
     the marching band do come with a small stipend at most schools, but it isn't
@@ -1451,7 +1478,7 @@ Roughly maps the sections of this essay with the autobiography assignment.
 * Constantly talking about how I want to be Carl Sagan :)
 * Repeatedly coming back to how I want to extend humanity's reach in the solar
   system
-  * Teaching Part 1 - developing a teaching persona <a
+ * Teaching Part 1 - developing a teaching persona <a
     href="#teaching-persona">⬏</a>
 
 ### II. Strengths Grounded in Self-Identity, Personality, and Other Traits
@@ -1489,7 +1516,8 @@ Roughly maps the sections of this essay with the autobiography assignment.
 
 ### VI. Enablers and Blockers of My Best Performance
 
-* NASA Part 2 - performance being blocked by too much multitasking
+* NASA Part 2 - performance being blocked by too much multitasking <a
+  href="nasa-multitasking">⬏</a>
 * Beginnings as a Research - overwhelmed by the workload <a
   href="#apps-workload">⬏<a>
 
