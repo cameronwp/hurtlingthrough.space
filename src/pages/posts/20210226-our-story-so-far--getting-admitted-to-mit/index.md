@@ -1057,6 +1057,10 @@ specific feedback to guide student thinking to be able to solve the problem. It
 was a blast and I wanted to chase that feeling. About two years into my Udacity
 career, I made the switch to fulltime engineer.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZXY4Kk3y04g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+_A fun talk I gave about scaling online education in 2018._
+
 I will admit that my career as a junior engineer at Udacity was productive but
 unremarkable from an outside perspective. I learned a lot and made some cool
 features for the website. It was primarily a time of learning and growth. I
@@ -1136,7 +1140,9 @@ learn how I could best support human spaceflight operations.
 Park in Idaho. Two simulated astronauts are behind me](./basalt-idaho.jpg)
 
 _Me at the foot of a lava flow at Craters of the Moon National Park as part of
-BASALT in 2016. Two simulated astronauts are behind me._
+BASALT in 2016. Behind me, a simulated astronaut (with the antennas) looks for
+scientific samples while the other hiker simulates the kind of tool and sample
+storage support you would get from a rover._
 
 There were sleepless nights and frantic rushes to test and deploy software. Each
 field deployment was an opportunity to demonstrate some unique value or test
@@ -1149,8 +1155,10 @@ between the predicted end of the EVA and when life support would run out. This
 meant we needed a way to collect information about the crew's progress during
 the EVA in as unobtrusive way as possible. Our interface was designed to be very
 simple - just checkboxes and timers that made sense at a glance. If you're
-interested in learning more, check out the blog posts I wrote here and here and
-Matthew's thesis here @@cite@@.
+interested in learning more, check out the blog posts I wrote about Marvin
+[here](/posts/20180115-marvin-deep-spacewalks/),
+[here](/posts/20180204-marvin-apollo-timelines/) and
+[here](/posts/20180516-marvin-eva-timeline-breakdown/) and Matthew's thesis[^5].
 
 After he graduated with his PhD, Matthew got a job at NASA as a research
 engineer for human spaceflight, and I followed behind him a few months later.
@@ -1200,19 +1208,59 @@ interesting or motivating problem space.
 It's probably clear by now that I like looking for opportunities. I'm still
 testing my theory, but I think I found one in the world of EVAs. I'll take a
 quick aside to give some background about human spaceflight operations, which
-will motivate why I made my next set of career choices. 
+will motivate why I made my next set of career choices.
 
-@@maybe just link to marvin blog posts instead? or can this be done in like 2 paragraphs?@@
+Clocks dominate EVAs. Temporal constraints exist between every activity the crew
+perform. It could be that certain tasks must be performed within some amount of
+time of one another. Some tasks are completed on repeating intervals throughout
+EVAs. Everyone has an eye on how quickly consumables, like water and oxygen, are
+being depleted as they give the most accurate insight into the total length of
+the EVA. Everyone is doing mental math to figure out exactly when events in the
+future will happen. Meanwhile, flight controllers are planning and replanning
+for potential future events. When something inevitably goes wrong (which is
+usually something small, like a bolt that won't screw in or a snagged cable), it
+has downstream effects that must be accounted for. All this is to say that
+there's a lot of temporal reasoning going on during an EVA, but there are few,
+if any, advanced tools (aka computers) doing the math for anyone[^5].
 
-## Principles of Autonomy and Decision Making
+Preparations for Artemis are well underway. Mars will come next. Current human
+spaceflight operations depend on human computers, but time delays will
+necessitate moving some of that temporal reasoning and planning capabilities _in
+situ_ to the planetary surfaces that astronauts will be exploring. I love this
+problem. What a cool application of math and logic - keeping people alive, safe,
+and productive as they extend humanity's reach in the solar system.
 
-@@link to blog post@@
+I knew I lacked the necessary background to build the advanced decision support
+systems for exploration. I had not given up the dream of grad school. Through
+some connections at work, I was able to get in touch with some professors in
+programs that work on challenges in human spaceflight. Knowing it was a long
+shot because my academic background had not improved in the intervening decade
+since college, I applied to MIT AeroAstro. And I was rejected. It stung at first
+but it faded quickly. I knew that receiving a "no" from a grad school
+application only meant "not this year."
 
-## Random Pictures and Videos
+Meanwhile, my then-girlfriend and I were due for a move (she's in a career where
+people frequently move for the first 10 years or so). She was accepted to a
+program here in Massachusetts, so we found ourselves planning for a move to
+Cambridge. I had a vague notion that lots of universities have programs for
+local professionals who want to take a class or two. A few minutes of research
+uncovered that MIT has the [Advanced Study
+Program](https://professional.mit.edu/advanced-study-program) (ASP). It seemed
+like a great fit. I was close enough to campus to take classes. Almost any class
+in the course catalog was available, so long as I could make a case that I had
+the listed prerequisites. I found [Principles of Autonomy and Decision
+Making](http://student.mit.edu/catalog/m16a.html#16.413), which seemed to speak
+directly to the kinds of problems and advanced decision making we'll face on
+planetary surfaces. Two months after getting a rejection letter, I was
+submitting another application to another program at MIT. This time, I was
+accepted! 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZXY4Kk3y04g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Beginnings as a Researcher
 
-_A fun talk I gave about scaling online education in 2018._
+asdf
+
+
+@@TODO backfill a few more references to assessments and such@@
 
 @@Don't wait for the perfect opportunity, figure out how to make opportunities
 work for you and move you in the right direction@@
@@ -1230,13 +1278,14 @@ lead to something cool too. Like working for G?@@
 [^1]: To be fair, some official responsibilities like coaching a team or leading
     the marching band do come with a small stipend at most schools, but it isn't
     remotely commensurate with the time and effort to do them _well_.
-
 [^2]: A broad and very shallow overview of physics and chemistry.
 [^3]: Pittman, C. W. (2013). Teaching with portals: The intersection of video
     games and physics education. *LEARNing Landscapes*, *6*(2), 341–360.
 [^4]: Pittman, C. "Conservation of Momentum". Williams-Pierce, C. (Ed.). (2016).
     *Teacher Pioneers*. pp 109-119. Carnegie Mellon: ETC Press.
     https://doi.org/10.1184/R1/6686936
+[^5]: Miller, M. J. (2017). Decision Support System Development For Human
+    Extravehicular Activity (Issue December). Georgia Institute of Technology. 
 
 ## LCT Section Mapping
 
