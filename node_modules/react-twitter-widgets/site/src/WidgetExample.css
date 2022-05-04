@@ -1,0 +1,16 @@
+.WidgetExample-container {
+  width: 500px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background: #f0f0f0;
+}
+
+@media screen and (max-width: 550px) {
+  .WidgetExample-container {
+    width: 90%;
+  }
+}
+
+.WidgetExample-container pre {
+  display: inline-block;
+}
