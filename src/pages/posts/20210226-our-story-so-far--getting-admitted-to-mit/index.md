@@ -981,6 +981,14 @@ the same shirt in both videos._
 
 _This was a fun style of video to make._
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hHvPD9m6ovM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+_We often worked alongside experts from Google._
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZAg8R-_VzNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+_Maybe I should learn how to be a stuntman next?_
+
 I had to fully exercise the nascent leadership skills I developed way back when
 I was teaching. Organization, communication, and a clearly articulated shared
 team vision were essential for every class. I was pleased that one of my
