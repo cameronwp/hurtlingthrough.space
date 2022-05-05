@@ -7,7 +7,7 @@
     "url": "https://github.com/cameronwp/personal-web/issues"
   },
   "dependencies": {
-    "aws-sdk": "^2.162.0",
+    "aws-sdk": "^2.814.0",
     "dotenv": "^4.0.0",
     "gatsby-remark-katex": "^1.0.7",
     "prompt": "^1.0.0",
