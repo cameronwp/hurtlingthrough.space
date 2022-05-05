@@ -160,16 +160,17 @@ school in Nashville soon after.
 
 ## Teaching Part 1 - Classroom Management
 
-Teaching was the hardest job I've ever had or ever will have. I think most
-teachers would agree with me, especially anyone who went straight into teaching
-after college. I'll never forget the feeling of closing the classroom door
-behind me for the first time, all alone, as a 22 year old in front of a class of
-9th graders. I was suddenly faced with an immense weight of responsibility. I
-was no longer a dependent of the educational system, I _was_ the educational
-system. My attitude and my ability to perform, whether good or bad, now had an
-impact on hundreds of lives besides my own. I was only just learning how to take
-care of myself as an adult, yet now I was a parental figure for the hundred some
-odd students that came through my classroom. It was overwhelming.
+<span id="hard-teaching" />Teaching was the hardest job I've ever had or ever
+will have. I think most teachers would agree with me, especially anyone who went
+straight into teaching after college. I'll never forget the feeling of closing
+the classroom door behind me for the first time, all alone, as a 22 year old in
+front of a class of 9th graders. I was suddenly faced with an immense weight of
+responsibility. I was no longer a dependent of the educational system, I _was_
+the educational system. My attitude and my ability to perform, whether good or
+bad, now had an impact on hundreds of lives besides my own. I was only just
+learning how to take care of myself as an adult, yet now I was a parental figure
+for the hundred some odd students that came through my classroom. It was
+overwhelming.
 
 Then once I reconciled with the level of maturity and self-discipline required
 to be a good teacher, the lifestyle of the career started to sink in and the
@@ -356,10 +357,10 @@ my classes (I had just finished writing a 30-page mini textbook on astronomy for
 one of my interdisciplinary science classes). Of course, this application also
 got rejected. This would not be the last rejection letter I'd get from MIT.
 
-This feels like a low point. My big plans for a delayed start as an astronomy
-grad student completely collapsed. I had no idea what to do next. I was starting
-to love teaching but I still couldn't quite imagine being a teacher for the rest
-of my life. I wanted new problems to solve and new skills to learn. I started
+This felt like a low point. My big plans for a delayed start as an astronomy grad
+student completely collapsed. I had no idea what to do next. I was starting to
+love teaching but I still couldn't quite imagine being a teacher for the rest of
+my life. I wanted new problems to solve and new skills to learn. I started
 thinking about starting fresh in another career, like maybe the military. But
 underneath all that frustration and disappointment was a sense of freedom too. I
 could be whatever I wanted to be. I had no real responsibilities outside work.
@@ -417,12 +418,12 @@ game, recorded videos, and used physics tracking software to analyze the motion
 of cubes. I tracked them falling, sliding, and colliding. Lo and behold, the
 Source Engine modeled realistic-ish physics.
 
-I sketched out my first unit of lesson plans about projectile motion. In it, I
-assumed that every student would have a laptop and a copy of the game to play
-independently. We had a cart of laptops at the school that met _Portal_'s
-minimum system requirements, so I wasn't worried about that. But there was the
-other issue of getting enough copies of _Portal_ for a whole class. I had an
-idea to ask the Internet for help. [Valve
+<span id="reddit" />I sketched out my first unit of lesson plans about projectile
+motion. In it, I assumed that every student would have a laptop and a copy of
+the game to play independently. We had a cart of laptops at the school that met
+_Portal_'s minimum system requirements, so I wasn't worried about that. But
+there was the other issue of getting enough copies of _Portal_ for a whole
+class. I had an idea to ask the Internet for help. [Valve
 Software](https://www.valvesoftware.com/en/), the makers of _Portal_, frequently
 gave out free copies of the game. I bet that a bunch of gamers out there had an
 extra copy of _Portal_ sitting around and maybe, I hoped, they would be willing
@@ -495,10 +496,11 @@ the fact that portals don't exist of course).
 _Demonstrating the use of the_ Portal 2 _level editor in the fall of 2012, a
 year after my first contact with Valve. Credit: Jeff Unay_
 
-In these first conversations with Leslie I learned that Valve wanted to support
-educators but they didn't know how to do it. They were excited to meet teachers
-like me who might be able to foster learning communities around their games. I
-learned that they had a new website in the works called Teach with Portals
+<span id="valve-relationship" />In these first conversations with Leslie I learned
+that Valve wanted to support educators but they didn't know how to do it. They
+were excited to meet teachers like me who might be able to foster learning
+communities around their games. I learned that they had a new website in the
+works called Teach with Portals
 ([teachwithportals.com](http://teachwithportals.com) seems to have been given
 over to a group called foundry10 I'm not familiar with, but they're still
 hosting my [physics
@@ -555,14 +557,14 @@ about being rejected, I was just anxious about putting myself out there. I meant
 every word in that letter. What if I read the situation wrong and got
 embarrassed by this whole episode?
 
-I used to go on runs after school through my neighborhood in Nashville. I always
-daydream when I run. Two scenes kept recurring during those Nashville runs. In
-one, I imagined picking up a newspaper and reading that a newly selected
-astronaut started off their career as a high school teacher. To my surprise, it
-sounded possible. In the other scene, I imagined myself as a 90 year old man
-sitting in a rocking chair. 90 year old me would be reminiscing about their life
-and me now at this exact moment. What were they feeling? Was it regret?
-Disappointment? Pride? The answer was obvious. I sent the letter.
+<span id="90yo" />I used to go on runs after school through my neighborhood in
+Nashville. I always daydream when I run. Two scenes kept recurring during those
+Nashville runs. In one, I imagined picking up a newspaper and reading that a
+newly selected astronaut started off their career as a high school teacher. To
+my surprise, it sounded possible. In the other scene, I imagined myself as a 90
+year old man sitting in a rocking chair. 90 year old me would be reminiscing
+about their life and me now at this exact moment. What were they feeling? Was it
+regret? Disappointment? Pride? The answer was obvious. I sent the letter.
 
 I got a response from Leslie a few days later (I've been searching for that
 email but I think it's gone - I must have sent the letter with my school email
@@ -836,22 +838,21 @@ for programming, I branched out to C++ (again) and JavaScript. In those early
 days, I found it especially useful to compare paradigms and ideas between
 languages.
 
-<video width="100%" autoplay loop>
-    <source src="./physics-sim.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+<video width="100%" autoplay loop> <source src="physics-sim.mp4"
+    type="video/mp4"> Your browser does not support the video tag. </video>
 
 _Simulating a 2D gravitational field with C++. The vectors represent the
 magnitude and direction of gravity at each location. The moving circles have
 mass, but I never got around to simulating their effect on one another. It's a
 little buggy, but it gets the point across!_
 
-A month after I started coding again, I came across a problem at work I realized
-I could solve with code. I needed to scrape websites. There was data in hundreds
-of pages scattered across multiple websites we wanted and I desperately didn't
-want to spend all day clicking, copying, and pasting. I sat down with the two
-engineers in the office and they helped me work out a script that successfully
-scraped websites and dropped the data into our database.
+<span id="first-coding" />A month after I started coding again, I came across a
+problem at work I realized I could solve with code. I needed to scrape websites.
+There was data in hundreds of pages scattered across multiple websites we wanted
+and I desperately didn't want to spend all day clicking, copying, and pasting. I
+sat down with the two engineers in the office and they helped me work out a
+script that successfully scraped websites and dropped the data into our
+database.
 
 Deploying useful code came with a euphoria I hadn't experienced before then. I
 loved studying physics back in college because it was fun solving problems, but
@@ -992,15 +993,18 @@ assignment, the earliest former colleagues I approached about getting feedback
 on my leadership skills were from Udacity. You'll start to see their responses
 from here on below.)
 
-While I was at Udacity, I worked alongside very creative and talented people to
-build online class experiences that make me proud. Making a class at Udacity
-required that people from multiple disciplines work together closely and
-communicate clearly. We had engineers and subject matter experts who would set
-curricula and goals, we had educators who would turn curricula into lesson plans
-with exercises and projects, and we had a video production team who would turn
-lesson plans into accessible content online. For most of the classes I made, I
-was both the teacher in the middle of the process and an engineer writing
-curricula.
+<span id="udacity-relationships" /> While I was at Udacity, I worked alongside
+very creative and talented people to build online class experiences that make me
+proud. Making a class at Udacity required that people from multiple disciplines
+work together closely and communicate clearly. We had engineers and subject
+matter experts who would set curricula and goals, we had educators who would
+turn curricula into lesson plans with exercises and projects, and we had a video
+production team who would turn lesson plans into accessible content online. For
+most of the classes I made, I was both the teacher in the middle of the process
+and an engineer writing curricula.
+
+I loved that I got paid to be as creative as I could be, all while using my love
+for teaching to spread my love for engineering.
 
 Here are a few random sample videos from the classes I helped teach.
 
@@ -1138,17 +1142,18 @@ It only took a day or two for me to realize how dumb I was. This was a golden
 opportunity to find a project that could lead to the space industry. I got back in touch
 with my now brother-in-law, and he connected me with his classmate, Matthew.
 
-Matthew and I got along instantly. We were on the same page about our working
-relationship. I thought his research into human spaceflight operations was
-insanely interesting, and he thought my ability to build interfaces was insanely
-useful. We shook hands and agreed that I would write software for his cognitive
-engineering research on workloads for astronauts and flight controllers, and he
-would connect me with people who could help me start a real career in the space
-industry. To spoil the ending, our handshake was a wild success for both of us.
-He got a PhD on schedule, and I got a career at NASA. We've been working
-together at NASA for a few years now, having produced award-winning interfaces
-for decision making and analysis of spacewalks. Our team is on track for making
-software to support decision making when the next humans walk on the Moon.
+<span id="matthew-intro" />Matthew and I got along instantly. We were on the same
+page about our working relationship. I thought his research into human
+spaceflight operations was insanely interesting, and he thought my ability to
+build interfaces was insanely useful. We shook hands and agreed that I would
+write software for his cognitive engineering research on workloads for
+astronauts and flight controllers, and he would connect me with people who could
+help me start a real career in the space industry. To spoil the ending, our
+handshake was a wild success for both of us. He got a PhD on schedule, and I got
+a career at NASA. We've been working together at NASA for a few years now,
+having produced award-winning interfaces for decision making and analysis of
+spacewalks. Our team is on track for making software to support decision making
+when the next humans walk on the Moon.
 
 When we shook hands, what I was really agreeing to was to give my nights and
 weekends over to the problem of understanding human spaceflight operations and
@@ -1333,7 +1338,7 @@ accepted!
 
 ## Beginnings as a Researcher
 
-I wrote about my experience in 16.413
+<span id="mers-intro" />I wrote about my experience in 16.413
 [previously](/posts/20191229-a-semester-of-ai-at-mit/). In short, I loved the
 class. There were clear applications of the model-based approaches to decision
 making and temporal reasoning with my work at NASA. This class felt right. These
@@ -1341,8 +1346,8 @@ were the skills I wanted to integrate into my career. So, just as I had done
 before with Matthew to get into NASA, and with Leslie to turn _Portal 2_ into a
 teaching tool, I networked with the professor of 16.413, Brian Williams. I
 wanted to be honest with him to try to find a way to turn the skills we were
-learning in class into a new career. I grabbed him after class one day and gave him
-a rundown of my background.
+learning in class into a new career. I grabbed him after class one day and gave
+him a rundown of my background.
 
 "I am interested in getting a masters," I explained. "This class is amazing, and
 I see a huge amount of potential with the kind of decision making we're working
@@ -1374,10 +1379,10 @@ start. I was taking classes (and getting A's!). I was working alongside other
 grad students. I was starting to dip my toes in research. I knew I could do the
 work and be successful, but the answer was still "no."
 
-The good and (extremely) bad news is that this happened in March of 2020, right
-when COVID lockdowns started. I actually forgot about the rejection. Fears of
-the pandemic swept it away, replacing disappointment with an overwhelming sense
-of dread. Clearly there were bigger problems in the world than a rejection
+The good news and (extremely) bad news is that this happened in March of 2020,
+right when COVID lockdowns started. I actually forgot about the rejection. Fears
+of the pandemic swept it away, washing away disappointment for an overwhelming
+sense of dread. Clearly there were bigger problems in the world than a rejection
 letter.
 
 <span id="nikhil" />It took a few months for me to come back to the rejection and
@@ -1433,9 +1438,9 @@ helped me up and gave me perspective. I got back to work and finished.
 ## The End of this Chapter
 
 So I got in to grad school. I'm studying autonomy and having the time of my
-(educational) life. Grad school challenges me in new ways every day, but I have
-a hard time not remaking on how far I've come since my first career teaching way
-back when.
+(educational) life. Grad school challenges me in new ways every day, but I find
+time to pause and reflect on how far I've come since my first career teaching
+way back when.
 
 <span id="mit-feedback" />Though my skills and goals have changed over the years,
 I don't think much has changed in my personality. I still love teamwork and
@@ -1518,11 +1523,16 @@ self-portrait.
 > personality, and other traits that support the expression of the strengths
 > reflected and discovered in the analysis of your qualitative feedback.
 
+I am driven to learn and solve new problems. I love working with people and want
+to see all of us succeed. 
+
 * Undergrad section - strengths shown in the star simulation assignment <a
   href="#star">⬏</a>
-* LearnBIG - learning how to code by giving myself exercises <a href="#lb-eng">⬏</a>
-* Udacity - getting an itch to keep learning <a href="itch">⬏</a>
-* NASA - helping my colleagues learn <a href="nasa-feedback">⬏</a>
+* LearnBIG - learning how to code by giving myself exercises <a
+  href="#lb-eng">⬏</a>
+* Udacity - getting an itch to keep learning <a href="#itch">⬏</a>
+* NASA Part 1 - finding ways to support spacewalk operations <a href="#eva-intro">⬏</a>
+* NASA - helping my colleagues learn <a href="#nasa-feedback">⬏</a>
 * The End of this Chapter - high expectations <a
   href="#letting-others-down">⬏</a>
 
@@ -1538,8 +1548,11 @@ self-portrait.
 > others represent your actual behaviors, your qualitative analysis should
 > become the primary source of your insights.
 
-* Teaching Part 1- strengths shown in persevering through difficult teaching
-  experiences
+I shared all the feedback I received from colleagues. They seemed to share
+similar stories.
+
+* Teaching Part 1 - strengths shown in persevering through difficult teaching
+  experiences <a href="#hard-teaching">⬏</a>
 * Teaching Part 1 - rant about teacher salaries <a href="#pay">⬏</a>
 * Udacity - the feedback I received <a href="#udacity-feedback">⬏</a>
 * NASA - the feedback I received <a href="#nasa-feedback">⬏</a>
@@ -1553,12 +1566,16 @@ self-portrait.
 > shaped outstanding leaders.iii For this section, you might create a “life map”
 > that illustrates your major phases and paths.
 
+It was hard to keep this list so short. Many significant and unexpected events
+have left their mark on my career.
+
 * Teaching Part 2 - _Portal 2_ as a teaching tool getting attention from Valve
   <a href="#valve-responds">⬏</a>
 * Teaching Part 2 - Valve films a documentary about me <a href="#valve-doc">⬏</a>
 * Teaching Part 2 - I get invited to work at a startup <a href="#lb-call">⬏</a>
 * NASA - getting involved in spacewalk research <a href="#eva-intro">⬏</a>
 * Beginnings as a Researcher - finding a way to do temporal reasoning research
+  <a href="#nikhil">⬏</a>
 * Beginnings as a Researcher - the end of the application process <a
   href="#prove-self">⬏</a>
 
@@ -1570,11 +1587,16 @@ self-portrait.
 > supervisors, followers, as well as more difficult relationships such as
 > adversaries, competitors, or opponents.
 
-* Teaching Part 2, LearnBIG - developing a relationship with Leslie from Valve
-* Udacity - relationships with the video team, teaching colleagues
-* NASA - Matthew and the thesis handshake
+I value every relationship I make. I've been fortunate to develop some very
+fruitful relationships early on in my career.
+
+* Teaching Part 2 - developing a relationship with Leslie from Valve <a
+  href="#valve-relationship">⬏</a>
+* Udacity - relationships with the video team, teaching colleagues <a
+  href="#udacity-relationships">⬏</a>
+* NASA - Matthew and the thesis handshake <a href="#matthew-intro">⬏</a>
 * Beginnings as a Researcher - connecting with Brian Williams to find a way to
-  turn model-based decision making into a career
+  turn model-based decision making into a career <a href="#mers-intro">⬏</a>
 * Beginnings as a Researcher - meeting Nikhil and finding a mutually beneficial
   research collaboration <a href="#nikhil">⬏</a>
 
@@ -1584,10 +1606,16 @@ self-portrait.
 > facilitated or hindered your ability to perform at your best. Try to think of
 > examples from the past and elaborate on these examples.
 
+I'm enabled by working with amazing people to solve hard problems.
+
 * Teaching Part 2 - finding a big challenge (expensive physics equipment) and
   getting creative to solve it <a href="#why-portal">⬏</a>
+* Teaching Part 2 - reaching out for help to get unblocked <a
+  href="#reddit">⬏</a>
+* LearnBIG - finding my first engineering project <a href="#first-coding">⬏</a>
+* Udacity - loving teaching online <a href="#udacity-relationships">⬏</a>
 * NASA Part 2 - performance being blocked by too much multitasking <a
-  href="nasa-multitasking">⬏</a>
+  href="#nasa-multitasking">⬏</a>
 * Beginnings as a Research - overwhelmed by the workload <a  href="#apps-workload">⬏</a>
 
 ### VII. Personal Vision
@@ -1602,7 +1630,11 @@ self-portrait.
 > vision of future “possible selves” iv. The most important outcome of this
 > section is that it embodies a meaningful expression of who you can become.
 
+We need teamwork to solve the biggest problems, like sending people to other planets.
+
 * Intro talks about hopes and dreams for humanity and space exploration
+* Teaching Part 2 - the little voice <a href="#voice">⬏</a>
+* Teaching Part 2 - what would 90 year old me think? <a href="#90yo">⬏</a>
 * The End of this Chapter - the conclusion about my 10 year old self would think
   <a href="#conclusion">⬏</a>
 
