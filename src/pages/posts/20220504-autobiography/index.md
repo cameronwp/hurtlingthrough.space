@@ -1,6 +1,6 @@
 ---
-title: "Our Story So Far - Getting Admitted to MIT"
-date: 2021-03-05T12:00:00-05:00
+title: "From Teacher to AI Researcher"
+date: 2022-05-04T12:00:00-05:00
 tags: 
   - mit
   - mers
@@ -10,7 +10,7 @@ tags:
   - ai
   - autonomy
 summary: The whole story of how I went from a high school teacher to a grad student studying AI at MIT.
-twitterprompt: And for my next act...
+twitterprompt: Cameron learns everything
 draft: false
 ---
 
@@ -43,8 +43,8 @@ enrolled, but I kept bailing at the last second after deciding that I had better
 opportunities elsewhere. But this time it really happened. This opportunity was
 too good to pass up. 
 
-I applied to AeroAstro because I want my career to define the future of space
-exploration. It's the ultimate game. Studying astronomy gives you a longer
+<span id="intro-h-d" />I applied to AeroAstro because I want my career to define
+the future of space exploration. Studying astronomy gives you a longer
 perspective on human events. From the long view, Apollo 11 happened last night.
 The Wright brothers took flight a few hours before that. We're at the earliest
 stages of becoming a multi-planetary species. I want to help us realize our
@@ -112,7 +112,7 @@ Excel a bad choice.
 
 ![With the telescopes at Cerra Tololo Interamerican Observatory](./chile-telescope.jpg)
 
-_With the telescopes at Cerra Tololo Interamerican Observatory, where I
+_With the telescopes at Cerra Tololo Interamerican Observatory in 2006, where I
 collected data that eventually turned into my honors thesis._
 
 About a month before the project was due, I decided to switch gears and use an
@@ -123,21 +123,21 @@ do math in loops and write to CSV files. It took me two more weeks to get my
 project working, but I did (with some help from my prof) and I got an A. I was
 really proud of that A. In hindsight, maybe this should have been a sign that I
 ought to take programming more seriously? Learning C++ on your own is no joke,
-especially when you are an absolute beginner. I really enjoyed it too. But
-unfortunately, I wouldn't open a code editor for almost another five years after
-I turned in that project.
+especially as an absolute beginner. I really enjoyed it too. But unfortunately,
+I wouldn't open a code editor for almost another five years after I turned in
+that project.
 
-My experience diving into my first programming language is representative of the
-strengths that consistently showed up in the assessments we did for LCT. It took
-courage and a sense of intellectual adventure to go head first into the
-assignment. This felt like it was tickling a different part of my brain than my
-physics homework - building something was a wholly different challenge that gave
-me a chance to exercise creative problem solving skills (also something that I
-scored highly on in the assessments) in an entirely different way. But I missed
-the strong signals of my strengths at the time. I was too focused on the
-challenges at hand (trying to finish my undergrad and be an astronomer) to fully
-realize how my strengths played into the assignment and what that meant for my
-career. 
+<span id="star" />My experience diving into my first programming language is
+representative of the strengths that consistently showed up in the assessments
+we did for LCT. It took courage and a sense of intellectual adventure to go head
+first into the assignment. This felt like it was tickling a different part of my
+brain than my physics homework - building something was a wholly different
+challenge that gave me a chance to exercise creative problem solving skills
+(also something that I scored highly on in the assessments) in an entirely
+different way. But I missed the strong signals of my strengths at the time. I
+was too focused on the challenges at hand (trying to finish my undergrad and be
+an astronomer) to fully realize how my strengths played into the assignment and
+what that meant for my career. 
 
 When I graduated, I wanted to be an astronomer but I was entirely unprepared to
 be an academic. I spent so much time in college focused on having as much fun as
@@ -289,7 +289,7 @@ science.
 
 _My teaching idol._
 
-I taught freshman physical science[^2] in my first year of teaching. Students
+<span id="hcl" />I taught freshman physical science[^2] in my first year of teaching. Students
 were learning about chemical reactions involving acids and bases, so I wanted to
 start class with this fun demonstration where you drop a small strip of
 magnesium in a test tube with hydrochloric acid and it produces hydrogen gas. If
@@ -366,19 +366,20 @@ could be whatever I wanted to be. I had no real responsibilities outside work.
 No strings, no expectations. I could wing it and see where that led. I soon got
 the chance.
 
-## Teacing Part 2 - Thinking with Portals
+## Teaching Part 2 - Thinking with Portals
 
-A few months later, between my second and third years of teaching, I realized I
-had a problem with my physics labs. I had the luxury of teaching a class without
-a standardized exam, which meant I had more freedom in the topics we covered. I
-liked being able to react to student interest. The school had a small budget for
-lab equipment and the ordering process took almost a whole school year. As such,
-I often felt frustrated that I didn't have the supplies for all the labs I
-wanted when I wanted them. I had some success getting creative cobbling together
-labs from the equipment I could find, and sometimes I spent my own money to buy
-the equipment I needed, but I knew we could do better. What I really needed was
-time to requisition a closet full of physics equipment. Given it wasn't going to
-appear overnight, I started to think of alternatives.
+<span id="why-portal" />A few months later, between my second and third years of
+teaching, I realized I had a problem with my physics labs. I had the luxury of
+teaching a class without a standardized exam, which meant I had more freedom in
+the topics we covered. I liked being able to react to student interest. The
+school had a small budget for lab equipment and the ordering process took almost
+a whole school year. As such, I often felt frustrated that I didn't have the
+supplies for all the labs I wanted when I wanted them. I had some success
+getting creative cobbling together labs from the equipment I could find, and
+sometimes I spent my own money to buy the equipment I needed, but I knew we
+could do better. What I really needed was time to requisition a closet full of
+physics equipment. Given it wasn't going to appear overnight, I started to think
+of alternatives.
 
 A physics simulator came to mind first. Assuming everyone in the class had
 access to a half-decent computer, virtual labs in a simulator could be cheap,
@@ -443,32 +444,33 @@ then, to my surprise, I found this message in my reddit inbox.
 >
 > Email me at [name redacted]@valvesoftware.com, please, and we'll talk.
 
-I idolized Valve Software. The _Half-Life_ series, the _Portal_ series,
-_Counter-Strike_, and _Team Fortress 2_ were some of my all-time favorite games.
-When I got an email from an employee there, it felt like a celebrity wanted to
-meet me. I couldn't believe it. It felt like validation that I found a problem
-to solve that other people cared about. I emailed them immediately and that
-started a relationship that would fundamentally alter the arc of my career.
+<span id="valve-responds" />I idolized Valve Software. The _Half-Life_ series, the
+_Portal_ series, _Counter-Strike_, and _Team Fortress 2_ were some of my
+all-time favorite games. When I got an email from an employee there, it felt
+like a celebrity wanted to meet me. I couldn't believe it. It felt like
+validation that I found a problem to solve that other people cared about. I
+emailed them immediately and that started a relationship that would
+fundamentally alter the arc of my career.
 
-With hindsight, it's easy to ascribe meaning to small events like this. Now, ten
-years later, I can make grandiose claims like "fundamentally alter the arc of my
-career" because I can clearly trace the cause and effect relationships between
-the series of events between this one and where I am now. But the truth is that
-at the time I had no idea what this meant or what was going to happen. I was
-just excited to see where it led. I remember thinking that it could be something
-big or it could be nothing at all. And I was okay with that. I used to go on
-runs after work in the West End neighborhood of Nashville where I lived. The
-quiet little voice in the back of my head wasn't so quiet. It was a record on
-repeat telling me that _I could be whatever I wanted to be_. The mantra had a
-weird intonation though. I can't describe it other than to say it emphasized
-that future. I had heard this phrase so many times growing up. My loving and
-supportive parents always told me so. My teachers told me so. But I think this
-might have been the first moment in my adult life where the idea of a
-self-deterministic future took hold in with full effect. I saw a life ahead of
-me. I saw hard work. I saw goals being accomplished. It was all the timelines of
-all the futures I could have all at once. It's a great feeling being young and
-seeing your whole life in front of you. Even though I won't be young forever, I
-hope I never lose it.
+<span id="voice" />With hindsight, it's easy to ascribe meaning to small events
+like this. Now, ten years later, I can make grandiose claims like "fundamentally
+alter the arc of my career" because I can clearly trace the cause and effect
+relationships between the series of events between this one and where I am now.
+But the truth is that at the time I had no idea what this meant or what was
+going to happen. I was just excited to see where it led. I remember thinking
+that it could be something big or it could be nothing at all. And I was okay
+with that. I used to go on runs after work in the West End neighborhood of
+Nashville where I lived. The quiet little voice in the back of my head wasn't so
+quiet. It was a record on repeat telling me that _I could be whatever I wanted
+to be_. The mantra had a weird intonation though. I can't describe it other than
+to say it emphasized that future. I had heard this phrase so many times growing
+up. My loving and supportive parents always told me so. My teachers told me so.
+But I think this might have been the first moment in my adult life where the
+idea of a self-deterministic future took hold in with full effect. I saw a life
+ahead of me. I saw hard work. I saw goals being accomplished. It was all the
+timelines of all the futures I could have all at once. It's a great feeling
+being young and seeing your whole life in front of you. Even though I won't be
+young forever, I hope I never lose it.
 
 Back to the story at hand, this one email I got from Valve meant I already came
 out ahead in the _Portal_ experiment.
@@ -596,8 +598,8 @@ I could have done more. I've held onto the dream that I'll retire and go back to
 teaching at the end of my career. It only makes sense to bookend my career with
 teaching.
 
-Before I get back to the main story, I want to get on my soapbox for a moment
-about teacher salaries. Holy cow, they should be tripled.
+<span id="pay" />Before I get back to the main story, I want to get on my soapbox
+for a moment about teacher salaries. Holy cow, they should be tripled.
 
 Tripling teacher pay would immediately make teaching a much more competitive
 career. Teachers could be held to much higher standards because they would know
@@ -660,14 +662,14 @@ the left](./valve_office.jpg)
 _In the main lobby of the Valve offices in July of 2012. I'm on the right.
 Leslie Redd and Yasser Malaika, a designer at Valve, are on the left._
 
-When I returned home, I learned that they wanted to make a short documentary
-about my classroom. I shared the news with my new principal and we set the
-wheels in motion to allow a film crew to visit my physics classes. The pictures
-I've been sharing of my classroom all came from the documentary effort. I feel I
-need to spoil the ending of this part of the story. Before any of you reading
-this go off to try to find the documentary, you should know that it was never
-finished and nothing was ever released except for the few pictures and videos
-included here.
+<span id="valve-doc" />When I returned home, I learned that they wanted to make a
+short documentary about my classroom. I shared the news with my new principal
+and we set the wheels in motion to allow a film crew to visit my physics
+classes. The pictures I've been sharing of my classroom all came from the
+documentary effort. I feel I need to spoil the ending of this part of the story.
+Before any of you reading this go off to try to find the documentary, you should
+know that it was never finished and nothing was ever released except for the few
+pictures and videos included here.
 
 Leslie and Jeff Unay, one of the filmmakers at Valve I met, started flying out
 to Nashville to visit my classroom and meet my students in the fall of 2012.
@@ -743,17 +745,17 @@ up getting accepted to ASU and UC Santa Cruz.
 I believe I had already accepted the invitation to attend UC Santa Cruz when I
 would have another phone call with Leslie that would change my life.
 
-I got a call from her when I was grocery shopping. This was after she had left
-Valve, probably around April of 2013. She spoke even more excitedly than usual.
-I had to stop shopping and walk over to a counter where there was a pen and some
-scrap paper. I started taking notes as she was telling me about this new
-business she was starting and wanted me to come with her. It was an educational
-technology company in Seattle. No name yet. She was the first employee, I would
-be the second. There was already enough angel funding for a year-ish of runway
-with a handful of employees. The business idea wasn't clear, but it would have
-something to do with helping educators find useful teaching resources on the
-Internet. I don't know if she used the phrase "iTunes for education" on the
-phone, but eventually that's how we would explain it.
+<span id="lb-call" />I got a call from her when I was grocery shopping. This was
+after she had left Valve, probably around April of 2013. She spoke even more
+excitedly than usual. I had to stop shopping and walk over to a counter where
+there was a pen and some scrap paper. I started taking notes as she was telling
+me about this new business she was starting and wanted me to come with her. It
+was an educational technology company in Seattle. No name yet. She was the first
+employee, I would be the second. There was already enough angel funding for a
+year-ish of runway with a handful of employees. The business idea wasn't clear,
+but it would have something to do with helping educators find useful teaching
+resources on the Internet. I don't know if she used the phrase "iTunes for
+education" on the phone, but eventually that's how we would explain it.
 
 ## My First Startup Experience - LearnBIG
 
@@ -796,16 +798,18 @@ launch. Basically by the end of the first week, we had basically abandoned the
 website and started a pivot to find a new product idea.
 
 In hindsight, we made a lot of poor decisions. I feel conflicted about my role.
-I take some responsibility, but the fact of the matter is I didn't know better.
-My whole business experience amounted to two months of scrambling in a startup
-and skimming [_The Lean Startup_](http://theleanstartup.com/) over a weekend.
-Our key mistake was simply that we invested a huge portion of our capital in an
-product without performing any actual market research. "If you build it, they
-will come" worked in _Field of Dreams_, but it doesn't work in business. No one
-was asking for our product, so no one ever used it.
+I take some responsibility because I was there, but the fact of the matter is I
+didn't know better. My whole business experience amounted to two months of
+scrambling in a startup and skimming [_The Lean
+Startup_](http://theleanstartup.com/) over a weekend. Our key mistake was simply
+that we invested a huge portion of our capital in an product without performing
+any actual market research. "If you build it, they will come" worked in _Field
+of Dreams_, but it doesn't work in business. No one was asking for our product,
+so no one ever used it.
 
-That being said, I wouldn't trade the experience of building the first LearnBIG
-website for the world. It is how I became an engineer. @@awk@@
+<span id="lb-eng" />It was disappointing, but I wouldn't trade this experience for
+the world. No better way to learn than trying and failing. And this is where I
+got my first taste of engineering.
 
 A couple weeks into the process of curating the database of educational
 resources, a thought occurred to me - I was working on a website, but I had no
@@ -1021,12 +1025,12 @@ _We often worked alongside experts from Google._
 
 _Maybe I should learn how to be a stuntman next?_
 
-I had to fully exercise the nascent leadership skills I developed way back when
-I was teaching. Organization, communication, and a clearly articulated shared
-team vision were essential for every class. I was pleased that one of my
-managers remembered that I was a "Direct, Solid Communicator" when asked about
-my strengths all these years later. They also hit on my attitude about
-collaboration: "Great teammate, always was a team player."
+<span id="udacity-feedback" />I had to fully exercise the nascent leadership
+skills I developed way back when I was teaching. Organization, communication,
+and a clearly articulated shared team vision were essential for every class. I
+was pleased that one of my managers remembered that I was a "Direct, Solid
+Communicator" when asked about my strengths all these years later. They also hit
+on my attitude about collaboration: "Great teammate, always was a team player."
 
 I enjoyed building productive working relationships with people from all kinds
 of backgrounds. This was a startup too, so there was a constant looming pressure
@@ -1106,9 +1110,9 @@ unremarkable from an outside perspective. I learned a lot and made some cool
 features for the website. It was primarily a time of learning and growth. I
 tried to glean as much wisdom and insight about engineering as I could from my colleagues. 
 
-Around this time, I started to get this itch. If I could go from zero to hero in
-web development in a matter of months, what else could I do? Could I revive my
-dream of space exploration? Why not?
+<span id="itch" />Around this time, I started to get this itch. If I could go from
+zero to hero in web development in a matter of months, what else could I do?
+Could I revive my dream of space exploration? Why not?
 
 I assumed grad school would be useful at some point, so I started going through
 online courses for what I assumed would be the baseline knowledge set for a grad
@@ -1156,11 +1160,11 @@ pushed code, he tested, and we deployed it to his on campus experiments where
 his classmates pretended to be astronauts and use the software to make decisions
 on Mars.
 
-This research exposed me to a whole new world I wasn't aware of - analog EVA
-testing (aka Extravehicular Activities aka spacewalks). These are simulated
-spacewalks that take place at various interesting locations on Earth that
-simulate some aspect of planetary or International Space Station (ISS)
-operations. There's an underwater facility in the Florida Keys called
+<span id="eva-intro" />This research exposed me to a whole new world I wasn't
+aware of - analog EVA testing (aka Extravehicular Activities aka spacewalks).
+These are simulated spacewalks that take place at various interesting locations
+on Earth that simulate some aspect of planetary or International Space Station
+(ISS) operations. There's an underwater facility in the Florida Keys called
 [NEEMO](https://www.nasa.gov/mission_pages/NEEMO/index.html) where astronauts
 and scientists live and work together, performing simulated spacewalks on coral
 reefs and scientific experiments in a habitat a lot like ISS. There's the
@@ -1210,14 +1214,14 @@ talk about the impact of my time at NASA. I've spent most of it working on two
 software projects - one that focuses on bolstering insights into EVAs, the other
 that focuses on helping image analysts share their findings.
 
-As a colleague, I got similar feedback about my strengths and weaknesses from
-the folks I work with at NASA. In my survey, I heard that "Your enthusiasm and
-genuine personality is awesome to be around." Someone else said that I am a
-"Self-starter, highly skilled, interested in learning, [Cameron] can pull back
-from 'interesting' approaches to favor practical approaches, [and is] able to lead
-by example." My teaching background also came up as a positive. The same person
-said that I am "Super helpful! Open to teaching team mates (especially me) in
-the name of project success."
+<span id="nasa-feedback" />As a colleague, I got similar feedback about my
+strengths and weaknesses from the folks I work with at NASA. In my survey, I
+heard that "Your enthusiasm and genuine personality is awesome to be around."
+Someone else said that I am a "Self-starter, highly skilled, interested in
+learning, [Cameron] can pull back from 'interesting' approaches to favor
+practical approaches, [and is] able to lead by example." My teaching background
+also came up as a positive. The same person said that I am "Super helpful! Open
+to teaching team mates (especially me) in the name of project success."
 
 <span id="nasa-multitasking" />What I see as a key differentiator between Udacity
 and NASA is that I hit my limit in my ability to multitask, and that led to some
@@ -1231,6 +1235,13 @@ downstream effects that negatively impacted my colleagues.
 > and anticipated work hours would help keep the expectations reasonable and
 > achievable. Fortunately, the analog never ended up happening so we never felt
 > the big crunch that would've likely been experienced.
+
+An intern I mentored said something similar.
+
+> I sometimes had trouble scheduling meetings and communicating with Cameron -
+> this is 90% down to circumstances (remote work, grad school, me also being
+> quite bad at this), but Cameron can still be more mindful and creative about
+> how to be present despite circumstances 
 
 This is a weakness I've worked hard to address. I don't like the feeling of
 letting others down. As we'll see later when I get into my career as a grad
@@ -1255,6 +1266,10 @@ leader and how I will need to adapt to managerial positions in the future.
 > of technical knowledge and experience. He'll have to search for a long time to
 > find team members more skilled than he is. 
 
+The intern had similar points about my continued tendency to teach: "effective
+teacher, gives useful feedback, respectfully defends technical opinions,
+pleasant person w/ positive attitude."
+
 I wish I could go into more of the specifics about my career at NASA, but none
 of the work I've done is public. I hope some of it will be public soon, because
 I've been lucky to lead some projects that have made some really amazing
@@ -1263,6 +1278,8 @@ playing. In short, I've been lucky to architect one award-winning project, and
 another that's now being used for testing Artemis launches. My colleagues are
 incredibly bright and fun to work with, and I couldn't ask for a more
 interesting or motivating problem space.
+
+<p class="dinkus" />
 
 It's probably clear by now that I like looking for opportunities. I'm still
 testing my theory, but I think I found one in the world of EVAs. I'll take a
@@ -1420,10 +1437,10 @@ So I got in to grad school. I'm studying autonomy and having the time of my
 a hard time not remaking on how far I've come since my first career teaching way
 back when.
 
-Though my skills and goals have changed over the years, I don't think much has
-changed in my personality. I still love teamwork and collaborating. One of my
-current classmates summarized my work in much the same way my old colleagues at
-Udacity did.
+<span id="mit-feedback" />Though my skills and goals have changed over the years,
+I don't think much has changed in my personality. I still love teamwork and
+collaborating. One of my current classmates summarized my work in much the same
+way my old colleagues at Udacity did.
 
 > To me, Cameron is light-spirited and very enjoyable to work with. He is
 > hardworking and very reponsible [sic] in delivering his personal research
@@ -1441,17 +1458,15 @@ standards and I don't like the idea of letting other people down.
 > the burden of high expectations, so I wouldn't be worried if you miss a
 > meeting a few times
 
-I see myself as someone who enjoys working with others and leading teams. I want
-to be the best I can and I expect other people to work hard along with me. I
-value being able to learn from amazing people and finding new problems to solve.
-This drive to push myself to learn as much as I can and solve the hardest
-problems is what got me to this point; now I feel like a superhero. I haven't
-gone to space yet, but I think my 10 year old self would be proud of where I am
-now.
+<span id="conclusion" />I see myself as someone who enjoys working with others and
+leading teams. I want to be the best I can and I expect other people to work
+hard along with me. I value being able to learn from amazing people and finding
+new problems to solve. This drive to push myself to learn as much as I can and
+solve the hardest problems is what got me to this point; now I feel like a
+superhero. I haven't gone to space yet, but I think my 10 year old self would be
+proud of where I am now.
 
 <p class="dinkus" />
-
-@@TODO backfill a few more references to assessments and such@@
 
 [^1]: To be fair, some official responsibilities like coaching a team or leading
     the marching band do come with a small stipend at most schools, but it isn't
@@ -1467,44 +1482,93 @@ now.
 
 ## LCT Section Mapping<span id="lct" />
 
-Roughly maps the sections of this essay with the autobiography assignment.
+Roughly maps a selection of sections of this essay with the autobiography
+assignment. I took the "be as creative as you want" portion to heart. I feel
+most creative when I'm writing, so this essay is my creative endeavor to paint a
+self-portrait.
 
 ### I. Personal Portraits
 
-* Intro talks about hopes and dreams for humanity
-* Teaching Part 1 - the colorful story about inhaling HCl
-* Teaching Part 2 - the little voice in my head
+> This part represents how you see yourself and integrates insights from both
+> papers. It should therefore be completed last; after you have completed all of
+> the other sections below. This can embody a personal vision, listing of core
+> areas of strengths, the conditions that bring out your best work, and how you
+> contribute to the good of others. For a more creative version, you can be as
+> imaginative as you want in crafting this portrait.
+
 * All the pictures and videos throughout the post
-* Constantly talking about how I want to be Carl Sagan :)
-* Repeatedly coming back to how I want to extend humanity's reach in the solar
-  system
- * Teaching Part 1 - developing a teaching persona <a
-    href="#teaching-persona">⬏</a>
+* Constantly talking about how I want to be Carl Sagan and repeatedly coming
+  back to how I want to extend humanity's reach in the solar system
+* Intro talks about hopes and dreams for humanity <a href="#intro-h-d">⬏</a>
+* Teaching Part 1 - the end of the story about continuing to teach after
+  inhaling HCl <a href="#hcl">⬏</a>
+* Teaching Part 1 - developing a teaching persona <a
+  href="#teaching-persona">⬏</a>
+* Teaching Part 2 - the little voice in my head <a href="#voice">⬏</a>
 
 ### II. Strengths Grounded in Self-Identity, Personality, and Other Traits
 
-* Undergrad section - strengths shown in the star simulation assignment
-* LearnBIG - learning how to code by giving myself exercises
-* NASA - helping my colleagues learn
-* Udacity, NASA colleagues talking about being a good teammate and collaborator
+> Strengths are composed of our distinctive (a) identity and personality, which
+> is how we see ourselves in a given situation and our enduring personal traits,
+> (b) our values and principles, which are personal standards that guide our
+> actual behavior and preferences, and our capabilities and expertise, which we
+> display when performing at our best.i Strengths can also be grounded in our
+> relationships with others, which we will explore in the next part of this
+> assignment. In this section, explicate how your insights about self-identity,
+> personality, and other traits that support the expression of the strengths
+> reflected and discovered in the analysis of your qualitative feedback.
+
+* Undergrad section - strengths shown in the star simulation assignment <a
+  href="#star">⬏</a>
+* LearnBIG - learning how to code by giving myself exercises <a href="#lb-eng">⬏</a>
+* Udacity - getting an itch to keep learning <a href="itch">⬏</a>
+* NASA - helping my colleagues learn <a href="nasa-feedback">⬏</a>
 * The End of this Chapter - high expectations <a
   href="#letting-others-down">⬏</a>
 
 ### III. Strengths Grounded in Values, Principles, Virtues
 
+> In this section, explicate the personal values, principles, and/or virtues
+> discovered in the analysis your feedback from others. Note that there is a
+> meaningful difference between values that are abstract ideals and those that
+> we actually live by. This section should articulate the values that you
+> actually live by (grounded and evidenced in the stories you received from
+> other and from your reflections from your past). These should be relatively
+> few in number (ex., seven or less). Since the feedback that you received from
+> others represent your actual behaviors, your qualitative analysis should
+> become the primary source of your insights.
+
 * Teaching Part 1- strengths shown in persevering through difficult teaching
   experiences
-* Teaching Part 1 - rant about teacher salaries
+* Teaching Part 1 - rant about teacher salaries <a href="#pay">⬏</a>
+* Udacity - the feedback I received <a href="#udacity-feedback">⬏</a>
+* NASA - the feedback I received <a href="#nasa-feedback">⬏</a>
+* The End of this Chapter - the feedback I received <a href="#mit-feedback">⬏</a>
 
 ### IV. Defining Events
 
-* Teaching Part 2 - _Portal 2_ as a teaching tool getting attention
-* NASA - getting involved in EVAs
-* Beginnings as a Researcher - finding a way to do research
+> This section should describe the events that have had the greatest impact on
+> your development and overall sense of “Who I have become”. Consider the Ligon
+> et al. (2008, esp. Table 2) reading on the kinds of life experiences that have
+> shaped outstanding leaders.iii For this section, you might create a “life map”
+> that illustrates your major phases and paths.
+
+* Teaching Part 2 - _Portal 2_ as a teaching tool getting attention from Valve
+  <a href="#valve-responds">⬏</a>
+* Teaching Part 2 - Valve films a documentary about me <a href="#valve-doc">⬏</a>
+* Teaching Part 2 - I get invited to work at a startup <a href="#lb-call">⬏</a>
+* NASA - getting involved in spacewalk research <a href="#eva-intro">⬏</a>
+* Beginnings as a Researcher - finding a way to do temporal reasoning research
 * Beginnings as a Researcher - the end of the application process <a
   href="#prove-self">⬏</a>
 
 ### V. Relationships and Networks
+
+> In this section, reflect on and describe the role that relationships and
+> networks play in your life; past, present, and future. This may include how
+> you manage your relationships with family, friends, mentors, co-workers,
+> supervisors, followers, as well as more difficult relationships such as
+> adversaries, competitors, or opponents.
 
 * Teaching Part 2, LearnBIG - developing a relationship with Leslie from Valve
 * Udacity - relationships with the video team, teaching colleagues
@@ -1516,13 +1580,29 @@ Roughly maps the sections of this essay with the autobiography assignment.
 
 ### VI. Enablers and Blockers of My Best Performance
 
+> In this section, explicate the personal and contextual factors that you think
+> facilitated or hindered your ability to perform at your best. Try to think of
+> examples from the past and elaborate on these examples.
+
+* Teaching Part 2 - finding a big challenge (expensive physics equipment) and
+  getting creative to solve it <a href="#why-portal">⬏</a>
 * NASA Part 2 - performance being blocked by too much multitasking <a
   href="nasa-multitasking">⬏</a>
-* Beginnings as a Research - overwhelmed by the workload <a
-  href="#apps-workload">⬏<a>
+* Beginnings as a Research - overwhelmed by the workload <a  href="#apps-workload">⬏</a>
 
 ### VII. Personal Vision
 
-* Intro talks about hopes and dreams for humanity and space exploration
+> This section should represent your hopes, dreams, fears, and other
+> possibilities that you can imagine, as well as your “future” self. This part
+> of the paper should not be viewed as a static set of statements but something
+> that will evolve over time. Some issues to consider are your personal and
+> professional ambitions, what do you want to contribute in your life, your
+> personal hopes and dreams, your extrinsic and intrinsic motivations, and your
+> commitments to others. The points below can be used to craft this personal
+> vision of future “possible selves” iv. The most important outcome of this
+> section is that it embodies a meaningful expression of who you can become.
 
+* Intro talks about hopes and dreams for humanity and space exploration
+* The End of this Chapter - the conclusion about my 10 year old self would think
+  <a href="#conclusion">⬏</a>
 
