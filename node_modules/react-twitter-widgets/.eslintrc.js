@@ -1,0 +1,20 @@
+module.exports = {
+  "env": {
+    "browser": true,
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "no-confusing-arrow": 0,
+    "no-shadow": 0,
+    "no-underscore-dangle": 0,
+    "semi": [1, "never"],
+    "arrow-parens": [2, "always"],
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-unused-prop-types": 0,
+    "react/forbid-prop-types": 0,
+  },
+}

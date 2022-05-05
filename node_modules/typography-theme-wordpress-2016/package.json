@@ -1,0 +1,31 @@
+{
+  "name": "typography-theme-wordpress-2016",
+  "description": "A theme for Typography.js inspired by the typography of the Wordpress 2016 default theme",
+  "version": "0.15.10",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gray-percentage": "^2.0.0",
+    "typography-breakpoint-constants": "^0.15.10"
+  },
+  "keywords": [
+    "css",
+    "typography",
+    "typography-theme"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/KyleAMathews/typography.js",
+  "bugs": {
+    "url": "https://github.com/KyleAMathews/typography.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KyleAMathews/typography.js.git"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "../../node_modules/.bin/babel src --out-dir dist/",
+    "flow": "../../node_modules/.bin/flow",
+    "lint": "../../node_modules/.bin/eslint --ext .js,.jsx --ignore-path .gitignore .",
+    "watch": "../../node_modules/.bin/babel -w src --out-dir dist/"
+  }
+}
