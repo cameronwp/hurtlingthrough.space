@@ -1,7 +1,7 @@
 ---
 title: "From Teacher to AI Researcher"
 date: 2022-05-04T12:00:00-05:00
-tags: 
+tags:
   - mit
   - mers
   - grad-school
@@ -41,7 +41,7 @@ scientific writing, with me thinking that I wanted to be a science popularizer
 like my hero, Carl Sagan. I was accepted to a couple programs and almost
 enrolled, but I kept bailing at the last second after deciding that I had better
 opportunities elsewhere. But this time it really happened. This opportunity was
-too good to pass up. 
+too good to pass up.
 
 <span id="intro-h-d" />I applied to AeroAstro because I want my career to define
 the future of space exploration. Studying astronomy gives you a longer
@@ -137,7 +137,7 @@ challenge that gave me a chance to exercise creative problem solving skills
 different way. But I missed the strong signals of my strengths at the time. I
 was too focused on the challenges at hand (trying to finish my undergrad and be
 an astronomer) to fully realize how my strengths played into the assignment and
-what that meant for my career. 
+what that meant for my career.
 
 When I graduated, I wanted to be an astronomer but I was entirely unprepared to
 be an academic. I spent so much time in college focused on having as much fun as
@@ -284,7 +284,7 @@ their labs.
 In the words of [Ms.
 Frizzle](https://magicschoolbus.fandom.com/wiki/Professor_Valerie_Frizzle,_PhD),
 I "got messy" a few times too. And by that I mean I injured myself doing
-science. 
+science.
 
 ![Ms. Frizzle from the Magic School Bus TV show](./Valerie_Frizzle.png)
 
@@ -838,8 +838,10 @@ for programming, I branched out to C++ (again) and JavaScript. In those early
 days, I found it especially useful to compare paradigms and ideas between
 languages.
 
-<video width="100%" autoplay loop> <source src="physics-sim.mp4"
-    type="video/mp4"> Your browser does not support the video tag. </video>
+<video width="100%" autoplay loop>
+  <source src="./physics-sim.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 _Simulating a 2D gravitational field with C++. The vectors represent the
 magnitude and direction of gravity at each location. The moving circles have
@@ -1015,7 +1017,7 @@ _This redwood video was me trying to channel my inner Carl Sagan._
 <iframe width="560" height="315" src="https://www.youtube.com/embed/3D7i4AScIuk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 _I think Mike and I got this on the second take. Also, I'm not sure why I wore
-the same shirt in both videos._ 
+the same shirt in both videos._
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/766JMEtZCPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -1086,7 +1088,7 @@ video team colleague had this to say.
 > point where I became frustrated and needed to have a stern conversation with
 > him and the rest of the course team to get them to move on and find a new
 > solution. This wasn't an issue unique to Cameron, to be fair, and I think was
-> just a product of his passion for the material. 
+> just a product of his passion for the material.
 
 In total, I directed the development of 11 classes at Udacity ranging from web
 development to self-driving cars. Each class let me learn something new. It
@@ -1112,7 +1114,7 @@ _A fun talk I gave about scaling online education in 2018._
 I will admit that my career as a junior engineer at Udacity was productive but
 unremarkable from an outside perspective. I learned a lot and made some cool
 features for the website. It was primarily a time of learning and growth. I
-tried to glean as much wisdom and insight about engineering as I could from my colleagues. 
+tried to glean as much wisdom and insight about engineering as I could from my colleagues.
 
 <span id="itch" />Around this time, I started to get this itch. If I could go from
 zero to hero in web development in a matter of months, what else could I do?
@@ -1246,7 +1248,7 @@ An intern I mentored said something similar.
 > I sometimes had trouble scheduling meetings and communicating with Cameron -
 > this is 90% down to circumstances (remote work, grad school, me also being
 > quite bad at this), but Cameron can still be more mindful and creative about
-> how to be present despite circumstances 
+> how to be present despite circumstances
 
 This is a weakness I've worked hard to address. I don't like the feeling of
 letting others down. As we'll see later when I get into my career as a grad
@@ -1269,7 +1271,7 @@ leader and how I will need to adapt to managerial positions in the future.
 > excellent work" role. This is a difficult transition for every technical
 > leader and will be especially difficult for Cameron given his very high level
 > of technical knowledge and experience. He'll have to search for a long time to
-> find team members more skilled than he is. 
+> find team members more skilled than he is.
 
 The intern had similar points about my continued tendency to teach: "effective
 teacher, gives useful feedback, respectfully defends technical opinions,
@@ -1483,7 +1485,7 @@ proud of where I am now.
     *Teacher Pioneers*. pp 109-119. Carnegie Mellon: ETC Press.
     https://doi.org/10.1184/R1/6686936
 [^5]: Miller, M. J. (2017). Decision Support System Development For Human
-    Extravehicular Activity (Issue December). Georgia Institute of Technology. 
+    Extravehicular Activity (Issue December). Georgia Institute of Technology.
 
 ## LCT Section Mapping<span id="lct" />
 
@@ -1524,7 +1526,7 @@ self-portrait.
 > reflected and discovered in the analysis of your qualitative feedback.
 
 I am driven to learn and solve new problems. I love working with people and want
-to see all of us succeed. 
+to see all of us succeed.
 
 * Undergrad section - strengths shown in the star simulation assignment <a
   href="#star">⬏</a>
