@@ -25,7 +25,7 @@ discipline in the battlefield. When should they attack? How should they organize
 going to lead them into battle? These questions kept Girm awake at night.
 
 He stumbled barefoot on the cool stone floor and out the temple entrance. The morning sun had just
-started to peek through the treeline. He loathed the damp dirt between his toes when he first
+started to peek through the treeline. He had loathed the damp dirt between his toes when he first
 arrived at Keantoo, but recently he started to change his mind. The discomfort became familiar. It
 reminded him of their struggle to best the Jungle. Great things lay ahead of them. A lifetime&rsquo;s
 *tabula rosa*. The fate of the Padawans and Planet Keantoo were intimately connected now. They
@@ -100,4 +100,4 @@ Rex&rsquo;s voice came back a moment later. &ldquo;Hey Girm we hear you. Boh-di 
 temple now. We&rsquo;ll see you when you get there.&rdquo;
 
 Girm gingerly lifted the injured human and carried them over his shoulder and back to the Temple,
-letting the Force guide him back.
+letting the Force guide him.
