@@ -1,4 +1,5 @@
 import React from 'react'
+import './bibtex.scss'
 
 export default function BibTeX({ title, date }) {
   const written = new Date(date)
