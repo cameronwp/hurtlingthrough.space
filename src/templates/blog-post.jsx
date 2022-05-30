@@ -6,6 +6,7 @@ import { Share } from 'react-twitter-widgets'
 
 import config from '../../gatsby-config'
 
+import BibTeX from '../components/bibtex'
 import Footer from '../components/footer'
 import Tag from '../components/tag'
 import { rhythm, scale } from '../utils/typography'
@@ -20,6 +21,13 @@ function renderTag(tag, index) {
       <Tag name={tag} />
     </div>
   )
+}
+
+function Citation({ title, date }) {
+  return <div>
+    Show citation
+  </div>
+  // <BibTeX title={title} date={date} />
 }
 
 class BlogPostTemplate extends React.Component {
@@ -72,6 +80,7 @@ class BlogPostTemplate extends React.Component {
               </div>
             </div>
           </div>
+          <div>Show BibTeX citation <a href="#citation">↴</a></div>
         </section>
 
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -93,6 +102,11 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
+        <section id='citation' className='citation'>
+          How to cite this blog post:<br /><br />
+
+          <BibTeX title={title} date={date} />
+        </section>
         <Footer />
       </div>
     )

@@ -1,16 +1,27 @@
-export default function BibTeX() {
-  return <>
-    How to cite this blog post:
+import React from 'react'
 
-    <pre>
-      @misc{Pittman}{Year}
-        title={ },
-        author={Cameron Pittman},
-        url={ },
-        journal={Hurtling through Space},
-        year={ },
-        month={ }
-      }
-    </pre>
-  </>
+export default function BibTeX({ title, date }) {
+  const written = new Date(date)
+  const bibtexTitle = `${title[0].toUpperCase()}${title.slice(1).toLowerCase()}`
+  const url = window.location.href
+  const year = written.getUTCFullYear()
+  const tag = `${year}${written.getUTCMonth() + 1}${title[0]}`
+  const month = written.toLocaleDateString('en-us', { month: 'long' })
+  const today = new Date();
+  const accessed = today.toLocaleDateString('en-gb', {
+    day: '2-digit',
+    month: 'short',
+    year: 'numeric'
+  })
+
+  const entry = `@misc{Pittman${tag},
+    author = {Pittman, Cameron},
+    title = {${bibtexTitle}},
+    journal = {Hurtling through Space},
+    url = {${url}},
+    year = {${year}},
+    month = {${month}},
+    accessed = {${accessed}}
+}`
+  return <pre>{entry}</pre>
 }
