@@ -3,8 +3,13 @@ import React from 'react'
 export default function BibTeX({ title, date }) {
   const written = new Date(date)
   const bibtexTitle = `${title[0].toUpperCase()}${title.slice(1).toLowerCase()}`
-  const url = new URL(window.location.href)
-  url.hash = ""
+
+  let url = ""
+  if (typeof window !== 'undefined') {
+    url = new URL(window.location.href)
+    url.hash = ""
+  }
+
   const year = written.getUTCFullYear()
   const tag = `${year}${written.getUTCMonth() + 1}${title[0]}`
   const month = written.toLocaleDateString('en-us', { month: 'long' })
