@@ -82,7 +82,7 @@ class About extends React.Component {
           <li>💻 <a href="https://www.lenovo.com/us/en/laptops/thinkpad/thinkpad-x/X1-Carbon-Gen-7/p/22TP2TXX17G" target="_blank" rel="noreferrer noopener">Lenovo Thinkpad X1 Carbon Gen 7 Model 20R1S05A00</a></li>
           <li>🌽 <a href="https://getfedora.org/">Fedora 35</a></li>
         </ul>
-        <h2>Living Room Gaming PC</h2>
+        <h2 id="living-room-pc">Living Room Gaming PC</h2>
         <ul className="emoji-list">
           <li>📦 <a href="https://www.fractal-design.com/products/cases/node/node-304/black/" target="_blank" rel="noreferrer noopener">Fractal Design Node 304 Black Case</a></li>
           <li>💥 <a href="https://www.evga.com/products/product.aspx?pn=06G-P4-2068-KR" target="_blank" rel="noreferrer noopener">EVGA GeForce RTX 2060 KO</a></li>
