@@ -234,12 +234,13 @@ GIT_DIR=$(pwd)
 
 # we want check out the commit into a temp worktree
 WORK_DIR=$(mktemp -d)
-SRC="$WORK_DIR/src"
+SRC="$WORK_DIR"
 
 while read -r oldrev newrev refname; do
     # check out the worktree at the last commit that was pushed
     git --git-dir="$GIT_DIR" worktree add --quiet --detach "$SRC" "$newrev"
-    # update submodules
+
+    # update submodules if necessary
     [[ -f "$SRC/.gitmodules" ]] && git -C "$SRC" submodule update --init --recursive --quiet
 done
 
@@ -303,7 +304,7 @@ GIT_DIR=$(pwd)
 
 # we want check out the commit into a temp worktree
 WORK_DIR=$(mktemp -d)
-SRC="$WORK_DIR/src"
+SRC="$WORK_DIR"
 
 clean_up() {
     git --git-dir="$GIT_DIR" worktree remove --force "$SRC"
@@ -314,9 +315,6 @@ while read -r oldrev newrev refname; do
     # check out the worktree at the last commit that was pushed
     git --git-dir="$GIT_DIR" worktree add --quiet --detach "$SRC" "$newrev"
     
-    # update submodules if necessary
-    [[ -f "$SRC/.gitmodules" ]] && git -C "$SRC" submodule update --init --recursive --quiet
-
     # parse the branch name
     BRANCH=${refname#refs/heads/}
     SCRIPT="$SRC/.ci/$BRANCH.sh"
@@ -327,6 +325,9 @@ if [[ ! -f "$SCRIPT" ]]; then
     clean_up
     exit 0
 fi
+
+# update submodules if necessary
+[[ -f "$SRC/.gitmodules" ]] && git -C "$SRC" submodule update --init --recursive --quiet
 
 pushd $SRC > /dev/null
 
@@ -346,7 +347,34 @@ first versions of the runner that Claude wrote. What is happening is that the fi
 
 Once we have the branch, it's a simple matter of checking whether an eponymous script lives in
 `.ci/`. If a script doesn't exist, we bail early. Otherwise, we run it with bash from the root of
-the repo.
+the repo. The other notable change was moving the submodules logic further down. Checking out
+submodules can take a lot of time. It would be a waste of effort if a job script is missing.
+
+To see this in action, let's imagine our dummy repo has the following job in `.ci/main.sh`.
+
+```sh
+#!/usr/bin/env bash
+
+# .ci/main.sh
+
+echo "Pretend I'm running tests from $(pwd)"
+```
+
+Running `git push origin main` should output something like:
+
+```txt
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 408 bytes | 408.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Pretend I'm running tests from /tmp/tmp.YKglmCIk5O
+To unraid.local:/mnt/user/git/my-project.git
+   361469b..27f6a1f  main -> main
+```
+
+Note that the job is running in a copy of the repo that's been checked out in `/tmp`.
 
 ### Step 4. Run Jobs Asynchronously
 
