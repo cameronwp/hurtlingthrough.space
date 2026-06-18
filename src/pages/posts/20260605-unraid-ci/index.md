@@ -239,19 +239,17 @@ SRC="$WORK_DIR/src"
 while read -r oldrev newrev refname; do
     # check out the worktree at the last commit that was pushed
     git --git-dir="$GIT_DIR" worktree add --quiet --detach "$SRC" "$newrev"
-    
-    if [ -f "$SRC/.gitmodules"];
-        git -C "$SRC" submodule update --init --recursive --quiet
-    fi
+    # update submodules
+    [[ -f "$SRC/.gitmodules" ]] && git -C "$SRC" submodule update --init --recursive --quiet
 done
 
-pushd $SRC  > /dev/null
+pushd $SRC > /dev/null
 
-# run tests here!
+# run a job here!
 # as a proof of concept that we have access to the worktree, just read the README
 head README.md
 
-popd  > /dev/null
+popd > /dev/null
 
 rm -rf "$WORK_DIR"
 ```
@@ -267,7 +265,7 @@ Writing objects: 100% (3/3), 363 bytes | 181.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 remote: # My Project
 remote:
-remote: This is a temporary repo. I'm changing this file just to make dummy commits.
+remote: This is a temporary repo. If you can see this, you can read the README.
 To unraid.local:/mnt/user/git/my-project.git
    fe87152..9aa2c06  main -> main
 ```
@@ -278,7 +276,7 @@ to start the job.
 ### Step 3. Defining Jobs
 
 It doesn't make sense to divorce the logic of defining jobs from the repo itself. Instead, let's
-make a convention for writing jobs in a repo.
+make a convention for authoring jobs in a repo.
 
 1. Jobs are defined as bash scripts
 2. Jobs scripts live in a`.ci/` directory in the repo
@@ -287,12 +285,9 @@ make a convention for writing jobs in a repo.
 4. Job scripts are run from the root of the repo
 
 I like this convention because it's simple. It doesn't need to be robust because this is meant to be
-a simple system for my personal repos. There is no notion of a fallback script to run for all
+a simple system for my personal repos. There is no notion of a fallback job to run for all
 branches, regardless of name. There is no regex branch matching either. Defining `.ci/main.sh` is
 all I need 99% of the time. But it's pretty easy to expand upon if I ever feel like it down the road.
-
-The last point is important. Any paths used in the job script should be relative to the root of the
-repo for sanity's sake.
 
 Let's update `post-receive` to match the branch name to a job script and run it from the root of the
 repo.
@@ -310,26 +305,47 @@ GIT_DIR=$(pwd)
 WORK_DIR=$(mktemp -d)
 SRC="$WORK_DIR/src"
 
+clean_up() {
+    git --git-dir="$GIT_DIR" worktree remove --force "$SRC"
+    rm -rf "$WORK_DIR"
+}
+
 while read -r oldrev newrev refname; do
     # check out the worktree at the last commit that was pushed
     git --git-dir="$GIT_DIR" worktree add --quiet --detach "$SRC" "$newrev"
     
-    # TODO
-    
-    branch=${refname#refs/heads/}
+    # update submodules if necessary
+    [[ -f "$SRC/.gitmodules" ]] && git -C "$SRC" submodule update --init --recursive --quiet
+
+    # parse the branch name
+    BRANCH=${refname#refs/heads/}
+    SCRIPT="$SRC/.ci/$BRANCH.sh"
 done
 
-pushd $SRC  > /dev/null
+if [[ ! -f "$SCRIPT" ]]; then
+    # exit early if there is no job to run
+    clean_up
+    exit 0
+fi
 
-# run tests here!
-# as a proof of concept that we have access to the worktree, just read the README
-head README.md
+pushd $SRC > /dev/null
 
-popd  > /dev/null
+bash $SCRIPT
 
-rm -rf "$WORK_DIR"
+popd > /dev/null
 
+clean_up
 ```
+
+I'll admit that I was not familiar with bash's prefix-removal operator, `${variable#pattern}`, when
+I started this project. This is one of the places where AI helped. I encountered it in the first
+versions of the runner that Claude helped write. What is happening is that the first instance of
+`pattern` is being stripped from `variable`. As we saw earlier, `refname` has the form of
+`refs/heads/BRANCH`. Stripping the `refs/heads/` out leaves us with just the branch name.
+
+Once we have the branch, it's a simple matter of checking whether an eponymous script lives in
+`.ci/`. If a job script doesn't exist, we bail early. Otherwise, we run it with bash from the root
+of the repo.
 
 ### Step 4. Run Jobs Asynchronously
 
