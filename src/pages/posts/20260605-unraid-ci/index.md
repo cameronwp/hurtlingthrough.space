@@ -330,22 +330,23 @@ fi
 
 pushd $SRC > /dev/null
 
-bash $SCRIPT
+# do not allow an error in the job script to kill post-receive because we still need to clean up
+bash $SCRIPT || true
 
 popd > /dev/null
 
 clean_up
 ```
 
-I'll admit that I was not familiar with bash's prefix-removal operator, `${variable#pattern}`, when
-I started this project. This is one of the places where AI helped. I encountered it in the first
-versions of the runner that Claude helped write. What is happening is that the first instance of
+I'll admit that I was not familiar with bash's prefix-removal operator, `FOO=${variable#pattern}`,
+when I started this project. This is one of the places where AI helped. I encountered it in the
+first versions of the runner that Claude wrote. What is happening is that the first instance of
 `pattern` is being stripped from `variable`. As we saw earlier, `refname` has the form of
 `refs/heads/BRANCH`. Stripping the `refs/heads/` out leaves us with just the branch name.
 
 Once we have the branch, it's a simple matter of checking whether an eponymous script lives in
-`.ci/`. If a job script doesn't exist, we bail early. Otherwise, we run it with bash from the root
-of the repo.
+`.ci/`. If a script doesn't exist, we bail early. Otherwise, we run it with bash from the root of
+the repo.
 
 ### Step 4. Run Jobs Asynchronously
 
